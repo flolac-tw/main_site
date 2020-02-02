@@ -8,21 +8,21 @@ import           Hakyll
 main :: IO ()
 main = hakyll $ do
     match "assets/images/*" $ do
-        route   idRoute
+        route   (gsubRoute "assets/" (const ""))
         compile copyFileCompiler
 
     match "assets/css/*" $ do
-        route   idRoute
+        route   (gsubRoute "assets/" (const ""))
         compile compressCssCompiler
 
     match (fromList ["content/about.rst", "content/contact.markdown"]) $ do
-        route   $ setExtension "html"
+        route   $ gsubRoute "content/" (const "") `composeRoutes` setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
     match "content/posts/*" $ do
-        route $ setExtension "html"
+        route $ gsubRoute "content/" (const "") `composeRoutes` setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -44,7 +44,7 @@ main = hakyll $ do
 
 
     match "content/index.html" $ do
-        route idRoute
+        route (gsubRoute "content/" (const ""))
         compile $ do
             posts <- recentFirst =<< loadAll "content/posts/*"
             let indexCtx =
