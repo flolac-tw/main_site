@@ -68,10 +68,9 @@ jobs:
 
         # Ensure to match the source branch specified on the GitHub setting.
         #
-        PUBLISH_BRANCH: master
+        PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: _site
-        if: github.ref == 'refs/heads/source'
+        if: github.ref == 'refs/heads/master'
         # Rename `source` to the branch for the source code
-        # if: github.ref == 'refs/heads/master'
       with:
         emptyCommits: false
