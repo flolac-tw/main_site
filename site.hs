@@ -1,17 +1,15 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE BlockArguments #-} 
 import           Data.Monoid (mappend)
 import           Hakyll
 
-
---------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    match "assets/images/*" $ do
+    match "assets/img/**" $ do
         route   (gsubRoute "assets/" (const ""))
         compile copyFileCompiler
 
-    match "assets/css/*" $ do
+    match "assets/css/**" $ do
         route   (gsubRoute "assets/" (const ""))
         compile compressCssCompiler
 
@@ -33,8 +31,9 @@ main = hakyll $ do
         compile $ do
             posts <- recentFirst =<< loadAll "content/posts/*"
             let archiveCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Archives"            `mappend`
+                    metadataField                            <>
+                    listField "posts" postCtx (return posts) <>
+                    constField "title" "Archives"            <>
                     defaultContext
 
             makeItem ""
@@ -42,14 +41,11 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" archiveCtx
                 >>= relativizeUrls
 
-
     match "content/index.html" $ do
         route (gsubRoute "content/" (const ""))
         compile $ do
-            posts <- recentFirst =<< loadAll "content/posts/*"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Home"                `mappend`
+                    metadataField  <>
                     defaultContext
 
             getResourceBody
