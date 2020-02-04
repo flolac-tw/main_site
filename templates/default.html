@@ -5,25 +5,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/d25dd1f650.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:200,300,400,500|Noto+Serif+TC:600&display=swap&subset=chinese-traditional" rel="stylesheet">
+  <style>
+    h1, h2 {
+      font-family: 'Noto Serif TC', serif;
+    }
+    h3, h4, h5, h6, body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+    data-target="#nav-general-menu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/">FλOL∀C</a>
 
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item">
-        <a class="nav-link" href="#">應屆資訊</a>
-      </li>
+  <div class="collapse navbar-collapse" id="nav-general-menu">
+    <ul class="navbar-nav mt-2 mt-lg-0 mr-auto">
+      <li class="nav-item"><a class="navbar-brand" id="nav-general-menu" href="/">FλOL∀C</a></li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          海年介紹
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+          程式語言
         </a>
         <div class="dropdown-menu">
+          <a class="dropdown-item" href="ocean.html">海年介紹</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">2020</a>
           <a class="dropdown-item" href="#">2018</a>
           <a class="dropdown-item" href="#">2016</a>
@@ -32,10 +46,12 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          山年介紹
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+          形式驗證
         </a>
         <div class="dropdown-menu">
+          <a class="dropdown-item" href="ocean.html">山年介紹</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">2019</a>
           <a class="dropdown-item" href="#">2017</a>
           <a class="dropdown-item" href="#">2015</a>
@@ -43,71 +59,84 @@
           <a class="dropdown-item" href="#">2011</a>
         </div>
       </li>
+    </ul>
+
+    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">應屆課程</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#">報名資訊</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#contact">聯絡我們</a>
+      </li>
+    </ul>
+
+  </div>
+
+  <div class="collapse navbar-collapse" id="nav-general-menu">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item">
         <a class="nav-link" href="#">English</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
+
 </nav>
 
 <div class="container">
   <div class="jumbotron text-center">
-    <h1>$title$</h1>
+    <h1>$title$<br>
     $if(subtitle)$
-    <h2>$subtitle$</h2> 
-    $endif$
+    <small>$subtitle$</small> 
+    $endif$</h1>
   </div>
   $body$
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2" src="img/haskell-logo.png" alt="" width="24"
-        height="24">
-        <p>
-        All contents on this site are licensed under
-        <a href="http://creativecommons.org/licenses/by-sa/3.0/">
-        <img src="img/cc-by-sa.svg" height="22pt" alt="CC BY-SA 3.0"></a>.
-        </p>
-      </div>
       <div class="col-6 col-md">
-        <h5>社群網站</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">GitHub</a></li>
-          <li><a class="text-muted" href="#">Facebook</a></li>
+        <h5>報名資訊</h5>
+      </div>
+      <div class="col-6 col-md" id="contact">
+        <h5>聯絡我們</h5>
+        <ul class="list-unstyled text-small list-inline">
+          <li class="list-inline-item">
+            <a class="text-muted" href="#"><i class="far fa-envelope"></i></a>
+          </li>
+          <li class="list-inline-item">
+             <a class="text-muted" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+          </li>
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>聯絡信箱</h5>
-        如果有任何報名或是課程問題，請寄信來 flolac(at)iis.sinica.edu.tw 我們會儘快答覆。
+        <h5>社群網站</h5>
+        <ul class="list-unstyled text-small list-inline">
+          <li class="list-inline-item">
+            <a class="text-muted" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
+          </li>
+
+          <li class="list-inline-item">
+            <a class="text-muted" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center small">
         Powered by
         <a class="licens-link" href="https://jaspervdj.be/hakyll/">Hakyll</a>, 
-        <a class="licens-link" href="http://purecss.io/">Bootstrap</a>, 
-        <a class="licens-link" href="http://purecss.io/">GitHub Pages</a>, and
-        <a class="licens-link" href="http://purecss.io/">Google Fonts</a>.
+        <a class="licens-link" href="https://getbootstrap.com">Bootstrap</a>, 
+        <a class="licens-link" href="https://pages.github.com">GitHub Pages</a>, and
+        <a class="licens-link" href="https://fonts.google.com">Google Fonts</a>
+        </br>
+        All contents on this site are licensed under
+        <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+      </br>
     </div>
   </footer> 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<link
-href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500|Noto+Serif+TC:600&display=swap&subset=chinese-traditional" rel="stylesheet">
-<style>
-  h1, h2 {
-    font-family: 'Noto Serif TC', serif;
-  }
-  h3, h4, h5, h6, body {
-    font-family: 'Noto Sans TC', sans-serif;
-  }
-</style>
 </body>
 </html>
