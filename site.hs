@@ -18,9 +18,7 @@ main = hakyll $ do
         route   (gsubRoute "assets/" (const ""))
         compile compressCssCompiler
 
-    match "content/index.html" $ do
-        route $ gsubRoute "content/" (const "")
-        compile copyFileCompiler
+    createRedirects [("index.html", "zh/index.html")]
 
     match "content/**.zh.html" $ do
         route $ gsubRoute "content/" (const "zh/")
