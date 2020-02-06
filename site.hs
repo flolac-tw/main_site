@@ -1,8 +1,3 @@
--- TODO: 
---   * Detect user's language and redirect index.html to zh/index.html or en/index.html 
---   * Treat everything ending with .zh.<ext> as in a root directory http://url/zh/
---    Similarly, .en.<ext> as in a root http://url/en/ 
-
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE BlockArguments #-}
 import           Data.Monoid (mappend)
@@ -10,6 +5,30 @@ import           Hakyll
 
 main :: IO ()
 main = hakyll $ do
+    createRedirects [("index.html", "zh/index.html")]
+
+    match "content/**.zh.html" $ do
+        route $ gsubRoute "content/" (const "zh/")
+          `composeRoutes` gsubRoute "zh.html" (const "html")
+        compile $ do
+            let indexCtx = langField "zh" <> biURL <> defaultContext
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.zh.html" indexCtx
+                >>= loadAndApplyTemplate "templates/head.html" indexCtx
+                >>= relativizeUrls
+
+    match "content/**.en.html" $ do
+        route $ gsubRoute "content/" (const "en/")
+          `composeRoutes` gsubRoute "en.html" (const "html")
+        compile $ do
+            let indexCtx = langField "en" <> biURL <> defaultContext
+            getResourceBody
+                >>= applyAsTemplate indexCtx
+                >>= loadAndApplyTemplate "templates/default.en.html" indexCtx
+                >>= loadAndApplyTemplate "templates/head.html" indexCtx
+                >>= relativizeUrls
+
     match "assets/img/**" $ do
         route   (gsubRoute "assets/" (const ""))
         compile copyFileCompiler
@@ -17,28 +36,6 @@ main = hakyll $ do
     match "assets/css/**" $ do
         route   (gsubRoute "assets/" (const ""))
         compile compressCssCompiler
-
-    createRedirects [("index.html", "zh/index.html")]
-
-    match "content/**.zh.html" $ do
-        route $ gsubRoute "content/" (const "zh/")
-          `composeRoutes` gsubRoute "zh.html" (const "html")
-        compile $ do
-            let indexCtx = enURL <> defaultContext
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.zh.html" indexCtx
-                >>= relativizeUrls
-
-    match "content/**.en.html" $ do
-        route $ gsubRoute "content/" (const "en/")
-          `composeRoutes` gsubRoute "en.html" (const "html")
-        compile $ do
-            let indexCtx = zhURL <> defaultContext
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.en.html" indexCtx
-                >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
 {-
@@ -71,12 +68,13 @@ postCtx =
     dateField "date" "%B %e, %Y" <>
     defaultContext
 
--- Produce the URL to its English/Chinese version of a given context
-enURL :: Context a
-enURL = field "en-url" (fmap (substUpDom "en") . getURL)
+langField :: String -> Context a
+langField = constField "lang" 
 
-zhURL :: Context a
-zhURL = field "zh-url" (fmap (substUpDom "zh") . getURL)
+-- Produce the URL to its English/Chinese version of a given context
+biURL :: Context a
+biURL = field "en-url" (fmap (substUpDom "en") . getURL)
+  <> field "zh-url" (fmap (substUpDom "zh") . getURL)
 
 -- An ad hoc approach to change /xxx/yyy to /dom/yyy
 substUpDom :: String -> String -> String
