@@ -1,3 +1,23 @@
+---
+  zh:
+    ocean-button: 程式語言
+    ocean-intro: 海年介紹
+    mountain-button: 正規驗證
+    mountain-intro: 山年介紹
+    current: 應屆課程
+    registration: 報名資訊
+    contact: 聯絡我們
+    lang-toggle: English
+  en:
+    ocean-button: Ocean
+    ocean-intro: Programming Language
+    mountain-button: Mountain
+    mountain-intro: Formal Verification
+    current: Current
+    registration: Registration
+    contact: Contact
+    lang-toggle: 中文
+---
 <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
     data-target="#nav-general-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,10 +29,10 @@
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          程式語言
+          $LC.ocean-button$
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/$lang$/ocean.html">海年介紹</a>
+          <a class="dropdown-item" href="/$lang$/ocean.html">$LC.ocean-intro$</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">2020</a>
           <a class="dropdown-item" href="#">2018</a>
@@ -24,10 +44,10 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          正規驗證
+          $LC.mountain-button$
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/$lang$/mountain.html">山年介紹</a>
+          <a class="dropdown-item" href="/$lang$/mountain.html">$LC.mountain-intro$</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">2019</a>
           <a class="dropdown-item" href="#">2017</a>
@@ -41,68 +61,22 @@
 
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">應屆課程</a>
+        <a class="nav-link" href="#">$LC.current$</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#">報名資訊</a>
+        <a class="nav-link" href="#">$LC.registration$</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#contact">聯絡我們</a>
+        <a class="nav-link" href="#contact">$LC.contact$</a>
       </li>
     </ul>
   </div>
-
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto small">
       <li class="nav-item">
-        <a class="nav-link" href=$en-url$>English</a>
+        <a class="nav-link" href="$LC-url$">$LC.lang-toggle$</a>
       </li>
     </ul>
   </div>
-
 </nav>
-
-<div class="container">
-  <div class="jumbotron text-center">
-    <h2>$title$<br>
-    $if(subtitle)$
-    <small class="text-muted">$subtitle$</small> 
-    $endif$</h2>
-  </div>
-  $body$
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
-      <div class="col-6 col-md">
-        <h5>報名資訊</h5>
-      </div>
-
-      <div class="col-6 col-md">
-        <h5>社群網站</h5>
-        <ul class="list-unstyled text-small list-inline">
-          <li class="list-inline-item">
-            <a class="text-muted" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
-          </li>
-
-          <li class="list-inline-item">
-            <a class="text-muted" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#"><i class="fab fa-slack"></i></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md" id="contact">
-        <h5>聯絡我們</h5>
-        <ul class="list-unstyled text-small list-inline">
-          <li class="list-inline-item">
-            <a class="text-muted" href="#"><i class="fas fa-envelope"></i></a>
-          </li>
-          <li class="list-inline-item">
-             <a class="text-muted" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer> 
-</div>
+$body$

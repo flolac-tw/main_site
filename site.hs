@@ -1,32 +1,25 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE BlockArguments #-}
 import           Data.Monoid (mappend)
+import           Control.Monad
 import           Hakyll
+
+import           Multilingual
 
 main :: IO ()
 main = hakyll $ do
     createRedirects [("index.html", "zh/index.html")]
 
-    match "content/**.zh.html" $ do
-        route $ gsubRoute "content/" (const "zh/")
-          `composeRoutes` gsubRoute "zh.html" (const "html")
+    forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
+        route $ gsubRoute "content/" (const $ lc ++ "/")
         compile $ do
-            let indexCtx = langField "zh" <> biURL <> defaultContext
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.zh.html" indexCtx
-                >>= loadAndApplyTemplate "templates/head.html" indexCtx
-                >>= relativizeUrls
-
-    match "content/**.en.html" $ do
-        route $ gsubRoute "content/" (const "en/")
-          `composeRoutes` gsubRoute "en.html" (const "html")
-        compile $ do
-            let indexCtx = langField "en" <> biURL <> defaultContext
-            getResourceBody
-                >>= applyAsTemplate indexCtx
-                >>= loadAndApplyTemplate "templates/default.en.html" indexCtx
-                >>= loadAndApplyTemplate "templates/head.html" indexCtx
+            let ctx = langToggleURL lc <> defaultContext
+            getResourceBody >>= applyLC lc
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= loadAndApplyTemplateLC "templates/nav.html" lc ctx
+                >>= loadAndApplyTemplateLC "templates/footer.html" lc ctx
+                >>= loadAndApplyTemplateLC "templates/head.html" lc ctx
                 >>= relativizeUrls
 
     match "assets/img/**" $ do
@@ -68,20 +61,10 @@ postCtx =
     dateField "date" "%B %e, %Y" <>
     defaultContext
 
-langField :: String -> Context a
-langField = constField "lang" 
-
+------------------------------------------------------------------------------
 -- Produce the URL to its English/Chinese version of a given context
-biURL :: Context a
-biURL = field "en-url" (fmap (substUpDom "en") . getURL)
-  <> field "zh-url" (fmap (substUpDom "zh") . getURL)
-
--- An ad hoc approach to change /xxx/yyy to /dom/yyy
-substUpDom :: String -> String -> String
-substUpDom dom = ('/':) . (dom ++) . dropWhile (/= '/') . tail
-
-getURL :: Item a -> Compiler String
-getURL i = do
-    let id = itemIdentifier i
-        empty' = fail $ "No route url found for item " ++ show id
-    maybe empty' toUrl <$> getRoute id
+langToggleURL :: String -> Context a
+langToggleURL lc = field "LC-url" $ case lc of
+    "zh" -> fmap (substUpDom "en") . getURL
+    "en" -> fmap (substUpDom "zh") . getURL
+    _    -> undefined

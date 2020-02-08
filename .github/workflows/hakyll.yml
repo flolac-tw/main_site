@@ -56,7 +56,7 @@ jobs:
         #
         # ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
         #
-        # and add 
+        # and add
         #
         #   1. the private key as a secrete ACTIONS_DEPLOY_KEY in the GitHub repo hosting the source code,
         #   2. the public key as a deploy key in the GitHub repo hosting the website.
