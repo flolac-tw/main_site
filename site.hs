@@ -13,13 +13,12 @@ main = hakyll $ do
     forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
         route $ gsubRoute "content/" (const $ lc ++ "/")
         compile $ do
-            let ctx = langToggleURL lc <> defaultContext
-            getResourceBody >>= applyLC lc
+            let ctx = localeCtx lc <> langToggleURL lc <> defaultContext
+            getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= loadAndApplyTemplateLC "templates/nav.html" lc ctx
-                >>= loadAndApplyTemplateLC "templates/footer.html" lc ctx
-                >>= loadAndApplyTemplateLC "templates/head.html" lc ctx
+                >>= loadAndApplyTemplatesLC lc ctx
+                  ["templates/nav.html", "templates/footer.html", "templates/head.html"]
                 >>= relativizeUrls
 
     match "assets/img/**" $ do
@@ -31,6 +30,7 @@ main = hakyll $ do
         compile compressCssCompiler
 
     match "templates/*" $ compile templateBodyCompiler
+
 {-
     match "content/posts/*" $ do
         route $ gsubRoute "content/" (const "") `composeRoutes` setExtension "html"
@@ -64,7 +64,7 @@ postCtx =
 ------------------------------------------------------------------------------
 -- Produce the URL to its English/Chinese version of a given context
 langToggleURL :: String -> Context a
-langToggleURL lc = field "LC-url" $ case lc of
+langToggleURL lc = field "LC-toggle-url" $ case lc of
     "zh" -> fmap (substUpDom "en") . getURL
     "en" -> fmap (substUpDom "zh") . getURL
-    _    -> undefined
+    _    -> getURL

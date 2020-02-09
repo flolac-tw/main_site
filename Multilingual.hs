@@ -3,6 +3,7 @@
 
 module Multilingual where
 
+import           Control.Monad
 import           Data.Monoid
 import           Data.List
 import qualified Data.HashMap.Strict            as HMS
@@ -12,19 +13,20 @@ import           Data.Yaml
 import           Hakyll
 
 ------------------------------------------------------------------------------
+loadAndApplyTemplatesLC lc ctx ids it = 
+    foldM (\item tpl -> loadAndApplyTemplateLC tpl lc ctx item) it ids
+
 loadAndApplyTemplateLC :: Identifier -> String -> Context a -> Item a -> Compiler (Item String)
 loadAndApplyTemplateLC id lc context item =
     let locale = redirectCtx "LC." (lc ++ ".") $ metaFile (toFilePath id)
         ctx    = constField "lang" lc <> locale <> context
     in loadAndApplyTemplate id ctx item
 
-applyLC :: String -> Item String -> Compiler (Item String)
-applyLC lc =
+localeCtx :: String -> Context a
+localeCtx lc = 
     let intLC  = metadataFieldDot
         locale = redirectCtx "LC." (lc ++ ".") intLC
-        ctx    = constField "lang" lc <> locale <> idCtx
-    in applyAsTemplate ctx
-
+    in constField "lang" lc <> locale
 ------------------------------------------------------------------------------
 -- Various contexts
 
@@ -34,10 +36,6 @@ redirectCtx origin after (Context f) = Context $ \k a i ->
     case origin `stripPrefix` k of
         Just k'   -> f (after ++ k') a i
         Nothing   -> f k a i
-
--- Every variable $xxx$ is substituted by $xxx$ itself.
-idCtx :: Context a
-idCtx = Context $ \k a i -> return $ StringField $ "$" ++ k ++ "$"
 
 -- Load a file as metadata
 metaFile :: FilePath -> Context a
