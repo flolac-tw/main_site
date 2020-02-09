@@ -13,12 +13,12 @@ main = hakyll $ do
     forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
         route $ gsubRoute "content/" (const $ lc ++ "/")
         compile $ do
-            let ctx = defaultContext <> localeCtx lc <> langToggleURL lc 
+            let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
             getResourceBody
                 >>= applyAsTemplate ctx
                 >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= loadAndApplyTemplateLC "templates/nav.html"    lc ctx
-                >>= loadAndApplyTemplateLC "templates/footer.html" lc ctx
+                >>= loadAndApplyTemplatesLC lc ctx
+                  ["templates/nav.html", "templates/footer.html"]
                 >>= loadAndApplyTemplate "templates/head.html" ctx
                 >>= relativizeUrls
 
