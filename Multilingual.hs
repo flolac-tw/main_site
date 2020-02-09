@@ -13,7 +13,7 @@ import           Data.Yaml
 import           Hakyll
 
 ------------------------------------------------------------------------------
-loadAndApplyTemplatesLC lc ctx ids it = 
+loadAndApplyTemplatesLC lc ctx ids it =
     foldM (\item tpl -> loadAndApplyTemplateLC tpl lc ctx item) it ids
 
 loadAndApplyTemplateLC :: Identifier -> String -> Context a -> Item a -> Compiler (Item String)
@@ -23,7 +23,7 @@ loadAndApplyTemplateLC id lc context item =
     in loadAndApplyTemplate id ctx item
 
 localeCtx :: String -> Context a
-localeCtx lc = 
+localeCtx lc =
     let intLC  = metadataFieldDot
         locale = redirectCtx "LC." (lc ++ ".") intLC
     in constField "lang" lc <> locale
