@@ -6,7 +6,6 @@
     mountain-intro: 山年介紹
     current: 應屆課程
     registration: 報名資訊
-    contact: 聯絡我們
     lang-toggle: English
   en:
     ocean-button: Ocean
@@ -15,7 +14,6 @@
     mountain-intro: Formal Verification
     current: Current
     registration: Registration
-    contact: Contact
     lang-toggle: 中文
 ---
 <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
@@ -64,27 +62,15 @@
       </li>
     </ul>
   </div>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/$lang$/contact.html"><i class="fas fa-envelope"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
-      </li>
-      <li class="nav-item">
-         <a class="nav-link" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fab fa-slack"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
-      </li>
-    </ul>
+  <div class="collapse navbar-collapse" id="nav-general-menu">
+    <div class="navbar-nav ml-md-auto">
+      <a class="nav-link nav-item" href="/$lang$/contact.html"><i class="fas fa-envelope"></i></a>
+      <a class="nav-link nav-item" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+      <a class="nav-link nav-item" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+      <a class="nav-link nav-item" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
+      <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a>
+      <a class="nav-link nav-item" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
+    </div>
   </div>
 </nav>
 $body$
