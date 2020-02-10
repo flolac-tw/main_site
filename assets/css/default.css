@@ -1,0 +1,14 @@
+h1, h2, h3 {
+  font-family: 'Noto Serif TC', serif;
+}
+
+h4, h5, h6, body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.de-emph {
+  opacity: 0.4;
+  transition: 0.4s;
+}
+
+.de-emph:hover {opacity: 1}
