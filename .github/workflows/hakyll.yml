@@ -1,6 +1,12 @@
 name: Hakyll site CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Run every day at 20:00. 
+    - cron: '0 20 * * *'
 
 jobs:
   build:
