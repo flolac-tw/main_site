@@ -1,17 +1,17 @@
 ---
   zh:
-    ocean-button: 程式語言
-    ocean-intro: 海年介紹
-    mountain-button: 正規驗證
-    mountain-intro: 山年介紹
+    theme-intro: 課程主題
+    ocean-intro: 程式語言
+    mountain-intro: 正規驗證
+    past-activity: 歷屆課程
     current: 應屆課程
     registration: 報名資訊
     lang-toggle: English
   en:
-    ocean-button: Ocean
+    theme-intro: Courses
     ocean-intro: Programming Language
-    mountain-button: Mountain
     mountain-intro: Formal Verification
+    past-activity: Events
     current: Current
     registration: Registration
     lang-toggle: 中文
@@ -26,32 +26,33 @@
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          $LC.ocean-button$
+          $LC.theme-intro$
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="/$lang$/ocean.html">$LC.ocean-intro$</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/$lang$/2020">2020</a>
-          <a class="dropdown-item" href="#">2018</a>
-          <a class="dropdown-item" href="#">2016</a>
-          <a class="dropdown-item" href="#">2014</a>
-          <a class="dropdown-item" href="#">2012</a>
-          <a class="dropdown-item" href="#">2010</a>
+          <a class="dropdown-item" href="/$lang$/mountain.html">$LC.mountain-intro$</a>
         </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          $LC.mountain-button$
+          $LC.past-activity$
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="/$lang$/mountain.html">$LC.mountain-intro$</a>
-          <div class="dropdown-divider"></div>
+          <div class="dropdown-item bg-light">$LC.mountain-intro$</div>
           <a class="dropdown-item" href="#">2019</a>
           <a class="dropdown-item" href="#">2017</a>
           <a class="dropdown-item" href="#">2015</a>
           <a class="dropdown-item" href="#">2013</a>
           <a class="dropdown-item" href="#">2011</a>
           <a class="dropdown-item" href="#">2009</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item">$LC.mountain-intro$</div>
+          <a class="dropdown-item" href="/$lang$/2020">2020</a>
+          <a class="dropdown-item" href="#">2018</a>
+          <a class="dropdown-item" href="#">2016</a>
+          <a class="dropdown-item" href="#">2014</a>
+          <a class="dropdown-item" href="#">2012</a>
+          <a class="dropdown-item" href="#">2010</a>
         </div>
       </li>
       <li class="nav-item">
