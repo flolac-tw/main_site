@@ -56,11 +56,12 @@ main = hakyll $ do
 -}
 
 
---------------------------------------------------------------------------------
+{-
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" <>
     defaultContext
+-}
 
 ------------------------------------------------------------------------------
 -- Produce the URL to its English/Chinese version of a given context
