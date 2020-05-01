@@ -33,13 +33,6 @@ main = hakyll $ do
     match "templates/*" $ compile templateBodyCompiler
 
 {-
-    match "content/posts/*" $ do
-        route $ gsubRoute "content/" (const "") `composeRoutes` setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    postCtx
-            >>= loadAndApplyTemplate "templates/default.html" postCtx
-            >>= relativizeUrls
-
     create ["archive.html"] $ do
         route idRoute
         compile $ do

@@ -1,18 +1,18 @@
 ---
   zh:
     theme-intro: 課程主題
-    ocean-intro: 程式語言
-    mountain-intro: 正規驗證
-    past-activity: 歷屆課程
+    ocean-intro: 型別原理
+    mountain-intro: 自動驗證
+    past-activity: 過往課程
     current: 應屆課程
     registration: 報名資訊
     lang-toggle: English
   en:
     theme-intro: Themes
-    ocean-intro: Programming Language
-    mountain-intro: Formal Verification
-    past-activity: Events
-    current: Current
+    ocean-intro: Type-Theoretic Foundations
+    mountain-intro: Automated Verification
+    past-activity: Past Events
+    current: Current Event
     registration: Registration
     lang-toggle: 中文
 ---
@@ -21,10 +21,10 @@
     data-target="#nav-general-menu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="/$lang$/index.html">FλOL∀C</a>
+  <a class="navbar-brand" href="/$lang$/index.html">FLOL∀C</a>
   <div class="collapse navbar-collapse" id="nav-general-menu">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
+<!--      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
           $LC.theme-intro$
         </a>
@@ -33,6 +33,14 @@
           <a class="dropdown-item" href="/$lang$/mountain.html">$LC.mountain-intro$</a>
         </div>
       </li>
+--!>
+      <li class="nav-item">
+        <a class="nav-link" href="/$lang$/2020">$LC.current$</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">$LC.registration$</a>
+      </li>
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
           $LC.past-activity$
@@ -54,12 +62,6 @@
           <a class="dropdown-item" href="#">2011</a>
           <a class="dropdown-item" href="#">2009</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/$lang$/2020">$LC.current$</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">$LC.registration$</a>
       </li>
     </ul>
   </div>

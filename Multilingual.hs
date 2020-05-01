@@ -78,7 +78,7 @@ joinBy _ []     = []
 joinBy _ [x]    = x
 joinBy s (x:xs) = x ++ s : joinBy s xs
 
--- An ad hoc approach to change /xxx/yyy to /dom/yyy
+-- An ad-hoc approach of changing from /xxx/yyy to /dom/yyy
 substUpDom :: String -> String -> String
 substUpDom dom = joinBy '/' . ([]:) . (dom:) . drop 2 . splitBy '/'
 
