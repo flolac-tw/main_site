@@ -5,23 +5,25 @@
     subtitle: Formosan Summer School on Logic, Language, and Computation
     aim: 宗旨
     aim-content: <p>近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。</p><p>「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。</p>
-    past-events: 歷屆課程
+    past-events: 歷屆特別講題
     founding-members: 創辦委員
     ocean-intro-content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     mountain-intro-content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     PL: 型別原理
     FM: 自動驗證
+    performance: 豆資訊
   en:
     title: Formosan Summer School on Logic, Language, and Computation
     subtitle: 「邏輯、語言與計算」暑期研習營
     aim: Aim
     aim-content: <p>近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。</p><p>「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。</p>
-    past-events: Past events
+    past-events: Special Lectures
     founding-members: Founding members
     ocean-intro-content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     mountain-intro-content: <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     PL: Type-Theoretic Foundations
     FM: Automated Verification
+    performance: Trivia
 ---
 <div class="row">
   <div class="col-12">
@@ -48,7 +50,97 @@
 </div>
 
 <div class="jumbotron">
-  <h2>$LC.past-events$</h2> 
+  <div class="row p-2">
+    <div class="col-md">
+      <h2>$LC.past-events$</h2> 
+    </div>
+  </div>
+  <div class="row p-2">
+    <ul>
+      <li>包含一系列各年份的
+        <ul>
+          <li>講題名稱</li>
+          <li>講者</li>
+          <li>年份</li>
+          <li>相關圖片（或論文截圖）</li>
+          <li>以及連結至對應的課程網站</li>
+        </ul>
+      </li>
+      <li>考慮用 <a href="https://getbootstrap.com/docs/4.4/components/carousel/#with-captions">Carousel</a> 橫幅呈現</li>
+    </ul>
+  </div>
 </div>
 
-<div class="jumbotron"><h2>$LC.founding-members$</h2></div>
+<div class="jumbotron">
+  <div class="row p-2">
+    <div class="col-md">
+      <h2>$LC.performance$</h2> 
+    </div>
+  </div>
+  <div class="row p-2">
+    <ul>
+      <li>學員心得回饋</li>
+      <li>系所人數統計</li>
+      <li>學界業界人數統計</li>
+      <li>諸如此類</li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row p-2">
+    <div class="col-md">
+      <h2>$LC.founding-members$</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md">
+        <div class="card" style="width: 11rem;">
+          <div class="card-body">
+            <h5 class="card-title">陳恭</h5>
+            <h6 class="card-subtitle mb-2 text-muted">政大資訊科學系</h6>
+            <a href="#" class="card-link">個人網站</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="card" style="width: 11rem;">
+          <div class="card-body">
+            <h5 class="card-title">莊庭瑞</h5>
+            <h6 class="card-subtitle mb-2 text-muted">中研院資訊所</h6>
+            <a href="#" class="card-link">個人網站</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="card" style="width: 11rem;">
+          <div class="card-body">
+            <h5 class="card-title">穆信成</h5>
+            <h6 class="card-subtitle mb-2 text-muted">中研院資訊所</h6>
+            <h6 class="card-subtitle mb-2 text-muted">台大資訊管理系</h6>
+            <a href="#" class="card-link">個人網站</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="card" style="width: 11rem;">
+          <div class="card-body">
+            <h5 class="card-title">蔡益坤</h5>
+            <h6 class="card-subtitle mb-2 text-muted">台大資訊管理系</h6>
+            <a href="#" class="card-link">個人網站</a>
+          </div>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="card" style="width: 11rem;">
+          <div class="card-body">
+            <h5 class="card-title">王柏堯</h5>
+            <h6 class="card-subtitle mb-2 text-muted">中研院資訊所</h6>
+            <h6 class="card-subtitle mb-2 text-muted">台大資訊工程系</h6>
+            <a href="#" class="card-link">個人網站</a>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</div>  
