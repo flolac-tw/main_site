@@ -11,4 +11,17 @@ h4, h5, h6, body {
   transition: 0.4s;
 }
 
-.de-emph:hover {opacity: 1}
+.de-emph:hover {opacity: 1; }
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
