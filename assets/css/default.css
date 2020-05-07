@@ -13,15 +13,28 @@ h4, h5, h6, body {
 
 .de-emph:hover {opacity: 1; }
 
+.de-emph-weak {
+  opacity: 0.2;
+  transition: 0.2s;
+}
+
+.de-emph-weak:hover {
+  opacity: 1;
+}
+
+blockquote footer {
+
+}
+
 blockquote p {
-    padding: 15px;
-    background: #eee;
-    border-radius: 5px;
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
 }
 blockquote p::before {
-    content: '\201C';
+  content: '\201C';
 }
 
 blockquote p::after {
-    content: '\201D';
+  content: '\201D';
 }

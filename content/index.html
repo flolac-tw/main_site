@@ -55,91 +55,91 @@
     FM: Automated Verification
     performance: Trivia
 ---
-<div class="row border">
-  <div class="col">
-    <h2 class="text-center">$LC.title$<br><small class="text-muted">$LC.subtitle$</small></h2>
-  </div>
-</div>
 
-<div class="row m-md-5 m-2 border">
-  <div class="col-md-12 text-justify">
-    <h3>$LC.aim$</h3>
+<div class="row p-4 border">
+  <div class="col-md-12 text-justify de-emph-weak">
+    <h4>$LC.aim$</h4>
     $LC.aim-content$
   </div>
 </div>
 
-<div class="row p-2 border">
-  <div class="col-md-6 de-emph border">
-    <h3><a href="/$lang$/ocean.html">$LC.PL$</a></h3>
+<div class="row border">
+  <div class="col">
+    <h1 class="text-center">$LC.title$<br><small class="text-muted">$LC.subtitle$</small></h1>
+  </div>
+</div>
+
+<div class="row p-2 border de-emph">
+  <div class="col-12 col-lg-6 border">
+    <h3>今年主題：$LC.PL$</h3>
     $LC.ocean-intro-content$
   </div>
-  <div class="col-md-6 de-emph border">
-    <h3><a href="/$lang$/mountain.html">$LC.FM$</a></h3>
+  <div class="col-12 col-lg-6 border">
+  </div>
+</div>
+
+<div class="row p-2 border de-emph">
+  <div class="col-12 col-lg-6 border">
+  </div>
+  <div class="col-12 col-lg-6 border">
+    <h3>來年主題：$LC.FM$</h3>
     $LC.mountain-intro-content$
   </div>
 </div>
 
-<div class="row p-2 border">
-  <div id="feature" class="carousel slide p-2" data-ride="carousel">
+<div class="row p-2 border de-emph">
+  <div class="col">
+    <div id="feature" class="carousel slide p-2" data-ride="carousel">
 
-    <!-- Indicators -->
-    <ul class="carousel-indicators">
-      <li data-target="#feature" data-slide-to="0" class="active"></li>
-      <li data-target="#feature" data-slide-to="1"></li>
-      <li data-target="#feature" data-slide-to="2"></li>
-    </ul>
-    
-    <!-- The slideshow -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/img/session_types.png" style="opacity:0.2" alt="Session Types" width=1000 height=600>
-        <div class="carousel-caption text-dark" style="text-shadow:0px 0px 8px white">
-          <a href="http://flolac.iis.sinica.edu.tw/flolac18/courses/Pi.html"><h3>Session Types</h3></a>
-          <p>2018 年邀請到倫敦帝國學院 (Imperial College London) 的吉田展子 (Nobuko Yoshida) 教授和 Rumyana Neykova 研究員為我們講授 π-calculus 與 session types. 吉田教授長年致力於並行計算模型與型別系統的研究，不僅學術成果豐碩，亦與業界密切合作，是介紹此領域理論與實踐的不二人選。Neykova 研究員以他在 “multiparty session types” 上的研究取得博士學位，除了設計理論框架，更將 multiparty session types 實作於 Python, Erlang 等主流語言，並已累積豐富的教學經驗。</p>
-          <p>註：底圖取自 Tzu-chun Chen, Mariangiola Dezani-Ciancaglini, Alceste Scalas, and Nobuko Yoshida. On the preciseness of subtyping in session types. Logical Methods in Computer Science, 13(2:12), 2017. https://doi.org/10.23638/LMCS-13(2:12)2017</p>
+      <ul class="carousel-indicators">
+        <li data-target="#feature" data-slide-to="0" class="active"></li>
+        <li data-target="#feature" data-slide-to="1"></li>
+        <li data-target="#feature" data-slide-to="2"></li>
+      </ul>
+      
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="/img/session_types.png" class="img-fuluid" style="opacity:0.2">
+          <div class="carousel-caption text-dark" style="text-shadow:0px 0px 8px white">
+            <a href="http://flolac.iis.sinica.edu.tw/flolac18/courses/Pi.html"><h3>Session Types</h3></a>
+            <p>2018 年邀請到英國倫敦帝國學院 Imperial College London 的吉田展子教授和 Rumyana Neykova 研究員為我們講授 π-calculus 與 session types。吉田教授長年致力於並行計算模型與型別系統的研究，不僅學術成果豐碩，亦與業界密切合作，是介紹此領域理論與實踐的不二人選。Neykova 研究員以他在 “multiparty session types” 上的研究取得博士學位，除了設計理論框架，更將 multiparty session types 實作於 Python, Erlang 等主流語言，並累積豐富的教學經驗。</p>
+            <p>註：底圖取自 T.-C. Chen, M. Dezani-Ciancaglini, A. Scalas, and N. Yoshida. On the preciseness of subtyping in session types. LMCS, 13(2:12), 2017. https://doi.org/10.23638/LMCS-13(2:12)2017</p>
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/img/block_chain.png" style="opacity:0.2" class="opacity-2" alt="Logic" width=1000 height=600> 
-        <div class="carousel-caption text-dark" style="text-shadow:0px 0px 8px white">
-          <a href="#"><h3>區塊鏈</h3></a>
-          <p> 2019 年邀請了 Jun Furuse 以 Tezos 為案例來為我們講解 formal verification 在業界的應用。Furuse 先生會由淺入深逐步介紹：blockchain、smart contract、為何業界需要 formal verification，以及，業界如何上述這些領域範圍中應用 formal verification。</p>
-          <p>底圖取自當年上課投影片。</p>
+
+        <div class="carousel-item">
+          <img src="/img/block_chain.png" class="img-fluid" style="opacity:0.2"> 
+          <div class="carousel-caption text-dark" style="text-shadow:0px 0px 8px white">
+            <a href="#"><h3>區塊鏈</h3></a>
+            <p> 2019 年邀請了 Jun Furuse 以 Tezos 為案例來為我們講解 formal verification 在業界的應用。Furuse 先生會由淺入深逐步介紹：blockchain、smart contract、為何業界需要 formal verification，以及，業界如何上述這些領域範圍中應用 formal verification。</p>
+            <p>底圖取自當年上課投影片。</p>
+          </div>
         </div>
+
       </div>
-      <div class="carousel-item">
-        <img src="/img/logic.jpg" style="opacity:0.2" class="opacity-2" alt="Logic" width=1000 height=600> 
-        <div class="carousel-caption text-dark" style="text-shadow:0px 0px 8px white">
-          <a href="#"><h3>邏輯</h3></a>
-          <p>（直構邏輯介紹）</p>
-          <p>底圖攝自柯向上上課狀況。</p>
-        </div>
-      </div>
+      
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#feature" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#feature" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
     </div>
-    
-    <!-- Left and right controls -->
-    <a class="carousel-control-prev" href="#feature" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#feature" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
   </div>
 </div>
 
 
-<div class="row p-2 border">
-  <h3>學員證詞</h3>
-</div>
-
-<div class="row p-2 border">
-  <div class="col">
+<div class="row p-2 de-emph border">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>只要對 theoretical computer science稍微有興趣的人，沒去一定會後悔得哭出來！特別今年是關於languages 的主題，就是那些 type systems、denotational semantics 之類的東西！跌斷手都要去的呀！</p>
       <footer> 2007 年學員（兼講師） K </footer>
     </blockquote>
   </div>
-  <div class="col">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>
       學到了非常多東西，也認識了一些很厲害的朋友。另外也看到了很多的外國講師（據說都是大師！）。最後一天考完還有 pizza 吃到飽！想學些新東西的同學一定要來參加一下！
@@ -147,29 +147,27 @@
       <footer> 某任不具名學員</footer>
     </blockquote>
   </div>
-  <div class="col">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>這些人超有誠意的！講什麼東西都怕你不懂，從最最基礎的東西開始解釋，哪像某物理系暑期課程，老師一上台就『我 assume 你們都有點 xxx 的基礎…… 』XD</p>
       <footer> 2010 年學員 W （數學系參加者）</footer>
     </blockquote>
   </div>
-</div>
 
-<div class="row p-2 border">
-  <div class="col">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>老師很親切、解釋很清楚，但覺得可以把DTP的比重增加一些</p>
-      <footer> 2014 年學員<footer>
+      <footer> 2014 年學員</footer>
     </blockquote>
   </div>
-  <div class="col">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>總體來說，各門課的上課講述與講義編寫都很清楚，感謝講師的用心，我學到非常多老師與助教們也都非常有熱忱帶大家學習，覺得這門課的品質很棒!...
       </p>
       <footer> 2018 年不具名學員</footer>
     </blockquote>
   </div>
-  <div class="col">
+  <div class="col-12 col-md-4">
     <blockquote>
       <p>期待後年的課程!
       </p>
@@ -178,13 +176,13 @@
   </div>
 </div>
 
-<div class="row p-2 border">
+<div class="row p-2 border de-emph">
   <div class="col">
     <div class="media">
-      <img src="/img/year-stat.png" height="240" width="240" class="mr-3" alt="學員年級統計">
+      <img src="/img/year-stat.png" stylee="img-fluid" height="auto" width="240px" class="mr-3" alt="學員年級統計">
       <div class="media-body">
-        <h5 class="mt-0">這課程適合怎樣幾年級修呢？</h5>
-        歷年來參加者的年齡分布很廣，從高中生到社會人士都有，根據我們的統計，從大學部到研究所都有年及分布很廣。課程沒有預設背景，似乎不同年級的學員（盡力參與）都可以跟得上課程，我們也有助教群可以協助學員哦！
+        <h5 class="mt-0">適合幾年級的學生呢？</h5>
+        根據我們的統計，歷年來參加者的年齡分布很廣，除了大學生與研究生外，還有少數高中生跟不少的社會人士。課程沒有預設背景，不同年級的學員（盡力參與）都可以跟得上課程，我們也有助教群可以協助學員。
       </div>
     </div>
   </div>
@@ -192,20 +190,42 @@
     <div class="media">
       <img src="/img/fatality.png" height="240" width="240" class="mr-3" alt="學員年級統計">
       <div class="media-body">
-        <h5 class="mt-0">這課程很難嗎？</h5>
-        <p>因為各種科系背景的不同，每個人狀況都不大一樣。大致上我們發現跟學員的年級沒有太大關係，主要是科系背景。歷年來數學系跟資工系高分通過的比較多，但也曾經有財金系的同學拿到滿分哦！至於不及格的同學則是沒有明顯的差異，即便是最相關的資工系也有不少人最後沒拿到學分（殘念⋯⋯）</p>
+        <h5 class="mt-0">課程很難嗎？</h5>
+        <p>因為各種科系背景的不同，每個人狀況都不大一樣。大致上我們發現科系背景間的差異較大，例如歷年來數學系跟資工系高分通過的比較多，但也曾有財金系的同學拿到滿分哦！至於不及格的同學則是沒有明顯的差異，即便是最相關的資工系也有不少人最後沒拿到學分（殘念⋯⋯）</p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row p-2 border">
+<div class="row border de-emph">
+  <div class="col">
+    <h5>報名方式</h5>
+    目前報名尚未開始，請密切注意社群網站公告喔！
+  </div>
+  <div class="col">
+    <h5>招收學員人數</h5>
+    <ul>
+      <li>修課生：40 人</li>
+      <li>旁聽生：40 人</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h5>課程費用</h5>
+    此課程不收費。若學員需要學分，且非台大學生，則需繳交學分費給台灣大學校方。
+  </div>
+  <div class="col">
+    <h5>報名時間</h5>
+    每年約開課前一個月左右截止。
+  </div>
+</div>
+
+<div class="row p-2 border de-emph">
   <div class="col-md">
     <h2>$LC.founding-members$</h1>
   </div>
 </div>
-<div class="row border">
-  <div class="col-md">
+<div class="row border de-emph">
+  <div class="col">
       <div class="card" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title">陳恭</h5>
@@ -214,7 +234,7 @@
         </div>
       </div>
   </div>
-  <div class="col-md">
+  <div class="col">
       <div class="card" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title">莊庭瑞</h5>
@@ -223,7 +243,7 @@
         </div>
       </div>
   </div>
-  <div class="col-md">
+  <div class="col">
       <div class="card" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title">穆信成</h5>
@@ -233,7 +253,7 @@
         </div>
       </div>
   </div>
-  <div class="col-md">
+  <div class="col">
       <div class="card" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title">蔡益坤</h5>
@@ -242,7 +262,7 @@
         </div>
       </div>
   </div>
-  <div class="col-md">
+  <div class="col">
       <div class="card" style="width: 11rem;">
         <div class="card-body">
           <h5 class="card-title">王柏堯</h5>
