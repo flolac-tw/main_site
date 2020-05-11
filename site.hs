@@ -30,6 +30,10 @@ main = hakyll $ do
         route   (gsubRoute "assets/" (const ""))
         compile compressCssCompiler
 
+    match "assets/html/**" $ do
+        route   (gsubRoute "assets/html/" (const ""))
+        compile copyFileCompiler
+
     match "templates/*" $ compile templateBodyCompiler
 
 {-
