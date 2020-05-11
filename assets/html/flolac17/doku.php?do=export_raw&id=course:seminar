@@ -1,0 +1,29 @@
+===== Title =====
+
+Blockchain 101
+
+===== Speaker =====
+
+[[https://sites.google.com/view/mikehsiao/home|Mike Hsiao]]
+
+Department of Management Information Systems, National Chengchi University
+===== Abstract =====
+
+FinTech/Blockchain is like teenage sex: everyone talks about it,
+nobody really knows how to do it, everyone thinks everyone else is
+doing it, so everyone claims they are doing it. In this talk, we are
+going to review the history of FinTech and blockchain and introduce
+how it works in the modern computing environment. The talk covers how
+Bitcoin (digital currency) and Etherereum (smart contract) which are
+the two of the most important blockchain-based applications are
+designed and implemented; and what are the pros and cons of such
+blockchain-based applications. Digital currency allows for
+instantaneous transactions and borderless transfer-of-ownership. Smart
+contracts are computer protocols intended to facilitate, verify, or
+enforce the negotiation or performance of a contract. They both seem
+quite nice and convenient for us in the digital world, but we should
+pay attention that Bitcoin and Etherereum have certain limitations
+that we might neglect before and should point out. Further, not all
+the FinTech problems can be solved by the blockchain; if we understand
+the limitation of such new technologies, we could find a better way to
+utilize them.

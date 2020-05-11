@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://flolac.iis.sinica.edu.tw/flolac17/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/feed.php">
+        <title>2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17) course</title>
+        <description></description>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/</link>
+        <image rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico" />
+       <dc:date>2020-05-05T02:48:02+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;rev=1504232784&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:learning&amp;rev=1500949827&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:seminar&amp;rev=1504861678&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:smt&amp;rev=1504514859&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:string&amp;rev=1502951494&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:synthesis&amp;rev=1500883564&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:vdm&amp;rev=1504680466&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico">
+        <title>2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/</link>
+        <url>http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;rev=1504232784&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-01T10:26:24+08:00</dc:date>
+        <title>course:computation</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;rev=1504232784&amp;do=diff</link>
+        <description>In this lecture, we will introduce the simplest computation machinery, finite state automata. Expressions (regular expressions) and logics (WS1S) that are equivalent to finite state automata are also introduced. After languages of finite words, we introduce ω-automata, which are finite state automata on infinite words. The linear-time temporal logic is shown to be a strict subset of ω-automata. Finally, basic automata-theoretic model checking is introduced to verify if a system satisfies its spe…</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:learning&amp;rev=1500949827&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-25T10:30:27+08:00</dc:date>
+        <title>course:learning</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:learning&amp;rev=1500949827&amp;do=diff</link>
+        <description>Automata learning is one type of machine learning algorithm studied since the 70s.
+In this lecture, we will cover different types of automata learning algorithms, including the L* algorithm by Dana Angliun, its improved version by Rivest and Shapire, and the tree-based version by Kearns and Vazirani. We will also discuss their applications in system verification.</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:seminar&amp;rev=1504861678&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-08T17:07:58+08:00</dc:date>
+        <title>course:seminar</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:seminar&amp;rev=1504861678&amp;do=diff</link>
+        <description>Title
+
+Blockchain 101
+
+Speaker
+
+Mike Hsiao
+
+Department of Management Information Systems, National Chengchi University
+
+Abstract
+
+FinTech/Blockchain is like teenage sex: everyone talks about it,
+nobody really knows how to do it, everyone thinks everyone else is
+doing it, so everyone claims they are doing it. In this talk, we are
+going to review the history of FinTech and blockchain and introduce
+how it works in the modern computing environment. The talk covers how
+Bitcoin (digital currency) and …</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:smt&amp;rev=1504514859&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-04T16:47:39+08:00</dc:date>
+        <title>course:smt</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:smt&amp;rev=1504514859&amp;do=diff</link>
+        <description>Part I
+
+We introduce some first-order theories in this lecture. Some decidable fragments of first-order theories and decision procedures of satisfiability are also introduced. We will learn how to reduce a problem to a problem in satisfiability modulo theories (SMT) and how to use an SMT solver to solve it.</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:string&amp;rev=1502951494&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-17T14:31:34+08:00</dc:date>
+        <title>course:string</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:string&amp;rev=1502951494&amp;do=diff</link>
+        <description>In computing, a sequence of characters is called a string.  For example, “Hello, World!” is a string (we use double quotes to indicate the beginning and end of the string). This particular string is very familiar
+to programmers since the first programming assignment in many programming textbooks is to write a program that outputs the string</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:synthesis&amp;rev=1500883564&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-07-24T16:06:04+08:00</dc:date>
+        <title>course:synthesis</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:synthesis&amp;rev=1500883564&amp;do=diff</link>
+        <description>Boolean satisfiability (SAT) has become an indispensable tool in the synthesis and verification hardware and software systems. In this lecture, we will cover some fundamental elements of SAT and quantified Boolean satisfiability (QSAT). Some examples will be introduced to show how SAT and QSAT are applied in solving industrial problems.</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:vdm&amp;rev=1504680466&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-09-06T14:47:46+08:00</dc:date>
+        <title>course:vdm</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:vdm&amp;rev=1504680466&amp;do=diff</link>
+        <description>The Vienna Development Method (VDM) is a software development methodology since the 1970s. VDM specification language (VDM-SL) models software systems at a higher level of abstraction. Through the modeling with VDM-SL, analysis of software designs and identification of key features can be achieved at an early stage of software development. This lecture will cover the basic modeling and analysis techniques of VDM-SL. We will also discuss some examples and industrial applications of VDM.</description>
+    </item>
+</rdf:RDF>

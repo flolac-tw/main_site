@@ -1,0 +1,2 @@
+Automata learning is one type of machine learning algorithm studied since the 70s.
+In this lecture, we will cover different types of automata learning algorithms, including the L* algorithm by Dana Angliun, its improved version by Rivest and Shapire, and the tree-based version by Kearns and Vazirani. We will also discuss their applications in system verification.

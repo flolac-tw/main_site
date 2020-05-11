@@ -1,0 +1,249 @@
+ /* ExhibitPlus V1.4a 25.10.2005. Author: Mark Fyvie. Official site: http://exhibitplus.fyvie.net
+
+    This is basestyle.css - a darker style with black left and right margins around a dark purple background
+    Even though colour information is specified here, each HTML page actually calls a second style sheet, and this style sheet contains just the colour information for the various styles. In this way the dark style is modified into other styles */
+ 
+ body {
+	font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; 
+	font-size: small; 
+	color: #ffff99; 
+	font-weight: normal; 
+	font-style: normal; 
+	background-color: black; 
+	background-image: none;
+	margin: 0px;
+	}
+ a:link { 
+	color: #bfbfbf; 
+	} 
+ a:visited { 
+	color: #808080; 
+	}
+ a:hover { 
+	color: white;
+	}
+ p {
+	margin:0px 10px 10px 10px;
+	font-size: small; 
+	font-weight: normal; 
+	font-style: normal; 
+	font-variant: normal;
+	}
+ p.indent { 
+	margin-left: 30pt;
+	}
+ table,tr,td {	
+	padding: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+	clear: left;
+	}
+ img {
+	border: 0px;
+	}
+/* Used to setup the main page structure with borders on the left and right */
+ #centercontent {
+	background: black;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding:5px 25px 20px 35px;
+	background-image: url(purplestripe.gif);
+	}
+
+/* Styles assosicated with index pages */
+ #indexframe {
+	width: 99%;
+	background-color: black;
+	padding: 4px;
+	clear: left;
+	border: 0px;  /* Netscape 4.x friendly */
+	}
+ .folderData { 
+	font-size: xx-small; 
+	color: #666666; 
+	line-height: 90%; 
+	}
+ .folderDescription { 
+	color: #666666; 
+	line-height: 110%;
+	margin-top: 10px;
+	}
+ .folderNavigation {
+	position: relative; 
+	font-size: x-small;
+	}
+ .folderNavigation a { 
+	text-decoration: none;
+	color: white;
+      }
+.folderNavigation a:link { 
+	text-decoration: none;
+	color: white;
+      }
+.folderNavigation a:visited { 
+	text-decoration: none;
+	color: white;
+      }
+.folderNavigation a:hover { 
+	text-decoration: none;
+	color: white;
+      }
+ .float {           /* Used to allow captions under the thumbnails, while at the same time preserving the "free flow" nature of thumbs when the browser is resized */
+	float: left;
+	} 
+ .float p {
+	text-align: center;
+	margin: 0px 10px 2px 10px;
+	}
+ .float p.thumbComment  {
+	font-size: x-small;
+	}
+ .thumbName a { 
+	color: #a1a1a1;
+	text-decoration: none; 
+	}
+ .thumbDate {
+	color: #616161;
+	font-size: x-small;
+	}
+ #w3clogosright {
+	float: right;
+	position: relative;
+	right: -20px;
+	}
+
+/* Styles assosciated with slide pages */
+ #frame {
+	background-color: black;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+	border: 0px;  /* Netscape 4.x friendly */
+	}
+ .minithumb {
+	padding: 0px;
+	visibility: visible;
+	}
+ .minithumbCurrent {
+	border: 1px dashed white;
+	padding: 0px;
+	visibility: visible;
+	}
+ .minithumbBox {
+	float: right;
+	}
+ .photoName { 
+	position: relative;
+	float: left;
+	font-size: medium; 
+	color: white; 
+	font-weight: bold;
+	}
+ .photoPosition { 
+	position: relative;
+	font-size: small; 
+	color: white; 
+	font-weight: normal;
+	}
+ .photoComments {  
+	position: relative;
+	font-family:Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; 
+	font-size: medium; 
+	font-weight: bold; 	
+	font-style: normal; 
+	font-variant: normal; 
+	text-align: center; 
+	}
+ .photoData { 
+	position: relative;
+	font-size: x-small; 
+	color: rgb(0,204,0);
+	}
+ .photoData b { /* This is the bolding used for the fields in the EXIF data. To remove bolding use font-weight:normal here */ 
+	font-weight: bold;
+	}
+ .photoData i { /* This is not used for italics, but to provide the | separator character inside the photoData clase */
+	color: silver; 
+	font-weight: bold; 
+	font-style: normal;
+	}
+ .photoDataPopupBase {
+	position: absolute; 
+	text-align: center;
+	margin: 0 auto; 
+	visibility: visible;
+	width: 90%;
+	background: black;
+	z-index: 20;
+	}
+ .photoDataPopup {
+	position: absolute;
+	left: 0;
+	bottom: 160px;
+	background: black;
+	z-index: 3; 
+	border: 1px outset #777;
+	padding: 2px;
+	font-size: x-small; 
+	color: rgb(0,204,0);
+	visibility: hidden; 
+ 	}
+ .keyboardDataPopup {
+	width: 250px;
+	position: absolute;
+	top: -150px;
+	left: 0;
+	background-color: silver;
+	color: black;
+	text-align: left;
+	z-index: 10; 
+	border: 1px solid black;
+	padding: 5px;
+	font-size: x-small; 
+	visibility: hidden; 
+	float: left;
+ 	}
+ .slideFrameButtons {
+	width: 350px; 
+	position:absolute; 
+	right: 3px; 
+	}
+ #buttonbox_portrait {
+	position: absolute;
+	z-index: 25;
+	}
+ #photonavbar_inside_portrait {
+	position: absolute;
+	right: 75px;
+	z-index: 15;
+	visibility: hidden;
+	}
+ #w3clogosleft {
+	float: left;
+	position: relative;
+	left: -30px;
+	}
+
+/* Styles assosciated with additional files, e.g. news.inc, footer.inc etc */
+ .dateline { 
+	font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; 
+	font-size: x-small;
+	color: rgb(191,191,191); 
+	font-weight: normal; 
+	font-style: normal; 
+	font-variant: normal;
+	}
+ .header { 
+	font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; 
+	font-size: large; 
+	color: white; 
+	font-weight: bold; 
+	font-style: normal; 
+	font-variant: normal;
+	}
+ .footer { 
+	font-size: xx-small; 
+	color: rgb(97,97,97); 
+	text-align: center; 
+	}

@@ -1,0 +1,3 @@
+In this lecture, we will introduce the simplest computation machinery, finite state automata. Expressions (regular expressions) and logics (WS1S) that are equivalent to finite state automata are also introduced. After languages of finite words, we introduce ω-automata, which are finite state automata on infinite words. The linear-time temporal logic is shown to be a strict subset of ω-automata. Finally, basic automata-theoretic model checking is introduced to verify if a system satisfies its specifications.
+
+{{ :course:automata.pdf | Slides}}, {{ :course:automata_handout.pdf | 4in1 Handout}}, {{ :course:exercises.pdf | Exercises}}, {{ :course:automata_exercises_sol.pdf |Suggested Solutions}}

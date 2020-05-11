@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+
+    <channel>
+        <title>FLOLAC 08</title>
+   	<link>.</link>
+   	
+        
+    	<jalbum:link rel="sub" href="2008_06_30/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="2008_07_01/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="2008_07_02/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="2008_07_03/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="2008_07_04,07/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="2008_07_08,09/album.rss" />   	
+    	
+        
+    </channel>
+</rss>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>en:chap6_simple.c [2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC &#039;10)]</title>
+	<meta name="Author" content="Marcin Mierzejewski @ Zenzire"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Keywords" content="dokuwiki,template,en:chap6_simple.c"/>
+  <meta name="Description" content="page descirpionen:chap6_simple.c"/>
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2010-07-08T08:13:11+0800" />
+<meta name="keywords" content="en,chap6_simple.c" />
+<link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC '10)" />
+<link rel="start" href="chap6_simple.c.html" />
+<link rel="contents" href="chap6_simple.c.html" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="../feed.html" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="../feed.mode.list.html%3Fmode=list.html" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="chap6_simple.c.html" />
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="chap6_simple.c.html" />
+<link rel="canonical" href="http://flolac.iis.sinica.edu.tw/flolac10/doku.php?id=en:chap6_simple.c" />
+<link rel="stylesheet" media="all" type="text/css" href="../lib/exe/css.php.s.all_t.flolac10.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../lib/exe/css.php.t.flolac10.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../lib/exe/css.php.s.print_t.flolac10.css" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='en';var JSINFO = {"id":"en:chap6_simple.c","namespace":"en"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.flolac10.js" ></script>
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/layout.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/design.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/topbar.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/sidebar.css" />
+
+  
+  </head>
+<body>
+<div class="page">
+
+    <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b> 
+
+   <div class="container">
+
+
+
+   <div class="header">
+
+   
+   <div class="logo">
+   <a href="../doku.html"  name="top" accesskey="h" title="[ALT+H]">2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC '10)</a>  
+         <div class="searchform" style="margin-top: 60px;"> 
+	<form action="../doku.html" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form> 
+	       <div class="plugin_translation"><span></span> <ul>  <li><div class="li"><a href="http://flolac.iis.sinica.edu.tw/flolac10/:chap6_simple.c" class="wikilink2" title="中文">中文</a></div></li>  <li><div class="li"><a href="chap6_simple.c.html" class="wikilink1" title="English">English</a></div></li></ul></div>      </div>
+	       </div>
+      <div class="topbar">
+				<ul>
+<li class="level1"><div class="li"> <a href="start.html" class="wikilink1" title="en:start">Start</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="programme.html" class="wikilink1" title="en:programme">Programme</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="registration.html" class="wikilink1" title="en:registration">Registration</a></div>
+</li>
+</ul>
+      </div>
+       </div>
+    
+  
+          <div class="content_with_sidebar">
+        <pre class="code">
+/*@ requires n &gt; 0; 
+    requires \valid(p+ (0..n−1)); 
+    assigns \nothing; 
+    ensures \forall int i; 
+                 0 &lt;= i &lt;= n−1 ==&gt; \result &gt;= p[i]; 
+    ensures \exists int e; 
+                 0 &lt;= e &lt;= n−1 &amp;&amp; \result == p[e]; 
+*/ 
+int max_seq(int* p, int n)
+ { 
+  int res = p[0];
+  for(int i = 0; i &lt; n; i++) { 
+    if (res &lt; p[i]) { res = p[i]; } 
+  } 
+  return res; 
+}
+</pre>
+
+  		      </div>
+      <div class="sidebar">
+      <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+      
+
+
+<h2><a name="courses" id="courses">Courses</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="logic.html" class="wikilink1" title="en:logic">Logic</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="fp.html" class="wikilink1" title="en:fp">Functional Programming</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="op.html" class="wikilink1" title="en:op">Operational Semantics</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="deno.html" class="wikilink1" title="en:deno">Denotational Semantics</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="prog.html" class="wikilink1" title="en:prog">Program Construction and Reasoning</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="frama-c.html" class="wikilink1" title="en:frama-c">Using Frama-C</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="seminar.html" class="wikilink1" title="en:seminar">Seminar</a> </div>
+</li>
+</ul>
+
+</div>
+      <b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+      </div>
+  
+  <div class="clearer">&nbsp;</div>
+
+  
+    <div class="stylefoot">
+    <div class="meta">
+      <div class="doc">
+        en/chap6_simple.c.txt &middot; Last modified: 2010/07/08 08:13 by pascal.cuoq      </div>
+      <div class="user">
+              </div>
+    </div>
+    <a href="chap6_simple.c.html" class="interwiki" title="">Recent changes</a>&nbsp;&middot;&nbsp;<a href="chap6_simple.c.html" class="interwiki" title="Show pagesource">Show pagesource</a>&nbsp;&middot;&nbsp;<a href="chap6_simple.c.html" class="interwiki" title="Login">Login</a>      </div>
+  
+<div class="footer">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+    <div class="footnotes">
+          Powered by <a href="http://www.dokuwiki.org/">Dokuwiki</a>. Template derived from <a href="http://www.zenzire.com/projects/mmclean/">mmClean</a>, courtesy of <a href="http://www.zenzire.com">zenzire</a>. <a href="http://www.flickr.com/photos/82714083@N00/3535640182/">Banner image</a> courtesy of <a href="http://www.flickr.com/photos/82714083@N00/">aireheru</a>, distributed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">CC 2.0-by-nc-sa</a>.    </div>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+
+
+</div>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+
+<img  width="1" height="1" alt=""  />
+</body>
+</html>
