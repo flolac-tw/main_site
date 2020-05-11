@@ -55,7 +55,7 @@ jobs:
         cabal exec -- site build
     - name: Check the site output
       run: |
-        cabal exec -- site check
+        cabal exec -- site check --internal-links
     - uses: peaceiris/actions-gh-pages@v2.10.1
       env:
         # Type the following in the terminal to get private/public keys:
