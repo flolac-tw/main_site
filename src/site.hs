@@ -1,10 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE BlockArguments #-}
 import           Data.Monoid (mappend)
 import           Control.Monad
 import           Hakyll
 
 import           Multilingual
+import           Util.List
 
 main :: IO ()
 main = hakyll $ do
@@ -36,34 +36,20 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
-{-
-    create ["archive.html"] $ do
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll "content/posts/*"
-            let archiveCtx =
-                    listField "posts" postCtx (return posts) <>
-                    defaultContext                           <>
-                    constField "title" "Archives"
-
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/archive.html" archiveCtx
-                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
-                >>= relativizeUrls
--}
-
-
-{-
-postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" <>
-    defaultContext
--}
-
 ------------------------------------------------------------------------------
--- Produce the URL to its English/Chinese version of a given context
+-- Produce a URL to its English/Chinese version of a given context
 langToggleURL :: String -> Context a
 langToggleURL lc = field "LC-toggle-url" $ case lc of
-    "zh" -> fmap (substUpDom "en") . getURL
-    "en" -> fmap (substUpDom "zh") . getURL
-    _    -> getURL
+  "zh" -> fmap (substRoot "en") . getURL
+  "en" -> fmap (substRoot "zh") . getURL
+  _    -> getURL
+
+getURL :: Item a -> Compiler String
+getURL i = maybe empty' toUrl <$> getRoute id
+  where
+    id = itemIdentifier i
+    empty' = fail $ "No route url found for item " ++ show id
+
+-- An ad-hoc function of changing from /xxx/yyy to /dom/yyy
+substRoot :: String -> String -> String
+substRoot dom = joinOn '/' . ([[], dom ] ++) . drop 2 . splitOn '/'
