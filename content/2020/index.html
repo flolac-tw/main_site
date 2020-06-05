@@ -2,9 +2,52 @@
   zh:
     title: 2020 「邏輯、語言與計算」暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2020
+    special-lecture: 特別講座
+    lecture-intro: 課程介紹
+    announcement: 公告事項
+    dates: 重要日期
+    organising-committee: 籌辦團隊
+    programme-committee: 課程委員
+    calendar: 
+      - time: 07/03
+        title: 學生選課
+      - time: 07/10
+        title: 旁聽報名
+      - time: 07/06
+        title: 修課錄取通知
+      - time: 07/13
+        title: 旁聽錄取通知
+      - time: 08/10
+        title: 課程開始
+      - time: 08/20
+        title: 課程結束
+      - time: 08/21
+        title: 考試
+        
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2020
     subtitle: 2020 「邏輯、語言與計算」暑期研習營
+    lecture-intro: Introduction
+    special-lecture: Special Lecture
+    announcement: Announcement
+    dates: Important dates
+    organising-committee: Organising Committee
+    programme-committee: Programme Committee
+    calendar: 
+      - time: 07/03
+        title: Registration
+      - time: 07/10
+        title: 旁聽報名
+      - time: 07/06
+        title: 修課錄取通知
+      - time: 07/13
+        title: 旁聽錄取通知
+      - time: 08/10
+        title: Start of Lectures
+      - time: 08/20
+        title: 課程結束
+      - time: 08/21
+        title: Exam
 ---
 <div class="row">
   <div class="col m-md-4 m-2 p-2">
@@ -14,31 +57,26 @@
 <div class="row">
   <div class="col-md-9 order-md-first order-last">
     <div class="jumbotron text-center">
-      <h2>特別講座</h2>
+      <h2>$LC.special-lecture$</h2>
     </div>
     <div class="jumbotron text-center">
-      <h2>課程介紹</h2>
+      <h2>$LC.lecture-intro$</h2>
     </div>
   </div>
 
   <div class="col-md-3 p-2">
 
-    <h5>公告事項</h5>
+    <h5>$LC.announcement$</h5>
     <ul class="list-group m-2 pt-2 pb-2 small">
       <li class="list-group-item list-group-item-action">
         <strong class="list-group-item-heading">02/10 (五)</strong> 網站上線</li>
     </ul>
 
-    <h5>重要日期</h5>
+    <h5>$LC.dates$</h5>
     <ul class="list-group m-2 pt-2 pb-2 small">
-      <li class="list-group-item list-group-item-action list-group-item-warning">
-        <strong class="list-group-item-heading">07/03 (五)</strong> 學生選課</li>
-      <li class="list-group-item list-group-item-success"><strong>07/10 (五)</strong> 旁聽報名</dd>
-      <li class="list-group-item list-group-item-success"><strong>07/06 (一)</strong> 修課錄取通知</dd>
-      <li class="list-group-item list-group-item-success"><strong>07/13 (一)</strong> 旁聽錄取通知</dd>
-      <li class="list-group-item list-group-item-success"><strong>08/03 (一)</strong> 課程開始</dd>
-      <li class="list-group-item list-group-item-success"><strong>08/13 (四)</strong> 課程結束</dd>
-      <li class="list-group-item list-group-item-success"><strong>08/14 (五)</strong> 考試</dd>
+      $foreach(event)in(LC.calendar)$
+      <li class="list-group-item list-group-item-success"><strong>$event.time$</strong> $event.title$</dd>
+      $endforeach$
     </ul>
 
     <dl class="row small p-2">
@@ -52,11 +90,11 @@
   </div>
 </div>
 <div class="row p-2">
-    <h3>籌辦團隊</h3>
+    <h3>$LC.organising-committee$</h3>
 </div>
 <div class="row">
   <div class="col-md p-2">
-      <h4>課程委員</h4>
+      <h4>$LC.programme-committee$</h4>
       <div class="card" style="width: 12rem;">
         <div class="card-body">
           <h5 class="card-title">柯向上</h5>
@@ -68,7 +106,8 @@
       <div class="card" style="width: 12rem;">
         <div class="card-body">
           <h5 class="card-title">陳亮廷</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Swansea University</h6>
+          <h6 class="card-subtitle mb-2 text-muted">中央研究院資訊所</h6>
+          <a href="#" class="card-link">個人網站</a>
         </div>
       </div>
   </div>
@@ -76,7 +115,7 @@
       <h4>事務委員</h4>
       <div class="card" style="width: 12rem;">
         <div class="card-body">
-          <h5 class="card-title">張少娟</h5>
+          <h5 class="card-title">林柏芬</h5>
           <h6 class="card-subtitle mb-2 text-muted">中央研究院資訊所</h6>
         </div>
       </div>
@@ -98,3 +137,4 @@
       </div>
   </div>
 </div>
+

@@ -1,10 +1,24 @@
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
 import           Control.Monad
-import           Hakyll
+import qualified Data.Text        as T
+import           Data.Monoid      (mappend)
+import           Data.List        (intercalate)
+import           Data.List.Extra  (splitOn)
+import           Data.Yaml        
+
+import           Hakyll          
+  hiding ( defaultContext
+         , applyAsTemplate
+         , loadAndApplyTemplate
+         , templateBodyCompiler
+         , field
+         , Context)
+import qualified Hakyll           as H
+
+import           Hakyll.Web.ExtendedTemplate
+import           Hakyll.Web.ExtendedTemplate.Type
 
 import           Multilingual
-import           Util.List
 
 main :: IO ()
 main = hakyll $ do
@@ -40,9 +54,9 @@ main = hakyll $ do
 -- Produce a URL to its English/Chinese version of a given context
 langToggleURL :: String -> Context a
 langToggleURL lc = field "LC-toggle-url" $ case lc of
-  "zh" -> fmap (substRoot "en") . getURL
-  "en" -> fmap (substRoot "zh") . getURL
-  _    -> getURL
+  "zh" -> fmap (String . T.pack . substRoot "en") . getURL
+  "en" -> fmap (String . T.pack . substRoot "zh") . getURL
+  _    -> fmap (String . T.pack) . getURL
 
 getURL :: Item a -> Compiler String
 getURL i = maybe empty' toUrl <$> getRoute id
@@ -52,4 +66,4 @@ getURL i = maybe empty' toUrl <$> getRoute id
 
 -- An ad-hoc function of changing from /xxx/yyy to /dom/yyy
 substRoot :: String -> String -> String
-substRoot dom = joinOn '/' . ([[], dom ] ++) . drop 2 . splitOn '/'
+substRoot dom = intercalate "/" . ([[], dom ] ++) . drop 2 . splitOn "/"
