@@ -47,7 +47,7 @@ jobs:
         stack exec -- site build
     - name: Check the site output
       run: |
-        stack exec -- site check --internal-links
+        stack exec --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal -- site check --internal-links
     - uses: peaceiris/actions-gh-pages@v2.10.1
       env:
         # Type the following in the terminal to get private/public keys:
