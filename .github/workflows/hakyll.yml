@@ -38,16 +38,17 @@ jobs:
           stack-work-${{ runner.OS }}-
     - name: Build dependencies and the site generator
       run: |
-        stack build --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal
+        stack build 
+      # stack install --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal
     - name: Build the site
       env:
         # citeproc requires the locale environment variable.
         LANG: en_US.UTF-8
       run: |
-        stack exec --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal -- site build
+        stack exec -- site build
     - name: Check the site output
       run: |
-        stack exec --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal -- site check --internal-links
+        stack exec -- site check --internal-links
     - uses: peaceiris/actions-gh-pages@v2.10.1
       env:
         # Type the following in the terminal to get private/public keys:
