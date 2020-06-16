@@ -6,14 +6,12 @@ import           Data.List        (intercalate)
 import           Data.List.Extra  (splitOn)
 import           Data.Yaml        
 
-import           Hakyll          
-  hiding ( defaultContext
-         , applyAsTemplate
-         , loadAndApplyTemplate
-         , templateBodyCompiler
-         , field
-         , Context)
-import qualified Hakyll           as H
+import           Hakyll.Core
+import           Hakyll.Main
+import           Hakyll.Web.CompressCss
+import           Hakyll.Web.Html
+import           Hakyll.Web.Html.RelativizeUrls
+import           Hakyll.Web.Redirect
 
 import           Hakyll.Web.ExtendedTemplate
 import           Hakyll.Web.ExtendedTemplate.Type

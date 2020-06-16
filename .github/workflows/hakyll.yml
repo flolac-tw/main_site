@@ -15,47 +15,39 @@ jobs:
     strategy:
       matrix:
         ghc: [ '8.8.3' ]
-        cabal: [ '3.2' ]
 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-haskell@v1
       with:
         ghc-version: ${{ matrix.ghc }}
-        cabal-version: ${{ matrix.cabal }}
-    - name: Cache ~/.cabal/store
+        stack-version: 'latest'
+    - name: Cache ~/.stack
       uses: actions/cache@v1
       with:
-        path: ~/.cabal/store
-        key: cabal-store-${{ runner.OS }}-${{ matrix.ghc }}-${{ hashFiles('cabal.project.freeze') }}
+        path: ~/.stack
+        key: cabal-store-${{ runner.OS }}-${{ hashFiles('stack.yaml') }}
         restore-keys: |
-          cabal-store-${{ runner.OS }}-${{ matrix.ghc }}-
           cabal-store-${{ runner.OS }}-
-    - name: Cache dist-newstyle
+    - name: Cache .stack-work
       uses: actions/cache@v1
       with:
-        path: dist-newstyle
-        key: dist-newstyle-${{ runner.OS }}-${{ matrix.ghc }}-${{ hashFiles('cabal.project.freeze') }}
+        path: .stack-work
+        key: stack-work-${{ runner.OS }}-${{ hashFiles('stack.yaml') }}
         restore-keys: |
-          dist-newstyle-${{ runner.OS }}-${{ matrix.ghc }}-
-          dist-newstyle-${{ runner.OS }}-
-    - name: Update the package list
-      run: |
-        cabal update
+          stack-work-${{ runner.OS }}-
     - name: Build dependencies and the site generator
       run: |
-        cabal build --constraint "hakyll -previewServer -watchServer"
-        # Uncomment the following if external link check is not required.
-        # cabal build --constraint "hakyll -previewServer -watchServer -checkExternal"
+        stack build --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal
     - name: Build the site
       env:
         # citeproc requires the locale environment variable.
         LANG: en_US.UTF-8
       run: |
-        cabal exec -- site build
+        stack exec -- site build
     - name: Check the site output
       run: |
-        cabal exec -- site check --internal-links
+        stack exec -- site check --internal-links
     - uses: peaceiris/actions-gh-pages@v2.10.1
       env:
         # Type the following in the terminal to get private/public keys:
