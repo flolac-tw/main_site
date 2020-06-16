@@ -44,7 +44,7 @@ jobs:
         # citeproc requires the locale environment variable.
         LANG: en_US.UTF-8
       run: |
-        stack exec -- site build
+        stack exec --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal -- site build
     - name: Check the site output
       run: |
         stack exec --flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal -- site check --internal-links
