@@ -1,27 +1,3 @@
-h1, h2, h3 {
-  font-family: 'Noto Serif TC', serif;
-}
-
-h4, h5, h6, body {
-  font-family: 'Noto Sans TC', sans-serif;
-}
-
-.de-emph {
-  opacity: 0.4;
-  transition: 0.4s;
-}
-
-.de-emph:hover {opacity: 1; }
-
-.de-emph-weak {
-  opacity: 0.2;
-  transition: 0.2s;
-}
-
-.de-emph-weak:hover {
-  opacity: 1;
-}
-
 blockquote p {
   padding: 15px;
   background: #eee;
@@ -33,4 +9,25 @@ blockquote p::before {
 
 blockquote p::after {
   content: '\201D';
+}
+
+footer dl {
+  padding: 0.5em;
+}
+footer dt {
+  float: left;
+  text-align: right;
+  font-weight: normal;
+  padding: .25em;
+  clear: left;
+}
+
+footer dt::after {
+  content: " | ";
+  padding: .25em;
+}
+footer dd {
+  float: left;
+  padding: .25em;
+  font-weight: normal;
 }
