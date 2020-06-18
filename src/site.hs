@@ -22,13 +22,25 @@ main :: IO ()
 main = hakyll $ do
     createRedirects [("index.html", "zh/index.html")]
 
-    forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
+    forM_ ["zh", "en"] $ \lc -> match "content/index.html" $ version lc $ do
         route $ gsubRoute "content/" (const $ lc ++ "/")
         compile $ do
             let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
             getResourceBody
                 >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
+                >>= loadAndApplyTemplate "templates/banner-fancy.html" ctx
+                >>= loadAndApplyTemplatesLC lc ctx
+                  ["templates/nav.html", "templates/footer.html"]
+                >>= loadAndApplyTemplate "templates/head.html" ctx
+                >>= relativizeUrls
+
+    forM_ ["zh", "en"] $ \lc -> match "content/event/**.html" $ version lc $ do
+        route $ gsubRoute "content/event/" (const $ lc ++ "/")
+        compile $ do
+            let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
+            getResourceBody
+                >>= applyAsTemplate ctx
+                >>= loadAndApplyTemplate "templates/banner-plain.html" ctx
                 >>= loadAndApplyTemplatesLC lc ctx
                   ["templates/nav.html", "templates/footer.html"]
                 >>= loadAndApplyTemplate "templates/head.html" ctx
