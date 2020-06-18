@@ -12,22 +12,16 @@ blockquote p::after {
 }
 
 footer dl {
-  padding: 0.5em;
+  display: grid;
+  grid-template-columns: max-content auto;
 }
 footer dt {
-  float: left;
-  text-align: right;
-  font-weight: normal;
-  padding: .25em;
-  clear: left;
+  grid-column-start: 1;
+  padding-right: .5em
 }
 
-footer dt::after {
-  content: " | ";
-  padding: .25em;
-}
 footer dd {
-  float: left;
-  padding: .25em;
-  font-weight: normal;
+  grid-column-start: 2;
+  border-left: 1.5px solid #FFF;
+  padding-left: .5em
 }
