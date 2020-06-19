@@ -25,3 +25,11 @@ footer dd {
   border-left: 1.5px solid #FFF;
   padding-left: .5em
 }
+
+.light-border-bottom {
+  border-bottom: 3px solid #FFF;
+}
+
+.dark-border-bottom {
+  border-bottom: 3px solid #000;
+}
