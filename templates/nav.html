@@ -1,74 +1,60 @@
 ---
   zh:
+    home: 首頁
     theme-intro: 課程主題
     ocean-intro: 型別原理
     mountain-intro: 自動驗證
-    past-activity: 過往課程
+    past-activity: 歷年課程
     current: 應屆課程
     registration: 報名資訊
-    lang-toggle: English
+    lang-toggle: En
   en:
+    home: Home
     theme-intro: Themes
     ocean-intro: Type-Theoretic Foundations
     mountain-intro: Automated Verification
     past-activity: Past Events
     current: Current Event
     registration: Registration
-    lang-toggle: 中文
+    lang-toggle: 中
 ---
-<nav class="navbar navbar-expand-md sticky-top navbar-dark" style="background-color: rgb(97, 193, 190); padding-top:0rem; padding-bottom: 0rem;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" 
-    data-target="#nav-general-menu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<header class="navbar navbar-expand sticky-top navbar-dark bg-dark flex-column flex-md-row justify-content-md-around py-0 py-md-2">
+  <a class="navbar-brand pt-3 py-md-2" href="/$lang$/index.html"><img src="/img/logo.svg" class="" height="36px"/></a>
 
-  <a class="navbar-brand" href="/$lang$/index.html"><img src="/img/logo.svg" width="100px"></a>
-
-  <div class="collapse navbar-collapse" id="nav-general-menu">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/$lang$/2020">$LC.current$</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://flolac.iis.sinica.edu.tw/flolac18/register.html">$LC.registration$</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          $LC.past-activity$
-        </a>
-        <div class="dropdown-menu">
-          <div class="dropdown-item">$LC.ocean-intro$</div>
-          <a class="dropdown-item" href="/$lang$/2020">2020</a>
-          <a class="dropdown-item" href="/flolac18.html" target="_blank">2018</a>
-          <a class="dropdown-item" href="/flolac16.html" target="_blank">2016</a>
-          <a class="dropdown-item" href="/flolac14.html" target="_blank">2014</a>
-          <a class="dropdown-item" href="/flolac12.html" target="_blank">2012</a>
-          <a class="dropdown-item" href="/flolac10.html" target="_blank">2010</a>
-          <div class="dropdown-divider"></div>
-          <div class="dropdown-item bg-light">$LC.mountain-intro$</div>
-          <a class="dropdown-item" href="/flolac19.html" target="_blank">2019</a>
-          <a class="dropdown-item" href="/flolac17.html" target="_blank">2017</a>
-          <a class="dropdown-item" href="/flolac15.html" target="_blank">2015</a>
-          <a class="dropdown-item" href="/flolac13.html" target="_blank">2013</a>
-          <a class="dropdown-item" href="/flolac11.html" target="_blank">2011</a>
-          <a class="dropdown-item" href="/flolac09.html" target="_blank">2009</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/flolac08.html" target="_blank">2008</a>
-          <a class="dropdown-item" href="/flolac07.html" target="_blank">2007</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="collapse navbar-collapse" id="nav-general-menu">
-    <div class="navbar-nav ml-md-auto">
-      <a class="nav-link nav-item" href="/$lang$/contact.html"><i class="fas fa-envelope"></i></a>
-      <a class="nav-link nav-item" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
-      <a class="nav-link nav-item" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
-      <a class="nav-link nav-item" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
-      <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a>
-      <a class="nav-link nav-item" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
-    </div>
-  </div>
-</nav>
+  <ul class="navbar-nav flex-row">
+<!--    <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li> -->
+    <li class="nav-item"><a class="nav-link" href="/$lang$/2020">$LC.current$</a></li>
+    <li class="nav-item"><a class="nav-link" href="http://flolac.iis.sinica.edu.tw/flolac18/register.html">$LC.registration$</a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">$LC.past-activity$</a>
+      <div class="dropdown-menu">
+        <div class="dropdown-item">$LC.ocean-intro$</div>
+        <a class="dropdown-item" href="/$lang$/2020">2020</a>
+        <a class="dropdown-item" href="/flolac18.html" target="_blank">2018</a>
+        <a class="dropdown-item" href="/flolac16.html" target="_blank">2016</a>
+        <a class="dropdown-item" href="/flolac14.html" target="_blank">2014</a>
+        <a class="dropdown-item" href="/flolac12.html" target="_blank">2012</a>
+        <a class="dropdown-item" href="/flolac10.html" target="_blank">2010</a>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item bg-light">$LC.mountain-intro$</div>
+        <a class="dropdown-item" href="/flolac19.html" target="_blank">2019</a>
+        <a class="dropdown-item" href="/flolac17.html" target="_blank">2017</a>
+        <a class="dropdown-item" href="/flolac15.html" target="_blank">2015</a>
+        <a class="dropdown-item" href="/flolac11.html" target="_blank">2011</a>
+        <a class="dropdown-item" href="/flolac09.html" target="_blank">2009</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/flolac08.html" target="_blank">2008</a>
+        <a class="dropdown-item" href="/flolac07.html" target="_blank">2007</a>
+      </div>
+    </li>
+  </ul>
+  <span class="navbar-nav">
+    <a class="nav-link" href="#"><i class="fas fa-envelope"></i></a>
+    <a class="nav-link" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+    <a class="nav-link" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+    <a class="nav-link" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
+<!--      <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a> -->
+    <a class="nav-link" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
+  </span>
+</header>
 $body$
