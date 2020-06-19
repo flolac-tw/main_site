@@ -70,12 +70,14 @@
   </div>
 </section>
 
-<section class="row p-2 p-md-4 text-dark bg-light" >
-  <div class="col-12 col-md-9 p-md-3">
-    <h2 class="dark-border-bottom">$LC.guest-lecture$</h2>
+<section class="row py-2 border py-md-4 text-dark bg-light" >
+  <div class="col-12 col-md-9 border p-md-3">
+    <h2 class="dark-border-bottom">2020 年特別講題：依值型別編程</h2>
+    <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
+    <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。前篇介紹的直構型別論 (intuitionistic type theory) 造出一個證明與程式共存的環境，讓我們能在程式語言內直接證明程式的性質，但證明仍需另外寫就。踏在直構型別論的基礎上，依值型別編程的目標是更進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。例如，與其先寫程式將兩份樹狀資料結構合併為一份，再寫證明解釋此操作保持平衡性質和元素排序，我們可直接設計一個「平衡搜尋樹」資料型別，再寫出型別描述「將兩棵平衡搜尋樹合併為一棵」這樣的操作。依值型別系統確保任何具此型別的程式必須妥適處理嵌於「平衡搜尋樹型別」的平衡性質和元素排序，因此程式只要通過型別檢驗就必定正確。不僅如此，依值型別更能在程式編寫過程中提供語意上的提示，有時甚至能直接從型別自動推得符合的程式。</p>
   </div>
-  <div class="col-12 col-md-3 my-0 bg-dark text-light overflow-auto d-flex flex-row flex-md-column" style="max-height: 300px;">
-      <div class="p-md-2 p-1">2020 - Dependently Typed Programming in Agda</div>
+  <div class="col-12 col-md-3  bg-dark text-light overflow-auto d-flex flex-row flex-md-column">
+      <div class="p-md-2 p-1">2020 - Dependently Typed Programming</div>
       <div class="p-md-2 p-1">2019 - Blockchain and Smart Contract Verification</div>
       <div class="p-md-2 p-1">2018 - Session Types</div>
       <div class="p-md-2 p-1">2017 - Vienna Development Method</div>
