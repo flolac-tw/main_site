@@ -18,11 +18,13 @@
     registration: Registration
     lang-toggle: 中
 ---
-<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark flex-column flex-md-row justify-content-md-around py-0 py-md-2">
-  <a class="navbar-brand pt-3 py-md-2" href="/$lang$/index.html"><img src="/img/logo.svg" class="" height="36px"/></a>
+<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark justify-content-around py-md-2 py-sm-1 py-0">
+  <!-- TODO: use CSS to control heights in different window widths -->
+  <a class="navbar-brand py-md-2 d-none d-md-block" href="/$lang$/index.html"><img src="/img/logo.svg" style="height: 2rem"/></a>
+  <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="/$lang$/index.html"><img src="/img/logo.svg" style="height: 1.5rem"/></a>
 
-  <ul class="navbar-nav flex-row">
-<!--    <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li> -->
+  <ul class="navbar-nav text-nowrap">
+    <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li>
     <li class="nav-item"><a class="nav-link" href="/$lang$/2020">$LC.current$</a></li>
     <li class="nav-item"><a class="nav-link" href="http://flolac.iis.sinica.edu.tw/flolac18/register.html">$LC.registration$</a></li>
     <li class="nav-item dropdown">
@@ -48,11 +50,11 @@
       </div>
     </li>
   </ul>
-  <span class="navbar-nav">
+
+  <span class="navbar-nav d-none d-sm-flex">
     <a class="nav-link" href="#"><i class="fas fa-envelope"></i></a>
     <a class="nav-link" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
     <a class="nav-link" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
-    <a class="nav-link" href="https://github.com/flolac-tw/"><i class="fab fa-github"></i></a>
 <!--      <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a> -->
     <a class="nav-link" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
   </span>
