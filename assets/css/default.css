@@ -22,7 +22,7 @@ footer dt {
 
 footer dd {
   grid-column-start: 2;
-  border-left: 1.5px solid #FFF;
+  border-left: 2px solid #FFF;
   padding-left: .5em
 }
 
