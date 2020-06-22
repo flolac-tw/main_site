@@ -33,3 +33,7 @@ footer dd {
 .dark-border-bottom {
   border-bottom: 3.5px solid #000;
 }
+
+.bg-gd {
+  background: linear-gradient(to bottom, #98d2d7 31%, #77bac0 48%, #4b8b97 72%, #3e7987 84%, #286a7c 100%);
+}

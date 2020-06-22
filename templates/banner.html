@@ -20,6 +20,12 @@ $if(plain-banner)$
   </div>
 </header>
 $endif$
-<div class="container-md">
-  $body$
-</div>
+$if(image-banner)$
+<header class="container-fluid bg-gd">
+  <div class="container-md">
+      <img src="$LC.img-url$" class="img-fluid mx-auto">
+  </div>
+</header>
+$endif$
+
+$body$
