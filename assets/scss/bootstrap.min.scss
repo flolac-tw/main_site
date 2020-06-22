@@ -1,0 +1,78 @@
+$fountain-blue:    #61C1BE; // the main theme colour for PL year
+$buttercup:        #FABE00; // the main theme colour for FM year
+$sundance:         #CB9F5F; // Light accent colour for FM and PL
+$aqua-haze:        #EFF6F6; // Light shades for FM
+$brown-rust:       #A5653C; // Dark accent for FM
+$thunder:          #30282E; // Dark shades for FM
+$snow-drift:       #F3F6F2; // Light shades for PL
+$au-chico:         #A36459; // Dark accent for PL
+$pickled-bluewood: #354B5B; // Dark shades for PL
+$fern:             #53b472;
+$old-gold:         #d0a43a;
+$pomegranate:      #f44336;
+
+$colors: (
+  "fountain-blue": $fountain-blue,
+  "buttercup"    : $buttercup,
+  "sundance"     : $sundance,
+  "aqua-haze"    : $aqua-haze,
+  "brown-rust"   : $brown-rust,
+  "thunder"      : $thunder,
+  "snow-drift"   : $snow-drift,
+  "au-chico"     : $au-chico,
+  "pickled-bluewood": $pickled-bluewood
+);
+
+$enable-shadows: true;
+
+$theme-colors: (
+  "primary": $fountain-blue,
+  "info"   : $pickled-bluewood,
+  "success": $fern,
+  "warning": $old-gold,
+  "danger" : $pomegranate,
+);
+
+$light: $snow-drift;
+$dark: $pickled-bluewood;
+$body-bg: $snow-drift;
+$body-color: $dark;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+blockquote p {
+  padding: 15px;
+  background: $gray-500;
+  border-radius: 5px;
+}
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
+footer dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+footer dt {
+  grid-column-start: 1;
+  padding-right: .5em
+}
+
+footer dd {
+  grid-column-start: 2;
+  border-left: 2px solid $light;
+  padding-left: .5em
+}
+
+.light-border-bottom {
+  border-bottom: 3.5px solid $light;
+}
+
+.dark-border-bottom {
+  border-bottom: 3.5px solid $dark;
+}
+

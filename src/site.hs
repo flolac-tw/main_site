@@ -20,33 +20,35 @@ import           Multilingual
 
 main :: IO ()
 main = hakyll $ do
-    createRedirects [("index.html", "zh/index.html")]
+  createRedirects [("index.html", "zh/index.html")]
 
-    forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
-        route $ gsubRoute "content/" (const $ lc ++ "/")
-        compile $ do
-            let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
-            getResourceBody
-                >>= applyAsTemplate ctx
-                >>= loadAndApplyTemplate "templates/banner.html" ctx
-                >>= loadAndApplyTemplatesLC lc ctx
-                  ["templates/nav.html", "templates/footer.html"]
-                >>= loadAndApplyTemplate "templates/head.html" ctx
-                >>= relativizeUrls
+  forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
+    route $ gsubRoute "content/" (const $ lc ++ "/")
+    compile $ do
+      let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
+      getResourceBody
+        >>= applyAsTemplate ctx
+        >>= loadAndApplyTemplatesLC lc ctx
+          [ "templates/banner.html"
+          , "templates/nav.html"
+          , "templates/footer.html"
+          , "templates/head.html"
+          ]
+        >>= relativizeUrls
 
-    match "assets/img/**" $ do
-        route   (gsubRoute "assets/" (const ""))
-        compile copyFileCompiler
+  match "assets/img/**" $ do
+      route   (gsubRoute "assets/" (const ""))
+      compile copyFileCompiler
 
-    match "assets/css/**" $ do
-        route   (gsubRoute "assets/" (const ""))
-        compile compressCssCompiler
+  match "assets/css/**" $ do
+      route   (gsubRoute "assets/" (const ""))
+      compile compressCssCompiler
 
-    match "assets/html/**" $ do
-        route   (gsubRoute "assets/html/" (const ""))
-        compile copyFileCompiler
+  match "assets/html/**" $ do
+      route   (gsubRoute "assets/html/" (const ""))
+      compile copyFileCompiler
 
-    match "templates/*" $ compile templateBodyCompiler
+  match "templates/*" $ compile templateBodyCompiler
 
 ------------------------------------------------------------------------------
 -- Produce a URL to its English/Chinese version of a given context
