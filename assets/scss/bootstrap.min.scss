@@ -33,40 +33,58 @@ $theme-colors: (
   "danger" : $pomegranate,
 );
 
+/*
 $light: $snow-drift;
 $dark: $pickled-bluewood;
 $body-bg: $snow-drift;
 $body-color: $dark;
 
+*/
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-blockquote p {
-  padding: 15px;
-  background: $gray-500;
-  border-radius: 5px;
-}
-blockquote p::before {
-  content: '\201C';
+blockquote {
+  background: white;
+  border-radius: 10px;
+  padding: 1em 1.25em;
+
+  > p {
+    color: $gray-700;
+    text-align: justify;
+  }
+
+  > p:first-of-type::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 0.75em;
+    vertical-align: super;
+    padding-right: 1em;
+    content: "\f10d";
+  }
+
+  > footer {
+    text-align: right;
+  }
+  > footer::before{
+    content: "— ";
+  }
 }
 
-blockquote p::after {
-  content: '\201D';
+footer {
+  dl {
+    display: grid;
+    grid-template-columns: max-content auto;
+  }
+  dt {
+    grid-column-start: 1;
+    padding-right: .5em
+  }
+  dd {
+    grid-column-start: 2;
+    border-left: 2px solid $light;
+    padding-left: .5em
+  }
 }
 
-footer dl {
-  display: grid;
-  grid-template-columns: max-content auto;
-}
-footer dt {
-  grid-column-start: 1;
-  padding-right: .5em
-}
-
-footer dd {
-  grid-column-start: 2;
-  border-left: 2px solid $light;
-  padding-left: .5em
-}
 
 .light-border-bottom {
   border-bottom: 3.5px solid $light;
