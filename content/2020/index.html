@@ -21,18 +21,19 @@
         title: 課程結束
       - time: 08/21
         title: 考試
+    news:
+      - time: 02/10 (五)
+        title: 網站上線
     committee:
       - role: 課程委員
         members: 
           - name: 柯向上
             affil: 中央研究院資訊科學所
           - name: 陳亮廷
-
       - role: 事務委員
         members: 
           - name: 林柏芬
           - name: 韓愷真
-
       - role: 助教團
         members: 
           - name: 賴廷彥
@@ -58,6 +59,9 @@
         title: 課程結束
       - time: 08/21
         title: Exam
+    news:
+      - time: 02/10 (五)
+        title: 網站上線
 ---
 <!--div class="row">
   <div class="col-md-3">
@@ -73,32 +77,37 @@
 </div-->
 
 <div class="container-fluid bg-light">
-  <div class="container-md p-3">
-    <div class="col-6 col-md">
-      <h5>$LC.dates$</h5>
-      <ul class="list-group">
+  <div class="container-md px-5 pt-5">
+    <div class="row">
+    <div class="col-5 news-box">
+      <h3 class="heading-underline">$LC.dates$</h3>
+      <ul class="news-group overflow-auto">
         $foreach(event)in(LC.calendar)$
         <li class="list-group-item list-group-item-success"><strong>$event.time$</strong> $event.title$</dd>
         $endforeach$
       </ul>
     </div>
-    <div class="col-6 col-md">
-      <h5>$LC.announcement$</h5>
-      <ul class="list-group m-2">
-        <li class="list-group-item list-group-item-action">
-          <strong class="list-group-item-heading">02/10 (五)</strong> 網站上線</li>
+    <div class="col-1"></div>
+    <div class="col-5 news-box">
+      <h3 class="heading-underline">$LC.announcement$</h3>
+      <ul class="news-group overflow-auto">
+        $foreach(event)in(LC.news)$
+        <li class="news-group-item py-2 border-bottom">
+          <strong class="list-group-item-heading">$event.time$</strong> &nbsp $event.title$</li>
+        $endforeach$
       </ul>
+    </div>
     </div>
   </div>
 </div>
 
 <div class="container-fluid bg-light">
-  <div class="container-md p-3">
+  <div class="container-md px-5 py-3">
+    <h3 class="">$LC.lecture-intro$</h3>
     <div class="col-12 border">
-      <h2 class="">$LC.lecture-intro$</h2>
     </div>
+    <h3 class="dark-border-bottom">2020 年特別講題：依值型別編程</h3>
     <div class="col-12 border">
-      <h2 class="dark-border-bottom">2020 年特別講題：依值型別編程</h2>
       <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
       <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。踏在直構型別論的基礎上，依值型別編程的目標是更進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。例如，與其先寫程式將兩份樹狀資料結構合併為一份，再寫證明解釋此操作保持平衡性質和元素排序，我們可直接設計一個「平衡搜尋樹」資料型別，再寫出型別描述「將兩棵平衡搜尋樹合併為一棵」這樣的操作。依值型別系統確保任何具此型別的程式必須妥適處理嵌於「平衡搜尋樹型別」的平衡性質和元素排序，因此程式只要通過型別檢驗就必定正確。不僅如此，依值型別更能在程式編寫過程中提供語意上的提示，有時甚至能直接從型別自動推得符合的程式。</p>
     </div>

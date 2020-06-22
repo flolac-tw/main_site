@@ -37,3 +37,20 @@ footer dd {
 .bg-gd {
   background: linear-gradient(to bottom, #98d2d7 31%, #77bac0 48%, #4b8b97 72%, #3e7987 84%, #286a7c 100%);
 }
+
+.heading-underline {
+  padding-bottom: .3em;
+  border-bottom: 4px solid;
+}
+
+.news-box {
+}
+
+.news-group {
+  padding-left: 0;
+  max-height: 30vh;
+  list-style: none;
+}
+
+.news-group-item {
+}
