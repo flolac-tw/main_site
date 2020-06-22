@@ -77,9 +77,9 @@
 </div-->
 
 <div class="container-fluid bg-light">
-  <div class="container-md px-5 pt-5">
+  <div class="container-md px-md-5 px-0 pt-5">
     <div class="row">
-    <div class="col-5 news-box">
+    <div class="col-md-5 col-12 news-box">
       <h3 class="heading-underline">$LC.dates$</h3>
       <ul class="news-group overflow-auto">
         $foreach(event)in(LC.calendar)$
@@ -87,8 +87,8 @@
         $endforeach$
       </ul>
     </div>
-    <div class="col-1"></div>
-    <div class="col-5 news-box">
+    <div class="col-md-1 col-0"></div>
+    <div class="col-md-5 col-12 news-box">
       <h3 class="heading-underline">$LC.announcement$</h3>
       <ul class="news-group overflow-auto">
         $foreach(event)in(LC.news)$
@@ -102,7 +102,7 @@
 </div>
 
 <div class="container-fluid bg-light">
-  <div class="container-md px-5 py-3">
+  <div class="container-md px-md-5 px-0 py-3">
     <h3 class="">$LC.lecture-intro$</h3>
     <div class="col-12 border">
     </div>

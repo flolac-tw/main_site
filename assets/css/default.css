@@ -38,9 +38,13 @@ footer dd {
   background: linear-gradient(to bottom, #98d2d7 31%, #77bac0 48%, #4b8b97 72%, #3e7987 84%, #286a7c 100%);
 }
 
+.bg-gd2 {
+  background: linear-gradient(to bottom, #97d2d7 28%, #8dccd3 39%, #539ca5 70%, #337988 89%, #2a7382 94%, #286c7f 100%);
+}
+
 .heading-underline {
-  padding-bottom: .3em;
-  border-bottom: 4px solid;
+  padding-bottom: .2em;
+  border-bottom: 3px solid;
 }
 
 .news-box {
