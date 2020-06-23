@@ -20,6 +20,24 @@ $if(plain-banner)$
   </div>
 </header>
 $endif$
-<div class="container-md">
-  $body$
-</div>
+$if(image-banner)$
+<header class="container-fluid px-0">
+  <div class="row no-gutters">
+    <div class="col bg-gd"></div>
+    <div class="container-md px-0 carousel">
+      <div class="caroudel-item">
+        <img src="/img/yearly_banner.png" class="d-sm-none d-block center-block" style="height: 150px">
+        <img src="/img/yearly_banner.png" class="d-sm-block d-none img-fluid mx-auto">
+        <div class="carousel-caption">
+          <h1 style="text-shadow: 1px 1px 5px lightgrey">$LC.title$</h3>
+          <p class="d-lg-block d-none">$LC.subtitle$</p>
+          <h5 class="d-lg-block d-none">$LC.timedate$</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col bg-gd2"></div>
+  </div>
+</header>
+$endif$
+
+$body$
