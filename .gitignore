@@ -2,3 +2,4 @@ dist-newstyle
 _*
 flolac-site.cabal.local
 .stack-work
+.vscode
