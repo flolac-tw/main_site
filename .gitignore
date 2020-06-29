@@ -3,3 +3,5 @@ _*
 flolac-site.cabal.local
 .stack-work
 .vscode
+
+node_modules
