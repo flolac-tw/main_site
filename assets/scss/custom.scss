@@ -23,17 +23,18 @@ $colors: ("fountain-blue": $fountain-blue,
 
 $enable-shadows: true;
 
-$theme-colors: ("primary": $fountain-blue,
+$theme-colors: (
+  "primary": $fountain-blue,
   "info" : $pickled-bluewood,
   "success": $fern,
   "warning": $old-gold,
   "danger" : $pomegranate,
 );
 
+$body-bg: $snow-drift;
 /*
 $light: $snow-drift;
 $dark: $pickled-bluewood;
-$body-bg: $snow-drift;
 $body-color: $dark;
 
 */
