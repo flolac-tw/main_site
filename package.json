@@ -1,0 +1,16 @@
+{
+  "name": "main_site",
+  "version": "1.0.0",
+  "repository": "git@github.com:flolac-tw/main_site.git",
+  "author": "陳亮廷、林子期、賴廷彥",
+  "license": "?",
+  "scripts": {
+    "watch": "stack exec -- site watch & npx sass assets/scss:assets/css --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.26.9"
+  }
+}
