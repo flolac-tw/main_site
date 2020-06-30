@@ -20,7 +20,7 @@ import           Multilingual
 
 main :: IO ()
 main = hakyll $ do
-  createRedirects [("index.html", "zh/index.html")]
+  createRedirects [("index.html", "zh/2020/index.html")]
 
   forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
