@@ -50,7 +50,36 @@ jobs:
     - name: Check the site output
       run: |
         stack build ${FLAGS} --exec "site check --internal-links"
-    - uses: peaceiris/actions-gh-pages@v2.10.1
+    - uses: peaceiris/actions-gh-pages@v3
+      name: Publish to the public site
+      env:
+        # Type the following in the terminal to get private/public keys:
+        #
+        # ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
+        #
+        # and add
+        #
+        #   1. the private key as a secrete ACTIONS_DEPLOY_KEY in the GitHub repo hosting the source code,
+        #   2. the public key as a deploy key in the GitHub repo hosting the website.
+        #
+        # For details, see
+        # https://github.com/marketplace/actions/github-pages-action
+        #
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY_TO_TEAM_SITE }}
+
+        # Ensure to match the source branch specified on the GitHub setting.
+        #
+        external_repository: flolac-tw/flolac-tw.github.io
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: _site
+
+        if: github.ref == 'refs/heads/master'
+        # Rename `source` to the branch for the source code
+      with:
+        emptyCommits: false
+        
+    - uses: peaceiris/actions-gh-pages@v3
+      name: Publish to the experimental site
       env:
         # Type the following in the terminal to get private/public keys:
         #
@@ -70,7 +99,7 @@ jobs:
         #
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: _site
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/dev'
         # Rename `source` to the branch for the source code
       with:
         emptyCommits: false
