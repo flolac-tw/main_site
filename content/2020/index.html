@@ -1,5 +1,26 @@
 ---
   image-banner: True
+  calendar: 
+    - time: 07/26
+      title: 外地實習生報名截止
+    - time: 07/29
+      title: 非台大學生報名截止
+    - time: 07/30
+      title: 非台大學生錄取通知
+    - time: 08/03
+      title: 台大學生報名截止
+    - time: 08/04
+      title: 旁聽報名截止
+    - time: 08/05
+      title: 旁聽錄取通知
+    - time: 08/05
+      title: 台大學生錄取通知
+    - time: 08/10
+      title: 課程開始
+    - time: 08/20
+      title: 課程結束
+    - time: 08/21
+      title: 考試
   zh:
     title: |
       邏輯、語言與計算暑期研習營
@@ -15,34 +36,9 @@
     dates: 重要日期
     organising-committee: 籌辦團隊
     programme-committee: 課程委員
-    calendar: 
-      - time: 07/03
-        title: 學生選課
-      - time: 07/06
-        title: 修課錄取通知
-      - time: 08/10
-        title: 課程開始
-      - time: 08/20
-        title: 課程結束
-      - time: 08/21
-        title: 考試
     news:
       - time: 02/10
         title: 網站上線
-    committee:
-      - role: 課程委員
-        members: 
-          - name: 柯向上
-            affil: 中央研究院資訊科學所
-          - name: 陳亮廷
-      - role: 事務委員
-        members: 
-          - name: 林柏芬
-          - name: 韓愷真
-      - role: 助教團
-        members: 
-          - name: 賴廷彥
-        
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2020
     subtitle: 邏輯、語言與計算暑期研習營
@@ -91,7 +87,7 @@
       <div class="card-body col-md-8 col-12 news-box">
         <h3 class="card-title heading-underline">$LC.dates$</h3>
         <ul class="list-group list-group-flush overflow-auto">
-          $foreach(event)in(LC.calendar)$
+          $foreach(event)in(calendar)$
           <li class="list-group-item py-1"><strong>$event.time$</strong> $event.title$</dd>
           $endforeach$
         </ul>
@@ -150,7 +146,7 @@
         <h5 class="card-header bg-danger text-light">$LC.dates$</h5>
         <div class="card-body">
           <ul class="card-text list-unstyled">
-          $foreach(event)in(LC.calendar)$
+          $foreach(event)in(calendar)$
           <li><strong>$event.time$</strong> $event.title$</dd>
           $endforeach$
           </ul>
@@ -195,7 +191,7 @@
           <dl class="card-text row">
             <dt class="col-5">函數編程</dt>     <dd class="col-7">穆信成</dd>
             <dt class="col-5">邏輯</dt>        <dd class="col-7">柯向上</dd>
-            <dt class="col-5">程式語言導論</dt> <dd class="col-7">陳亮廷，游書弘</dd>
+            <dt class="col-5">程式語言導論</dt> <dd class="col-7">陳亮廷，游書泓</dd>
             <dt class="col-5">依值型別編程</dt> <dd class="col-7">穆信成，柯向上，陳亮廷</dd>
             <dt class="col-5">特別演講</dt>     <dd class="col-7">張耘盛</dd>
           </dl>
@@ -268,10 +264,10 @@
           </table>
 
           <ul class="list list-unstyled">
-            <li><strong>F</strong>: 函數編成</li>  
+            <li><strong>F</strong>: 函數編程</li>  
             <li><strong>L</strong>: 邏輯</li>  
             <li><strong>T</strong>: 程式語言導論</li>  
-            <li><strong>D</strong>: 依值型別編成</li>  
+            <li><strong>D</strong>: 依值型別編程</li>  
             <li><strong>I</strong>: 特別演講</li>  
             <li><strong>E</strong>: 考試</li>  
           </ul>
