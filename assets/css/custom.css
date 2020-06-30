@@ -9972,6 +9972,97 @@ h3 {
     border-color: #dee2e6;
   }
 }
+nav {
+  height: 5rem;
+}
+
+body {
+  background: url("/img/background/creampaper.png") repeat;
+}
+
+body > div > section {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+h2 {
+  color: #354B5B;
+  margin-bottom: 3rem;
+}
+
+#landing {
+  padding: 0;
+  height: calc(100vh - 5rem);
+  background-image: url("/img/background/main.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-align: center;
+}
+#landing h1 {
+  font-size: 400%;
+}
+#landing span {
+  font-size: 150%;
+}
+
+#aim,
+#special-lecture {
+  background: #222;
+  color: white;
+}
+#aim h2,
+#special-lecture h2 {
+  color: white;
+}
+
+#ocean-mountain-intro-container {
+  display: grid;
+  grid-template-columns: auto 500px 500px auto;
+}
+#ocean-mountain-intro-container #ocean-intro-padding {
+  grid-column: 1/2;
+  background: #61C1BE;
+}
+#ocean-mountain-intro-container #ocean-intro {
+  grid-column: 2/3;
+  width: auto;
+  padding: 6rem 6rem 6rem 0;
+  margin: 0;
+  background: #61C1BE;
+}
+#ocean-mountain-intro-container #mountain-intro {
+  grid-column: 3/4;
+  width: auto;
+  padding: 6rem 0 6rem 6rem;
+  margin: 0;
+  background: #FABE00;
+}
+#ocean-mountain-intro-container #mountain-intro-padding {
+  grid-column: 4/5;
+  background: #FABE00;
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: auto auto;
+  }
+
+  #special-lecture-container {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: auto;
+  }
+}
 blockquote {
   background: white;
   border-radius: 10px;

@@ -1,0 +1,287 @@
+$breakpoint: 992px; // used by Bootstrap
+
+$width        : 1000px;
+$margin       : 6rem;
+$padding      : 1rem;
+$border-radius: 0.5rem;
+
+$nav-height: 5rem;
+
+nav {
+    height: $nav-height;
+}
+
+body {
+    background: url('/img/background/creampaper.png') repeat;
+
+    // grid-template-columns : [left-end] auto [left-boundary] $width/2 [mid] $width/2 [right-boundary] auto [right-end];
+    // grid-template-areas  :
+    //     "nav nav nav nav"
+    //     "landing landing landing landing"
+    //     "aim aim aim aim"
+    //     "ocean ocean mountain mountain"
+    //     "footer footer footer footer";
+}
+
+// body>div {
+//     display              : grid;
+//     grid-template-columns: [left-end] auto [left-boundary] $width/2 [mid] $width/2 [right-boundary] auto [right-end];
+// }
+
+// body>div>section {
+//     grid-column: left-boundary / right-boundary;
+//     padding    : $margin 0;
+// }
+body>div>section {
+    width  : $width;
+    margin : 0 auto;
+    padding: $margin 0;
+}
+
+h2 {
+    color        : $pickled-bluewood;
+    margin-bottom: $margin/2;
+}
+
+#landing {
+
+    // dimension 
+    padding: 0;
+    height : calc(100vh - #{$nav-height});
+
+    // background 
+    background-image   : url('/img/background/main.png');
+    background-size    : cover;
+    background-position: top;
+    background-repeat  : no-repeat;
+
+    // layout 
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    // text color & alignment
+    color      : white;
+    text-shadow: 0px 0px 5px black;
+    text-align : center;
+
+    h1 {
+        font-size: 400%;
+    }
+
+    span {
+        font-size: 150%;
+    }
+}
+
+#aim,
+#special-lecture {
+    background: #222;
+    color     : white;
+
+    h2 {
+        color: white;
+    }
+}
+
+#ocean-mountain-intro-container {
+    display              : grid;
+    grid-template-columns: auto $width/2 $width/2 auto;
+
+    #ocean-intro-padding {
+        grid-column: 1 / 2;
+        background : $fountain-blue;
+    }
+
+    #ocean-intro {
+        grid-column: 2 / 3;
+        width      : auto;
+        padding    : $margin $margin $margin 0;
+        margin     : 0;
+        background : $fountain-blue;
+    }
+
+    #mountain-intro {
+        grid-column: 3 / 4;
+        width      : auto;
+        padding    : $margin 0 $margin $margin;
+        margin     : 0;
+        background : $buttercup;
+    }
+
+    #mountain-intro-padding {
+        grid-column: 4 / 5;
+        background : $buttercup;
+    }
+
+    // grid-template-columns: [left-end] auto [left-boundary] $width/2 [mid] $width/2 [right-boundary] auto [right-end];
+}
+
+// #ocean-intro-container {
+//     background: $fountain-blue;
+
+//     #ocean-intro {
+//         width: $width/2;
+//     }
+
+// }
+
+// #mountain-intro-container {
+//     background: $buttercup;
+
+//     #mountain-intro {
+//         width: $width/2;
+//     }
+// }
+
+// #ocean-intro-container {
+//     background: $fountain-blue;
+
+//     h2 {
+//         color: $pickled-bluewood;
+//     }
+// }
+
+// #mountain-intro-container {
+//     background: $buttercup;
+// }
+
+// #announcement-container {
+//     background: $buttercup;
+// }
+
+// #special-lecture-container {
+//     background: #222;
+
+//     h2 {
+//         color: white;
+//     }
+
+//     color: white;
+// }
+
+// #timeline {
+//     $timeline-color       : gray;
+//     $important-event-color: $fountain-blue;
+//     $timeline-width       : 0.5rem;
+//     $diameter             : 2rem;
+
+//     ol {
+//         list-style: none;
+//         padding   : 0;
+//         margin    : 0;
+//     }
+
+//     li {
+//         display    : flex;
+//         line-height: $diameter;
+
+//         &:first-of-type .timeline-event-date-container {
+//             border-right-color: $important-event-color;
+
+//             &:after {
+//                 border-color       : $important-event-color;
+//                 // background-color: $important-event-color;
+//                 // background-image: none;
+//             }
+//         }
+
+//         .timeline-event-date-container {
+//             // layout
+//             display        : flex;
+//             justify-content: flex-end;
+
+//             // dimensions
+//             min-width: 10rem;
+//             padding  : $padding*2 $padding $padding 0;
+
+//             // border
+//             border-right: $timeline-color $timeline-width solid;
+
+//             // text
+//             text-align: right;
+//             color     : gray;
+//             font-size : 150%;
+
+//             &:after {
+//                 content      : "\A";
+//                 position     : relative;
+//                 left         : calc(#{$padding} + #{$diameter / 2} + #{$timeline-width / 2});
+//                 display      : inline-block;
+//                 width        : $diameter;
+//                 height       : $diameter;
+//                 border       : 0.4rem solid $timeline-color;
+//                 border-radius: 50%;
+//                 background   : url('/img/background/creampaper_@2X.png') repeat;
+//             }
+//         }
+
+//         .timeline-event-content-container {
+//             padding: $padding $padding $padding $padding*2;
+
+//             display: flex;
+
+//             .timeline-event-content {
+//                 background-color   : white;
+//                 // margin-top      : $padding;
+//                 padding            : $padding;
+
+//                 box-shadow   : 0px 0px 4px lightgray;
+//                 border-radius: $border-radius;
+
+//                 h4 {
+//                     color      : #212529;
+//                     font-weight: 400;
+//                     font-size  : 1.2rem;
+//                     margin     : 0;
+//                     line-height: $diameter;
+//                 }
+
+//             }
+
+//             &:before {
+//                 content     : "\A";
+//                 width       : 0;
+//                 height      : 0;
+//                 border-style: solid;
+//                 border-width: $diameter/2 $diameter/2 $diameter/2 0;
+//                 border-color: transparent white transparent transparent;
+//                 border-style: solid;
+//                 position    : relative;
+//                 top         : $padding;
+//             }
+
+
+//         }
+
+//     }
+// }
+
+// }
+
+// for desktop 
+@media (min-width: $breakpoint) {
+
+    // grid system 2 column
+    .container {
+        grid-template-columns: auto auto;
+    }
+
+    // span across 2 columns
+    // #timeline {
+    //   grid-column: 1 / -1;
+    // }
+
+    #special-lecture-container {
+        grid-column: 1 / -1;
+    }
+}
+
+// for mobile 
+@media (max-width: $breakpoint) {
+
+    // grid system only 1 column
+    .container {
+        grid-template-columns: auto;
+    }
+}

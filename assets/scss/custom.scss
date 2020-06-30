@@ -40,6 +40,8 @@ $body-color: $dark;
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
+// Custom styling
+@import "style";
 
 blockquote {
   background   : white;

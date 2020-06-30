@@ -1,5 +1,4 @@
 ---
-  fancy-banner: true
   zh: 
     title: 「邏輯、語言與計算」暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation
@@ -73,6 +72,39 @@
     - year: "2008"
       title: Interpreting Types as Abstract Values
 ---
+
+<div id="landing">
+  <header>
+    <h1>$LC.title$</h1>
+    <span>$LC.subtitle$</span>
+  </header>
+</div>
+<div id="aim">
+  <section >
+    <h2>$LC.h-aim$</h2>
+    $LC.aim-content$
+  </section>
+</div>
+<div id="ocean-mountain-intro-container">
+  <div id="ocean-intro-padding"></div>
+  <section id="ocean-intro">
+    <h2>今年主題：$LC.h-PL$</h2>
+    $LC.ocean-intro-content$
+  </section>
+  <section id="mountain-intro">
+    <h2>來年主題：$LC.h-FM$</h2>
+    $LC.mountain-intro-content$
+  </section>
+  <div id="mountain-intro-padding"></div>
+</div>
+<div id="special-lecture" >
+  <section>
+    <h2>2020 年特別講題：依值型別編程</h2>
+    <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
+    <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。踏在直構型別論的基礎上，依值型別編程的目標是進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。</p>
+  </section>
+</div>
+<!-- 
 <div class="container-md">
   <section class="row row-cols-2 text-light bg-dark">
     <div class="col-12 col-md bg-light">
@@ -124,7 +156,7 @@
     </div>
   </div>
   </section>
-</div>
+</div> -->
 <!--
 <section class="row border">
   <div class="col border">
