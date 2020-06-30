@@ -82,7 +82,7 @@ footer {
 
   dd {
     grid-column-start: 2;
-    border-left      : 2px solid $light;
+    border-left      : 0.15em solid $light;
     padding-left     : .5em
   }
 }
@@ -124,4 +124,12 @@ footer {
   list-style  : none;
 }
 
-.news-group-item {}
+.border-right-thick {
+  border-right: 0.15em solid white;
+}
+
+@media only screen and (max-width: 992px) {
+  .border-right-thick {
+    border: none;
+  }
+}
