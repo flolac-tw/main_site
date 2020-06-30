@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - dev
   schedule:
     # Run every day at 20:00.
     - cron: '0 20 * * *'
