@@ -3,8 +3,11 @@
 網站係用 [Hakyll](https://hackage.haskell.org/package/hakyll) 靜態網站編譯器維護，
 支援文件轉換器 [Pandoc](https://pandoc.org) 可用 Markdown, LaTeX 甚至 doc 格式。
 
-內容上傳至 GitHub 這個 repo 後，會觸發 [GitHub workflow](/.github/workflows/hakyll.yml)
-編譯內容產生網站，並自動上傳到 `gh-pages` 分支。
+* 主要網站：push 至 `master` 後，會觸發 [GitHub workflow](/.github/workflows/hakyll.yml)
+編譯內容產生網站，自動發布網站內容到 `flolac-tw/flolac-tw.github.io` 的 `master` 分支更新網站。
+
+* 測試用網站：push 至 `dev` 後會自動生成網站，自動 push 進 `gh-pages` 分支
+並發布網站至 `flolac.iis.sinica.edu.tw/main_site/` 
 
 ## 安裝
 
@@ -41,8 +44,6 @@ npm run watch
 
 ## 上傳變更
 
-原則上產生的網站可直接上傳至 GitHub，但這步請交由設定好的 workflow 執行。
+原則上產生的網站可直接上傳至 GitHub，但請交由設定好的 workflow 執行。
 
 若無權限變更，請發 pull request 由管理者合併變更。
-
-Liang-Ting Chen, 06-19-2020

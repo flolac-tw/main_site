@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - dev
   schedule:
     # Run every day at 20:00.
     - cron: '0 20 * * *'
@@ -50,8 +51,11 @@ jobs:
     - name: Check the site output
       run: |
         stack build ${FLAGS} --exec "site check --internal-links"
-    - uses: peaceiris/actions-gh-pages@v2.10.1
-      env:
+        
+    - uses: peaceiris/actions-gh-pages@v3
+      name: Publish to the organsiation site      
+      if: github.ref == 'refs/heads/master'
+      with:
         # Type the following in the terminal to get private/public keys:
         #
         # ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
@@ -64,13 +68,24 @@ jobs:
         # For details, see
         # https://github.com/marketplace/actions/github-pages-action
         #
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        deploy_key: ${{ secrets.ACTION_DEPLOY_KEY_TO_TEAM_SITE }}
 
         # Ensure to match the source branch specified on the GitHub setting.
         #
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: _site
-        if: github.ref == 'refs/heads/master'
-        # Rename `source` to the branch for the source code
+        external_repository: flolac-tw/flolac-tw.github.io
+        publish_branch: master
+        publish_dir: _site
+
+        
+    - uses: peaceiris/actions-gh-pages@v3
+      name: Publish to the project site
+      if: github.ref == 'refs/heads/dev'
       with:
-        emptyCommits: false
+        # For details, see
+        # https://github.com/marketplace/actions/github-pages-action
+        #
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+
+        # Ensure to match the source branch specified on the GitHub setting.
+        #
+        publish_dir: _site
