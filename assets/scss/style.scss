@@ -1,11 +1,14 @@
 $breakpoint: 992px; // used by Bootstrap
 
 $width        : 1000px;
-$margin       : 6rem;
+$margin       : 3rem;
 $padding      : 1rem;
 $border-radius: 0.5rem;
 
 $nav-height: 5rem;
+
+
+$secondary: gray;
 
 nav {
     height: $nav-height;
@@ -23,24 +26,21 @@ body {
     //     "footer footer footer footer";
 }
 
-// body>div {
-//     display              : grid;
-//     grid-template-columns: [left-end] auto [left-boundary] $width/2 [mid] $width/2 [right-boundary] auto [right-end];
-// }
 
-// body>div>section {
-//     grid-column: left-boundary / right-boundary;
-//     padding    : $margin 0;
-// }
 body>div>section {
-    width  : $width;
-    margin : 0 auto;
-    padding: $margin 0;
+    max-width: $width;
+    margin   : 0 auto;
+    padding  : $margin $padding;
 }
 
 h2 {
-    color        : $pickled-bluewood;
-    margin-bottom: $margin/2;
+    margin           : $margin/2 0 $margin 0;
+    // padding-bottom: 1rem;
+    // border-bottom : 0.3rem solid;
+}
+
+h3 {
+    margin: $margin 0;
 }
 
 #landing {
@@ -74,14 +74,9 @@ h2 {
     }
 }
 
-#aim,
-#special-lecture {
-    background: #222;
+#aim {
+    background: $thunder;
     color     : white;
-
-    h2 {
-        color: white;
-    }
 }
 
 #ocean-mountain-intro-container {
@@ -96,7 +91,7 @@ h2 {
     #ocean-intro {
         grid-column: 2 / 3;
         width      : auto;
-        padding    : $margin $margin $margin 0;
+        padding    : $margin $margin $margin $padding;
         margin     : 0;
         background : $fountain-blue;
     }
@@ -104,7 +99,7 @@ h2 {
     #mountain-intro {
         grid-column: 3 / 4;
         width      : auto;
-        padding    : $margin 0 $margin $margin;
+        padding    : $margin $padding $margin $margin;
         margin     : 0;
         background : $buttercup;
     }
@@ -114,7 +109,54 @@ h2 {
         background : $buttercup;
     }
 
-    // grid-template-columns: [left-end] auto [left-boundary] $width/2 [mid] $width/2 [right-boundary] auto [right-end];
+    // for mobile 
+    @media (max-width: $breakpoint) {
+        display: block;
+
+        #ocean-intro-padding,
+        #mountain-intro-padding {
+            display: none;
+        }
+
+        #ocean-intro,
+        #mountain-intro {
+            padding: $margin $padding;
+        }
+    }
+}
+
+#special-lecture {
+    background: $thunder;
+    color     : white;
+
+    ol {
+        list-style  : none;
+        padding     : 0;
+        margin      : 0;
+        column-count: 2;
+        column-gap  : 2rem;
+
+        li {
+            line-height: 2rem;
+            padding    : 1rem;
+
+            display: flex;
+
+            .guest-lecture-year {
+                display      : inline-block;
+                padding-right: $padding;
+                color        : $secondary;
+                font-weight  : bold;
+            }
+        }
+    }
+
+    // for mobile 
+    @media (max-width: $breakpoint) {
+        ol {
+            column-count: 1;
+        }
+    }
 }
 
 // #ocean-intro-container {
