@@ -51,7 +51,7 @@ jobs:
     - name: Check the site output
       run: |
         stack build ${FLAGS} --exec "site check --internal-links"
-        
+
     - uses: peaceiris/actions-gh-pages@v3
       name: Publish to the organsiation site      
       if: github.ref == 'refs/heads/master'
@@ -76,6 +76,10 @@ jobs:
         publish_branch: master
         publish_dir: _site
 
+    - name: Remove CNAME from _site on branch dev
+      if: github.ref == 'refs/heads/dev'
+      run: |
+        rm _site/CNAME
         
     - uses: peaceiris/actions-gh-pages@v3
       name: Publish to the project site
