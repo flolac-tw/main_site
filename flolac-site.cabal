@@ -22,7 +22,9 @@ executable site
                   , yaml >= 0.11.2
   ghc-options:      -threaded
   default-language: Haskell2010
+
   other-modules:    Multilingual
+                    Redirect
                     Hakyll.Web.ExtendedTemplate
                     Hakyll.Web.ExtendedTemplate.Context
                     Hakyll.Web.ExtendedTemplate.Parser
