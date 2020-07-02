@@ -11,11 +11,11 @@ import           Hakyll.Main
 import           Hakyll.Web.CompressCss
 import           Hakyll.Web.Html
 import           Hakyll.Web.Html.RelativizeUrls
-import           Hakyll.Web.Redirect
 
 import           Hakyll.Web.ExtendedTemplate
 import           Hakyll.Web.ExtendedTemplate.Type
 
+import           Redirect
 import           Multilingual
 
 main :: IO ()
