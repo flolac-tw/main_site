@@ -77,41 +77,67 @@
     <span>$LC.location$</span>
   </header>
 </div>
-<div id="intro" class="dark">
-  <section>
-    <h2>課程介紹</h2>
-    <p>
-      本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
-      以及型別系統在程式語言中扮演的角色，使學生能以遞迴（迭構）方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
-      並具備進一步探索程式語言相關領域的知識基礎。
-    </p>
-  </section>
+<div id="course">
+  <div id="course-timeline" class="dark">
+    <section>
+      <h2>$LC.dates$</h2>
+      <ol>
+        $foreach(event)in(calendar)$
+        <li>
+          <div class="timeline-event-date-container">
+            <div class="timeline-event-date">
+              $event.time$
+            </div>
+          </div>
+          <div class="timeline-event-content-container">
+            <div class="timeline-event-content">
+              $event.title$
+            </div>
+          </div>
+        </li>
+        $endforeach$
+      </ol>
+    </section>
+  </div>
+  <div id="course-left-column" >
+    <div id="course-intro" class="dark">
+      <section>
+        <h2>課程介紹</h2>
+        <p>
+          本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
+          以及型別系統在程式語言中扮演的角色，使學生能以遞迴（迭構）方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
+          並具備進一步探索程式語言相關領域的知識基礎。
+        </p>
+      </section>
+    </div>
+    <div id="course-special-lecture" class="dark">
+      <section>
+        <h2>2020 年特別講題：依值型別編程</h2>
+        <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
+        <h3>程式不可能寫錯</h3>
+        <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
+        <h3>寫程式不再孤單</h3>
+        <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知和尚待滿足的條件，互動地寫出正確程式。</p>
+        <h3>數學定理也能跑</h3>
+        <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還具有計算意義。</p>
+      </section>
+    </div>
+    <div id="course-lecturer" class="dark">
+      <section>
+        <h2>課程與講師</h2>
+        <dl>
+          <dt>函數編程</dt>     <dd>穆信成</dd>
+          <dt>邏輯</dt>        <dd>柯向上</dd>
+          <dt>程式語言導論</dt> <dd>陳亮廷，游書泓</dd>
+          <dt>依值型別編程</dt> <dd>穆信成，柯向上，陳亮廷</dd>
+          <dt>特別演講</dt>     <dd>張耘盛</dd>
+        </dl>
+      </section>
+    </div>
+
+  </div>
 </div>
-<div class="dark">
-  <section>
-    <h2>2020 年特別講題：依值型別編程</h2>
-    <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
-    <h3>程式不可能寫錯</h3>
-    <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
-    <h3>寫程式不再孤單</h3>
-    <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知和尚待滿足的條件，互動地寫出正確程式。</p>
-    <h3>數學定理也能跑</h3>
-    <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還具有計算意義。</p>
-  </section>
-</div>
-<div class="dark">
-  <section>
-    <h2>課程與講師</h2>
-    <dl>
-      <dt>函數編程</dt>     <dd>穆信成</dd>
-      <dt>邏輯</dt>        <dd>柯向上</dd>
-      <dt>程式語言導論</dt> <dd>陳亮廷，游書泓</dd>
-      <dt>依值型別編程</dt> <dd>穆信成，柯向上，陳亮廷</dd>
-      <dt>特別演講</dt>     <dd>張耘盛</dd>
-    </dl>
-  </section>
-</div>
-<div id="timetable" class="dark">
+<div id="timetable" class="dark alt">
   <section>
     <h2>課表</h2>
     <table>
@@ -182,75 +208,3 @@
     </table>
   </section>
 </div>
-
-<!--div class="row">
-  <div class="col-md-3">
-    <dl class="row">
-      <dt class="col-sm-3">日期</dt>
-      <dd class="col-sm-9">2020 年 8 月 10 日至 21 日</dd>
-      <dt class="col-sm-3">時間</dt>
-      <dd class="col-sm-9">早上 9 點至下午 5 點</dd>
-      <dt class="col-sm-3">地點</dt>
-      <dd class="col-sm-9">台灣大學管理學院1號館102 (暫定)</dd>
-    </dl>
-  </div>
-</div-->
-
-<!-- <div class="container-fluid bg-light px-0">
-  <div class="container-md px-md-5 px-0">
-    <div class="row no-gutters" style="min-height: 30vh">
-    <div class="card col-md-6 col-12 rounded-0 border-0">
-      <div class="card-body col-md-8 col-12 news-box">
-        <h3 class="card-title heading-underline">$LC.dates$</h3>
-        <ul class="list-group list-group-flush overflow-auto">
-          $foreach(event)in(calendar)$
-          <li class="list-group-item py-1"><strong>$event.time$</strong> $event.title$</dd>
-          $endforeach$
-        </ul>
-      </div>
-    </div>
-    <div class="card col-md-6 col-12 rounded-0 border-0" style="background-color: #eee">
-      <div class="card-body col-md-8 col-12 news-box">
-      <h3 class="heading-underline">$LC.announcement$</h3>
-      <ul class="news-group overflow-auto">
-        $foreach(event)in(LC.news)$
-        <li class="news-group-item py-1 border-bottom border-secondary">
-          <strong class="list-group-item-heading">$event.time$</strong> &nbsp $event.title$</li>
-        $endforeach$
-      </ul>
-      </div>
-    </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="container-fluid bg-light px-0">
-  <div class="container-md px-md-5 px-0">
-    <div class="card rounded-0" style="background-color: #898888; color: white">
-      <div class="card-body col-12">
-        <h3 class="card-title">$LC.lecture-intro$</h3>
-      </div>
-    </div>
-    <div class="card rounded-0" style="background-color: #5a5757; color: white">
-      <div class="card-body col-12">
-        <h3 class="card-title">2020 年特別講題：依值型別編程</h3>
-        
-      </div>
-    </div>
-  </div>
-</div> -->
-  
-
-
-<!-- <article class="container-md px-xl-5 px-0">
-    <div class="col-12 col-md-4 px-md-3 px-0">
-      <div class="card rounded">
-        <h4 class="card-header bg-danger text-light">$LC.dates$</h4>
-        <div class="card-body">
-          <ul class="card-text list-unstyled">
-          $foreach(event)in(calendar)$
-          <li><strong>$event.time$</strong> $event.title$</dd>
-          $endforeach$
-          </ul>
-        </div>
-</article> -->
