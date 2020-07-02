@@ -33,16 +33,11 @@ $theme-colors: (
 
 $body-bg: $snow-drift;
 $body-color: $pickled-bluewood;
-/*
-$light: $snow-drift;
-$dark: $pickled-bluewood;
-
-*/
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-blockquote {
+blockquote.dialog {
   background   : white;
   border-radius: 10px;
   padding      : 1em 1.25em;
@@ -70,25 +65,48 @@ blockquote {
   }
 }
 
-footer {
-  dl {
-    display              : grid;
-    grid-template-columns: max-content auto;
-  }
-
-  dt {
+dl.dl-vbar {
+  display              : grid;
+  grid-template-columns: max-content auto;
+  margin-bottom: 0px;
+  >dt {
     grid-column-start: 1;
-    padding-right    : .5em
+    padding-right    : .5em;
   }
-
-  dd {
+  >dd {
     grid-column-start: 2;
-    border-left      : 0.15em solid $light;
-    padding-left     : .5em
+    border-left      : 0.15em solid $light; // $light should inhert the text colour.
+    padding-left     : .5em;
+  }
+  >dd:last-child {
+    margin-bottom: 0px;
   }
 }
 
-
+dl.inline-block-lists {
+  div {
+    display: inline-block;
+    >dt {
+      display: inline-block;
+    }
+    >dd {
+      display: inline-block;
+      padding-right: 2em;
+      ul {
+        display:inline-block;
+        list-style-type: none; 
+        vertical-align: top;
+        padding-left: 1em;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  div:last-child {  
+    >dd {
+      margin-bottom: 0px;
+    }
+  }
+}
 .light-border-bottom {
   border-bottom: 3.5px solid $light;
 }

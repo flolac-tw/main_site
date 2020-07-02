@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/*
-$light: $snow-drift;
-$dark: $pickled-bluewood;
-
-*/
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -9970,16 +9965,16 @@ h3 {
     border-color: #dee2e6;
   }
 }
-blockquote {
+blockquote.dialog {
   background: white;
   border-radius: 10px;
   padding: 1em 1.25em;
 }
-blockquote > p {
+blockquote.dialog > p {
   color: #495057;
   text-align: justify;
 }
-blockquote > p:first-of-type::before {
+blockquote.dialog > p:first-of-type::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 0.75em;
@@ -9987,25 +9982,50 @@ blockquote > p:first-of-type::before {
   padding-right: 1em;
   content: "";
 }
-blockquote > footer {
+blockquote.dialog > footer {
   text-align: right;
 }
-blockquote > footer::before {
+blockquote.dialog > footer::before {
   content: "— ";
 }
 
-footer dl {
+dl.dl-vbar {
   display: grid;
   grid-template-columns: max-content auto;
+  margin-bottom: 0px;
 }
-footer dt {
+dl.dl-vbar > dt {
   grid-column-start: 1;
   padding-right: 0.5em;
 }
-footer dd {
+dl.dl-vbar > dd {
   grid-column-start: 2;
   border-left: 0.15em solid #f8f9fa;
   padding-left: 0.5em;
+}
+dl.dl-vbar > dd:last-child {
+  margin-bottom: 0px;
+}
+
+dl.inline-block-lists div {
+  display: inline-block;
+}
+dl.inline-block-lists div > dt {
+  display: inline-block;
+}
+dl.inline-block-lists div > dd {
+  display: inline-block;
+  padding-right: 2em;
+}
+dl.inline-block-lists div > dd ul {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: top;
+  padding-left: 1em;
+  margin-bottom: 0px;
+}
+dl.inline-block-lists div:last-child > dd {
+  margin-bottom: 0px;
 }
 
 .light-border-bottom {
