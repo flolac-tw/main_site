@@ -2,7 +2,6 @@
 /*
 $light: $snow-drift;
 $dark: $pickled-bluewood;
-$body-color: $dark;
 
 */
 /*!
@@ -74,7 +73,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #354B5B;
   text-align: left;
   background-color: #F3F6F2;
 }
@@ -1692,7 +1691,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #354B5B;
 }
 .table th,
 .table td {
@@ -1737,7 +1736,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #212529;
+  color: #354B5B;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -2092,7 +2091,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: #212529;
+  color: #354B5B;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2423,7 +2422,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
+  color: #354B5B;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -2441,7 +2440,7 @@ textarea.form-control {
   }
 }
 .btn:hover {
-  color: #212529;
+  color: #354B5B;
   text-decoration: none;
 }
 .btn:focus, .btn.focus {
@@ -3023,7 +3022,7 @@ input[type=button].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #212529;
+  color: #354B5B;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -5039,7 +5038,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   background-color: #f8f9fa;
 }
 .list-group-item-action:active {
-  color: #212529;
+  color: #354B5B;
   background-color: #e9ecef;
 }
 
@@ -5826,7 +5825,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #212529;
+  color: #354B5B;
 }
 
 .carousel {
@@ -9834,7 +9833,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: #212529 !important;
+  color: #354B5B !important;
 }
 
 .text-muted {
