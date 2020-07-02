@@ -9975,8 +9975,40 @@ nav {
   height: 5rem;
 }
 
-body {
-  background: url("/img/background/creampaper.png") repeat;
+.dark {
+  background: #222;
+  color: #CCC;
+}
+.dark h2,
+.dark h3 {
+  color: white;
+}
+.dark .ocean {
+  color: #61C1BE;
+}
+.dark .mountain {
+  color: #FABE00;
+}
+.dark:nth-of-type(2n+1) {
+  background: #111;
+}
+
+.light {
+  background: #EEE;
+  color: #222;
+}
+.light h2,
+.light h3 {
+  color: black;
+}
+.light .ocean {
+  color: #47b8b4;
+}
+.light .mountain {
+  color: #dba800;
+}
+.light:nth-of-type(2n) {
+  background: white;
 }
 
 body > div > section {
@@ -9990,7 +10022,7 @@ h2 {
 }
 
 h3 {
-  margin: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 #landing {
@@ -10014,77 +10046,76 @@ h3 {
   font-size: 150%;
 }
 
-#aim {
-  background: #30282E;
-  color: white;
-}
-
-#ocean-mountain-intro-container {
-  display: grid;
-  grid-template-columns: auto 500px 500px auto;
-}
-#ocean-mountain-intro-container #ocean-intro-padding {
-  grid-column: 1/2;
-  background: #61C1BE;
-}
-#ocean-mountain-intro-container #ocean-intro {
-  grid-column: 2/3;
-  width: auto;
-  padding: 3rem 3rem 3rem 1rem;
-  margin: 0;
-  background: #61C1BE;
-}
-#ocean-mountain-intro-container #mountain-intro {
-  grid-column: 3/4;
-  width: auto;
-  padding: 3rem 1rem 3rem 3rem;
-  margin: 0;
-  background: #FABE00;
-}
-#ocean-mountain-intro-container #mountain-intro-padding {
-  grid-column: 4/5;
-  background: #FABE00;
-}
-@media (max-width: 992px) {
-  #ocean-mountain-intro-container {
-    display: block;
-  }
-  #ocean-mountain-intro-container #ocean-intro-padding,
-#ocean-mountain-intro-container #mountain-intro-padding {
-    display: none;
-  }
-  #ocean-mountain-intro-container #ocean-intro,
-#ocean-mountain-intro-container #mountain-intro {
-    padding: 3rem 1rem;
-  }
-}
-
-#special-lecture {
-  background: #30282E;
-  color: white;
-}
-#special-lecture ol {
+#previous-guest-lectures ol {
   list-style: none;
   padding: 0;
   margin: 0;
   column-count: 2;
   column-gap: 2rem;
 }
-#special-lecture ol li {
+#previous-guest-lectures ol li {
   line-height: 2rem;
   padding: 1rem;
   display: flex;
 }
-#special-lecture ol li .guest-lecture-year {
+#previous-guest-lectures ol li .guest-lecture-year {
   display: inline-block;
   padding-right: 1rem;
   color: gray;
   font-weight: bold;
 }
 @media (max-width: 992px) {
-  #special-lecture ol {
+  #previous-guest-lectures ol {
     column-count: 1;
   }
+}
+
+#ocean-mountain-intro-container {
+  display: grid;
+  grid-template-columns: auto 500px 500px auto;
+}
+#ocean-mountain-intro-container h2 {
+  text-align: center;
+}
+#ocean-mountain-intro-container #ocean-intro {
+  grid-column: 2/3;
+  width: auto;
+  padding: 3rem;
+  margin: 0;
+  border-top: #61C1BE 1rem solid;
+  border-bottom: #61C1BE 1rem solid;
+}
+#ocean-mountain-intro-container #mountain-intro {
+  grid-column: 3/4;
+  width: auto;
+  padding: 3rem;
+  margin: 0;
+  border-top: #FABE00 1rem solid;
+  border-bottom: #FABE00 1rem solid;
+}
+@media (max-width: 992px) {
+  #ocean-mountain-intro-container {
+    display: block;
+  }
+  #ocean-mountain-intro-container h2 {
+    text-align: left;
+  }
+  #ocean-mountain-intro-container #ocean-intro,
+#ocean-mountain-intro-container #mountain-intro {
+    padding: 3rem 1rem;
+    border-bottom: none;
+  }
+}
+
+#course {
+  padding-top: 5rem;
+}
+#course #header-container {
+  height: 200px;
+  background-image: url("/img/background/main.png");
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {
