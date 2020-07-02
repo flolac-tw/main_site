@@ -96,7 +96,8 @@ h2 {
 }
 
 h3 {
-    margin-bottom: $margin;
+    margin   : $margin 0;
+    font-size: 150%;
 }
 
 #landing {
@@ -161,7 +162,7 @@ h3 {
     }
 }
 
-#ocean-mountain-intro-container {
+#ocean-mountain-intro {
     display              : grid;
     grid-template-columns: auto $width/2 $width/2 auto;
 
@@ -205,18 +206,87 @@ h3 {
     }
 }
 
-#course {
-    padding-top: $nav-height;
+#header {
+    // dimentions
+    height             : 200px;
+    padding            : $padding;
+    // background 
+    background-image   : url('/img/background/main.png');
+    background-size    : cover;
+    background-position: center 20%;
+    background-repeat  : no-repeat;
+    // layout 
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
 
-    #header-container {
-        height             : 200px;
-        // background 
-        background-image   : url('/img/background/main.png');
-        background-size    : cover;
-        background-position: center 20%;
-        background-repeat  : no-repeat;
+    // text color & alignment
+    color      : $foreground-dark-header;
+    text-shadow: 0px 0px 5px black;
+    text-align : center;
 
+    h1 {
+        font-size: 200%;
+    }
+}
 
+#timetable {
+    table {
+        width        : 100%;
+        margin-bottom: $margin;
+    }
+
+    thead {
+        border-bottom: 1px solid $foreground-dark-aux;
+    }
+
+    tbody {
+        th {
+            width       : 10%;
+            border-right: 1px solid $foreground-dark-aux;
+        }
+
+        td {
+            width: 18%;
+        }
+    }
+
+    .plt {
+        color: #16a085;
+    }
+
+    .fp {
+        color: #2980b9;
+    }
+
+    .lgc {
+        color: #c0392b;
+    }
+
+    .dtp {
+        color: #f39c12;
+    }
+
+    th {
+
+        color     : $foreground-dark-aux;
+        text-align: center;
+
+        height: 4rem;
+        margin: $padding;
+    }
+
+    td {
+        text-align: center;
+
+        height: 8rem;
+        margin: $padding;
+
+        font-size: 120%;
+
+        abbr {
+            text-decoration: none !important;
+        }
     }
 }
 

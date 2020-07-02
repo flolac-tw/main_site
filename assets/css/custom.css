@@ -10022,7 +10022,8 @@ h2 {
 }
 
 h3 {
-  margin-bottom: 3rem;
+  margin: 3rem 0;
+  font-size: 150%;
 }
 
 #landing {
@@ -10070,14 +10071,14 @@ h3 {
   }
 }
 
-#ocean-mountain-intro-container {
+#ocean-mountain-intro {
   display: grid;
   grid-template-columns: auto 500px 500px auto;
 }
-#ocean-mountain-intro-container h2 {
+#ocean-mountain-intro h2 {
   text-align: center;
 }
-#ocean-mountain-intro-container #ocean-intro {
+#ocean-mountain-intro #ocean-intro {
   grid-column: 2/3;
   width: auto;
   padding: 3rem;
@@ -10085,7 +10086,7 @@ h3 {
   border-top: #61C1BE 1rem solid;
   border-bottom: #61C1BE 1rem solid;
 }
-#ocean-mountain-intro-container #mountain-intro {
+#ocean-mountain-intro #mountain-intro {
   grid-column: 3/4;
   width: auto;
   padding: 3rem;
@@ -10094,28 +10095,77 @@ h3 {
   border-bottom: #FABE00 1rem solid;
 }
 @media (max-width: 992px) {
-  #ocean-mountain-intro-container {
+  #ocean-mountain-intro {
     display: block;
   }
-  #ocean-mountain-intro-container h2 {
+  #ocean-mountain-intro h2 {
     text-align: left;
   }
-  #ocean-mountain-intro-container #ocean-intro,
-#ocean-mountain-intro-container #mountain-intro {
+  #ocean-mountain-intro #ocean-intro,
+#ocean-mountain-intro #mountain-intro {
     padding: 3rem 1rem;
     border-bottom: none;
   }
 }
 
-#course {
-  padding-top: 5rem;
-}
-#course #header-container {
+#header {
   height: 200px;
+  padding: 1rem;
   background-image: url("/img/background/main.png");
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  text-align: center;
+}
+#header h1 {
+  font-size: 200%;
+}
+
+#timetable table {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+#timetable thead {
+  border-bottom: 1px solid gray;
+}
+#timetable tbody th {
+  width: 10%;
+  border-right: 1px solid gray;
+}
+#timetable tbody td {
+  width: 18%;
+}
+#timetable .plt {
+  color: #16a085;
+}
+#timetable .fp {
+  color: #2980b9;
+}
+#timetable .lgc {
+  color: #c0392b;
+}
+#timetable .dtp {
+  color: #f39c12;
+}
+#timetable th {
+  color: gray;
+  text-align: center;
+  height: 4rem;
+  margin: 1rem;
+}
+#timetable td {
+  text-align: center;
+  height: 8rem;
+  margin: 1rem;
+  font-size: 120%;
+}
+#timetable td abbr {
+  text-decoration: none !important;
 }
 
 @media (min-width: 992px) {
