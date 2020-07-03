@@ -24,26 +24,25 @@ $colors: ("fountain-blue": $fountain-blue,
 $enable-shadows: true;
 
 $theme-colors: ("primary": $fountain-blue,
-  "info" : $pickled-bluewood,
+  "secondary" : $pickled-bluewood,
   "success": $fern,
   "warning": $old-gold,
   "danger" : $pomegranate,
+  "dark-shade": $pickled-bluewood,
+  "dark-accent": $au-chico,
+  "light-shade": $snow-drift,
+  "light-accent": $sundance,
 );
 
 $body-bg   : $snow-drift;
-/*
-$light     : $snow-drift;
-$dark      : $pickled-bluewood;
-$body-color: $dark;
-
-*/
+$body-color: $pickled-bluewood;
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // Custom styling
 @import "style";
 
-blockquote {
+blockquote.dialog {
   background   : white;
   border-radius: 10px;
   padding      : 1em 1.25em;
@@ -71,32 +70,77 @@ blockquote {
   }
 }
 
-footer {
-  dl {
-    display              : grid;
-    grid-template-columns: max-content auto;
-  }
+dl.dl-vbar {
+  display              : grid;
+  grid-template-columns: max-content auto;
+  margin-bottom        : 0px;
 
-  dt {
+  >dt {
     grid-column-start: 1;
-    padding-right    : .5em
+    padding-right    : .5em;
   }
 
-  dd {
+  >dd {
     grid-column-start: 2;
-    border-left      : 0.15em solid $light;
-    padding-left     : .5em
+    border-left      : 0.15em solid $light; // $light should inhert the text colour.
+    padding-left     : .5em;
+  }
+
+  >dd:last-child {
+    margin-bottom: 0px;
   }
 }
 
+dl.inline-block-lists {
+  >div {
+    display: inline-block;
 
-// .light-border-bottom {
-//   border-bottom: 3.5px solid $light;
-// }
+    >dt {
+      display      : inline-block;
+      padding-right: 1em;
+    }
 
-// .dark-border-bottom {
-//   border-bottom: 3.5px solid $dark;
-// }
+    >dd {
+      display      : inline-block;
+      padding-right: 2em;
+    }
+  }
+
+  div:last-child {
+    >dd {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.affiliation {
+  font-size: 0.8em;
+}
+
+.grid-3-col-container {
+  display              : grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap           : 1em;
+  grid-auto-flow       : row;
+  grid-auto-rows       : auto;
+}
+
+.grid-1-col-container {
+  display              : grid;
+  grid-template-columns: repeat(1, max-content);
+  grid-auto-flow       : row;
+  grid-auto-rows       : auto;
+}
+
+.light-border-bottom {
+  border-bottom : 0.2em solid $light;
+  padding-bottom: 1em;
+}
+
+.dark-border-bottom {
+  border-bottom : 0.2em solid $dark;
+  padding-bottom: 1em;
+}
 
 // .yearly-banner {
 //   min-height       : 30vh;
