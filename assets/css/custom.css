@@ -10610,7 +10610,7 @@ h4 {
 #landing {
   padding: 0;
   height: calc(100vh - 5rem);
-  background-image: url("/img/background/main.png");
+  background-image: url("/img/main.png");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -10670,7 +10670,7 @@ h4 {
 #header {
   height: 200px;
   padding: 1rem;
-  background-image: url("/img/background/main.png");
+  background-image: url("/img/main.png");
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
