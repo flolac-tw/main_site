@@ -181,6 +181,50 @@ h3 {
   margin: 0;
   padding: 3rem 3rem 3rem 1rem;
 }
+@media (max-width: 992px) {
+  #course {
+    display: block;
+  }
+  #course #course-timeline {
+    padding: 3rem 1rem;
+  }
+  #course #course-timeline ol {
+    list-style: disc;
+  }
+  #course #course-timeline li {
+    padding: 1rem;
+  }
+  #course #course-timeline .timeline-event-date-container {
+    border: none;
+    margin: 0;
+    padding: 0 3rem;
+  }
+  #course #course-timeline .timeline-event-date-container:after {
+    display: none;
+  }
+  #course #course-timeline .timeline-event-content-container {
+    margin: 0;
+    padding: 0 3rem;
+  }
+  #course #course-timeline .timeline-event-content-container .timeline-event-content {
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+  #course #course-timeline .timeline-event-content-container:before {
+    display: none;
+  }
+  #course #course-intro,
+#course #course-special-lecture,
+#course #course-lecturer {
+    display: block;
+  }
+  #course #course-intro > section,
+#course #course-special-lecture > section,
+#course #course-lecturer > section {
+    padding: 3rem 1rem;
+  }
+}
 
 #course-lecturer dl {
   display: grid;
@@ -302,21 +346,6 @@ h3 {
 }
 #timetable td abbr {
   text-decoration: none !important;
-}
-
-@media (min-width: 992px) {
-  .container {
-    grid-template-columns: auto auto;
-  }
-
-  #special-lecture-container {
-    grid-column: 1/-1;
-  }
-}
-@media (max-width: 992px) {
-  .container {
-    grid-template-columns: auto;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

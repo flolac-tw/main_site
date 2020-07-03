@@ -275,6 +275,59 @@ h3 {
         }
 
     }
+
+    // for mobile 
+    @media (max-width: $breakpoint) {
+        display: block;
+
+        #course-timeline {
+            padding: $margin $padding;
+
+            // remove the fancy timeline stuff
+            ol {
+                list-style: disc;
+            }
+
+            li {
+                padding: $padding;
+            }
+
+            .timeline-event-date-container {
+                border : none;
+                margin : 0;
+                padding: 0 $margin;
+
+                &:after {
+                    display: none
+                }
+            }
+
+            .timeline-event-content-container {
+                margin : 0;
+                padding: 0 $margin;
+
+                .timeline-event-content {
+                    background: none;
+                    margin    : 0;
+                    padding   : 0;
+                }
+
+                &:before {
+                    display: none
+                }
+            }
+        }
+
+        #course-intro,
+        #course-special-lecture,
+        #course-lecturer {
+            display: block;
+
+            >section {
+                padding: $margin $padding;
+            }
+        }
+    }
 }
 
 #course-lecturer dl {
@@ -293,8 +346,6 @@ h3 {
 }
 
 #course-timeline {
-    // $timeline-color       : $ocean-light;
-    // $timeline-color       : white;
     $timeline-color       : $foreground-dark-alt;
     $important-event-color: $foreground-dark-emph;
     $timeline-width       : 0.5rem;
@@ -454,29 +505,29 @@ h3 {
     }
 }
 
-// for desktop 
-@media (min-width: $breakpoint) {
+// // for desktop 
+// @media (min-width: $breakpoint) {
 
-    // grid system 2 column
-    .container {
-        grid-template-columns: auto auto;
-    }
+//     // grid system 2 column
+//     .container {
+//         grid-template-columns: auto auto;
+//     }
 
-    // span across 2 columns
-    // #timeline {
-    //   grid-column: 1 / -1;
-    // }
+//     // span across 2 columns
+//     // #timeline {
+//     //   grid-column: 1 / -1;
+//     // }
 
-    #special-lecture-container {
-        grid-column: 1 / -1;
-    }
-}
+//     #special-lecture-container {
+//         grid-column: 1 / -1;
+//     }
+// }
 
-// for mobile 
-@media (max-width: $breakpoint) {
+// // for mobile 
+// @media (max-width: $breakpoint) {
 
-    // grid system only 1 column
-    .container {
-        grid-template-columns: auto;
-    }
-}
+//     // grid system only 1 column
+//     .container {
+//         grid-template-columns: auto;
+//     }
+// }
