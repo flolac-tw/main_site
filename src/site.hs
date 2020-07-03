@@ -1,10 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Control.Monad
-import qualified Data.Text        as T
-import           Data.Monoid      (mappend)
-import           Data.List        (intercalate)
-import           Data.List.Extra  (splitOn)
-import           Data.Yaml        
+import qualified Data.Text                     as T
+import           Data.Monoid                    ( mappend )
+import           Data.List                      ( intercalate )
+import           Data.List.Extra                ( splitOn )
+import           Data.Yaml
 
 import           Hakyll.Core
 import           Hakyll.Main
@@ -28,25 +28,31 @@ main = hakyll $ do
       let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
       getResourceBody
         >>= applyAsTemplate ctx
-        >>= loadAndApplyTemplatesLC lc ctx
-          [ "templates/banner.html"
-          , "templates/nav.html"
-          , "templates/footer.html"
-          , "templates/head.html"
-          ]
+        >>= loadAndApplyTemplatesLC
+              lc
+              ctx
+              [ "templates/banner.html"
+              , "templates/nav.html"
+              , "templates/footer.html"
+              , "templates/head.html"
+              ]
         >>= relativizeUrls
 
   match "assets/img/**" $ do
-      route   (gsubRoute "assets/" (const ""))
-      compile copyFileCompiler
+    route (gsubRoute "assets/" (const ""))
+    compile copyFileCompiler
+
+  match "assets/script/**" $ do
+    route (gsubRoute "assets/" (const ""))
+    compile copyFileCompiler
 
   match "assets/css/**" $ do
-      route   (gsubRoute "assets/" (const ""))
-      compile compressCssCompiler
+    route (gsubRoute "assets/" (const ""))
+    compile compressCssCompiler
 
   match "assets/html/**" $ do
-      route   (gsubRoute "assets/html/" (const ""))
-      compile copyFileCompiler
+    route (gsubRoute "assets/html/" (const ""))
+    compile copyFileCompiler
 
   match "templates/*" $ compile templateBodyCompiler
 
@@ -60,10 +66,10 @@ langToggleURL lc = field "LC-toggle-url" $ case lc of
 
 getURL :: Item a -> Compiler String
 getURL i = maybe empty' toUrl <$> getRoute id
-  where
-    id = itemIdentifier i
-    empty' = fail $ "No route url found for item " ++ show id
+ where
+  id     = itemIdentifier i
+  empty' = fail $ "No route url found for item " ++ show id
 
 -- An ad-hoc function of changing from /xxx/yyy to /dom/yyy
 substRoot :: String -> String -> String
-substRoot dom = intercalate "/" . ([[], dom ] ++) . drop 2 . splitOn "/"
+substRoot dom = intercalate "/" . ([[], dom] ++) . drop 2 . splitOn "/"

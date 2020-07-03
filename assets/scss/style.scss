@@ -45,7 +45,10 @@ body {
     color     : $foreground-dark;
 
     h2,
-    h3 {
+    h3,
+    h4,
+    h5,
+    h6 {
         color: $foreground-dark-emph;
     }
 
@@ -107,6 +110,10 @@ h2 {
 h3 {
     margin   : $margin 0;
     font-size: 150%;
+}
+
+h4 {
+    margin: $margin 0 $margin/2;
 }
 
 .two-column {
@@ -512,29 +519,64 @@ h3 {
     }
 }
 
-// // for desktop 
-// @media (min-width: $breakpoint) {
+#registration-attendee-type-tab {
+    $tab-height  : 3rem;
+    $border-width: 0.4rem;
 
-//     // grid system 2 column
-//     .container {
-//         grid-template-columns: auto auto;
-//     }
+    list-style: none;
+    margin    : $margin 0 0 0;
+    padding   : 0;
 
-//     // span across 2 columns
-//     // #timeline {
-//     //   grid-column: 1 / -1;
-//     // }
+    display: flex;
 
-//     #special-lecture-container {
-//         grid-column: 1 / -1;
-//     }
-// }
 
-// // for mobile 
-// @media (max-width: $breakpoint) {
+    >li {
+        width: 25%;
 
-//     // grid system only 1 column
-//     .container {
-//         grid-template-columns: auto;
-//     }
-// }
+        // make <a> a block that fills the whole <li>
+        a {
+            display       : block;
+            padding       : $padding;
+            text-align    : center;
+            font-weight   : bold;
+            min-height    : $tab-height;
+            // line-height: $tab-height;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+        }
+
+        // make the tab text smaller on mobile 
+        @media (max-width: $breakpoint) {
+            a {
+                font-size: 50%;
+            }
+        }
+
+        border-top: solid $border-width $background-dark;
+
+        &.selected {
+            background      : $background-dark-alt;
+            border-top-color: $ocean-dark;
+        }
+    }
+}
+
+#registration-attendee-type-page {
+    list-style: none;
+    margin    : 0;
+    padding   : 0;
+    background: $background-dark-alt;
+
+    >li {
+        display: none;
+        padding: $margin;
+
+        &.selected {
+            display      : block;
+            // border-top: solid 0.4rem $ocean-dark;
+        }
+    }
+}
