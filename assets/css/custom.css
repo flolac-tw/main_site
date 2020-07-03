@@ -10529,10 +10529,10 @@ nav {
 .dark h3 {
   color: white;
 }
-.dark.ocean h2 {
+.dark .ocean h2, .dark.ocean h2 {
   color: #61C1BE;
 }
-.dark.mountain h2 {
+.dark .mountain h2, .dark.mountain h2 {
   color: #FABE00;
 }
 .dark.alt {

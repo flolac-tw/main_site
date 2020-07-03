@@ -49,12 +49,14 @@ body {
         color: $foreground-dark-emph;
     }
 
+    .ocean,
     &.ocean {
         h2 {
             color: $ocean-dark;
         }
     }
 
+    .mountain,
     &.mountain {
         h2 {
             color: $mountain-dark;
