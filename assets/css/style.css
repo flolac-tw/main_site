@@ -56,6 +56,31 @@ h3 {
   font-size: 150%;
 }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 496px 496px 1fr;
+}
+.two-column > :first-child {
+  grid-column: 2/3;
+  width: calc(992px/2);
+  padding: 3rem 3rem 3rem 1rem;
+}
+.two-column > :last-child {
+  grid-column: 3/4;
+  width: calc(992px/2);
+  padding: 3rem 1rem 3rem 3rem;
+}
+@media (max-width: 992px) {
+  .two-column {
+    display: block;
+  }
+  .two-column > :first-child,
+.two-column > :last-child {
+    padding: 3rem 1rem;
+    width: auto;
+  }
+}
+
 #landing {
   padding: 0;
   height: calc(100vh - 5rem);
@@ -101,38 +126,18 @@ h3 {
   }
 }
 
-#ocean-mountain-intro {
-  display: grid;
-  grid-template-columns: auto 496px 496px auto;
-}
 #ocean-mountain-intro h2 {
   text-align: center;
 }
 #ocean-mountain-intro #ocean-intro {
-  grid-column: 2/3;
-  width: auto;
-  padding: 3rem 3rem 3rem 1rem;
-  margin: 0;
   border-top: #61C1BE 1rem solid;
 }
 #ocean-mountain-intro #mountain-intro {
-  grid-column: 3/4;
-  width: auto;
-  padding: 3rem 1rem 3rem 3rem;
-  margin: 0;
   border-top: #FABE00 1rem solid;
 }
 @media (max-width: 992px) {
-  #ocean-mountain-intro {
-    display: block;
-  }
   #ocean-mountain-intro h2 {
     text-align: left;
-  }
-  #ocean-mountain-intro #ocean-intro,
-#ocean-mountain-intro #mountain-intro {
-    padding: 3rem 1rem;
-    border-bottom: none;
   }
 }
 

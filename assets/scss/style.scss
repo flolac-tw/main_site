@@ -109,6 +109,35 @@ h3 {
     font-size: 150%;
 }
 
+.two-column {
+    display              : grid;
+    grid-template-columns: 1fr $width/2 $width/2 1fr;
+
+    > :first-child {
+        grid-column: 2 / 3;
+        width      : calc(#{$width}/2);
+        padding    : $margin $margin $margin $padding;
+    }
+
+    > :last-child {
+        grid-column: 3 / 4;
+        width      : calc(#{$width}/2);
+        padding    : $margin $padding $margin $margin;
+    }
+
+    // for mobile 
+    @media (max-width: $breakpoint) {
+        display: block;
+
+        > :first-child,
+        > :last-child {
+            padding: $margin $padding;
+            width  : auto;
+        }
+
+    }
+}
+
 #landing {
 
     // dimension 
@@ -172,45 +201,23 @@ h3 {
 }
 
 #ocean-mountain-intro {
-    display              : grid;
-    grid-template-columns: auto $width/2 $width/2 auto;
 
     h2 {
         text-align: center;
     }
 
     #ocean-intro {
-        grid-column     : 2 / 3;
-        width           : auto;
-        padding         : $margin $margin $margin $padding;
-        margin          : 0;
-        border-top      : $ocean-dark 1rem solid;
-        // border-bottom: $ocean-dark 1rem solid;
-
+        border-top: $ocean-dark 1rem solid;
     }
 
     #mountain-intro {
-        grid-column: 3 / 4;
-        width      : auto;
-        padding    : $margin $padding $margin $margin;
-        margin     : 0;
-
-        border-top      : $mountain-dark 1rem solid;
-        // border-bottom: $mountain-dark 1rem solid;
+        border-top: $mountain-dark 1rem solid;
     }
 
     // for mobile 
     @media (max-width: $breakpoint) {
-        display: block;
-
         h2 {
             text-align: left;
-        }
-
-        #ocean-intro,
-        #mountain-intro {
-            padding      : $margin $padding;
-            border-bottom: none;
         }
     }
 }
@@ -351,7 +358,7 @@ h3 {
     $timeline-width       : 0.5rem;
     $diameter             : 2rem;
 
-    $background: #000;
+    $background: $background-dark-alt2;
 
     background: $background;
     padding   : $margin $margin;
