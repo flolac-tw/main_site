@@ -65,67 +65,7 @@
       - time: 02/10 (五)
         title: 網站上線
 ---
-<!--div class="row">
-  <div class="col-md-3">
-    <dl class="row">
-      <dt class="col-sm-3">日期</dt>
-      <dd class="col-sm-9">2020 年 8 月 10 日至 21 日</dd>
-      <dt class="col-sm-3">時間</dt>
-      <dd class="col-sm-9">早上 9 點至下午 5 點</dd>
-      <dt class="col-sm-3">地點</dt>
-      <dd class="col-sm-9">台灣大學管理學院1號館102 (暫定)</dd>
-    </dl>
-  </div>
-</div-->
-
-<!-- <div class="container-fluid bg-light px-0">
-  <div class="container-md px-md-5 px-0">
-    <div class="row no-gutters" style="min-height: 30vh">
-    <div class="card col-md-6 col-12 rounded-0 border-0">
-      <div class="card-body col-md-8 col-12 news-box">
-        <h3 class="card-title heading-underline">$LC.dates$</h3>
-        <ul class="list-group list-group-flush overflow-auto">
-          $foreach(event)in(calendar)$
-          <li class="list-group-item py-1"><strong>$event.time$</strong> $event.title$</dd>
-          $endforeach$
-        </ul>
-      </div>
-    </div>
-    <div class="card col-md-6 col-12 rounded-0 border-0" style="background-color: #eee">
-      <div class="card-body col-md-8 col-12 news-box">
-      <h3 class="heading-underline">$LC.announcement$</h3>
-      <ul class="news-group overflow-auto">
-        $foreach(event)in(LC.news)$
-        <li class="news-group-item py-1 border-bottom border-secondary">
-          <strong class="list-group-item-heading">$event.time$</strong> &nbsp $event.title$</li>
-        $endforeach$
-      </ul>
-      </div>
-    </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="container-fluid bg-light px-0">
-  <div class="container-md px-md-5 px-0">
-    <div class="card rounded-0" style="background-color: #898888; color: white">
-      <div class="card-body col-12">
-        <h3 class="card-title">$LC.lecture-intro$</h3>
-      </div>
-    </div>
-    <div class="card rounded-0" style="background-color: #5a5757; color: white">
-      <div class="card-body col-12">
-        <h3 class="card-title">2020 年特別講題：依值型別編程</h3>
-        
-      </div>
-    </div>
-  </div>
-</div> -->
-  
-
-
 <article class="container-md px-xl-5 px-0">
-
   <section class="row pb-3 pt-5 mw-100 mx-lg-5 mx-0 px-lg-3 px-0">
     <div class="col-12 col-md-8 px-md-3 px-0">
       <div class="card">
@@ -140,8 +80,8 @@
       </div>
     </div>
     <div class="col-12 col-md-4 px-md-3 px-0">
-      <div class="card rounded">
-        <h5 class="card-header text-danger">$LC.dates$</h5>
+      <div class="card rounded border-danger">
+        <h5 class="card-header">$LC.dates$</h5>
         <div class="card-body">
           <ul class="card-text list-unstyled">
           $foreach(event)in(calendar)$
