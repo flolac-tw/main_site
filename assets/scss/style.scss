@@ -579,4 +579,11 @@ h4 {
             // border-top: solid 0.4rem $ocean-dark;
         }
     }
+
+    // for mobile 
+    @media (max-width: $breakpoint) {
+        >li {
+            padding: $margin $padding;
+        }
+    }
 }

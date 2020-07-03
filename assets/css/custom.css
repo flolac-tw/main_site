@@ -10922,6 +10922,11 @@ h4 {
 #registration-attendee-type-page > li.selected {
   display: block;
 }
+@media (max-width: 992px) {
+  #registration-attendee-type-page > li {
+    padding: 3rem 1rem;
+  }
+}
 
 blockquote.dialog {
   background: white;
