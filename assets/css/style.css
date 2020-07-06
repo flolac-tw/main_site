@@ -91,7 +91,7 @@ h4 {
 #landing {
   padding: 0;
   height: calc(100vh - 5rem);
-  background-image: url("/img/main.png");
+  background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
