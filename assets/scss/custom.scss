@@ -90,13 +90,13 @@ dl.dl-vbar {
 dl.inline-block-lists {
   >div {
     display: inline-block;
+    margin-right: 2.5em;
     >dt {
       display: inline-block;
-      padding-right: 1em;
+      width: 5em;
     }
     >dd {
       display: inline-block;
-      padding-right: 2em;
     }
   }
   div:last-child {  
@@ -105,6 +105,18 @@ dl.inline-block-lists {
     }
   }
 }
+
+.list-inline-block {
+  padding-left: 0;
+  list-style:none;
+  li {
+    display: inline-block;
+  }
+  li:not(:last-child) {
+    margin-right: .5em;
+  }
+}
+
 .affiliation {
   font-size: 0.8em;
 }
@@ -116,21 +128,18 @@ dl.inline-block-lists {
 .text-outline {
   text-shadow: 0px 0px 1px black;
 }
-.grid-3-col-container {
+
+@mixin container-n-rows ($rows) {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
-  column-gap: 1em;
-  grid-auto-flow: row;
-  grid-auto-rows: auto;
+  grid-template-rows: repeat($rows, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  grid-column-gap: 1em;
 }
 
-.grid-1-col-container {
-  display: grid;
-  grid-template-columns: repeat(1, max-content);
-  grid-auto-flow: row;
-  grid-auto-rows: auto;
+.container-4-rows {
+  @include container-n-rows(4);
 }
-
 .light-border-bottom {
   border-bottom: 0.2em solid $light;
   padding-bottom: 1em;
