@@ -90,10 +90,10 @@ dl.dl-vbar {
 dl.inline-block-lists {
   >div {
     display: inline-block;
-    margin-right: 2.5em;
+    margin-right: 3em;
     >dt {
       display: inline-block;
-      width: 5em;
+      padding-right: .5em;
     }
     >dd {
       display: inline-block;
@@ -134,7 +134,7 @@ dl.inline-block-lists {
   grid-template-rows: repeat($rows, auto);
   grid-auto-flow: column;
   grid-auto-columns: auto;
-  grid-column-gap: 1em;
+  grid-column-gap: .5em;
 }
 
 .container-4-rows {
