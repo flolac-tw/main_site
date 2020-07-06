@@ -10734,23 +10734,26 @@ h4 {
   #course #course-timeline {
     padding: 3rem 1rem;
   }
-  #course #course-timeline ol {
-    list-style: disc;
-  }
   #course #course-timeline li {
-    padding: 1rem;
+    padding: 1rem 0;
   }
   #course #course-timeline .timeline-event-date-container {
+    width: 30%;
     border: none;
     margin: 0;
-    padding: 0 3rem;
+    padding: 0 1rem;
+    display: block;
+  }
+  #course #course-timeline .timeline-event-date-container .timeline-event-date {
+    text-align: left;
   }
   #course #course-timeline .timeline-event-date-container:after {
     display: none;
   }
   #course #course-timeline .timeline-event-content-container {
+    width: 70%;
     margin: 0;
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
   #course #course-timeline .timeline-event-content-container .timeline-event-content {
     background: none;

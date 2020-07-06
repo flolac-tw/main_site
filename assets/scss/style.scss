@@ -321,18 +321,22 @@ h4 {
             padding: $margin $padding;
 
             // remove the fancy timeline stuff
-            ol {
-                list-style: disc;
-            }
-
             li {
-                padding: $padding;
+                padding: $padding 0;
             }
 
             .timeline-event-date-container {
+                width: 30%;
+
                 border : none;
                 margin : 0;
-                padding: 0 $margin;
+                padding: 0 $padding;
+
+                display: block;
+
+                .timeline-event-date {
+                    text-align: left;
+                }
 
                 &:after {
                     display: none
@@ -340,8 +344,9 @@ h4 {
             }
 
             .timeline-event-content-container {
+                width  : 70%;
                 margin : 0;
-                padding: 0 $margin;
+                padding: 0 $padding;
 
                 .timeline-event-content {
                     background: none;
