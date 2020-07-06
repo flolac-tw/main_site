@@ -117,6 +117,13 @@ dl.inline-block-lists {
   font-size: 0.8em;
 }
 
+.vbar-inbetween >*:not(last-child) {
+  border-right: 0.15em solid white;
+}
+
+.text-outline {
+  text-shadow: 0px 0px 1px black;
+}
 .grid-3-col-container {
   display              : grid;
   grid-template-columns: repeat(3, max-content);

@@ -25,6 +25,7 @@ jobs:
       with:
         ghc-version: ${{ matrix.ghc }}
         stack-version: 'latest'
+
     - name: Cache ~/.stack
       uses: actions/cache@v1
       with:
@@ -32,6 +33,7 @@ jobs:
         key: cabal-store-${{ runner.OS }}-${{ hashFiles('stack.yaml') }}
         restore-keys: |
           cabal-store-${{ runner.OS }}-
+
     - name: Cache .stack-work
       uses: actions/cache@v1
       with:
@@ -39,9 +41,19 @@ jobs:
         key: stack-work-${{ runner.OS }}-${{ hashFiles('stack.yaml') }}
         restore-keys: |
           stack-work-${{ runner.OS }}-
+
     - name: Build dependencies and the site generator
       run: |
         stack build ${FLAGS}
+        npm install
+        mkdir -p assets/css && touch assets/css/custom.css
+
+    - name: Compile CSS from SCSS files
+      uses: gha-utilities/sass-build@v0.2.5
+      with:
+        source: assets/scss/custom.scss
+        destination: assets/css/custom.css
+
     - name: Build the site
       env:
         # citeproc requires the locale environment variable.
