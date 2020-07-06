@@ -193,6 +193,21 @@ h4 {
   margin: 0;
   padding: 3rem 3rem 3rem 1rem;
 }
+#course #course-lecturer td {
+  width: 30%;
+}
+#course #course-lecturer th {
+  width: 35%;
+  vertical-align: baseline;
+}
+#course #course-lecturer .affiliation {
+  color: gray;
+}
+#course #course-lecturer tr.border-at-top > * {
+  border-top: 1rem solid transparent;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
 @media (max-width: 992px) {
   #course {
     display: block;

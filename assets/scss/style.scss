@@ -290,6 +290,29 @@ h4 {
 
     }
 
+    #course-lecturer {
+
+        td {
+            width: 30%;
+        }
+
+        th {
+            width         : 35%;
+            vertical-align: baseline;
+        }
+
+        .affiliation {
+            color: $foreground-dark-alt;
+        }
+
+        tr.border-at-top>* {
+            // $foreground-dark-alt;
+            border-top : $padding solid transparent;
+            margin-top : $padding;
+            padding-top: $padding;
+        }
+    }
+
     // for mobile 
     @media (max-width: $breakpoint) {
         display: block;
