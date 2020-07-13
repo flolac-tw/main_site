@@ -243,6 +243,7 @@ h4 {
     padding: 0 1rem;
   }
   #course #course-timeline .timeline-event-content-container .timeline-event-content {
+    color: #222;
     background: none;
     margin: 0;
     padding: 0;
@@ -424,6 +425,22 @@ h4 {
   text-decoration: none !important;
 }
 
+.dark #registration-attendee-type-tab > li.selected {
+  background: #111;
+  border-top-color: #61C1BE;
+}
+.dark #registration-attendee-type-page {
+  background: #111;
+}
+
+.light #registration-attendee-type-tab > li.selected {
+  background: #F8F8F8;
+  border-top-color: #47b8b4;
+}
+.light #registration-attendee-type-page {
+  background: #F8F8F8;
+}
+
 #registration-attendee-type-tab {
   list-style: none;
   margin: 3rem 0 0 0;
@@ -432,7 +449,7 @@ h4 {
 }
 #registration-attendee-type-tab > li {
   width: 25%;
-  border-top: solid 0.4rem #222;
+  border-top: solid 0.4rem transparent;
 }
 #registration-attendee-type-tab > li a {
   display: block;
@@ -449,16 +466,11 @@ h4 {
     font-size: 50%;
   }
 }
-#registration-attendee-type-tab > li.selected {
-  background: #111;
-  border-top-color: #61C1BE;
-}
 
 #registration-attendee-type-page {
   list-style: none;
   margin: 0;
   padding: 0;
-  background: #111;
 }
 #registration-attendee-type-page > li {
   display: none;

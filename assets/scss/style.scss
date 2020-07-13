@@ -362,6 +362,7 @@ h4 {
                 padding: 0 $padding;
 
                 .timeline-event-content {
+                    color     : $foreground-light;
                     background: none;
                     margin    : 0;
                     padding   : 0;
@@ -399,7 +400,6 @@ h4 {
         grid-column: 2 / 3;
     }
 }
-
 
 #course-timeline {
     &.dark {
@@ -639,6 +639,28 @@ h4 {
     }
 }
 
+.dark {
+    #registration-attendee-type-tab>li.selected {
+        background      : $background-dark-alt;
+        border-top-color: $ocean-dark;
+    }
+
+    #registration-attendee-type-page {
+        background: $background-dark-alt;
+    }
+}
+
+.light {
+    #registration-attendee-type-tab>li.selected {
+        background      : $background-light-alt;
+        border-top-color: $ocean-light;
+    }
+
+    #registration-attendee-type-page {
+        background: $background-light-alt;
+    }
+}
+
 #registration-attendee-type-tab {
     $tab-height  : 3rem;
     $border-width: 0.4rem;
@@ -655,12 +677,11 @@ h4 {
 
         // make <a> a block that fills the whole <li>
         a {
-            display       : block;
-            padding       : $padding;
-            text-align    : center;
-            font-weight   : bold;
-            min-height    : $tab-height;
-            // line-height: $tab-height;
+            display    : block;
+            padding    : $padding;
+            text-align : center;
+            font-weight: bold;
+            min-height : $tab-height;
 
             &:hover {
                 text-decoration: none;
@@ -675,12 +696,8 @@ h4 {
             }
         }
 
-        border-top: solid $border-width $background-dark;
+        border-top: solid $border-width transparent;
 
-        &.selected {
-            background      : $background-dark-alt;
-            border-top-color: $ocean-dark;
-        }
     }
 }
 
@@ -688,7 +705,6 @@ h4 {
     list-style: none;
     margin    : 0;
     padding   : 0;
-    background: $background-dark-alt;
 
     >li {
         display: none;
