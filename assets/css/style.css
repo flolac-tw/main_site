@@ -27,21 +27,27 @@ nav {
 }
 
 .light {
-  background: #EEE;
+  background: #DDD;
   color: #222;
 }
 .light h2,
-.light h3 {
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
   color: black;
 }
-.light .ocean {
+.light .ocean h2, .light.ocean h2 {
   color: #47b8b4;
 }
-.light .mountain {
+.light .mountain h2, .light.mountain h2 {
   color: #dba800;
 }
-.light:nth-of-type(2n) {
-  background: white;
+.light.alt {
+  background: #EEE;
+}
+.light.alt2 {
+  background: #FFF;
 }
 
 body > div > section {

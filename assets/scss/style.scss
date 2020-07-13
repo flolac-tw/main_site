@@ -23,8 +23,9 @@ $foreground-dark-alt :gray;
 $foreground-dark-emph:white;
 
 // colors for background/foreground
-$background-light     : #EEE;
-$background-light-alt : white;
+$background-light      : #DDD;
+$background-light-alt  : #EEE;
+$background-light-alt2 :#FFF;
 
 $foreground-light     :#222;
 $foreground-light-alt :gray;
@@ -33,10 +34,6 @@ $foreground-light-emph:black;
 
 nav {
     height: $nav-height;
-}
-
-body {
-    // background: url('/img/background/creampaper.png') repeat;
 }
 
 // colors & accents
@@ -80,20 +77,33 @@ body {
     color     : $foreground-light;
 
     h2,
-    h3 {
+    h3,
+    h4,
+    h5,
+    h6 {
         color: $foreground-light-emph;
     }
 
-    .ocean {
-        color: $ocean-light;
+    .ocean,
+    &.ocean {
+        h2 {
+            color: $ocean-light;
+        }
     }
 
-    .mountain {
-        color: $mountain-light;
+    .mountain,
+    &.mountain {
+        h2 {
+            color: $mountain-light;
+        }
     }
 
-    &:nth-of-type(2n) {
+    &.alt {
         background: $background-light-alt;
+    }
+
+    &.alt2 {
+        background: $background-light-alt2;
     }
 }
 
@@ -152,8 +162,8 @@ h4 {
     height : calc(100vh - #{$nav-height});
 
     // background 
-    background-image   : url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
-    
+    background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
+
     background-size    : cover;
     background-position: top;
     background-repeat  : no-repeat;
@@ -232,11 +242,11 @@ h4 {
 
 #header {
     // dimentions
-    height             : 200px;
-    padding            : $padding;
+    height          : 200px;
+    padding         : $padding;
     // background 
-    background-image   : url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
-    
+    background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
+
     background-size    : cover;
     background-position: center 20%;
     background-repeat  : no-repeat;
