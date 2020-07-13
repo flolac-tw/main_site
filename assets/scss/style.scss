@@ -23,13 +23,14 @@ $foreground-dark-alt :gray;
 $foreground-dark-emph:white;
 
 // colors for background/foreground
-$background-light      : #DDD;
-$background-light-alt  : #EEE;
-$background-light-alt2 :#FFF;
+$background-light      : #F0F0F0;
+$background-light-alt  : #F8F8F8;
+$background-light-alt2 :#E8E8E8;
 
-$foreground-light     :#222;
-$foreground-light-alt :gray;
-$foreground-light-emph:black;
+$foreground-light      :#222;
+$foreground-light-alt  :gray;
+$foreground-light-alt2 :lightgray;
+$foreground-light-emph :black;
 
 
 nav {
@@ -399,16 +400,110 @@ h4 {
     }
 }
 
+
 #course-timeline {
-    $timeline-color       : $foreground-dark-alt;
-    $important-event-color: $foreground-dark-emph;
-    $timeline-width       : 0.5rem;
-    $diameter             : 2rem;
+    &.dark {
+        // foreground
+        $timeline-color       : $foreground-dark-alt;
+        $important-event-color: $foreground-dark-emph;
+        // background
+        $background           : $background-dark-alt2;
+        $background2          : $background-dark;
+        background            : $background;
 
-    $background: $background-dark-alt2;
+        li {
+            &:first-of-type {
+                .timeline-event-date-container {
+                    border-right-color: $important-event-color;
+                    color             : $important-event-color;
 
-    background: $background;
-    padding   : $margin $margin;
+                    &:after {
+                        border-color: $important-event-color;
+                    }
+                }
+            }
+
+            .timeline-event-date-container {
+                // border
+                border-right-color: $timeline-color;
+
+                &:after {
+                    border-color: $timeline-color;
+                    background  : $background;
+                }
+            }
+
+            .timeline-event-content-container {
+                .timeline-event-content {
+                    background-color: $background2;
+                }
+
+                &:before {
+                    border-color: transparent $background2 transparent transparent;
+                }
+            }
+        }
+    }
+
+    &.light {
+        // foreground
+        $timeline-color       : $foreground-light-alt2;
+        $important-event-color: $ocean-light;
+        // background
+        $background           : $background-light-alt2;
+        $background2          : white;
+        background            : $background;
+
+        li {
+            &:first-of-type {
+                .timeline-event-date-container {
+                    border-right-color: $important-event-color;
+                    color             : $important-event-color;
+
+                    &:after {
+                        border-color: $important-event-color;
+                    }
+                }
+
+                .timeline-event-content-container {
+                    .timeline-event-content {
+                        background-color: $important-event-color;
+                        color           : $background2;
+                    }
+
+                    &:before {
+                        border-color: transparent $important-event-color transparent transparent;
+                    }
+                }
+            }
+
+            .timeline-event-date-container {
+                // border
+                border-right-color: $timeline-color;
+
+                &:after {
+                    border-color: $timeline-color;
+                    background  : $background;
+                }
+            }
+
+            .timeline-event-content-container {
+                .timeline-event-content {
+                    background: $background2;
+                }
+
+                &:before {
+                    border-color: transparent $background2 transparent transparent;
+                }
+            }
+        }
+    }
+
+    $timeline-width : 0.5rem;
+    $diameter       : 2rem;
+
+
+    padding : $margin $margin;
 
 
     ol {
@@ -421,19 +516,6 @@ h4 {
         display    : flex;
         line-height: $diameter;
 
-        &:first-of-type {
-            color: $important-event-color;
-
-            .timeline-event-date-container {
-                border-right-color: $important-event-color;
-                color             : $important-event-color;
-
-                &:after {
-                    border-color: $important-event-color;
-                }
-            }
-        }
-
         .timeline-event-date-container {
             // layout
             display        : flex;
@@ -444,11 +526,11 @@ h4 {
             padding  : $padding*2 $padding $padding 0;
 
             // border
-            border-right: $timeline-color $timeline-width solid;
+            border-right-width: $timeline-width;
+            border-right-style: solid;
 
             // text
             text-align : right;
-            color      : $foreground-dark;
             font-weight: bold;
 
             &:after {
@@ -458,9 +540,9 @@ h4 {
                 display      : inline-block;
                 width        : $diameter;
                 height       : $diameter;
-                border       : 0.4rem solid $timeline-color;
+                border-width : 0.4rem;
+                border-style : solid;
                 border-radius: 50%;
-                background   : $background;
             }
         }
 
@@ -470,8 +552,7 @@ h4 {
             display: flex;
 
             .timeline-event-content {
-                background-color: $background-dark;
-                padding         : $padding;
+                padding: $padding;
 
                 border-radius: $border-radius;
 
@@ -488,7 +569,6 @@ h4 {
                 height      : 0;
                 border-style: solid;
                 border-width: $diameter/2 $diameter/2 $diameter/2 0;
-                border-color: transparent $background-dark transparent transparent;
                 border-style: solid;
                 position    : relative;
                 top         : $padding;

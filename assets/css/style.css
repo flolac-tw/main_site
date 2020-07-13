@@ -27,7 +27,7 @@ nav {
 }
 
 .light {
-  background: #DDD;
+  background: #F0F0F0;
   color: #222;
 }
 .light h2,
@@ -44,10 +44,10 @@ nav {
   color: #dba800;
 }
 .light.alt {
-  background: #EEE;
+  background: #F8F8F8;
 }
 .light.alt2 {
-  background: #FFF;
+  background: #E8E8E8;
 }
 
 body > div > section {
@@ -274,8 +274,60 @@ h4 {
 }
 
 #course-timeline {
-  background: #000;
   padding: 3rem 3rem;
+}
+#course-timeline.dark {
+  background: #000;
+}
+#course-timeline.dark li:first-of-type .timeline-event-date-container {
+  border-right-color: white;
+  color: white;
+}
+#course-timeline.dark li:first-of-type .timeline-event-date-container:after {
+  border-color: white;
+}
+#course-timeline.dark li .timeline-event-date-container {
+  border-right-color: gray;
+}
+#course-timeline.dark li .timeline-event-date-container:after {
+  border-color: gray;
+  background: #000;
+}
+#course-timeline.dark li .timeline-event-content-container .timeline-event-content {
+  background-color: #222;
+}
+#course-timeline.dark li .timeline-event-content-container:before {
+  border-color: transparent #222 transparent transparent;
+}
+#course-timeline.light {
+  background: #E8E8E8;
+}
+#course-timeline.light li:first-of-type .timeline-event-date-container {
+  border-right-color: #47b8b4;
+  color: #47b8b4;
+}
+#course-timeline.light li:first-of-type .timeline-event-date-container:after {
+  border-color: #47b8b4;
+}
+#course-timeline.light li:first-of-type .timeline-event-content-container .timeline-event-content {
+  background-color: #47b8b4;
+  color: white;
+}
+#course-timeline.light li:first-of-type .timeline-event-content-container:before {
+  border-color: transparent #47b8b4 transparent transparent;
+}
+#course-timeline.light li .timeline-event-date-container {
+  border-right-color: lightgray;
+}
+#course-timeline.light li .timeline-event-date-container:after {
+  border-color: lightgray;
+  background: #E8E8E8;
+}
+#course-timeline.light li .timeline-event-content-container .timeline-event-content {
+  background: white;
+}
+#course-timeline.light li .timeline-event-content-container:before {
+  border-color: transparent white transparent transparent;
 }
 #course-timeline ol {
   list-style: none;
@@ -286,24 +338,14 @@ h4 {
   display: flex;
   line-height: 2rem;
 }
-#course-timeline li:first-of-type {
-  color: white;
-}
-#course-timeline li:first-of-type .timeline-event-date-container {
-  border-right-color: white;
-  color: white;
-}
-#course-timeline li:first-of-type .timeline-event-date-container:after {
-  border-color: white;
-}
 #course-timeline li .timeline-event-date-container {
   display: flex;
   justify-content: flex-end;
   min-width: 7rem;
   padding: 2rem 1rem 1rem 0;
-  border-right: gray 0.5rem solid;
+  border-right-width: 0.5rem;
+  border-right-style: solid;
   text-align: right;
-  color: #CCC;
   font-weight: bold;
 }
 #course-timeline li .timeline-event-date-container:after {
@@ -313,16 +355,15 @@ h4 {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  border: 0.4rem solid gray;
+  border-width: 0.4rem;
+  border-style: solid;
   border-radius: 50%;
-  background: #000;
 }
 #course-timeline li .timeline-event-content-container {
   padding: 1rem 1rem 1rem 2rem;
   display: flex;
 }
 #course-timeline li .timeline-event-content-container .timeline-event-content {
-  background-color: #222;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -336,7 +377,6 @@ h4 {
   height: 0;
   border-style: solid;
   border-width: 1rem 1rem 1rem 0;
-  border-color: transparent #222 transparent transparent;
   border-style: solid;
   position: relative;
   top: 1rem;
