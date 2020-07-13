@@ -1,5 +1,6 @@
 name: Hakyll site CI
 
+
 on:
   push:
     branches:
