@@ -1,4 +1,5 @@
-$breakpoint: 992px; // used by Bootstrap
+$breakpoint : 992px; // used by Bootstrap
+$breakpoint2: 576px;
 
 $width        : $breakpoint;
 $margin       : 3rem;
@@ -687,16 +688,27 @@ h4 {
                 text-decoration: none;
             }
 
-        }
-
-        // make the tab text smaller on mobile 
-        @media (max-width: $breakpoint) {
-            a {
-                font-size: 50%;
+            &.abbr {
+                display: none;
             }
         }
 
         border-top: solid $border-width transparent;
+
+        // make the tab text smaller on mobile 
+        @media (max-width: $breakpoint2) {
+
+            a {
+                &.full {
+                    display: none;
+                }
+
+                &.abbr {
+                    display: block;
+                }
+            }
+        }
+
 
     }
 }

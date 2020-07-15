@@ -461,9 +461,15 @@ h4 {
 #registration-attendee-type-tab > li a:hover {
   text-decoration: none;
 }
-@media (max-width: 992px) {
-  #registration-attendee-type-tab > li a {
-    font-size: 50%;
+#registration-attendee-type-tab > li a.abbr {
+  display: none;
+}
+@media (max-width: 576px) {
+  #registration-attendee-type-tab > li a.full {
+    display: none;
+  }
+  #registration-attendee-type-tab > li a.abbr {
+    display: block;
   }
 }
 
