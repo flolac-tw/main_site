@@ -37,6 +37,13 @@ nav {
 .light h6 {
   color: black;
 }
+.light blockquote {
+  background: #F0F0F0;
+  border-left-color: gray;
+}
+.light blockquote footer {
+  color: gray;
+}
 .light .ocean h2, .light.ocean h2 {
   color: #47b8b4;
 }
@@ -151,6 +158,38 @@ h4 {
 @media (max-width: 992px) {
   #ocean-mountain-intro h2 {
     text-align: left;
+  }
+}
+
+#stats img {
+  display: block;
+  width: 80%;
+  margin: 3rem auto;
+  max-width: 300px;
+}
+#stats h3 {
+  text-align: center;
+}
+
+#feedbacks > section > div {
+  columns: 2;
+}
+#feedbacks blockquote {
+  break-inside: avoid;
+  padding: 3rem 3rem 1.5rem 3rem;
+  border-left-width: 0.3rem;
+  border-left-style: solid;
+}
+#feedbacks blockquote p {
+  font-style: italic;
+  font-size: 120%;
+}
+#feedbacks blockquote footer {
+  text-align: right;
+}
+@media (max-width: 992px) {
+  #feedbacks > section > div {
+    columns: unset;
   }
 }
 

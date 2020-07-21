@@ -86,6 +86,15 @@ nav {
         color: $foreground-light-emph;
     }
 
+    blockquote {
+        background       : $background-light;
+        border-left-color: $foreground-light-alt;
+
+        footer {
+            color: $foreground-light-alt;
+        }
+    }
+
     .ocean,
     &.ocean {
         h2 {
@@ -240,6 +249,54 @@ h4 {
             text-align: left;
         }
     }
+}
+
+#stats {
+    img {
+        display: block;
+
+        width    : 80%;
+        margin   : $margin auto;
+        max-width: 300px;
+
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+#feedbacks {
+    >section>div {
+        columns: 2;
+    }
+
+    blockquote {
+        break-inside     : avoid;
+        // border-radius: $border-radius;
+        padding          : $margin $margin $margin/2 $margin;
+        border-left-width: 0.3rem;
+        border-left-style: solid;
+
+        p {
+            font-style: italic;
+            font-size : 120%;
+        }
+
+        footer {
+            text-align: right;
+        }
+    }
+
+    // make the tab text smaller on mobile 
+    @media (max-width: $breakpoint) {
+
+
+        >section>div {
+            columns: unset;
+        }
+    }
+
 }
 
 #header {
