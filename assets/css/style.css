@@ -61,12 +61,34 @@ body > div.mountain h2 {
   #course-timeline {
     background: #000;
   }
-  #course-timeline li:first-of-type .timeline-event-date-container {
-    border-right-color: white;
-    color: white;
+  #course-timeline li.timeline-event-past {
+    color: #444;
   }
-  #course-timeline li:first-of-type .timeline-event-date-container:after {
-    border-color: white;
+  #course-timeline li.timeline-event-past .timeline-event-date-container {
+    border-right-color: #111;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-date-container:after {
+    border-color: #111;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-content-container .timeline-event-content {
+    background-color: #111;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-content-container:before {
+    border-color: transparent #111 transparent transparent;
+  }
+  #course-timeline li.timeline-event-next .timeline-event-date-container {
+    border-right-color: #61C1BE;
+    color: #61C1BE;
+  }
+  #course-timeline li.timeline-event-next .timeline-event-date-container:after {
+    border-color: #61C1BE;
+  }
+  #course-timeline li.timeline-event-next .timeline-event-content-container .timeline-event-content {
+    background-color: #61C1BE;
+    color: #222;
+  }
+  #course-timeline li.timeline-event-next .timeline-event-content-container:before {
+    border-color: transparent #61C1BE transparent transparent;
   }
   #course-timeline li .timeline-event-date-container {
     border-right-color: gray;
@@ -153,25 +175,40 @@ body > div.mountain h2 {
   #course-timeline {
     background: #E8E8E8;
   }
-  #course-timeline li:first-of-type .timeline-event-date-container {
+  #course-timeline li.timeline-event-past {
+    color: #BBB;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-date-container {
+    border-right-color: #DDD;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-date-container:after {
+    border-color: #DDD;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-content-container .timeline-event-content {
+    background-color: #DDD;
+  }
+  #course-timeline li.timeline-event-past .timeline-event-content-container:before {
+    border-color: transparent #DDD transparent transparent;
+  }
+  #course-timeline li.timeline-event-next .timeline-event-date-container {
     border-right-color: #47b8b4;
     color: #47b8b4;
   }
-  #course-timeline li:first-of-type .timeline-event-date-container:after {
+  #course-timeline li.timeline-event-next .timeline-event-date-container:after {
     border-color: #47b8b4;
   }
-  #course-timeline li:first-of-type .timeline-event-content-container .timeline-event-content {
+  #course-timeline li.timeline-event-next .timeline-event-content-container .timeline-event-content {
     background-color: #47b8b4;
     color: white;
   }
-  #course-timeline li:first-of-type .timeline-event-content-container:before {
+  #course-timeline li.timeline-event-next .timeline-event-content-container:before {
     border-color: transparent #47b8b4 transparent transparent;
   }
   #course-timeline li .timeline-event-date-container {
-    border-right-color: lightgray;
+    border-right-color: gray;
   }
   #course-timeline li .timeline-event-date-container:after {
-    border-color: lightgray;
+    border-color: gray;
     background: #E8E8E8;
   }
   #course-timeline li .timeline-event-content-container .timeline-event-content {
@@ -411,7 +448,6 @@ h4 {
     padding: 0 1rem;
   }
   #course #course-timeline .timeline-event-content-container .timeline-event-content {
-    color: #222;
     background: none;
     margin: 0;
     padding: 0;

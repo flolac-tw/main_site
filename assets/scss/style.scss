@@ -109,23 +109,59 @@ nav {
     #course-timeline {
         // foreground
         $timeline-color       : $foreground-dark-alt;
-        $important-event-color: $foreground-dark-emph;
+        
         // background
         $background           : $background-dark-alt2;
         $background2          : $background-dark;
         background            : $background;
 
         li {
-            &:first-of-type {
+
+            &.timeline-event-past {
+                $past-event-color: $background-dark-alt;
+                color             : #444;
+
                 .timeline-event-date-container {
-                    border-right-color: $important-event-color;
-                    color             : $important-event-color;
+                    border-right-color: $past-event-color;
 
                     &:after {
-                        border-color: $important-event-color;
+                        border-color: $past-event-color;
+                    }
+                }
+
+                .timeline-event-content-container {
+                    .timeline-event-content {
+                        background-color: $past-event-color;
+                    }
+
+                    &:before {
+                        border-color: transparent $past-event-color transparent transparent;
                     }
                 }
             }
+            &.timeline-event-next {
+                $next-event-color: $ocean-dark;
+                .timeline-event-date-container {
+                    border-right-color: $next-event-color;
+                    color             : $next-event-color;
+
+                    &:after {
+                        border-color: $next-event-color;
+                    }
+                }
+
+                .timeline-event-content-container {
+                    .timeline-event-content {
+                        background-color: $next-event-color;
+                        color           : $background2;
+                    }
+
+                    &:before {
+                        border-color: transparent $next-event-color transparent transparent;
+                    }
+                }
+            }
+
 
             .timeline-event-date-container {
                 // border
@@ -231,35 +267,59 @@ nav {
 
     #course-timeline {
         // foreground
-        $timeline-color       : $foreground-light-alt2;
-        $important-event-color: $ocean-light;
+        $timeline-color       : $foreground-light-alt;
         // background
         $background           : $background-light-alt2;
         $background2          : white;
         background            : $background;
 
         li {
-            &:first-of-type {
+            
+            &.timeline-event-past {
+                $past-event-color: #DDD;
+                color             : #BBB;
+
                 .timeline-event-date-container {
-                    border-right-color: $important-event-color;
-                    color             : $important-event-color;
+                    border-right-color: $past-event-color;
 
                     &:after {
-                        border-color: $important-event-color;
+                        border-color: $past-event-color;
                     }
                 }
 
                 .timeline-event-content-container {
                     .timeline-event-content {
-                        background-color: $important-event-color;
+                        background-color: $past-event-color;
+                    }
+
+                    &:before {
+                        border-color: transparent $past-event-color transparent transparent;
+                    }
+                }
+            }
+            &.timeline-event-next {
+                $next-event-color: $ocean-light;
+                .timeline-event-date-container {
+                    border-right-color: $next-event-color;
+                    color             : $next-event-color;
+
+                    &:after {
+                        border-color: $next-event-color;
+                    }
+                }
+
+                .timeline-event-content-container {
+                    .timeline-event-content {
+                        background-color: $next-event-color;
                         color           : $background2;
                     }
 
                     &:before {
-                        border-color: transparent $important-event-color transparent transparent;
+                        border-color: transparent $next-event-color transparent transparent;
                     }
                 }
             }
+
 
             .timeline-event-date-container {
                 // border
@@ -586,7 +646,6 @@ h4 {
                 padding: 0 $padding;
 
                 .timeline-event-content {
-                    color     : $foreground-light;
                     background: none;
                     margin    : 0;
                     padding   : 0;

@@ -3,14 +3,19 @@
   calendar: 
     - time: 07/26
       title: 外地實習生報名截止
+      past: true
     - time: 07/29
       title: 非台大學生報名截止
+      past: true
     - time: 07/30
       title: 非台大學生錄取通知
+      past: true
     - time: 08/03
       title: 台大學生報名截止
+      past: true
     - time: 08/04
       title: 旁聽報名截止
+      next: true
     - time: 08/05
       title: 旁聽錄取通知
     - time: 08/05
@@ -81,7 +86,15 @@
       <h2>$LC.dates$</h2>
       <ol>
         $foreach(event)in(calendar)$
-        <li>
+        $if(event.past)$
+          <li class="timeline-event-past">
+        $else$
+          $if(event.next)$
+            <li class="timeline-event-next">
+          $else$
+            <li >
+          $endif$
+        $endif$
           <div class="timeline-event-date-container">
             <div class="timeline-event-date">
               $event.time$
