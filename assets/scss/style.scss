@@ -90,6 +90,17 @@ nav {
         border-top-color: $ocean-dark;
     }
 
+
+    #ocean-mountain-intro {
+        #ocean-intro {
+            border-top-color: $ocean-dark;
+        }
+    
+        #mountain-intro {
+            border-top-color: $mountain-dark;
+        }
+    }
+
     #registration-attendee-type-page {
         background: $background-dark-alt;
     }
@@ -137,6 +148,16 @@ nav {
             }
         }
     }
+
+
+    #course > #course-left-column {
+        background: $background-dark;
+    }
+
+
+    #course > #course-lecturer .affiliation {
+        color: $foreground-dark-alt;
+    }
 }
   
 @media (prefers-color-scheme: light) {
@@ -181,6 +202,21 @@ nav {
 
     body > div.alt2 {
         background: $background-light-alt2;
+    }
+
+
+    #previous-guest-lectures .guest-lecture-year {
+        color        : $foreground-light-alt;
+    }
+
+    #ocean-mountain-intro {
+        #ocean-intro {
+            border-top-color: $ocean-light;
+        }
+    
+        #mountain-intro {
+            border-top-color: $mountain-light;
+        }
     }
 
 
@@ -245,6 +281,14 @@ nav {
                 }
             }
         }
+    }
+
+    #course > #course-left-column {
+        background: $background-light;
+    }
+
+    #course > #course-lecturer .affiliation {
+        color: $foreground-light-alt;
     }
 }
 
@@ -345,7 +389,6 @@ h4 {
             .guest-lecture-year {
                 display      : inline-block;
                 padding-right: $padding;
-                color        : $foreground-dark-alt;
                 font-weight  : bold;
             }
         }
@@ -366,11 +409,13 @@ h4 {
     }
 
     #ocean-intro {
-        border-top: $ocean-dark 1rem solid;
+        border-top-width: 1rem;
+        border-top-style: solid;
     }
 
     #mountain-intro {
-        border-top: $mountain-dark 1rem solid;
+        border-top-width: 1rem;
+        border-top-style: solid;
     }
 
     // for mobile 
@@ -469,8 +514,6 @@ h4 {
     #course-left-column {
         grid-column: 1 / 3;
         grid-row   : 1 / 2;
-
-        background: $background-dark;
     }
 
     #course-intro,
@@ -500,12 +543,7 @@ h4 {
             vertical-align: baseline;
         }
 
-        .affiliation {
-            color: $foreground-dark-alt;
-        }
-
         tr.border-at-top>* {
-            // $foreground-dark-alt;
             border-top : $padding solid transparent;
             margin-top : $padding;
             padding-top: $padding;

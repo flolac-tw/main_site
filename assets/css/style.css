@@ -47,6 +47,13 @@ body > div.mountain h2 {
     border-top-color: #61C1BE;
   }
 
+  #ocean-mountain-intro #ocean-intro {
+    border-top-color: #61C1BE;
+  }
+  #ocean-mountain-intro #mountain-intro {
+    border-top-color: #FABE00;
+  }
+
   #registration-attendee-type-page {
     background: #111;
   }
@@ -73,6 +80,14 @@ body > div.mountain h2 {
   }
   #course-timeline li .timeline-event-content-container:before {
     border-color: transparent #222 transparent transparent;
+  }
+
+  #course > #course-left-column {
+    background: #222;
+  }
+
+  #course > #course-lecturer .affiliation {
+    color: gray;
   }
 }
 @media (prefers-color-scheme: light) {
@@ -115,6 +130,17 @@ body > div.mountain h2 {
     background: #E8E8E8;
   }
 
+  #previous-guest-lectures .guest-lecture-year {
+    color: gray;
+  }
+
+  #ocean-mountain-intro #ocean-intro {
+    border-top-color: #47b8b4;
+  }
+  #ocean-mountain-intro #mountain-intro {
+    border-top-color: #dba800;
+  }
+
   #registration-attendee-type-tab > li.selected {
     background: #F8F8F8;
     border-top-color: #47b8b4;
@@ -153,6 +179,14 @@ body > div.mountain h2 {
   }
   #course-timeline li .timeline-event-content-container:before {
     border-color: transparent white transparent transparent;
+  }
+
+  #course > #course-left-column {
+    background: #F0F0F0;
+  }
+
+  #course > #course-lecturer .affiliation {
+    color: gray;
   }
 }
 body > div > section {
@@ -235,7 +269,6 @@ h4 {
 #previous-guest-lectures ol li .guest-lecture-year {
   display: inline-block;
   padding-right: 1rem;
-  color: gray;
   font-weight: bold;
 }
 @media (max-width: 992px) {
@@ -248,10 +281,12 @@ h4 {
   text-align: center;
 }
 #ocean-mountain-intro #ocean-intro {
-  border-top: #61C1BE 1rem solid;
+  border-top-width: 1rem;
+  border-top-style: solid;
 }
 #ocean-mountain-intro #mountain-intro {
-  border-top: #FABE00 1rem solid;
+  border-top-width: 1rem;
+  border-top-style: solid;
 }
 @media (max-width: 992px) {
   #ocean-mountain-intro h2 {
@@ -321,7 +356,6 @@ h4 {
 #course #course-left-column {
   grid-column: 1/3;
   grid-row: 1/2;
-  background: #222;
 }
 #course #course-intro,
 #course #course-special-lecture,
@@ -342,9 +376,6 @@ h4 {
 #course #course-lecturer th {
   width: 35%;
   vertical-align: baseline;
-}
-#course #course-lecturer .affiliation {
-  color: gray;
 }
 #course #course-lecturer tr.border-at-top > * {
   border-top: 1rem solid transparent;
