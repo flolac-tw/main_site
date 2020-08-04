@@ -2,61 +2,151 @@ nav {
   height: 5rem;
 }
 
-.dark {
-  background: #222;
-  color: #CCC;
-}
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6 {
-  color: white;
-}
-.dark .ocean h2, .dark.ocean h2 {
-  color: #61C1BE;
-}
-.dark .mountain h2, .dark.mountain h2 {
-  color: #FABE00;
-}
-.dark.alt {
-  background: #111;
-}
-.dark.alt2 {
-  background: #000;
-}
+@media (prefers-color-scheme: dark) {
+  body > div {
+    background: #222;
+    color: #CCC;
+  }
 
-.light {
-  background: #F0F0F0;
-  color: #222;
-}
-.light h2,
-.light h3,
-.light h4,
-.light h5,
-.light h6 {
-  color: black;
-}
-.light blockquote {
-  background: #F0F0F0;
-  border-left-color: gray;
-}
-.light blockquote footer {
-  color: gray;
-}
-.light .ocean h2, .light.ocean h2 {
-  color: #47b8b4;
-}
-.light .mountain h2, .light.mountain h2 {
-  color: #dba800;
-}
-.light.alt {
-  background: #F8F8F8;
-}
-.light.alt2 {
-  background: #E8E8E8;
-}
+  h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+  }
 
+  .ocean h2,
+body > div.ocean h2 {
+    color: #61C1BE;
+  }
+
+  .mountain h2,
+body > div.mountain h2 {
+    color: #FABE00;
+  }
+
+  body > div.alt {
+    background: #111;
+  }
+
+  body > div.alt2 {
+    background: #000;
+  }
+
+  #registration-attendee-type-tab > li.selected {
+    background: #111;
+    border-top-color: #61C1BE;
+  }
+
+  #registration-attendee-type-page {
+    background: #111;
+  }
+
+  #course-timeline {
+    background: #000;
+  }
+  #course-timeline li:first-of-type .timeline-event-date-container {
+    border-right-color: white;
+    color: white;
+  }
+  #course-timeline li:first-of-type .timeline-event-date-container:after {
+    border-color: white;
+  }
+  #course-timeline li .timeline-event-date-container {
+    border-right-color: gray;
+  }
+  #course-timeline li .timeline-event-date-container:after {
+    border-color: gray;
+    background: #000;
+  }
+  #course-timeline li .timeline-event-content-container .timeline-event-content {
+    background-color: #222;
+  }
+  #course-timeline li .timeline-event-content-container:before {
+    border-color: transparent #222 transparent transparent;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body > div {
+    background: #F0F0F0;
+    color: #222;
+  }
+
+  h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+  }
+
+  blockquote {
+    background: #F0F0F0;
+    border-left-color: gray;
+  }
+  blockquote footer {
+    color: gray;
+  }
+
+  .ocean h2,
+body > div.ocean h2 {
+    color: #47b8b4;
+  }
+
+  .mountain h2,
+body > div.mountain h2 {
+    color: #dba800;
+  }
+
+  body > div.alt {
+    background: #F8F8F8;
+  }
+
+  body > div.alt2 {
+    background: #E8E8E8;
+  }
+
+  #registration-attendee-type-tab > li.selected {
+    background: #F8F8F8;
+    border-top-color: #47b8b4;
+  }
+
+  #registration-attendee-type-page {
+    background: #F8F8F8;
+  }
+
+  #course-timeline {
+    background: #E8E8E8;
+  }
+  #course-timeline li:first-of-type .timeline-event-date-container {
+    border-right-color: #47b8b4;
+    color: #47b8b4;
+  }
+  #course-timeline li:first-of-type .timeline-event-date-container:after {
+    border-color: #47b8b4;
+  }
+  #course-timeline li:first-of-type .timeline-event-content-container .timeline-event-content {
+    background-color: #47b8b4;
+    color: white;
+  }
+  #course-timeline li:first-of-type .timeline-event-content-container:before {
+    border-color: transparent #47b8b4 transparent transparent;
+  }
+  #course-timeline li .timeline-event-date-container {
+    border-right-color: lightgray;
+  }
+  #course-timeline li .timeline-event-date-container:after {
+    border-color: lightgray;
+    background: #E8E8E8;
+  }
+  #course-timeline li .timeline-event-content-container .timeline-event-content {
+    background: white;
+  }
+  #course-timeline li .timeline-event-content-container:before {
+    border-color: transparent white transparent transparent;
+  }
+}
 body > div > section {
   max-width: 992px;
   margin: 0 auto;
@@ -316,59 +406,6 @@ h4 {
 #course-timeline {
   padding: 3rem 3rem;
 }
-#course-timeline.dark {
-  background: #000;
-}
-#course-timeline.dark li:first-of-type .timeline-event-date-container {
-  border-right-color: white;
-  color: white;
-}
-#course-timeline.dark li:first-of-type .timeline-event-date-container:after {
-  border-color: white;
-}
-#course-timeline.dark li .timeline-event-date-container {
-  border-right-color: gray;
-}
-#course-timeline.dark li .timeline-event-date-container:after {
-  border-color: gray;
-  background: #000;
-}
-#course-timeline.dark li .timeline-event-content-container .timeline-event-content {
-  background-color: #222;
-}
-#course-timeline.dark li .timeline-event-content-container:before {
-  border-color: transparent #222 transparent transparent;
-}
-#course-timeline.light {
-  background: #E8E8E8;
-}
-#course-timeline.light li:first-of-type .timeline-event-date-container {
-  border-right-color: #47b8b4;
-  color: #47b8b4;
-}
-#course-timeline.light li:first-of-type .timeline-event-date-container:after {
-  border-color: #47b8b4;
-}
-#course-timeline.light li:first-of-type .timeline-event-content-container .timeline-event-content {
-  background-color: #47b8b4;
-  color: white;
-}
-#course-timeline.light li:first-of-type .timeline-event-content-container:before {
-  border-color: transparent #47b8b4 transparent transparent;
-}
-#course-timeline.light li .timeline-event-date-container {
-  border-right-color: lightgray;
-}
-#course-timeline.light li .timeline-event-date-container:after {
-  border-color: lightgray;
-  background: #E8E8E8;
-}
-#course-timeline.light li .timeline-event-content-container .timeline-event-content {
-  background: white;
-}
-#course-timeline.light li .timeline-event-content-container:before {
-  border-color: transparent white transparent transparent;
-}
 #course-timeline ol {
   list-style: none;
   padding: 0;
@@ -462,22 +499,6 @@ h4 {
 }
 #timetable td abbr {
   text-decoration: none !important;
-}
-
-.dark #registration-attendee-type-tab > li.selected {
-  background: #111;
-  border-top-color: #61C1BE;
-}
-.dark #registration-attendee-type-page {
-  background: #111;
-}
-
-.light #registration-attendee-type-tab > li.selected {
-  background: #F8F8F8;
-  border-top-color: #47b8b4;
-}
-.light #registration-attendee-type-page {
-  background: #F8F8F8;
 }
 
 #registration-attendee-type-tab {

@@ -38,10 +38,13 @@ nav {
     height: $nav-height;
 }
 
-// colors & accents
-.dark {
-    background: $background-dark;
-    color     : $foreground-dark;
+
+@media (prefers-color-scheme: dark) {
+    
+    body > div {
+        background: $background-dark;
+        color     : $foreground-dark;
+    }
 
     h2,
     h3,
@@ -52,32 +55,86 @@ nav {
     }
 
     .ocean,
-    &.ocean {
+    body > div.ocean {
         h2 {
             color: $ocean-dark;
         }
     }
 
     .mountain,
-    &.mountain {
+    body > div.mountain {
         h2 {
             color: $mountain-dark;
         }
     }
 
-    &.alt {
+    body > div.alt {
         background: $background-dark-alt;
     }
 
-    &.alt2 {
+    body > div.alt2 {
         background: $background-dark-alt2;
     }
-}
 
-.light {
+    #registration-attendee-type-tab>li.selected {
+        background      : $background-dark-alt;
+        border-top-color: $ocean-dark;
+    }
+
+    #registration-attendee-type-page {
+        background: $background-dark-alt;
+    }
+
+
+    #course-timeline {
+        // foreground
+        $timeline-color       : $foreground-dark-alt;
+        $important-event-color: $foreground-dark-emph;
+        // background
+        $background           : $background-dark-alt2;
+        $background2          : $background-dark;
+        background            : $background;
+
+        li {
+            &:first-of-type {
+                .timeline-event-date-container {
+                    border-right-color: $important-event-color;
+                    color             : $important-event-color;
+
+                    &:after {
+                        border-color: $important-event-color;
+                    }
+                }
+            }
+
+            .timeline-event-date-container {
+                // border
+                border-right-color: $timeline-color;
+
+                &:after {
+                    border-color: $timeline-color;
+                    background  : $background;
+                }
+            }
+
+            .timeline-event-content-container {
+                .timeline-event-content {
+                    background-color: $background2;
+                }
+
+                &:before {
+                    border-color: transparent $background2 transparent transparent;
+                }
+            }
+        }
+    }
+}
+  
+@media (prefers-color-scheme: light) {
+    body > div {
     background: $background-light;
     color     : $foreground-light;
-
+    }
     h2,
     h3,
     h4,
@@ -96,25 +153,89 @@ nav {
     }
 
     .ocean,
-    &.ocean {
+    body > div.ocean {
         h2 {
             color: $ocean-light;
         }
     }
 
     .mountain,
-    &.mountain {
+    body > div.mountain {
         h2 {
             color: $mountain-light;
         }
     }
 
-    &.alt {
+    body > div.alt {
         background: $background-light-alt;
     }
 
-    &.alt2 {
+    body > div.alt2 {
         background: $background-light-alt2;
+    }
+
+
+    #registration-attendee-type-tab>li.selected {
+        background      : $background-light-alt;
+        border-top-color: $ocean-light;
+    }
+
+    #registration-attendee-type-page {
+        background: $background-light-alt;
+    }
+
+    #course-timeline {
+        // foreground
+        $timeline-color       : $foreground-light-alt2;
+        $important-event-color: $ocean-light;
+        // background
+        $background           : $background-light-alt2;
+        $background2          : white;
+        background            : $background;
+
+        li {
+            &:first-of-type {
+                .timeline-event-date-container {
+                    border-right-color: $important-event-color;
+                    color             : $important-event-color;
+
+                    &:after {
+                        border-color: $important-event-color;
+                    }
+                }
+
+                .timeline-event-content-container {
+                    .timeline-event-content {
+                        background-color: $important-event-color;
+                        color           : $background2;
+                    }
+
+                    &:before {
+                        border-color: transparent $important-event-color transparent transparent;
+                    }
+                }
+            }
+
+            .timeline-event-date-container {
+                // border
+                border-right-color: $timeline-color;
+
+                &:after {
+                    border-color: $timeline-color;
+                    background  : $background;
+                }
+            }
+
+            .timeline-event-content-container {
+                .timeline-event-content {
+                    background: $background2;
+                }
+
+                &:before {
+                    border-color: transparent $background2 transparent transparent;
+                }
+            }
+        }
     }
 }
 
@@ -460,102 +581,7 @@ h4 {
 }
 
 #course-timeline {
-    &.dark {
-        // foreground
-        $timeline-color       : $foreground-dark-alt;
-        $important-event-color: $foreground-dark-emph;
-        // background
-        $background           : $background-dark-alt2;
-        $background2          : $background-dark;
-        background            : $background;
-
-        li {
-            &:first-of-type {
-                .timeline-event-date-container {
-                    border-right-color: $important-event-color;
-                    color             : $important-event-color;
-
-                    &:after {
-                        border-color: $important-event-color;
-                    }
-                }
-            }
-
-            .timeline-event-date-container {
-                // border
-                border-right-color: $timeline-color;
-
-                &:after {
-                    border-color: $timeline-color;
-                    background  : $background;
-                }
-            }
-
-            .timeline-event-content-container {
-                .timeline-event-content {
-                    background-color: $background2;
-                }
-
-                &:before {
-                    border-color: transparent $background2 transparent transparent;
-                }
-            }
-        }
-    }
-
-    &.light {
-        // foreground
-        $timeline-color       : $foreground-light-alt2;
-        $important-event-color: $ocean-light;
-        // background
-        $background           : $background-light-alt2;
-        $background2          : white;
-        background            : $background;
-
-        li {
-            &:first-of-type {
-                .timeline-event-date-container {
-                    border-right-color: $important-event-color;
-                    color             : $important-event-color;
-
-                    &:after {
-                        border-color: $important-event-color;
-                    }
-                }
-
-                .timeline-event-content-container {
-                    .timeline-event-content {
-                        background-color: $important-event-color;
-                        color           : $background2;
-                    }
-
-                    &:before {
-                        border-color: transparent $important-event-color transparent transparent;
-                    }
-                }
-            }
-
-            .timeline-event-date-container {
-                // border
-                border-right-color: $timeline-color;
-
-                &:after {
-                    border-color: $timeline-color;
-                    background  : $background;
-                }
-            }
-
-            .timeline-event-content-container {
-                .timeline-event-content {
-                    background: $background2;
-                }
-
-                &:before {
-                    border-color: transparent $background2 transparent transparent;
-                }
-            }
-        }
-    }
+    
 
     $timeline-width : 0.5rem;
     $diameter       : 2rem;
@@ -694,28 +720,6 @@ h4 {
         abbr {
             text-decoration: none !important;
         }
-    }
-}
-
-.dark {
-    #registration-attendee-type-tab>li.selected {
-        background      : $background-dark-alt;
-        border-top-color: $ocean-dark;
-    }
-
-    #registration-attendee-type-page {
-        background: $background-dark-alt;
-    }
-}
-
-.light {
-    #registration-attendee-type-tab>li.selected {
-        background      : $background-light-alt;
-        border-top-color: $ocean-light;
-    }
-
-    #registration-attendee-type-page {
-        background: $background-light-alt;
     }
 }
 
