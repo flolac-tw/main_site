@@ -407,6 +407,7 @@ h4 {
     height : calc(100vh - #{$nav-height});
 
     // background 
+    background-color: $ocean-light;
     background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
 
     background-size    : cover;
@@ -537,6 +538,7 @@ h4 {
     height          : 200px;
     padding         : $padding;
     // background 
+    background-color: $ocean-light;
     background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
 
     background-size    : cover;
