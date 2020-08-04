@@ -54,6 +54,15 @@ nav {
         color: $foreground-dark-emph;
     }
 
+    blockquote {
+        background       : $background-dark;
+        box-shadow: 0.5rem 0.5rem 0 $background-dark-alt2;
+
+        footer {
+            color: $foreground-dark-alt;
+        }
+    }
+
     .ocean,
     body > div.ocean {
         h2 {
@@ -145,7 +154,7 @@ nav {
 
     blockquote {
         background       : $background-light;
-        border-left-color: $foreground-light-alt;
+        box-shadow: 0.5rem 0.5rem 0 $background-light-alt2;
 
         footer {
             color: $foreground-light-alt;
@@ -390,14 +399,13 @@ h4 {
 #feedbacks {
     >section>div {
         columns: 2;
+        column-gap: $margin;
     }
 
     blockquote {
         break-inside     : avoid;
-        // border-radius: $border-radius;
         padding          : $margin $margin $margin/2 $margin;
-        border-left-width: 0.3rem;
-        border-left-style: solid;
+        margin-bottom: $margin;
 
         p {
             font-style: italic;
@@ -411,7 +419,6 @@ h4 {
 
     // make the tab text smaller on mobile 
     @media (max-width: $breakpoint) {
-
 
         >section>div {
             columns: unset;

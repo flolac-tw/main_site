@@ -16,6 +16,14 @@ h6 {
     color: white;
   }
 
+  blockquote {
+    background: #222;
+    box-shadow: 0.5rem 0.5rem 0 #000;
+  }
+  blockquote footer {
+    color: gray;
+  }
+
   .ocean h2,
 body > div.ocean h2 {
     color: #61C1BE;
@@ -83,7 +91,7 @@ h6 {
 
   blockquote {
     background: #F0F0F0;
-    border-left-color: gray;
+    box-shadow: 0.5rem 0.5rem 0 #E8E8E8;
   }
   blockquote footer {
     color: gray;
@@ -263,12 +271,12 @@ h4 {
 
 #feedbacks > section > div {
   columns: 2;
+  column-gap: 3rem;
 }
 #feedbacks blockquote {
   break-inside: avoid;
   padding: 3rem 3rem 1.5rem 3rem;
-  border-left-width: 0.3rem;
-  border-left-style: solid;
+  margin-bottom: 3rem;
 }
 #feedbacks blockquote p {
   font-style: italic;
