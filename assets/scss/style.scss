@@ -837,11 +837,12 @@ h4 {
 
     td {
         text-align: center;
+        vertical-align: top;
 
         height: 8rem;
         padding-top: $padding * 2;
 
-        font-size: 75%;
+        font-size: 100%;
 
         vertical-align: top;
 
@@ -866,9 +867,6 @@ h4 {
             color: #eeac41 !important;
         }
 
-        a {
-            font-size: 150%; 
-        }
         // injecting a line break after <a />s
         a::after {
             content: "\A";

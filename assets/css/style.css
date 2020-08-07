@@ -582,9 +582,10 @@ h4 {
 }
 #timetable td {
   text-align: center;
+  vertical-align: top;
   height: 8rem;
   padding-top: 2rem;
-  font-size: 75%;
+  font-size: 100%;
   vertical-align: top;
 }
 #timetable td abbr {
@@ -601,9 +602,6 @@ h4 {
 }
 #timetable td.dtp a {
   color: #eeac41 !important;
-}
-#timetable td a {
-  font-size: 150%;
 }
 #timetable td a::after {
   content: "\a";
