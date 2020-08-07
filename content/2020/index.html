@@ -139,49 +139,117 @@
     </div>
   </div>
 </div>
-<div id="course-lecturer" class="ocean">
+<div id="course-lectures" class="ocean">
   <section>
     <h2>課程</h2>
-    <table>
-      <tbody>
-        <tr>
-          <th scope="row">函數編程</th>
-          <td>穆信成</td>
-          <td class="affiliation">中研院資訊所</td>
-        </tr>
-        <tr class="border-at-top">
-          <th scope="row">邏輯</th>
-          <td>柯向上</td>
-          <td class="affiliation">中研院資訊所</td>
-        </tr>
-        <tr class="border-at-top">
-          <th scope="row" rowspan=2>程式語言導論</th>
-          <td>陳亮廷</td>
-          <td class="affiliation">中研院資訊所</td>
-        </tr>
-        <tr>
-          <td>游書泓</td>
-          <td class="affiliation">Department of Computer Science, Northwestern University</td>
-        </tr>
-        <tr class="border-at-top">
-          <th scope="row" rowspan=3>依值型別編程</th>
-          <td>穆信成</td>
-          <td class="affiliation"></td>
-        </tr>
-        <tr>
-          <td>柯向上</td>
-        </tr>
-        <tr>
-          <td>陳亮廷</td>
-        </tr>
-        <tr class="border-at-top">
-          <th scope="row">特別演講</th>
-          <td>張耘盛</td>
-          <td class="affiliation">中研院資訊所</td>
-        </tr>
-      </tbody>
-    </table>
-    </section>
+    <div class="lecture">
+      <h3><span id="lecture-fp"></span>函數編程</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>穆信成</dt>
+            <dd>中研院資訊所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教材</h4>
+          <ul>
+            <li>教材連結 1</li>
+            <li>教材連結 2</li>
+            <li>教材連結 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-logic"></span>邏輯</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>柯向上</dt>
+            <dd>中研院資訊所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教材</h4>
+          <ul>
+            <li>教材連結 1</li>
+            <li>教材連結 2</li>
+            <li>教材連結 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-plt"></span>程式語言導論</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>陳亮廷</dt>
+            <dd>中研院資訊所</dd>
+            <dt>游書泓</dt>
+            <dd>Department of Computer Science, Northwestern University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教材</h4>
+          <ul>
+            <li>教材連結 1</li>
+            <li>教材連結 2</li>
+            <li>教材連結 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>依值型別編程</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>穆信成</dt>
+            <dd>中研院資訊所</dd>
+            <dt>柯向上</dt>
+            <dd>中研院資訊所</dd>
+            <dt>陳亮廷</dt>
+            <dd>中研院資訊所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教材</h4>
+          <ul>
+            <li>教材連結 1</li>
+            <li>教材連結 2</li>
+            <li>教材連結 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="lecture">
+      <h3><span id="lecture-special"></span>特別演講</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>張耘盛</dt>
+            <dd>中研院資訊所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教材</h4>
+          <ul>
+            <li>教材連結 1</li>
+            <li>教材連結 2</li>
+            <li>教材連結 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <div id="timetable" class="alt ocean">
   <section>
@@ -200,19 +268,19 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="plt"><abbr title="Introduction">程式語言導論 0</abbr></td>
-          <td class="plt"><abbr title="Untyped λ-calculus">程式語言導論 1</abbr></td>
-          <td class="fp"><abbr title="Functional program derivation">函數編程 1</abbr></td>
-          <td class="lgc"><abbr title="Classical semantics and meta-theoretic properties">邏輯 1</abbr></td>
-          <td class="fp"><abbr title="TBA">函數編程 2</abbr></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 0</a>Introduction</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a>Untyped λ-calculus</td>
+          <td class="fp"><a href="#lecture-fp">函數編程 1</a>Functional program derivation</td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 1</a>Classical semantics and meta-theoretic properties</td>
+          <td class="fp"><a href="#lecture-fp">函數編程 2</a>TBA</td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="fp"><abbr title="Inductive functions and equational reasoning">函數編程 0</abbr></td>
-          <td class="lgc"><abbr title="Natural deduction and intuitionistic propositional logic">邏輯 0</abbr></td>
-          <td class="plt"><abbr title="Simply typed λ-calculus">程式語言導論 2</abbr></td>
-          <td class="plt"><abbr title="Stateful calculus">程式語言導論 3</abbr></td>
-          <td class="plt"><abbr title="What's out there">程式語言導論 4</abbr></td>
+          <td class="fp"><a href="#lecture-fp">函數編程 0</a>Inductive functions and equational reasoning</td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 0</a>Natural deduction and intuitionistic propositional logic</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 2</a>Simply typed λ-calculus</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a>Stateful calculus</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 4</a>What's out there / Agda Installation</td>
         </tr>
       </tbody>
     </table>
@@ -230,18 +298,18 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="dtp"><abbr title="Agda basics (e.g., safe head, vector manipulation, sprintf?)">依值型別編程 0</abbr></td>
-          <td class="dtp"><abbr title="Shallow and deep embeddings of intuitionistic logic">依值型別編程 1</abbr></td>
-          <td class="dtp"><abbr title="Intrinsic representation of simply typed lambda calculus and type">依值型別編程 2</abbr></td>
-          <td class="dtp"><abbr title="Hutton's razor">依值型別編程 3</abbr></td>
-          <td class="exm"><abbr title="Exam">考試</abbr></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 0</a>Agda basics</td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 1</a>Shallow and deep embeddings of intuitionistic logic</td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a>Intrinsic representation of simply typed lambda calculus and type</td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 3</a>McBride's razor</td>
+          <td class="exm"><a href="#lecture-exam">考試</a></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="lgc"><abbr title="First-order logic and the Curry–Howard correspondence">邏輯 2</abbr></td>
-          <td class="plt"><abbr title="Hoare logic">程式語言導論 5</abbr></td>
-          <td class="plt"><abbr title="Polymorphic lambda calculus">程式語言導論 6</abbr></td>
-          <td class="tlk"><abbr title="Invited Talk: Verification of a Snapshot-Consistent Flash Translation Layer">特別演講</abbr></td>
+          <td class="lgc"><a href="#lecture-logc">邏輯 2</a>First-order logic and the Curry–Howard correspondence</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 5</a>Polymorphic lambda calculus</td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 6</a>Hoare logic</td>
+          <td class="tlk"><a href="#lecture-special">特別演講</a>Verification of a Snapshot-Consistent Flash Translation Layer</td>
         </tr>
       </tbody>
     </table>

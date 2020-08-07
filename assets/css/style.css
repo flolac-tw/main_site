@@ -108,7 +108,7 @@ body > div.mountain h2 {
     background: #222;
   }
 
-  #course > #course-lecturer .affiliation {
+  #course > #course-lectures .affiliation {
     color: gray;
   }
 }
@@ -222,7 +222,7 @@ body > div.mountain h2 {
     background: #F0F0F0;
   }
 
-  #course > #course-lecturer .affiliation {
+  #course > #course-lectures .affiliation {
     color: gray;
   }
 }
@@ -243,6 +243,7 @@ h3 {
 
 h4 {
   margin: 3rem 0 1.5rem;
+  font-size: 120%;
 }
 
 .two-column {
@@ -398,13 +399,13 @@ h4 {
 }
 #course #course-intro,
 #course #course-special-lecture,
-#course #course-lecturer {
+#course #course-lectures {
   display: grid;
   grid-template-columns: auto calc(calc(992px - 350px));
 }
 #course #course-intro > section,
 #course #course-special-lecture > section,
-#course #course-lecturer > section {
+#course #course-lectures > section {
   grid-column: 2/3;
   margin: 0;
   padding: 3rem 3rem 3rem 1rem;
@@ -447,36 +448,59 @@ h4 {
   }
   #course #course-intro,
 #course #course-special-lecture,
-#course #course-lecturer {
+#course #course-lectures {
     display: block;
   }
   #course #course-intro > section,
 #course #course-special-lecture > section,
-#course #course-lecturer > section {
+#course #course-lectures > section {
     padding: 3rem 1rem;
   }
 }
 
-#course-lecturer td {
+#course-lectures .lecture {
+  margin: 2rem 0;
+  padding: 2rem;
+  box-shadow: 0.5rem 0.5rem 0 #000;
+  background: #111;
+}
+#course-lectures .lecture h3 {
+  color: #61C1BE;
+  position: relative;
+}
+#course-lectures .lecture h3 span {
+  position: absolute;
+  top: calc(-5rem - 2rem);
+}
+#course-lectures .lecture h3, #course-lectures .lecture h4 {
+  margin-top: 0;
+}
+#course-lectures .lecture .lecture-content {
+  display: flex;
+}
+#course-lectures .lecture .lecture-content div {
+  flex: 1;
+}
+#course-lectures td {
   width: 30%;
 }
-#course-lecturer th {
+#course-lectures th {
   width: 35%;
   vertical-align: baseline;
 }
-#course-lecturer tr.border-at-top > * {
+#course-lectures tr.border-at-top > * {
   border-top: 1rem solid transparent;
   margin-top: 1rem;
   padding-top: 1rem;
 }
-#course-lecturer dl {
+#course-lectures dl {
   display: grid;
   grid-template-columns: 10rem auto;
 }
-#course-lecturer dl dt {
+#course-lectures dl dt {
   grid-column: 1/2;
 }
-#course-lecturer dl dd {
+#course-lectures dl dd {
   grid-column: 2/3;
 }
 
@@ -550,18 +574,6 @@ h4 {
 #timetable tbody td {
   width: 18%;
 }
-#timetable .plt {
-  color: #16a085;
-}
-#timetable .fp {
-  color: #48a6e6;
-}
-#timetable .lgc {
-  color: #ff8c80;
-}
-#timetable .dtp {
-  color: #eeac41;
-}
 #timetable th {
   color: gray;
   text-align: center;
@@ -571,11 +583,31 @@ h4 {
 #timetable td {
   text-align: center;
   height: 8rem;
-  margin: 1rem;
-  font-size: 120%;
+  padding-top: 2rem;
+  font-size: 75%;
+  vertical-align: top;
 }
 #timetable td abbr {
   text-decoration: none !important;
+}
+#timetable td.plt a {
+  color: #16a085 !important;
+}
+#timetable td.fp a {
+  color: #48a6e6 !important;
+}
+#timetable td.lgc a {
+  color: #ff8c80 !important;
+}
+#timetable td.dtp a {
+  color: #eeac41 !important;
+}
+#timetable td a {
+  font-size: 150%;
+}
+#timetable td a::after {
+  content: "\a";
+  white-space: pre;
 }
 
 #registration-attendee-type-tab {

@@ -191,7 +191,7 @@ nav {
     }
 
 
-    #course > #course-lecturer .affiliation {
+    #course > #course-lectures .affiliation {
         color: $foreground-dark-alt;
     }
 }
@@ -347,7 +347,7 @@ nav {
         background: $background-light;
     }
 
-    #course > #course-lecturer .affiliation {
+    #course > #course-lectures .affiliation {
         color: $foreground-light-alt;
     }
 }
@@ -369,6 +369,7 @@ h3 {
 
 h4 {
     margin: $margin 0 $margin/2;
+    font-size: 120%;
 }
 
 .two-column {
@@ -580,7 +581,7 @@ h4 {
 
     #course-intro,
     #course-special-lecture,
-    #course-lecturer {
+    #course-lectures {
         $content-width: calc(#{$left-column-width});
 
         display              : grid;
@@ -643,7 +644,7 @@ h4 {
 
         #course-intro,
         #course-special-lecture,
-        #course-lecturer
+        #course-lectures
         {
             display: block;
         
@@ -655,7 +656,39 @@ h4 {
 }
 
 
-#course-lecturer {
+#course-lectures {
+
+    .lecture {
+        h3 {
+            color: $ocean-dark;
+            position: relative;
+
+            // for offsetting the <nav> height
+            // https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+            span { 
+                position:absolute; top: calc(-#{$nav-height} - #{2rem}) 
+            }
+        }
+        
+        
+        h3, h4 {
+            margin-top: 0;
+        }
+
+        .lecture-content {
+            display: flex;
+
+            div {
+                flex: 1
+            }
+        }
+
+        margin: 2rem 0;
+        padding: 2rem;
+        box-shadow: 0.5rem 0.5rem 0 $background-dark-alt2;
+        background       : $background-dark-alt;
+
+    }
 
     td {
         width: 30%;
@@ -687,6 +720,8 @@ h4 {
         }
     }
 }
+
+
 #course-timeline {
     
 
@@ -792,22 +827,6 @@ h4 {
         }
     }
 
-    .plt {
-        color: #16a085;
-    }
-
-    .fp {
-        color: #48a6e6;
-    }
-
-    .lgc {
-        color: #ff8c80;
-    }
-
-    .dtp {
-        color: #eeac41;
-    }
-
     th {
         color     : $foreground-dark-alt;
         text-align: center;
@@ -820,13 +839,42 @@ h4 {
         text-align: center;
 
         height: 8rem;
-        margin: $padding;
+        padding-top: $padding * 2;
 
-        font-size: 120%;
+        font-size: 75%;
+
+        vertical-align: top;
 
         abbr {
             text-decoration: none !important;
         }
+
+        &.plt a {
+            color: #16a085 !important;
+
+        }
+
+        &.fp a {
+            color: #48a6e6 !important;
+        }
+
+        &.lgc a {
+            color: #ff8c80 !important;
+        }
+
+        &.dtp a {
+            color: #eeac41 !important;
+        }
+
+        a {
+            font-size: 150%; 
+        }
+        // injecting a line break after <a />s
+        a::after {
+            content: "\A";
+            white-space: pre;
+          }
+
     }
 }
 
