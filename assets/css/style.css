@@ -414,6 +414,21 @@ h4 {
 #course-lectures .lecture .lecture-content div {
   flex: 1;
 }
+#course-lectures .lecture .lecture-content dl {
+  display: grid;
+  grid-template-columns: 5rem auto;
+}
+#course-lectures .lecture .lecture-content dl dt {
+  grid-column: 1/2;
+}
+#course-lectures .lecture .lecture-content dl dd {
+  grid-column: 2/3;
+}
+@media (max-width: 576px) {
+  #course-lectures .lecture .lecture-content {
+    display: block;
+  }
+}
 #course-lectures td {
   width: 30%;
 }
@@ -438,7 +453,7 @@ h4 {
 }
 
 #course-timeline {
-  padding: 3rem 3rem;
+  padding: 3rem;
 }
 #course-timeline ol {
   list-style: none;
@@ -492,6 +507,11 @@ h4 {
   position: relative;
   top: 1rem;
 }
+@media (max-width: 576px) {
+  #course-timeline {
+    padding: 1rem;
+  }
+}
 
 #timetable table {
   width: 100%;
@@ -539,6 +559,11 @@ h4 {
 #timetable td a::after {
   content: "\a";
   white-space: pre;
+}
+@media (max-width: 992px) {
+  #timetable small {
+    display: none;
+  }
 }
 
 #registration-attendee-type-tab {

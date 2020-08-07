@@ -600,10 +600,35 @@ h4 {
             div {
                 flex: 1
             }
+
+            dl {
+                $dt-width: 5rem;
+
+                display              : grid;
+                grid-template-columns: $dt-width auto;
+
+                dt {
+                    grid-column: 1 / 2;
+                }
+
+                dd {
+                    grid-column: 2 / 3;
+                }
+            }
         }
 
         margin: 2rem 0;
         padding: 2rem;
+
+
+        // make the tab text smaller on mobile 
+        @media (max-width: $breakpoint2) {
+
+            .lecture-content {
+                display: block;
+            }
+        }
+
 
     }
 
@@ -643,7 +668,7 @@ h4 {
     $timeline-width : 0.5rem;
     $diameter       : 2rem;
 
-    padding : $margin $margin;
+    padding : $margin;
 
     ol {
         list-style: none;
@@ -717,6 +742,12 @@ h4 {
         }
 
     }
+
+
+    // make the tab text smaller on mobile 
+    @media (max-width: $breakpoint2) {
+        padding : $padding
+    }
 }
 
 #timetable {
@@ -786,6 +817,12 @@ h4 {
             white-space: pre;
           }
 
+    }
+    // for mobile 
+    @media (max-width: $breakpoint) {
+       small {
+           display: none;
+       }
     }
 }
 
