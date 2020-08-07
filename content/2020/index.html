@@ -63,67 +63,62 @@
     <span>$LC.location$</span>
   </header>
 </div>
-<div id="course-anouncements" class="ocean alt">
+
+<div class="two-column ocean">
+  <section>
+    <h2>課程介紹</h2>
+    <p>
+      本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
+      以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
+      並具備進一步探索程式語言相關領域的知識基礎。
+    </p>
+  </section>
   <section>
     <h2>公告</h2>
-    <p>公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告公告</p>
+    <ul>
+      <li><strong>08/07</strong> - 請大家帶電腦練習 FP 跟 DTP</li>
+    </ul>
   </section>
 </div>
-<div id="course">
-  <div id="course-timeline" class="ocean alt2">
-    <section>
-      <h2>$LC.dates$</h2>
-      <ol>
-        $foreach(event)in(calendar)$
-        $if(event.past)$
-          <li class="timeline-event-past">
+<div class="two-column ocean alt">
+  <section>
+    <h2>特別講題介紹：依值型別編程</h2>
+    <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
+    <h3>程式不可能寫錯</h3>
+    <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
+    <h3>寫程式不再孤單</h3>
+    <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知與尚待滿足的條件，互動地寫出正確程式。</p>
+    <h3>數學定理也能跑</h3>
+    <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。</p>
+    <p>歡迎一同來體驗數學、邏輯、計算融為一體的舒暢感！</p>
+  </section>
+  <section id="course-timeline">
+    <h2>$LC.dates$</h2>
+    <ol>
+      $foreach(event)in(calendar)$
+      $if(event.past)$
+        <li class="timeline-event-past">
+      $else$
+        $if(event.next)$
+          <li class="timeline-event-next">
         $else$
-          $if(event.next)$
-            <li class="timeline-event-next">
-          $else$
-            <li >
-          $endif$
+          <li >
         $endif$
-          <div class="timeline-event-date-container">
-            <div class="timeline-event-date">
-              $event.time$
-            </div>
+      $endif$
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">
+            $event.time$
           </div>
-          <div class="timeline-event-content-container">
-            <div class="timeline-event-content">
-              $event.title$
-            </div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">
+            $event.title$
           </div>
-        </li>
-        $endforeach$
-      </ol>
-    </section>
-  </div>
-  <div id="course-left-column" >
-    <div id="course-intro" class="ocean">
-      <section>
-        <h2>課程介紹</h2>
-        <p>
-          本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
-          以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
-          並具備進一步探索程式語言相關領域的知識基礎。
-        </p>
-      </section>
-    </div>
-    <div id="course-special-lecture" class="alt ocean">
-      <section>
-        <h2>特別講題介紹：依值型別編程</h2>
-        <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
-        <h3>程式不可能寫錯</h3>
-        <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
-        <h3>寫程式不再孤單</h3>
-        <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知與尚待滿足的條件，互動地寫出正確程式。</p>
-        <h3>數學定理也能跑</h3>
-        <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。</p>
-        <p>歡迎一同來體驗數學、邏輯、計算融為一體的舒暢感！</p>
-      </section>
-    </div>
-  </div>
+        </div>
+      </li>
+      $endforeach$
+    </ol>
+  </section>
 </div>
 <div id="course-lectures" class="ocean">
   <section>

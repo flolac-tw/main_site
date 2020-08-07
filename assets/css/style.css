@@ -66,23 +66,20 @@ body > div.mountain h2 {
     color: #61C1BE;
   }
 
-  #course-timeline {
-    background: #000;
-  }
   #course-timeline li.timeline-event-past {
     color: #444;
   }
   #course-timeline li.timeline-event-past .timeline-event-date-container {
-    border-right-color: #111;
+    border-right-color: #222;
   }
   #course-timeline li.timeline-event-past .timeline-event-date-container:after {
-    border-color: #111;
+    border-color: #222;
   }
   #course-timeline li.timeline-event-past .timeline-event-content-container .timeline-event-content {
-    background-color: #111;
+    background-color: #222;
   }
   #course-timeline li.timeline-event-past .timeline-event-content-container:before {
-    border-color: transparent #111 transparent transparent;
+    border-color: transparent #222 transparent transparent;
   }
   #course-timeline li.timeline-event-next .timeline-event-date-container {
     border-right-color: #61C1BE;
@@ -99,11 +96,11 @@ body > div.mountain h2 {
     border-color: transparent #61C1BE transparent transparent;
   }
   #course-timeline li .timeline-event-date-container {
-    border-right-color: gray;
+    border-right-color: #CCC;
   }
   #course-timeline li .timeline-event-date-container:after {
-    border-color: gray;
-    background: #000;
+    border-color: #CCC;
+    background: #111;
   }
   #course-timeline li .timeline-event-content-container .timeline-event-content {
     background-color: #222;
@@ -188,23 +185,20 @@ body > div.mountain h2 {
     color: #47b8b4;
   }
 
-  #course-timeline {
-    background: #E8E8E8;
-  }
   #course-timeline li.timeline-event-past {
     color: #BBB;
   }
   #course-timeline li.timeline-event-past .timeline-event-date-container {
-    border-right-color: #DDD;
+    border-right-color: #F0F0F0;
   }
   #course-timeline li.timeline-event-past .timeline-event-date-container:after {
-    border-color: #DDD;
+    border-color: #F0F0F0;
   }
   #course-timeline li.timeline-event-past .timeline-event-content-container .timeline-event-content {
-    background-color: #DDD;
+    background-color: #F0F0F0;
   }
   #course-timeline li.timeline-event-past .timeline-event-content-container:before {
-    border-color: transparent #DDD transparent transparent;
+    border-color: transparent #F0F0F0 transparent transparent;
   }
   #course-timeline li.timeline-event-next .timeline-event-date-container {
     border-right-color: #47b8b4;
@@ -215,7 +209,7 @@ body > div.mountain h2 {
   }
   #course-timeline li.timeline-event-next .timeline-event-content-container .timeline-event-content {
     background-color: #47b8b4;
-    color: white;
+    color: #E8E8E8;
   }
   #course-timeline li.timeline-event-next .timeline-event-content-container:before {
     border-color: transparent #47b8b4 transparent transparent;
@@ -225,13 +219,13 @@ body > div.mountain h2 {
   }
   #course-timeline li .timeline-event-date-container:after {
     border-color: gray;
-    background: #E8E8E8;
+    background: #F8F8F8;
   }
   #course-timeline li .timeline-event-content-container .timeline-event-content {
-    background: white;
+    background: #E8E8E8;
   }
   #course-timeline li .timeline-event-content-container:before {
-    border-color: transparent white transparent transparent;
+    border-color: transparent #E8E8E8 transparent transparent;
   }
 
   #course > #course-left-column {
@@ -398,80 +392,6 @@ h4 {
 }
 #header h1 {
   font-size: 200%;
-}
-
-#course {
-  display: grid;
-  grid-template-columns: 1fr calc(992px - 350px) 350px 1fr;
-  grid-template-rows: auto;
-}
-#course #course-timeline {
-  grid-column: 3/5;
-  grid-row: 1/2;
-}
-#course #course-left-column {
-  grid-column: 1/3;
-  grid-row: 1/2;
-}
-#course #course-intro,
-#course #course-special-lecture,
-#course #course-lectures {
-  display: grid;
-  grid-template-columns: auto calc(calc(992px - 350px));
-}
-#course #course-intro > section,
-#course #course-special-lecture > section,
-#course #course-lectures > section {
-  grid-column: 2/3;
-  margin: 0;
-  padding: 3rem 3rem 3rem 1rem;
-}
-@media (max-width: 992px) {
-  #course {
-    display: block;
-  }
-  #course #course-timeline {
-    padding: 3rem 1rem;
-  }
-  #course #course-timeline li {
-    padding: 1rem 0;
-  }
-  #course #course-timeline .timeline-event-date-container {
-    width: 30%;
-    border: none;
-    margin: 0;
-    padding: 0 1rem;
-    display: block;
-  }
-  #course #course-timeline .timeline-event-date-container .timeline-event-date {
-    text-align: left;
-  }
-  #course #course-timeline .timeline-event-date-container:after {
-    display: none;
-  }
-  #course #course-timeline .timeline-event-content-container {
-    width: 70%;
-    margin: 0;
-    padding: 0 1rem;
-  }
-  #course #course-timeline .timeline-event-content-container .timeline-event-content {
-    background: none;
-    margin: 0;
-    padding: 0;
-  }
-  #course #course-timeline .timeline-event-content-container:before {
-    display: none;
-  }
-  #course #course-intro,
-#course #course-special-lecture,
-#course #course-lectures {
-    display: block;
-  }
-  #course #course-intro > section,
-#course #course-special-lecture > section,
-#course #course-lectures > section {
-    padding: 3rem 1rem;
-  }
 }
 
 #course-lectures .lecture {
