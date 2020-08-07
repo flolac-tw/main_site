@@ -58,6 +58,14 @@ body > div.mountain h2 {
     background: #111;
   }
 
+  .lecture {
+    box-shadow: 0.5rem 0.5rem 0 #000;
+    background: #111;
+  }
+  .lecture h3 {
+    color: #61C1BE;
+  }
+
   #course-timeline {
     background: #000;
   }
@@ -144,11 +152,11 @@ body > div.mountain h2 {
     color: #dba800;
   }
 
-  body > div.alt {
+  body div.alt {
     background: #F8F8F8;
   }
 
-  body > div.alt2 {
+  body div.alt2 {
     background: #E8E8E8;
   }
 
@@ -170,6 +178,14 @@ body > div.mountain h2 {
 
   #registration-attendee-type-page {
     background: #F8F8F8;
+  }
+
+  .lecture {
+    box-shadow: 0.5rem 0.5rem 0 #E8E8E8;
+    background: #F8F8F8;
+  }
+  .lecture h3 {
+    color: #47b8b4;
   }
 
   #course-timeline {
@@ -461,11 +477,8 @@ h4 {
 #course-lectures .lecture {
   margin: 2rem 0;
   padding: 2rem;
-  box-shadow: 0.5rem 0.5rem 0 #000;
-  background: #111;
 }
 #course-lectures .lecture h3 {
-  color: #61C1BE;
   position: relative;
 }
 #course-lectures .lecture h3 span {

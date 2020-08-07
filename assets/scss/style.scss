@@ -105,6 +105,14 @@ nav {
         background: $background-dark-alt;
     }
 
+    .lecture {
+        h3 {
+            color: $ocean-dark;
+        }
+        box-shadow: 0.5rem 0.5rem 0 $background-dark-alt2;
+        background       : $background-dark-alt;
+    }
+
 
     #course-timeline {
         // foreground
@@ -232,11 +240,11 @@ nav {
         }
     }
 
-    body > div.alt {
+    body div.alt {
         background: $background-light-alt;
     }
 
-    body > div.alt2 {
+    body div.alt2 {
         background: $background-light-alt2;
     }
 
@@ -263,6 +271,15 @@ nav {
 
     #registration-attendee-type-page {
         background: $background-light-alt;
+    }
+
+    .lecture {
+        box-shadow: 0.5rem 0.5rem 0 $background-light-alt2;
+        background       : $background-light-alt;
+
+        h3 {
+            color: $ocean-light;
+        }
     }
 
     #course-timeline {
@@ -660,7 +677,6 @@ h4 {
 
     .lecture {
         h3 {
-            color: $ocean-dark;
             position: relative;
 
             // for offsetting the <nav> height
@@ -685,8 +701,6 @@ h4 {
 
         margin: 2rem 0;
         padding: 2rem;
-        box-shadow: 0.5rem 0.5rem 0 $background-dark-alt2;
-        background       : $background-dark-alt;
 
     }
 
