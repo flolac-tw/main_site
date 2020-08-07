@@ -15,13 +15,13 @@
       past: true
     - time: 08/04
       title: 旁聽報名截止
-      next: true
+      past: true
     - time: 08/05
-      title: 旁聽錄取通知
-    - time: 08/05
-      title: 台大學生錄取通知
+      title: 旁聽與台大學生錄取通知
+      past: true
     - time: 08/10
       title: 課程開始
+      next: true
     - time: 08/20
       title: 課程結束
     - time: 08/21
@@ -40,9 +40,6 @@
     dates: 重要日期
     organising-committee: 籌辦團隊
     programme-committee: 課程委員
-    news:
-      - time: 02/10
-        title: 網站上線
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2020
     subtitle: 邏輯、語言與計算暑期研習營
@@ -55,20 +52,6 @@
     dates: Important dates
     organising-committee: Organising Committee
     programme-committee: Programme Committee
-    calendar: 
-      - time: 07/03
-        title: Registration
-      - time: 07/06
-        title: 修課錄取通知
-      - time: 08/10
-        title: Start of Lectures
-      - time: 08/20
-        title: 課程結束
-      - time: 08/21
-        title: Exam
-    news:
-      - time: 02/10 (五)
-        title: 網站上線
 ---
 
 <div id="header">
@@ -116,7 +99,7 @@
         <h2>課程介紹</h2>
         <p>
           本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
-          以及型別系統在程式語言中扮演的角色，使學生能以遞迴（迭構）方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
+          以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
           並具備進一步探索程式語言相關領域的知識基礎。
         </p>
       </section>
@@ -198,19 +181,19 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="plt"><abbr title="Introduction">程式語言導論 0</abbr></td>
-          <td class="plt"><abbr title="Untyped λ-calculus">程式語言導論 1</abbr></td>
-          <td class="fp"><abbr title="Functional program derivation">函數編程 1</abbr></td>
-          <td class="lgc"><abbr title="Classical semantics and meta-theoretic properties">邏輯 1</abbr></td>
-          <td class="fp"><abbr title="TBA">函數編程 2</abbr></td>
+          <td class="plt"><div>程式語言導論 0</div><small>Introduction</small></td>
+          <td class="plt"><div>程式語言導論 1</div><small>Untyped λ-calculus</small></td>
+          <td class="fp"><div>函數編程 1 </div><small>Functional program derivation</small></abbr></td>
+          <td class="lgc"><div>邏輯 1 </div><small>Classical semantics and meta-theoretic properties</small></td>
+          <td class="fp"><div>函數編程 2</div><small>TBA</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="fp"><abbr title="Inductive functions and equational reasoning">函數編程 0</abbr></td>
-          <td class="lgc"><abbr title="Natural deduction and intuitionistic propositional logic">邏輯 0</abbr></td>
-          <td class="plt"><abbr title="Simply typed λ-calculus">程式語言導論 2</abbr></td>
-          <td class="plt"><abbr title="Stateful calculus">程式語言導論 3</abbr></td>
-          <td class="plt"><abbr title="What's out there">程式語言導論 4</abbr></td>
+          <td class="fp"><div>函數編程 0</div> <small>Inductive functions and equational reasoning</small></td>
+          <td class="lgc"><div>邏輯 0</div> <small> Natural deduction and intuitionistic propositional logic</small></td>
+          <td class="plt">程式語言導論 2 <small>Simply typed λ-calculus</small></td>
+          <td class="plt">程式語言導論 3 <small>Stateful calculus</small></td>
+          <td class="plt">程式語言導論 4 <small>What's out there / Agda Installation</small></td>
         </tr>
       </tbody>
     </table>
@@ -228,18 +211,18 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="dtp"><abbr title="Agda basics (e.g., safe head, vector manipulation, sprintf?)">依值型別編程 0</abbr></td>
-          <td class="dtp"><abbr title="Shallow and deep embeddings of intuitionistic logic">依值型別編程 1</abbr></td>
-          <td class="dtp"><abbr title="Intrinsic representation of simply typed lambda calculus and type">依值型別編程 2</abbr></td>
-          <td class="dtp"><abbr title="Hutton's razor">依值型別編程 3</abbr></td>
-          <td class="exm"><abbr title="Exam">考試</abbr></td>
+          <td class="dtp">依值型別編程 0 <small>Agda basics</small></td>
+          <td class="dtp">依值型別編程 1 <small>Shallow and deep embeddings of intuitionistic logic</small></td>
+          <td class="dtp">依值型別編程 2 <small>Intrinsic representation of simply typed lambda calculus and type</small></td>
+          <td class="dtp">依值型別編程 3 <small>McBride's razor</small></td>
+          <td class="exm">考試</td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="lgc"><abbr title="First-order logic and the Curry–Howard correspondence">邏輯 2</abbr></td>
-          <td class="plt"><abbr title="Hoare logic">程式語言導論 5</abbr></td>
-          <td class="plt"><abbr title="Polymorphic lambda calculus">程式語言導論 6</abbr></td>
-          <td class="tlk"><abbr title="Invited Talk: Verification of a Snapshot-Consistent Flash Translation Layer">特別演講</abbr></td>
+          <td class="lgc"><div>邏輯 2</div><small>First-order logic and the Curry–Howard correspondence</small></td>
+          <td class="plt"><div>程式語言導論 5</div><small>Polymorphic lambda calculus</small></td>
+          <td class="plt"><div>程式語言導論 6</div><small>Hoare logic</small></td>
+          <td class="tlk"><div>特別演講</div><small>Verification of a Snapshot-Consistent Flash Translation Layer</small></td>
         </tr>
       </tbody>
     </table>
