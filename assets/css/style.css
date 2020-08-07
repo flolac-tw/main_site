@@ -34,11 +34,11 @@ body > div.mountain h2 {
     color: #FABE00;
   }
 
-  body > div.alt {
+  body div.alt {
     background: #111;
   }
 
-  body > div.alt2 {
+  body div.alt2 {
     background: #000;
   }
 
@@ -409,18 +409,6 @@ h4 {
   margin: 0;
   padding: 3rem 3rem 3rem 1rem;
 }
-#course #course-lecturer td {
-  width: 30%;
-}
-#course #course-lecturer th {
-  width: 35%;
-  vertical-align: baseline;
-}
-#course #course-lecturer tr.border-at-top > * {
-  border-top: 1rem solid transparent;
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
 @media (max-width: 992px) {
   #course {
     display: block;
@@ -469,6 +457,18 @@ h4 {
   }
 }
 
+#course-lecturer td {
+  width: 30%;
+}
+#course-lecturer th {
+  width: 35%;
+  vertical-align: baseline;
+}
+#course-lecturer tr.border-at-top > * {
+  border-top: 1rem solid transparent;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
 #course-lecturer dl {
   display: grid;
   grid-template-columns: 10rem auto;

@@ -77,11 +77,11 @@ nav {
         }
     }
 
-    body > div.alt {
+    body div.alt {
         background: $background-dark-alt;
     }
 
-    body > div.alt2 {
+    body div.alt2 {
         background: $background-dark-alt2;
     }
 
@@ -591,26 +591,8 @@ h4 {
             margin     : 0;
             padding    : $margin $margin $margin $padding;
         }
-
     }
 
-    #course-lecturer {
-
-        td {
-            width: 30%;
-        }
-
-        th {
-            width         : 35%;
-            vertical-align: baseline;
-        }
-
-        tr.border-at-top>* {
-            border-top : $padding solid transparent;
-            margin-top : $padding;
-            padding-top: $padding;
-        }
-    }
 
     // for mobile 
     @media (max-width: $breakpoint) {
@@ -661,9 +643,10 @@ h4 {
 
         #course-intro,
         #course-special-lecture,
-        #course-lecturer {
+        #course-lecturer
+        {
             display: block;
-
+        
             >section {
                 padding: $margin $padding;
             }
@@ -671,21 +654,39 @@ h4 {
     }
 }
 
-#course-lecturer dl {
-    $dt-width: 10rem;
 
-    display              : grid;
-    grid-template-columns: $dt-width auto;
+#course-lecturer {
 
-    dt {
-        grid-column: 1 / 2;
+    td {
+        width: 30%;
     }
 
-    dd {
-        grid-column: 2 / 3;
+    th {
+        width         : 35%;
+        vertical-align: baseline;
+    }
+
+    tr.border-at-top>* {
+        border-top : $padding solid transparent;
+        margin-top : $padding;
+        padding-top: $padding;
+    }
+
+    dl {
+        $dt-width: 10rem;
+
+        display              : grid;
+        grid-template-columns: $dt-width auto;
+
+        dt {
+            grid-column: 1 / 2;
+        }
+
+        dd {
+            grid-column: 2 / 3;
+        }
     }
 }
-
 #course-timeline {
     
 
