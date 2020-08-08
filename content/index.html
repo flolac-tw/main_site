@@ -1,5 +1,4 @@
 ---
-  fancy-banner: true
   zh: 
     title: 「邏輯、語言與計算」暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation
@@ -73,43 +72,51 @@
     - year: "2008"
       title: Interpreting Types as Abstract Values
 ---
-<div class="container-md">
-  <section class="row row-cols-2 text-light bg-dark">
-    <div class="col-12 col-md bg-light">
-    </div>
-    <div class="col-12 col-md text-justify">
-      <h2 class="light-border-bottom">$LC.h-aim$</h2>
-      $LC.aim-content$
-    </div>
+
+<div id="landing">
+  <header>
+    <h1>$LC.title$</h1>
+    <span>$LC.subtitle$</span>
+  </header>
+</div>
+<div>
+  <section >
+    <h2>$LC.h-aim$</h2>
+    $LC.aim-content$
   </section>
-  
-  <section class="row text-dark bg-light">
-    <div class="col">
-      <h2>今年主題：$LC.h-PL$</h2>
-      $LC.ocean-intro-content$
-    </div>
+</div>
+<div id="ocean-mountain-intro" class="alt two-column">
+  <section id="ocean-intro" class="ocean">
+    <h2>今年主題：$LC.h-PL$</h2>
+    $LC.ocean-intro-content$
   </section>
-  
-  <section class="row text-light bg-dark">
-    <div class="col">
-      <h2>來年主題：$LC.h-FM$</h2>
-      $LC.mountain-intro-content$
-    </div>
+  <section id="mountain-intro" class="mountain">
+    <h2>來年主題：$LC.h-FM$</h2>
+    $LC.mountain-intro-content$
   </section>
-  
-  <section class="row text-dark bg-light" >
-    <div class="col-12 col-md-8">
-      <h2 class="dark-border-bottom">2020 年特別講題：依值型別編程</h2>
-      <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
-      <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。踏在直構型別論的基礎上，依值型別編程的目標是進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。</p>
-    </div>
-    <div class="col-12 col-md-4 bg-dark text-light overflow-auto d-flex flex-row flex-md-column">
+</div>
+<div>
+  <section>
+    <h2>2020 年特別講題：依值型別編程</h2>
+    <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
+    <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。踏在直構型別論的基礎上，依值型別編程的目標是進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。</p>
+  </section>
+</div>
+<div id="previous-guest-lectures" class="alt" >
+  <section>
+    <h2>過往特別講題</h2>
+    <ol>
       $foreach(event)in(guest-lectures)$
-      <div class="">$event.year$ - $event.title$</div>
+      <li>
+        <span class="guest-lecture-year">$event.year$</span>
+        <span class="guest-lecture-title">$event.title$</span>
+      </li>
       $endforeach$
-    </div>
+    </ol>
   </section>
-  
+</div>
+<!-- 
+<div class="container-md">
   <section class="row row-cols-md-2 row-cols-1" style="background-color: #dee2e6">
     <div class="col d-flex flex-row" style="overflow-x: auto">
       <div class="px-4 py-3">
@@ -124,9 +131,58 @@
     </div>
   </div>
   </section>
+</div> -->
+
+<div id="stats" class="two-column" >
+  <section>
+    <img src="/img/year-stat-cropped.png" alt="學員年級統計">
+    <div>
+      <h3>適合幾年級的學生呢？</h3>
+      <p>根據我們的統計，歷年來參加者的年齡分布很廣，除了大學生與研究生外，還有少數高中生跟不少的社會人士。課程沒有預設背景，不同年級的學員（盡力參與）都可以跟得上課程，我們也有助教群可以協助學員。</p>
+    </div>
+  </section>
+  <section>
+    <img src="/img/fatality-cropped.png" alt="學員年級統計">
+    <h3>課程很難嗎？</h3>
+    <p>因為各種科系背景的不同，每個人狀況都不大一樣。大致上我們發現科系背景間的差異較大，例如歷年來數學系跟資工系高分通過的比較多，但也曾有財金系的同學拿到滿分哦！至於不及格的同學則是沒有明顯的差異，即便是最相關的資工系也有不少人最後沒拿到學分（殘念⋯⋯）</p>
+  </section>
 </div>
-<!--
-<section class="row border">
+<div id="feedbacks" class="alt" >
+  <section>
+      <h2>學員心得</h2>
+      <div>
+        <blockquote>
+          <p>只要對 theoretical computer science稍微有興趣的人，
+            沒去一定會後悔得哭出來！特別今年是關於languages 的主題，
+            就是那些 type systems、denotational semantics 之類的東西！
+            跌斷手都要去的呀！
+          </p>
+          <footer>2007 年學員兼講師 K</footer>
+        </blockquote>
+        <blockquote>
+          <p>每個課程都銜接地很好，原本看似是獨立的不同課程，後來才發現彼此是環環相扣的。
+          </p>
+          <footer>2012 年學員</footer>
+        </blockquote>
+        <blockquote>
+          <p>太棒了！相當幸福！
+          </p>
+          <footer>2012 年學員</footer>
+        </blockquote>
+        <blockquote>
+          <p>非常的充實，完全能體會所有老師和助教的用心。
+          </p>
+          <footer>2012 年學員</footer>
+        </blockquote>
+        <blockquote>
+          <p>讚。
+          </p>
+          <footer>2012 年學員</footer>
+        </blockquote>
+      </div>
+  </section>
+</div>
+<!-- <section class="row border">
   <div class="col border">
     <div class="media">
       <img src="/img/year-stat.png" stylee="img-fluid" height="auto" width="150px" class="mr-3" alt="學員年級統計">
@@ -145,29 +201,6 @@
       </div>
     </div>
   </div>
-</section>
--->
+</section> -->
 
-<!--
-<section class="row border">
-  <div class="col">
-    <h5>報名方式</h5>
-    目前報名尚未開始，請密切注意社群網站公告喔！
-  </div>
-  <div class="col">
-    <h5>招收學員人數</h5>
-    <ul>
-      <li>修課生：40 人</li>
-      <li>旁聽生：40 人</li>
-    </ul>
-  </div>
-  <div class="col">
-    <h5>課程費用</h5>
-    此課程不收費。若學員需要學分，且非台大學生，則需繳交學分費給台灣大學校方。
-  </div>
-  <div class="col">
-    <h5>報名時間</h5>
-    每年約開課前一個月左右截止。
-  </div>
-</section>
--->
+

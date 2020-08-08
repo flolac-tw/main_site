@@ -23,8 +23,7 @@ $colors: ("fountain-blue": $fountain-blue,
 
 $enable-shadows: true;
 
-$theme-colors: (
-  "primary": $fountain-blue,
+$theme-colors: ("primary": $fountain-blue,
   "secondary" : $pickled-bluewood,
   "success": $fern,
   "warning": $old-gold,
@@ -35,11 +34,13 @@ $theme-colors: (
   "light-accent": $sundance,
 );
 
-$body-bg: $snow-drift;
+$body-bg   : $snow-drift;
 $body-color: $pickled-bluewood;
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
+// Custom styling
+@import "style";
 
 blockquote.dialog {
   background   : white;
@@ -72,16 +73,19 @@ blockquote.dialog {
 dl.dl-vbar {
   display              : grid;
   grid-template-columns: max-content auto;
-  margin-bottom: 0px;
+  margin-bottom        : 0px;
+
   >dt {
     grid-column-start: 1;
     padding-right    : .5em;
   }
+
   >dd {
     grid-column-start: 2;
     border-left      : 0.15em solid $light; // $light should inhert the text colour.
     padding-left     : .5em;
   }
+
   >dd:last-child {
     margin-bottom: 0px;
   }
@@ -89,17 +93,20 @@ dl.dl-vbar {
 
 dl.inline-block-lists {
   >div {
-    display: inline-block;
+    display     : inline-block;
     margin-right: 3em;
+
     >dt {
-      display: inline-block;
+      display      : inline-block;
       padding-right: .5em;
     }
+
     >dd {
       display: inline-block;
     }
   }
-  div:last-child {  
+
+  div:last-child {
     >dd {
       margin-bottom: 0px;
     }
@@ -108,10 +115,12 @@ dl.inline-block-lists {
 
 .list-inline-block {
   padding-left: 0;
-  list-style:none;
+  list-style  : none;
+
   li {
     display: inline-block;
   }
+
   li:not(:last-child) {
     margin-right: .5em;
   }
@@ -121,7 +130,7 @@ dl.inline-block-lists {
   font-size: 0.8em;
 }
 
-.vbar-inbetween >*:not(last-child) {
+.vbar-inbetween>*:not(last-child) {
   border-right: 0.15em solid white;
 }
 
@@ -130,53 +139,54 @@ dl.inline-block-lists {
 }
 
 @mixin container-n-rows ($rows) {
-  display: grid;
+  display           : grid;
   grid-template-rows: repeat($rows, auto);
-  grid-auto-flow: column;
-  grid-auto-columns: auto;
-  grid-column-gap: .5em;
+  grid-auto-flow    : column;
+  grid-auto-columns : auto;
+  grid-column-gap   : .5em;
 }
 
 .container-4-rows {
   @include container-n-rows(4);
 }
+
 .light-border-bottom {
-  border-bottom: 0.2em solid $light;
+  border-bottom : 0.2em solid $light;
   padding-bottom: 1em;
 }
 
 .dark-border-bottom {
-  border-bottom: 0.2em solid $dark;
+  border-bottom : 0.2em solid $dark;
   padding-bottom: 1em;
 }
 
-.yearly-banner {
-  min-height       : 30vh;
-  background-image : url('/img/yearly_banner.png');
-  background-size  : cover;
-  background-repeat: no-repeat;
-}
+// .yearly-banner {
+//   min-height       : 30vh;
+//   background-image : url('/img/yearly_banner.png');
+//   background-size  : cover;
+//   background-repeat: no-repeat;
+// }
 
-.bg-gd {
-  background: linear-gradient(to bottom, #98d2d7 31%, #77bac0 48%, #4b8b97 72%, #3e7987 84%, #286a7c 100%);
-}
+// .bg-gd {
+//   background: linear-gradient(to bottom, #98d2d7 31%, #77bac0 48%, #4b8b97 72%, #3e7987 84%, #286a7c 100%);
+// }
 
-.bg-gd2 {
-  background: linear-gradient(to bottom, #97d2d7 28%, #8dccd3 39%, #539ca5 70%, #337988 89%, #2a7382 94%, #286c7f 100%);
-}
+// .bg-gd2 {
+//   background: linear-gradient(to bottom, #97d2d7 28%, #8dccd3 39%, #539ca5 70%, #337988 89%, #2a7382 94%, #286c7f 100%);
+// }
 
-.heading-underline {
-  padding-bottom: .2em;
-  border-bottom : 3px solid;
-}
+// .heading-underline {
+//   padding-bottom: .2em;
+//   border-bottom : 3px solid;
+// }
 
-.news-box {}
+// .news-box {}
 
-.news-group {
-  padding-left: 0;
-  max-height  : 30vh;
-  list-style  : none;
-}
+// .news-group {
+//   padding-left: 0;
+//   max-height  : 30vh;
+//   list-style  : none;
+// }
 
 .border-right-thick {
   border-right: 0.15em solid white;

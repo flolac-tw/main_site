@@ -1,28 +1,33 @@
 ---
-  image-banner: True
+  <!-- image-banner: True -->
   calendar: 
     - time: 07/26
-      title: <s>外地實習生報名截止</s>
+      title: 外地實習生報名截止
+      past: true
     - time: 07/29
-      title: <s>非台大學生報名截止</s>
+      title: 非台大學生報名截止
+      past: true
     - time: 07/30
-      title: <s>非台大學生錄取通知</s>
+      title: 非台大學生錄取通知
+      past: true
     - time: 08/03
-      title: <s>台大學生報名截止</s>
+      title: 台大學生報名截止
+      past: true
     - time: 08/04
-      title: <s>旁聽報名截止</s>
+      title: 旁聽報名截止
+      past: true
     - time: 08/05
-      title: <s>旁聽與台大學生錄取通知</s>
+      title: 旁聽與台大學生錄取通知
+      past: true
     - time: 08/10
       title: 課程開始
+      next: true
     - time: 08/20
       title: 課程結束
     - time: 08/21
       title: 考試
   zh:
-    title: |
-      邏輯、語言與計算暑期研習營
-
+    title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2020
     date: "2020.8.10–21"
     time: "9:00–17:00"
@@ -31,11 +36,6 @@
     lecture-intro: 課程講師
     announcement: 公告事項
     dates: 重要日期
-    organising-committee: 籌辦團隊
-    programme-committee: 課程委員
-    news:
-      - time: 02/10
-        title: 網站上線
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2020
     subtitle: 邏輯、語言與計算暑期研習營
@@ -46,182 +46,225 @@
     special-lecture: Special Lecture
     announcement: Announcement
     dates: Important dates
-    organising-committee: Organising Committee
-    programme-committee: Programme Committee
-    calendar: 
-      - time: 07/03
-        title: Registration
-      - time: 07/06
-        title: 修課錄取通知
-      - time: 08/10
-        title: Start of Lectures
-      - time: 08/20
-        title: 課程結束
-      - time: 08/21
-        title: Exam
-    news:
-      - time: 02/10 (五)
-        title: 網站上線
 ---
-<article class="container-md px-xl-5 px-0">
-  <section class="row pb-3 pt-5 mw-100 mx-lg-5 mx-0 px-lg-3 px-0">
-    <div class="col-12 col-md-8 px-md-3 px-0">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title text-light-accent">課程介紹</h4>
-          <p class="card-text">
-            本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 px-md-3 px-0">
-      <div class="card rounded border-danger">
-        <h5 class="card-header">$LC.dates$</h5>
-        <div class="card-body">
-          <ul class="card-text list-unstyled">
-          $foreach(event)in(calendar)$
-          <li><strong>$event.time$</strong> $event.title$</dd>
-          $endforeach$
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
+<div id="header">
+  <header>
+    <h1>$LC.title$</h1>
+    <span>$LC.subtitle$</span><br />
+    <span>$LC.date$</span>
+    <span>$LC.time$</span><br />
+    <span>$LC.location$</span>
+  </header>
+</div>
+
+<div class="two-column ocean">
   <section>
+    <h2>課程介紹</h2>
+    <p>
+      本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
+      以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
+      並具備進一步探索程式語言相關領域的知識基礎。
+    </p>
   </section>
-
-  <section class="row py-3 mw-100 mx-lg-5 mx-0 px-lg-3 px-0">
-    <div class="col-12 px-md-3 px-0">
-      <div class="card">
-        <h4 class="card-header bg-primary text-light">特別講題介紹</h4>
-        <div class="card-body bg-white">
-          <h5 class="card-title">依值型別編程</h5>
-          <p class="card-text">本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。
-          </p>
-          <h6 class="card-title">程式不可能寫錯</h6>
-          <p>
-          依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。
-          </p>
-          <h6 class="card-title">寫程式不再孤單</h6>
-          <p>
-          當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知與尚待滿足的條件，互動地寫出正確程式。
-          </p>
-          <h6 class="card-title">數學定理也能跑</h6>
-          <p>
-          依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。
-          </p>
-          <p>
-          歡迎一同來體驗數學、邏輯、計算融為一體的舒暢感！
-          </p>
-        </div>
-        </div>
-      </div>
-    </div>
+  <section>
+    <h2>公告</h2>
+    <ul>
+      <li><strong>08/08</strong> - 請學員攜帶電腦於上課練習時間：並請於上課期間全程配戴口罩。</li>
+    </ul>
   </section>
-
-  <section class="row py-3 mw-100 mx-lg-5 mx-0 px-lg-3 px-0">
-    <div class="col-12 col-md-4 px-md-3 px-0">
-      <div class="card">
-        <h5 class="card-header">課程與講師</h5>
-        <div class="card-body bg-white">
-          <dl class="card-text">
-            <dt>函數編程</dt><dd>穆信成 <span class="affiliation">中研院資訊所</span></dd>
-            <dt>邏輯</dt><dd>柯向上 <span class="affiliation">中研院資訊所</span></dd>
-            <dt>程式語言導論</dt>
-              <dd>
-                <ul class="list-inline"><li class="list-inline-item">陳亮廷 <span class="affiliation">中研院資訊所</span></li>
-                  <li class="list-inline-item">游書泓 <span class="affiliation">Department of Computer Science, Northwestern University</span></li></ul>
-              </dd>
-            <dt>依值型別編程</dt>
-            <dd>
-              <ul class="list-inline">
-                <li class="list-inline-item">穆信成</li>
-                <li class="list-inline-item">柯向上</li>
-                <li class="list-inline-item">陳亮廷</li>
-              </ul>
-            </dd>
-            <dt>特別演講</dt><dd>張耘盛 <span class="affiliation">中研院資訊所</span></dd>
+</div>
+<div class="two-column ocean alt">
+  <section>
+    <h2>特別講題介紹：依值型別編程</h2>
+    <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
+    <h3>程式不可能寫錯</h3>
+    <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
+    <h3>寫程式不再孤單</h3>
+    <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知與尚待滿足的條件，互動地寫出正確程式。</p>
+    <h3>數學定理也能跑</h3>
+    <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。</p>
+    <p>歡迎一同來體驗數學、邏輯、計算融為一體的舒暢感！</p>
+  </section>
+  <section id="course-timeline">
+    <h2>$LC.dates$</h2>
+    <ol>
+      $foreach(event)in(calendar)$
+      $if(event.past)$
+        <li class="timeline-event-past">
+      $else$
+        $if(event.next)$
+          <li class="timeline-event-next">
+        $else$
+          <li >
+        $endif$
+      $endif$
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">
+            $event.time$
+          </div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">
+            $event.title$
+          </div>
+        </div>
+      </li>
+      $endforeach$
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="ocean">
+  <section>
+    <h2>課程</h2>
+    <div class="lecture">
+      <h3><span id="lecture-fp"></span>函數編程</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>穆信成</dt>
+            <dd>中央研究院資訊科學所</dd>
           </dl>
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-8 px-md-3 px-0">
-      <div class="card">
-        <h5 class="card-header">課表</h5>
-        <div class="card-body">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">第一週</th>
-                <th scope="col">星期一</th>
-                <th scope="col">星期二</th>
-                <th scope="col">星期三</th>
-                <th scope="col">星期四</th>
-                <th scope="col">星期五</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">上午</th>
-                <td><abbr title="Introduction">T₀</abbr></td>
-                <td><abbr title="Untyped λ-calculus">T₁</abbr></td>
-                <td><abbr title="Functional program derivation">F₁</abbr></td>
-                <td><abbr title="Classical semantics and meta-theoretic properties">L₁</abbr></td>
-                <td><abbr title="TBA">F₂</abbr></td>
-              </tr>
-              <tr>
-                <th scope="row">下午</th>
-                <td><abbr title="Inductive functions and equational reasoning">F₀</abbr></td>
-                <td><abbr title="Natural deduction and intuitionistic propositional logic">L₀</abbr></td>
-                <td><abbr title="Simply typed λ-calculus">T₂</abbr></td>
-                <td><abbr title="Stateful calculus">T₃</abbr></td>
-                <td><abbr title="What's out there">T₄</abbr></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">第二週</th>
-                <th scope="col">星期一</th>
-                <th scope="col">星期二</th>
-                <th scope="col">星期三</th>
-                <th scope="col">星期四</th>
-                <th scope="col">星期五</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">上午</th>
-                <td><abbr title="Agda basics (e.g., safe head, vector manipulation, sprintf?)">D₀</abbr></td>
-                <td><abbr title="Shallow and deep embeddings of intuitionistic logic">D₁</abbr></td>
-                <td><abbr title="Intrinsic representation of simply typed lambda calculus and type">D₂</abbr></td>
-                <td><abbr title="McBride’s razor">D₃</abbr></td>
-                <td><abbr title="Exam">E</abbr></td>
-              </tr>
-              <tr>
-                <th scope="row">下午</th>
-                <td><abbr title="First-order logic and the Curry–Howard correspondence">L₂</abbr></td>
-                <td><abbr title="Polymorphic lambda calculus">T₅</abbr></td>
-                <td><abbr title="Hoare logic">T₆</abbr></td>
-                <td><abbr title="Invited Talk: Verification of a Snapshot-Consistent Flash Translation Layer">I</abbr></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <ul class="list list-unstyled">
-            <li><strong>F</strong>: 函數編程</li>  
-            <li><strong>L</strong>: 邏輯</li>  
-            <li><strong>T</strong>: 程式語言導論</li>  
-            <li><strong>D</strong>: 依值型別編程</li>  
-            <li><strong>I</strong>: 特別演講</li>  
-            <li><strong>E</strong>: 考試</li>  
+    <div class="lecture">
+      <h3><span id="lecture-logic"></span>邏輯</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>柯向上</dt>
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="/pdf/2020/Logic-0.pdf">Logic 0</a></li>
+            <li class="list-inline-item"><a href="/pdf/2020/Logic-1.pdf">Logic 1</a></li>
+            <li class="list-inline-item"><a href="/pdf/2020/Logic-2.pdf">Logic 2</a></li>
           </ul>
         </div>
       </div>
     </div>
+    <div class="lecture">
+      <h3><span id="lecture-plt"></span>程式語言導論</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>陳亮廷</dt>
+            <dd>中央研究院資訊科學所</dd>
+            <dt>游書泓</dt>
+            <dd>Department of Computer Science, Northwestern University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h5>投影片</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="/pdf/2020/PLT-1.pdf">PLT 1</a></li>
+            <li class="list-inline-item"><a href="/pdf/2020/PLT-2.pdf">PLT 2</a></li>
+            <li class="list-inline-item"><a href="/pdf/2020/PLT-5.pdf">PLT 5</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>依值型別編程</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>穆信成</dt>
+            <dd>中央研究院資訊科學所</dd>
+            <dt>柯向上</dt>
+            <dd>中央研究院資訊科學所</dd>
+            <dt>陳亮廷</dt>
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="lecture">
+      <h3><span id="lecture-special"></span>特別演講</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>主講人</h4>
+          <dl>
+            <dt>張耘盛</dt>
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
   </section>
-</article>
+</div>
+<div id="timetable" class="alt ocean">
+  <section>
+    <h2>課表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第一週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 0</a><small>Introduction</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
+          <td class="fp"><a href="#lecture-fp">函數編程 1</a><small>Functional program derivation</small></abbr></td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 1</a><small>Classical semantics and meta-theoretic properties</small></td>
+          <td class="fp"><a href="#lecture-fp">函數編程 2</a><small>TBA</small></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td class="fp"><a href="#lecture-fp">函數編程 0</a><small>Inductive functions and equational reasoning</small></td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 0</a><small>Natural deduction and intuitionistic propositional logic</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 2</a><small>Simply typed λ-calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Stateful calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 4</a><small>What's out there / Agda Installation</small></td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第二週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 0</a><small>Agda basics</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 1</a><small>Shallow and deep embeddings of intuitionistic logic</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a><small>Intrinsic representation of simply typed lambda calculus and type</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 3</a><small>McBride's razor</small></td>
+          <td class="exm"><a href="#lecture-exam">考試</a></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td class="lgc"><a href="#lecture-logc">邏輯 2</a><small>First-order logic and the Curry–Howard correspondence</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 5</a><small>Polymorphic lambda calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 6</a><small>Hoare logic</small></td>
+          <td class="tlk"><a href="#lecture-special">特別演講</a><small>Verification of a Snapshot-Consistent Flash Translation Layer</small></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>
