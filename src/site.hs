@@ -50,6 +50,10 @@ main = hakyll $ do
     route (gsubRoute "assets/" (const ""))
     compile compressCssCompiler
 
+  match "assets/pdf/**" $ do
+    route (gsubRoute "assets/" (const ""))
+    compile copyFileCompiler
+
   match "assets/html/**" $ do
     route (gsubRoute "assets/html/" (const ""))
     compile copyFileCompiler
