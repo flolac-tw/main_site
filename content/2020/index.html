@@ -30,12 +30,20 @@
     title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2020
     date: "2020.8.10–21"
-    time: "9:00–17:00"
+    time: "9:10–16:20"
     location: "臺灣大學管理學院一號館 102 教室"
     special-lecture: 特別講座
     lecture-intro: 課程講師
     announcement: 公告事項
     dates: 重要日期
+    special-talk: 特別演講
+    speaker: 主講人
+    speaker-name: 張耘盛
+    speaker-affli: Institute of Information Science, Academia Sinica
+    talk-title: 題目
+    talk-title-content: 驗證真實世界的系統<br />案例討論：快閃轉換層的形式化驗證
+    talk-abstract: 摘要
+    talk-abstract-content: "形式化驗證是透過數理邏輯來對程式正確性進行推論的一套方法。由於這套方法通常被認為不易實現且需大量人力，因此也被認為只適用於小型程式或是與生命攸關的系統。然而，隨著理論與工具的發展，許多像是編譯器和作業系統這類我們在日常生活中會接觸的系統，都在最近這十年內成功地被驗證。在這演講的前半段，我會先討論怎麼樣算是一個「正確的程式」，再介紹一些驗證的技術，最後以示範驗證一個小程式作結。演講的後半段，我會分享在中研院進行形式化驗證的經驗：我們驗證了位於許多固態硬碟內部，一個叫作快閃轉換層的核心軟體元件。內容將包括它的形式規格、斷電的行為模型、我們採用的驗證方法以及驗證時遇到的挑戰。"
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2020
     subtitle: 邏輯、語言與計算暑期研習營
@@ -46,6 +54,14 @@
     special-lecture: Special Lecture
     announcement: Announcement
     dates: Important dates
+    special-talk: Special Talk
+    speaker: Speaker
+    speaker-name: Yun-Sheng Chang
+    speaker-affli: Institute of Information Science, Academia Sinica
+    talk-title: Title
+    talk-title-content: "Verifying real-world systems<br/>Case study: Formal verification of a flash translation layer"
+    talk-abstract: Abstract 
+    talk-abstract-content: "Formal verification, the act of reasoning about program correctness using mathematical logic, is often considered hard to conduct and labor-intensive, and thus only applicable to tiny programs or life-critical systems. However, with the advance of theory and tools, many real-world systems such as compilers and operating systems have been successfully verified over the last decade. In the first part of this talk, I will first talk about what it is to be a “correct program,” then introduce some verification techniques, and finally conclude with a simple demonstration, in which a small program will be verified. In the second part, I will share the experience of verifying a flash translation layer, a key software component in many solid-state drives. In particular, I will cover its formal specification, how we modeled the behavior of system crashes, the verification approach we used, and the challenges we met."
 ---
 
 <div id="header">
@@ -124,7 +140,7 @@
           <h4>講師</h4>
           <dl>
             <dt>穆信成</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
           </dl>
         </div>
       </div>
@@ -136,7 +152,7 @@
           <h4>講師</h4>
           <dl>
             <dt>柯向上</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
           </dl>
         </div>
         <div>
@@ -157,14 +173,14 @@
           <h4>講師</h4>
           <dl>
             <dt>陳亮廷</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
             <dt>游書泓</dt>
             <dd>Department of Computer Science, Northwestern University</dd>
           </dl>
         </div>
         <div>
           <h4>教學資源</h4>
-          <h5>投影片</h5>
+          <h6>投影片</h6>
           <ul class="list-inline">
             <li class="list-inline-item"><a href="/pdf/2020/PLT-1.pdf">PLT 1</a></li>
             <li class="list-inline-item"><a href="/pdf/2020/PLT-2.pdf">PLT 2</a></li>
@@ -180,25 +196,31 @@
           <h4>講師</h4>
           <dl>
             <dt>穆信成</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
             <dt>柯向上</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
             <dt>陳亮廷</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dd>中央研究院資訊科學研究所</dd>
           </dl>
         </div>
       </div>
     </div>
 
     <div class="lecture">
-      <h3><span id="lecture-special"></span>特別演講</h3>
+      <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
       <div class="lecture-content">
         <div>
-          <h4>主講人</h4>
+          <h4>$LC.speaker$</h4>
           <dl>
-            <dt>張耘盛</dt>
-            <dd>中央研究院資訊科學所</dd>
+            <dt>$LC.speaker-name$</dt>
+            <dd>$LC.speaker-affli$</dd>
           </dl>
+          <h4>$LC.talk-title$</h4>
+          $LC.talk-title-content$
+        </div>
+        <div>
+          <h6>$LC.talk-abstract$</h6>
+          $LC.talk-abstract-content$
         </div>
       </div>
     </div>
@@ -259,7 +281,7 @@
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="lgc"><a href="#lecture-logc">邏輯 2</a><small>First-order logic and the Curry–Howard correspondence</small></td>
+          <td class="lgc"><a href="#lecture-logc">邏輯 2</a><small>Curry–Howard correspondence</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 5</a><small>Polymorphic lambda calculus</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 6</a><small>Hoare logic</small></td>
           <td class="tlk"><a href="#lecture-special">特別演講</a><small>Verification of a Snapshot-Consistent Flash Translation Layer</small></td>
