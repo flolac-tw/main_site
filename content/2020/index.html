@@ -27,12 +27,19 @@
       next: true
     - time: 08/21
       title: 考試
+  announcement:
+    - time: 08/11
+      title: 自週四 (8/13) 上課教室改為 <strong>103 教室</strong>
+    - time: 08/10
+      title: 課程講義投影片陸續更新上傳，有需要的學員請下載
+    - time: 08/08
+      title: 請學員攜帶電腦於上課時間練習；並請於上課期間全程配戴口罩
   zh:
     title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2020
     date: "2020.8.10–21"
     time: "9:10–16:20"
-    location: "臺灣大學管理學院一號館 102 教室"
+    location: "臺灣大學管理學院一號館 103 教室"
     special-lecture: 特別講座
     lecture-intro: 課程講師
     announcement: 公告事項
@@ -50,7 +57,7 @@
     subtitle: 邏輯、語言與計算暑期研習營
     date: "2020.8.10–21"
     time: "9:00–17:00"
-    location: "臺灣大學管理學院一號館 102 教室"
+    location: "臺灣大學管理學院一號館 103 教室"
     lecture-intro: Lecturers
     special-lecture: Special Lecture
     announcement: Announcement
@@ -87,8 +94,9 @@
   <section>
     <h2>公告</h2>
     <ul>
-      <li><strong>08/10</strong> - 課程講義投影片陸續更新上傳，有需要的學員請下載。</li>
-      <li><strong>08/08</strong> - 請學員攜帶電腦於上課時間練習：並請於上課期間全程配戴口罩。</li>
+      $foreach(event)in(announcement)$
+      <li><strong>$event.time$</strong> - $event.title$</li>
+      $endforeach$
     </ul>
   </section>
 </div>
@@ -272,7 +280,7 @@
           <td class="fp"><a href="#lecture-fp">函數編程 0</a><small>Inductive functions and equational reasoning</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 2</a><small>Simply typed λ-calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Stateful calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Imperative Language Constructs</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 4</a><small>What's out there / Agda Installation</small></td>
         </tr>
       </tbody>
