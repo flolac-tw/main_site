@@ -21,17 +21,25 @@
       past: true
     - time: 08/10
       title: 課程開始
-      next: true
+      past: true
     - time: 08/20
       title: 課程結束
+      next: true
     - time: 08/21
       title: 考試
+  announcement:
+    - time: 08/11
+      title: 自週四 (8/13) 上課教室改為 <strong>103 教室</strong>
+    - time: 08/10
+      title: 課程講義投影片陸續更新上傳，有需要的學員請下載
+    - time: 08/08
+      title: 請學員攜帶電腦於上課時間練習；並請於上課期間全程配戴口罩
   zh:
     title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2020
     date: "2020.8.10–21"
     time: "9:10–16:20"
-    location: "臺灣大學管理學院一號館 102 教室"
+    location: "臺灣大學管理學院一號館 103 教室"
     special-lecture: 特別講座
     lecture-intro: 課程講師
     announcement: 公告事項
@@ -49,7 +57,7 @@
     subtitle: 邏輯、語言與計算暑期研習營
     date: "2020.8.10–21"
     time: "9:00–17:00"
-    location: "臺灣大學管理學院一號館 102 教室"
+    location: "臺灣大學管理學院一號館 103 教室"
     lecture-intro: Lecturers
     special-lecture: Special Lecture
     announcement: Announcement
@@ -86,7 +94,9 @@
   <section>
     <h2>公告</h2>
     <ul>
-      <li><strong>08/08</strong> - 請學員攜帶電腦於上課時間練習：並請於上課期間全程配戴口罩。</li>
+      $foreach(event)in(announcement)$
+      <li><strong>$event.time$</strong> - $event.title$</li>
+      $endforeach$
     </ul>
   </section>
 </div>
@@ -143,6 +153,17 @@
             <dd>中央研究院資訊科學研究所</dd>
           </dl>
         </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>講義</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="/2020/FP-Handouts.pdf">FP</a></li>
+          </ul>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="/2020/MiniPrelude.hs">MiniPrelude.hs</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="lecture">
@@ -159,9 +180,9 @@
           <h4>教學資源</h4>
           <h6>投影片</h6>
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="/pdf/2020/Logic-0.pdf">Logic 0</a></li>
-            <li class="list-inline-item"><a href="/pdf/2020/Logic-1.pdf">Logic 1</a></li>
-            <li class="list-inline-item"><a href="/pdf/2020/Logic-2.pdf">Logic 2</a></li>
+            <li class="list-inline-item"><a href="/2020/Logic-0.pdf">Logic 0</a></li>
+            <li class="list-inline-item"><a href="/2020/Logic-1.pdf">Logic 1</a></li>
+            <li class="list-inline-item"><a href="/2020/Logic-2.pdf">Logic 2</a></li>
           </ul>
         </div>
       </div>
@@ -182,9 +203,14 @@
           <h4>教學資源</h4>
           <h6>投影片</h6>
           <ul class="list-inline">
-            <li class="list-inline-item"><a href="/pdf/2020/PLT-1.pdf">PLT 1</a></li>
-            <li class="list-inline-item"><a href="/pdf/2020/PLT-2.pdf">PLT 2</a></li>
-            <li class="list-inline-item"><a href="/pdf/2020/PLT-5.pdf">PLT 5</a></li>
+            <li class="list-inline-item"><a href="/2020/PLT-0.pdf">PLT 0</a></li>
+            <li class="list-inline-item"><a href="/2020/PLT-1.pdf">PLT 1</a></li>
+            <li class="list-inline-item"><a href="/2020/PLT-2.pdf">PLT 2</a></li>
+            <li class="list-inline-item"><a href="/2020/PLT-5.pdf">PLT 5</a></li>
+          </ul>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="/2020/intro.zip">intro.zip</a></li>
           </ul>
         </div>
       </div>
@@ -219,7 +245,7 @@
           $LC.talk-title-content$
         </div>
         <div>
-          <h6>$LC.talk-abstract$</h6>
+          <h4>$LC.talk-abstract$</h4>
           $LC.talk-abstract-content$
         </div>
       </div>
@@ -244,7 +270,7 @@
         <tr>
           <th scope="row">上午</th>
           <td class="plt"><a href="#lecture-plt">程式語言導論 0</a><small>Introduction</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 0</a><small>Natural deduction and intuitionistic propositional logic</small></td>
           <td class="fp"><a href="#lecture-fp">函數編程 1</a><small>Functional program derivation</small></abbr></td>
           <td class="lgc"><a href="#lecture-logic">邏輯 1</a><small>Classical semantics and meta-theoretic properties</small></td>
           <td class="fp"><a href="#lecture-fp">函數編程 2</a><small>TBA</small></td>
@@ -252,9 +278,9 @@
         <tr>
           <th scope="row">下午</th>
           <td class="fp"><a href="#lecture-fp">函數編程 0</a><small>Inductive functions and equational reasoning</small></td>
-          <td class="lgc"><a href="#lecture-logic">邏輯 0</a><small>Natural deduction and intuitionistic propositional logic</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 2</a><small>Simply typed λ-calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Stateful calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Imperative language constructs</small></td>
           <td class="plt"><a href="#lecture-plt">程式語言導論 4</a><small>What's out there / Agda Installation</small></td>
         </tr>
       </tbody>
@@ -275,7 +301,7 @@
           <th scope="row">上午</th>
           <td class="dtp"><a href="#lecture-dtp">依值型別編程 0</a><small>Agda basics</small></td>
           <td class="dtp"><a href="#lecture-dtp">依值型別編程 1</a><small>Shallow and deep embeddings of intuitionistic logic</small></td>
-          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a><small>Intrinsic representation of simply typed lambda calculus and type</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a><small>Intrinsic representation of simply typed lambda calculus</small></td>
           <td class="dtp"><a href="#lecture-dtp">依值型別編程 3</a><small>McBride's razor</small></td>
           <td class="exm"><a href="#lecture-exam">考試</a></td>
         </tr>

@@ -26,6 +26,7 @@ git clone https://github.com/flolac-tw/main_website.git
 接下來在 repo 所在的目錄下執行
 
 ```
+npm install
 stack build
 ```
 
