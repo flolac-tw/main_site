@@ -42,10 +42,18 @@
     date: "2020.8.10–21"
     time: "9:10–16:20"
     location: "臺灣大學管理學院一號館 103 教室"
+    introduction: 課程介紹
     special-lecture: 特別講座
     lecture-intro: 課程講師
     announcement: 公告事項
     dates: 重要日期
+    course: 課程
+    functional-programming: 函數編程
+    scm: 穆信成
+    logic: 邏輯
+    PLT: 程式語言導論
+    DTP: 依值型別編程
+    special-topic: 特別講題：依值型別編成
     special-talk: 特別演講
     speaker: 主講人
     speaker-name: 張耘盛
@@ -60,10 +68,18 @@
     date: "2020.8.10–21"
     time: "9:00–17:00"
     location: "臺灣大學管理學院一號館 103 教室"
+    introduction: Introduction
     lecture-intro: Lecturers
     special-lecture: Special Lecture
-    announcement: Announcement
+    announcement: Announcements
     dates: Important dates
+    course: Courses
+    special-topic: "Special Lecture: Dependently Typed Programming"
+    functional-programming: Functional Programming
+    scm: Shin-Cheng Mu
+    logic: Logic
+    PLT: Programming Language Theory
+    DTP: Dependently Typed Programming
     special-talk: Special Talk
     speaker: Speaker
     speaker-name: Yun-Sheng Chang
@@ -83,7 +99,7 @@
 
 <div class="two-column ocean">
   <section>
-    <h2>課程介紹</h2>
+    <h2>$LC.introduction$</h2>
     <p>
       本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
       以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
@@ -91,7 +107,7 @@
     </p>
   </section>
   <section>
-    <h2>公告</h2>
+    <h2>$LC.announcement$</h2>
     <ul>
       $foreach(event)in(announcement)$
       <li><strong>$event.time$</strong> - $event.title$</li>
@@ -101,7 +117,7 @@
 </div>
 <div class="two-column ocean alt">
   <section>
-    <h2>特別講題介紹：依值型別編程</h2>
+    <h2>$LC.special-topic$</h2>
     <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
     <h3>程式不可能寫錯</h3>
     <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
@@ -141,14 +157,14 @@
 </div>
 <div id="course-lectures" class="ocean">
   <section>
-    <h2>課程</h2>
+    <h2>$LC.course$</h2>
     <div class="lecture">
-      <h3><span id="lecture-fp"></span>函數編程</h3>
+      <h3><span id="lecture-fp"></span>$LC.functional-programming$</h3>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
           <dl>
-            <dt>穆信成</dt>
+            <dt>$LC.scm$</dt>
             <dd>中央研究院資訊科學研究所</dd>
           </dl>
         </div>
@@ -172,7 +188,7 @@
       </div>
     </div>
     <div class="lecture">
-      <h3><span id="lecture-logic"></span>邏輯</h3>
+      <h3><span id="lecture-logic"></span>$LC.logic$</h3>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -193,7 +209,7 @@
       </div>
     </div>
     <div class="lecture">
-      <h3><span id="lecture-plt"></span>程式語言導論</h3>
+      <h3><span id="lecture-plt"></span>$LC.PLT$</h3>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -223,7 +239,7 @@
       </div>
     </div>
     <div class="lecture">
-      <h3><span id="lecture-dtp"></span>依值型別編程</h3>
+      <h3><span id="lecture-dtp"></span>$LC.DTP$</h3>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
