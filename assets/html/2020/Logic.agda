@@ -284,25 +284,24 @@ choice : {R : A → B → Set}
        → ((x : A) → Σ[ y ∈ B ] R x y) → Σ[ f ∈ (A → B) ] ((x : A) → R x (f x))
 choice = {!!}
 
---  This is an axiom in set theory, but the constructive meaning of Σ makes
---  it provable in Type Theory.
+--  This is an axiom (whose truth has to be assumed) in set theory, but the
+--  constructive meaning of Π and Σ makes it provable in Type Theory.
 --
 --  Defining bi-implication by
 
 _↔_ : Set → Set → Set
 A ↔ B = (A → B) × (B → A)
 
-
 infixr 2 _↔_
 
 --  prove the following:
 
 Π-distr-× : {P Q : A → Set}
-          → ((x : A) → P x × Q x) ↔ ((x : A) → P x) × ((x : A) → Q x)
+          → ((x : A) → P x × Q x) ↔ (((x : A) → P x) × ((x : A) → Q x))
 Π-distr-× = {!!}
 
 Σ-distr-⊎ : {P Q : A → Set}
-          → (Σ[ x ∈ A ] P x ⊎ Q x) ↔ (Σ[ x ∈ A ] P x) ⊎ (Σ[ x ∈ A ] Q x)
+          → (Σ[ x ∈ A ] P x ⊎ Q x) ↔ ((Σ[ x ∈ A ] P x) ⊎ (Σ[ x ∈ A ] Q x))
 Σ-distr-⊎ = {!!}
 
 --  For the following two bi-implications, only one direction is true:
@@ -415,4 +414,238 @@ length (x ∷ xs) = suc (length xs)
 --
 ----  Equational reasoning combinators
 --
---  To make equational proofs human-readable, we ...
+--  To make equational proofs human-readable, we can use the following cleverly
+--  designed combinators:
+
+begin_ : {x y : A} → x ≡ y → x ≡ y
+begin eq = eq
+
+_≡⟨_⟩_ : (x {y z} : A) → x ≡ y → y ≡ z → x ≡ z
+x ≡⟨ refl ⟩ y≡z = y≡z
+
+_∎ : (x : A) → x ≡ x
+x ∎ = refl
+
+infix  1 begin_
+infixr 2 _≡⟨_⟩_
+infix  3 _∎
+
+--  With the combinators we can write equational proofs in a style that is much
+--  closer to what we write on paper; moreover, Agda checks the validity of the
+--  proofs for us!
+
++-assoc' : (k m n : ℕ) → (k + m) + n ≡ k + (m + n)
++-assoc' = {!!}
+
+--  Exercise: rewrite your proof of ++-length (in particular the inductive case)
+--  using the equational reasoning combinators.
+
+++-length' : (xs ys : List A) → length (xs ++ ys) ≡ length xs + length ys
+++-length' = {!!}
+
+--
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--
+----  Deep embedding of NJ
+--
+--  To prove meta-theorems like soundness, we need to encode NJ derivations as
+--  elements of an indexed datatype in Agda, so that we can quantify over NJ
+--  derivations and perform case analysis on them.  This is called a ‘deep
+--  embedding’, where the programs of a DSL are represented syntactically in
+--  the host language (meta-language) and are amenable to meta-level analysis.
+--
+--  Below we will replay most of the things we have written semi-formally or
+--  informally on the Logic slides, from the propositional formulas to NJ.
+
+PV : Set
+PV = Char
+
+data ℙ : Set where
+  var : Char → ℙ
+  ⊥   : ℙ
+  _∧_ : ℙ → ℙ → ℙ
+  _∨_ : ℙ → ℙ → ℙ
+  _⇒_ : ℙ → ℙ → ℙ
+
+infixr 5 _∧_ _∨_
+infixr 4 _⇒_
+
+variable φ ψ θ : ℙ
+
+¬_ : ℙ → ℙ
+¬ φ = φ ⇒ ⊥
+
+infixr 6 ¬_
+
+data Context : Set where
+  ∅   : Context
+  _,_ : Context → ℙ → Context
+
+infixl 3 _,_
+
+variable Γ : Context
+
+data _∋_ : Context → ℙ → Set where
+  zero :         (Γ , φ) ∋ φ
+  suc  : Γ ∋ φ → (Γ , ψ) ∋ φ
+
+infix 2 _∋_ _⊢_
+
+data _⊢_ : Context → ℙ → Set where
+
+  assum :  Γ ∋ φ
+        → -------
+           Γ ⊢ φ
+
+  ⊥E    :  Γ ⊢ ⊥
+        → -------
+           Γ ⊢ φ
+  
+  ∧I    :  Γ ⊢ φ
+        →  Γ ⊢ ψ
+        → -----------
+           Γ ⊢ φ ∧ ψ
+
+  ∧EL   :  Γ ⊢ φ ∧ ψ
+        → -----------
+           Γ ⊢ φ
+ 
+  ∧ER   :  Γ ⊢ φ ∧ ψ
+        → -----------
+           Γ ⊢ ψ
+
+  ∨IL   :  Γ ⊢ φ
+        → -----------
+           Γ ⊢ φ ∨ ψ
+
+  ∨IR   :  Γ ⊢ ψ
+        → -----------
+           Γ ⊢ φ ∨ ψ
+
+  ∨E    :  Γ     ⊢ φ ∨ ψ
+        →  Γ , φ ⊢ θ
+        →  Γ , ψ ⊢ θ
+        → ---------------
+           Γ     ⊢ θ
+
+  ⇒I    :  Γ , φ ⊢ ψ
+        → ---------------
+           Γ     ⊢ φ ⇒ ψ
+
+  ⇒E    :  Γ ⊢ φ ⇒ ψ
+        →  Γ ⊢ φ
+        → -----------
+           Γ ⊢ ψ
+
+--  Here are some examples of deeply embedded NJ derivations.
+
+assoc'' : ∅ ⊢ (var 'A' ∧ var 'B') ∧ var 'C' ⇒ var 'A' ∧ (var 'B' ∧ var 'C')
+assoc'' = {!!}
+
+distr'' : ∅ ⊢ var 'A' ∧ (var 'B' ∨ var 'C')
+            ⇒ (var 'A' ∧ var 'B') ∨ (var 'A' ∧ var 'C')
+distr'' = {!!}
+
+--  Note that exactly the same definition of NJ (modulo renaming) will be used
+--  as the datatype of λ-terms tomorrow!
+--
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--
+----  Classical semantics
+--
+--  Now we model the classical semantics of propositional logic in Agda,
+--  and then prove (intuitionistically/constructively) that NJ is sound
+--  with respect to the classical semantics by mapping every NJ derivation
+--  to the corresponding semantic consequence.
+
+data Bool : Set where
+  true  : Bool
+  false : Bool
+
+and : Bool → Bool → Bool
+and true  b = b
+and false b = false
+
+or : Bool → Bool → Bool
+or true  b = true
+or false b = b
+
+imp : Bool → Bool → Bool
+imp true  b = b
+imp false b = true
+
+⟦_⟧ : ℙ → (PV → Bool) → Bool
+⟦ var x ⟧ σ = σ x
+⟦ ⊥     ⟧ σ = false
+⟦ φ ∧ ψ ⟧ σ = and (⟦ φ ⟧ σ) (⟦ ψ ⟧ σ)
+⟦ φ ∨ ψ ⟧ σ = or  (⟦ φ ⟧ σ) (⟦ ψ ⟧ σ)
+⟦ φ ⇒ ψ ⟧ σ = imp (⟦ φ ⟧ σ) (⟦ ψ ⟧ σ)
+
+_sat_ : (PV → Bool) → Context → Set
+σ sat ∅       = Unit
+σ sat (Γ , φ) = σ sat Γ × (⟦ φ ⟧ σ ≡ true)
+
+_⊧_ : Context → ℙ → Set
+Γ ⊧ φ = (σ : PV → Bool) → σ sat Γ → ⟦ φ ⟧ σ ≡ true
+
+soundness : Γ ⊢ φ → Γ ⊧ φ
+soundness (assum i) σ s = {!!}
+soundness (⊥E d) σ s = {!!}
+soundness (∧I d₀ d₁) σ s = {!!}
+soundness (∧EL d) σ s = {!!}
+soundness (∧ER d) σ s = {!!}
+soundness (∨IL d) σ s = {!!}
+soundness (∨IR d) σ s = {!!}
+soundness (∨E d₀ d₁ d₂) σ s = {!!}
+soundness (⇒I d) σ s = {!!}
+soundness (⇒E d₀ d₁) σ s = {!!}
+
+--  When proving soundness, the following boolean case analysis may be helpful.
+
+bcase : (b : Bool) → (b ≡ true → A) → (b ≡ false → A) → A
+bcase true  f g = f refl
+bcase false f g = g refl
+
+--  Now it is easy to prove (formally!) that it is impossible to construct
+--  an NJ derivation of ⊢ ⊥.
+
+consistency : Neg (∅ ⊢ ⊥)
+consistency d with soundness d (λ _ → false) tt
+consistency d | ()
+
+--  Exercise: define NK (with ¬¬E), and then state and prove Glivenko’s theorem.
+--
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--
+----  Aside: the ‘Agda semantics’ of NJ
+--
+--  The soundness theorem gives a semantics to the deeply embedded NJ language,
+--  but we can also give other semantics, for example mapping NJ back into Agda.
+
+⟦_⟧ᴬ : ℙ → (PV → Set) → Set
+⟦ var x ⟧ᴬ σ = σ x
+⟦ ⊥     ⟧ᴬ σ = Empty
+⟦ φ ∧ ψ ⟧ᴬ σ = ⟦ φ ⟧ᴬ σ × ⟦ ψ ⟧ᴬ σ
+⟦ φ ∨ ψ ⟧ᴬ σ = ⟦ φ ⟧ᴬ σ ⊎ ⟦ ψ ⟧ᴬ σ
+⟦ φ ⇒ ψ ⟧ᴬ σ = ⟦ φ ⟧ᴬ σ → ⟦ ψ ⟧ᴬ σ
+
+--  Exercise: state and prove the resulting soundness theorem.
+--
+--  Is there a relationship between this soundness theorem and the shallowly
+--  embedded definitions of NJ rules?
+--
+--  * Jeremy Gibbons and Nicolas Wu [2014]. Folding domain-specific languages:
+--    deep and shallow embeddings (functional pearl). In International Conference
+--    on Functional Programming (ICFP), pages 339–347. ACM.
+--    https://doi.org/10.1145/2628136.2628138.
+--
+--------------------------------------------------------------------------------
