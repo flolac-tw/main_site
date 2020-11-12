@@ -157,14 +157,14 @@ applyTemplate' tmps ctx item = go tmps
         -- expected to never happen with all templates constructed by 'template'
     trimError = fail $ "Hakyll.Web.Template.applyTemplate: template not fully trimmed."
 
-        --------------------------------------------------------------------------------
-        -- | The following pattern is so common:
-        --
-        -- > tpl <- loadBody "templates/foo.html"
-        -- > someCompiler
-        -- >     >>= applyTemplate tpl ctx
-        --
-        -- That we have a single function which does this:
+--------------------------------------------------------------------------------
+-- | The following pattern is so common:
+--
+-- > tpl <- loadBody "templates/foo.html"
+-- > someCompiler
+-- >     >>= applyTemplate tpl ctx
+--
+-- That we have a single function which does this:
 --
 -- > someCompiler
 -- >     >>= loadAndApplyTemplate "templates/foo.html" ctx
@@ -186,3 +186,4 @@ applyAsTemplate :: Context String          -- ^ Context
 applyAsTemplate ctx item = do
     tpl <- compileTemplateItem item
     applyTemplate tpl ctx item
+
