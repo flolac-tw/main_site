@@ -40,7 +40,7 @@ packages:
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
 #
 extra-deps:
-  - git: https://github.com/L-TChen/hakyll.git
+  - git: https://github.com/flolac-tw/hakyll.git
     commit: f0eccab2a22a99c3dca12020dfb4ce189582be92
 
 # Override default flag values for local packages and extra-deps

@@ -7,13 +7,13 @@ packages:
 - completed:
     name: hakyll
     version: 4.13.3.0
-    git: https://github.com/L-TChen/hakyll.git
+    git: https://github.com/flolac-tw/hakyll.git
     pantry-tree:
       size: 11874
       sha256: 56e30c4e625756ff478c379b7ca831d624ddc037e953aed7592452f599c8147a
     commit: f0eccab2a22a99c3dca12020dfb4ce189582be92
   original:
-    git: https://github.com/L-TChen/hakyll.git
+    git: https://github.com/flolac-tw/hakyll.git
     commit: f0eccab2a22a99c3dca12020dfb4ce189582be92
 snapshots:
 - completed:
