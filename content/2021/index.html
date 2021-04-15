@@ -1,0 +1,379 @@
+---
+  <!-- image-banner: True -->
+  calendar: 
+    - time: TBD
+      title: 非台大學生報名截止
+      past: true
+    - time: TBD
+      title: 非台大學生錄取通知
+      past: true
+    - time: TBD
+      title: 台大學生報名截止
+      past: true
+    - time: TBD
+      title: 旁聽報名截止
+      past: true
+    - time: TBD
+      title: 旁聽與台大學生錄取通知
+      past: true
+    - time: TBD
+      title: 課程開始
+      past: true
+    - time: TBD
+      title: 課程結束
+      past: true
+    - time: TBD
+      title: 考試
+      past: true
+  announcement:
+    - time: TBD
+      title: "網站上線"
+  zh:
+    title: 邏輯、語言與計算暑期研習營
+    subtitle: Formosan Summer School on Logic, Language, and Computation, 2021
+    date: "TBD"
+    time: ""
+    location: "臺灣大學管理學院"
+    introduction: 課程介紹
+    special-lecture: 特別講座
+    lecturer: 課程講師
+    announcement: 公告事項
+    dates: 重要日期
+    course: 課程
+    logic: 一階邏輯
+    speaker-logic: 王柏堯
+    automata: 自動機
+    speaker-automata: 蔡明憲
+    DL: 描述邏輯與其應用
+    speaker-DL: 陳偉松
+    BoolSat: 布林可滿足性與其在合成與驗證的應用
+    speaker-BoolSat: 江介宏
+    SMT: Satisfiability Modulo Theories
+    speaker-SMT: 林信宏
+    StrProg: 基於自動機的字串操作程式分析
+    speaker-StrProg: 郁方
+    special-topic: 特別講題：TBD
+    special-talk: 特別演講
+    speaker: 主講人
+    speaker-name: 張耘盛
+    speaker-affli: 中央研究院資訊科學研究所
+    talk-title: 題目
+    talk-title-content: 驗證真實世界的系統<br />案例討論：快閃轉換層的形式化驗證
+    talk-abstract: 摘要
+    talk-abstract-content: "形式化驗證是透過數理邏輯來對程式正確性進行推論的一套方法。由於這套方法通常被認為不易實現且需大量人力，因此也被認為只適用於小型程式或是與生命攸關的系統。然而，隨著理論與工具的發展，許多像是編譯器和作業系統這類我們在日常生活中會接觸的系統，都在最近這十年內成功地被驗證。在這演講的前半段，我會先討論怎麼樣算是一個「正確的程式」，再介紹一些驗證的技術，最後以示範驗證一個小程式作結。演講的後半段，我會分享在中研院進行形式化驗證的經驗：我們驗證了位於許多固態硬碟內部，一個叫作快閃轉換層的核心軟體元件。內容將包括它的形式規格、斷電的行為模型、我們採用的驗證方法以及驗證時遇到的挑戰。"
+  en:
+    title: Formosan Summer School on Logic, Language, and Computation, 2021
+    subtitle: 邏輯、語言與計算暑期研習營
+    date: "TBD"
+    time: ""
+    location: "臺灣大學管理學院"
+    introduction: Introduction
+    lecturer: Lecturer(s)
+    special-lecture: Special Lecture
+    announcement: Announcements
+    dates: Important dates
+    course: Courses
+    special-topic: "Special Lecture: TBD"
+    logic: First-Order Logic
+    speaker-logic: Bow-Yaw Wang
+    automata: Automata Theory
+    speaker-automata: Ming-Hsien Tsai
+    DL: Description Logics and its Application in AI and Knowledge Systems
+    speaker-DL: Tony Tan
+    BoolSat: Boolean Satisfiability and Its Applications to Synthesis and Verification
+    speaker-BoolSat: Roland Jiang
+    SMT: Satisfiability Modulo Theories
+    speaker-SMT: Hsin-Hung Lin
+    StrProg: Automata-based String Manipulating Program Analysis
+    speaker-StrProg: Fang Yu
+    functional-programming: Functional Programming
+    DTP: Dependently Typed Programming
+    special-talk: Special Talk
+    speaker: Speaker
+    speaker-name: Yun-Sheng Chang
+    speaker-affli: Institute of Information Science, Academia Sinica
+    talk-title: Title
+    talk-title-content: "Verifying real-world systems<br/>Case study: Formal verification of a flash translation layer"
+    talk-abstract: Abstract 
+    talk-abstract-content: "Formal verification, the act of reasoning about program correctness using mathematical logic, is often considered hard to conduct and labor-intensive, and thus only applicable to tiny programs or life-critical systems. However, with the advance of theory and tools, many real-world systems such as compilers and operating systems have been successfully verified over the last decade. In the first part of this talk, I will first talk about what it is to be a “correct program,” then introduce some verification techniques, and finally conclude with a simple demonstration, in which a small program will be verified. In the second part, I will share the experience of verifying a flash translation layer, a key software component in many solid-state drives. In particular, I will cover its formal specification, how we modeled the behavior of system crashes, the verification approach we used, and the challenges we met."
+---
+
+<div id="header">
+  <header>
+    <h1>$LC.title$</h1>
+    <span>$LC.subtitle$</span><br /><span>$LC.date$</span><span>$LC.time$</span><br/><span>$LC.location$</span>
+  </header>
+</div>
+
+<div class="two-column ocean">
+  <section>
+    <h2>$LC.introduction$</h2>
+    <p>
+    近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+    「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+    自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+    「邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十五屆。
+    </p>
+  </section>
+  <section>
+    <h2>$LC.announcement$</h2>
+    <ul>
+      $foreach(event)in(announcement)$
+      <li><strong>$event.time$</strong> - $event.title$</li>
+      $endforeach$
+    </ul>
+  </section>
+</div>
+<div class="two-column ocean alt">
+  <section>
+    <h2>$LC.special-topic$</h2>
+  </section>
+  <section id="course-timeline">
+    <h2>$LC.dates$</h2>
+    <ol>
+      $foreach(event)in(calendar)$
+      $if(event.past)$
+        <li class="timeline-event-past">
+      $else$
+        $if(event.next)$
+          <li class="timeline-event-next">
+        $else$
+          <li >
+        $endif$
+      $endif$
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">
+            $event.time$
+          </div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">
+            $event.title$
+          </div>
+        </div>
+      </li>
+      $endforeach$
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="ocean">
+  <section>
+    <h2>$LC.course$</h2>
+    <div class="lecture">
+      <h3><span id="lecture-fp"></span>$LC.logic$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-logic$</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>講義</h6>
+          <h6>原始檔</h6>
+          <h6>練習解答</h6>
+          <h6>考試範圍</h6>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-logic"></span>$LC.automata$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-automata$</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-plt"></span>$LC.DL$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-DL$</dt>
+            <dd>國立臺灣大學資訊工程學系</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>補充資料</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>習題解答</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>$LC.BoolSat$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-BoolSat$</dt>
+            <dd>國立臺灣大學電機工程學系</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>$LC.SMT$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-SMT$</dt>
+            <dd>國立政治大學資訊管理學系</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+      </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>$LC.StrProg$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            <dt>$LC.speaker-StrProg$</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+      </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.speaker$</h4>
+          <dl>
+            <dt>$LC.speaker-name$</dt>
+            <dd>$LC.speaker-affli$</dd>
+          </dl>
+          <h4>$LC.talk-title$</h4>
+          $LC.talk-title-content$
+        </div>
+        <div>
+          <h4>$LC.talk-abstract$</h4>
+          $LC.talk-abstract-content$
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="timetable" class="alt ocean">
+  <section>
+    <h2>課表</h2>
+    <!--table>
+      <thead>
+        <tr>
+          <th scope="col">第一週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 0</a><small>Introduction</small></td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 0</a><small>Natural deduction and intuitionistic propositional logic</small></td>
+          <td class="fp"><a href="#lecture-fp">函數編程 1</a><small>Functional program derivation</small></abbr></td>
+          <td class="lgc"><a href="#lecture-logic">邏輯 1</a><small>Classical semantics and meta-theoretic properties</small></td>
+          <td class="fp"><a href="#lecture-fp">函數編程 2</a><small>TBA</small></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td class="fp"><a href="#lecture-fp">函數編程 0</a><small>Inductive functions and equational reasoning</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 2</a><small>Simply typed λ-calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Imperative language constructs</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 4</a><small>What's out there / Agda Installation</small></td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第二週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 0</a><small>Agda basics</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 1</a><small>Shallow and deep embeddings of intuitionistic logic</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a><small>Intrinsic representation of simply typed lambda calculus</small></td>
+          <td class="dtp"><a href="#lecture-dtp">依值型別編程 3</a><small>McBride's razor</small></td>
+          <td class="exm"><a href="#lecture-exam">考試</a></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td class="lgc"><a href="#lecture-logc">邏輯 2</a><small>Curry–Howard correspondence</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 5</a><small>Polymorphic lambda calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">程式語言導論 6</a><small>Hoare logic</small></td>
+          <td class="tlk"><a href="#lecture-special">特別演講</a><small>Verification of a Snapshot-Consistent Flash Translation Layer</small></td>
+        </tr>
+      </tbody>
+    </table--!>
+  </section>
+</div>
