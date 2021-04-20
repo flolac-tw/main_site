@@ -1,5 +1,4 @@
 dist-newstyle
-_*
 flolac-site.cabal.local
 .stack-work
 .vscode
@@ -12,3 +11,7 @@ assets/css/style.css.map
 
 
 .DS_Store
+_cache
+_site
+coq-installer-8.4-win-0.exe
+coqide-8.4rc1.dmg
