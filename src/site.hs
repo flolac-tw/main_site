@@ -17,6 +17,7 @@ import           Hakyll.Web.ExtendedTemplate.Type
 
 import           Redirect
 import           Multilingual
+import           YearlyTheme
 
 main :: IO ()
 main = hakyll $ do
