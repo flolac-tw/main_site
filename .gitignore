@@ -5,10 +5,7 @@ flolac-site.cabal.local
 .vscode
 
 node_modules
-assets/css/custom.css
-assets/css/custom.css.map
-assets/css/style.css
-assets/css/style.css.map
+assets/css/*
 
 
 .DS_Store
