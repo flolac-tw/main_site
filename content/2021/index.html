@@ -1,30 +1,31 @@
 ---
   <!-- image-banner: True -->
+  yearly_theme: mountain
   calendar: 
     - time: TBD
       title: 非台大學生報名截止
-      past: true
+      past: false
     - time: TBD
       title: 非台大學生錄取通知
-      past: true
+      past: false
     - time: TBD
       title: 台大學生報名截止
-      past: true
+      past: false
     - time: TBD
       title: 旁聽報名截止
-      past: true
+      past: false
     - time: TBD
       title: 旁聽與台大學生錄取通知
-      past: true
-    - time: TBD
+      past: false
+    - time: 7/19
       title: 課程開始
-      past: true
-    - time: TBD
+      past: false
+    - time: 7/29
       title: 課程結束
-      past: true
-    - time: TBD
+      past: false
+    - time: 7/30
       title: 考試
-      past: true
+      past: false
   announcement:
     - time: TBD
       title: "網站上線"
@@ -40,27 +41,43 @@
     announcement: 公告事項
     dates: 重要日期
     course: 課程
-    logic: 一階邏輯
-    speaker-logic: 王柏堯
-    automata: 自動機
-    speaker-automata: 蔡明憲
-    DL: 描述邏輯與其應用
-    speaker-DL: 陳偉松
-    BoolSat: 布林可滿足性與其在合成與驗證的應用
-    speaker-BoolSat: 江介宏
-    SMT: Satisfiability Modulo Theories
-    speaker-SMT: 陳郁方
-    StrProg: 基於自動機的字串操作程式分析
-    speaker-StrProg: 郁方
+    courses:
+      - title: 命題邏輯與一階邏輯
+        lecturer: 王柏堯
+        affli: 中央研究院資訊科學研究所 
+      - title: 驗證密碼學程式
+        lecturer: 蔡明憲
+        affli: 中央研究院資訊科學研究所
+      - title: 霍爾邏輯
+        lecturer: 穆信成
+        affli: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
+      - title: 邏輯的理論研究
+        lecturer: 陳偉松
+        affli: 國立臺灣大學資訊工程學系 
+      - title: 布林可滿足性與其在合成與驗證的應用
+        lecturer: 江介宏
+        affli: 國立臺灣大學電機工程學系
+      - title: 布林可滿足性演算法
+        lecturer: 黃鍾揚
+        affli: 國立臺灣大學電機工程學系
+      - title: 程式驗證導論 
+        lecturer: 陳郁方
+        affli: 中央研究院資訊科學研究所
+      - title: Dafny 程式驗證工具
+        lecturer: 林子期 
+        affli: 中央研究院資訊科學研究所
+      - title: 基於 SMT 的程式測試
+        lecturer: 郁方
+        affli: 國立政治大學資訊管理學系
     special-topic: 特別講題：TBD
     special-talk: 特別演講
     speaker: 主講人
-    speaker-name: 張耘盛
-    speaker-affli: 中央研究院資訊科學研究所
+    speaker-name: 謝邁思
+    speaker-affli: GitHub
     talk-title: 題目
-    talk-title-content: 驗證真實世界的系統<br />案例討論：快閃轉換層的形式化驗證
+    talk-title-content: 資料流分析導論
     talk-abstract: 摘要
-    talk-abstract-content: "形式化驗證是透過數理邏輯來對程式正確性進行推論的一套方法。由於這套方法通常被認為不易實現且需大量人力，因此也被認為只適用於小型程式或是與生命攸關的系統。然而，隨著理論與工具的發展，許多像是編譯器和作業系統這類我們在日常生活中會接觸的系統，都在最近這十年內成功地被驗證。在這演講的前半段，我會先討論怎麼樣算是一個「正確的程式」，再介紹一些驗證的技術，最後以示範驗證一個小程式作結。演講的後半段，我會分享在中研院進行形式化驗證的經驗：我們驗證了位於許多固態硬碟內部，一個叫作快閃轉換層的核心軟體元件。內容將包括它的形式規格、斷電的行為模型、我們採用的驗證方法以及驗證時遇到的挑戰。"
+    talk-abstract-content: ""
   en:
     title: Formosan Summer School on Logic, Language, and Computation, 2021
     subtitle: 邏輯、語言與計算暑期研習營
@@ -73,9 +90,39 @@
     announcement: Announcements
     dates: Important dates
     course: Courses
+    courses:
+      - title: 命題邏輯與一階邏輯
+        lecturer: 王柏堯
+        affli: 中央研究院資訊科學研究所 
+      - title: 驗證密碼學程式
+        lecturer: 蔡明憲
+        affli: 中央研究院資訊科學研究所
+      - title: 霍爾邏輯
+        lecturer: 穆信成
+        affli: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
+      - title: 邏輯的理論研究
+        lecturer: 陳偉松
+        affli: 國立臺灣大學資訊工程學系 
+      - title: 布林可滿足性與其在合成與驗證的應用
+        lecturer: 江介宏
+        affli: 國立臺灣大學電機工程學系
+      - title: 布林可滿足性演算法
+        lecturer: 黃鍾揚
+        affli: 國立臺灣大學電機工程學系
+      - title: 程式驗證導論 
+        lecturer: 陳郁方
+        affli: 中央研究院資訊科學研究所
+      - title: Dafny 程式驗證工具
+        lecturer: 林子期 
+        affli: 中央研究院資訊科學研究所
+      - title: 基於 SMT 的程式測試
+        lecturer: 郁方
+        affli: 國立政治大學資訊管理學系
     special-topic: "Special Lecture: TBD"
     logic: First-Order Logic
     speaker-logic: Bow-Yaw Wang
+    hoare: 霍爾邏輯
+    speaker-hoare: 穆信成
     automata: Automata Theory
     speaker-automata: Ming-Hsien Tsai
     DL: Description Logics and its Application in AI and Knowledge Systems
@@ -90,12 +137,12 @@
     DTP: Dependently Typed Programming
     special-talk: Special Talk
     speaker: Speaker
-    speaker-name: Yun-Sheng Chang
-    speaker-affli: Institute of Information Science, Academia Sinica
+    speaker-name: Max Schäfer
+    speaker-affli: GitHub
     talk-title: Title
-    talk-title-content: "Verifying real-world systems<br/>Case study: Formal verification of a flash translation layer"
+    talk-title-content: Introduction to Static Data-flow Analysis
     talk-abstract: Abstract 
-    talk-abstract-content: "Formal verification, the act of reasoning about program correctness using mathematical logic, is often considered hard to conduct and labor-intensive, and thus only applicable to tiny programs or life-critical systems. However, with the advance of theory and tools, many real-world systems such as compilers and operating systems have been successfully verified over the last decade. In the first part of this talk, I will first talk about what it is to be a “correct program,” then introduce some verification techniques, and finally conclude with a simple demonstration, in which a small program will be verified. In the second part, I will share the experience of verifying a flash translation layer, a key software component in many solid-state drives. In particular, I will cover its formal specification, how we modeled the behavior of system crashes, the verification approach we used, and the challenges we met."
+    talk-abstract-content: ""
 ---
 
 <div id="header">
@@ -159,14 +206,15 @@
 <div id="course-lectures" class="ocean">
   <section>
     <h2>$LC.course$</h2>
+    $foreach(course)in(LC.courses)$
     <div class="lecture">
-      <h3><span id="lecture-fp"></span>$LC.logic$</h3>
+      <h3><span></span>$course.title$</h3>
       <div class="lecture-content">
         <div>
           <h4>$LC.lecturer$</h4>
           <dl>
-            <dt>$LC.speaker-logic$</dt>
-            <dd>中央研究院資訊科學研究所</dd>
+            <dt>$course.lecturer$</dt>
+            <dd>$course.affli$</dd>
           </dl>
         </div>
         <div>
@@ -178,119 +226,7 @@
         </div>
       </div>
     </div>
-    <div class="lecture">
-      <h3><span id="lecture-logic"></span>$LC.automata$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$LC.speaker-automata$</dt>
-            <dd>中央研究院資訊科學研究所</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>投影片</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>考試範圍</h6>
-          <ul class="list-inline">
-            <li class="list-inline-item"></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="lecture">
-      <h3><span id="lecture-plt"></span>$LC.DL$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$LC.speaker-DL$</dt>
-            <dd>國立臺灣大學資訊工程學系</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>投影片</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>補充資料</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>習題解答</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>考試範圍</h6>
-          <ul class="list-inline">
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="lecture">
-      <h3><span id="lecture-dtp"></span>$LC.BoolSat$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$LC.speaker-BoolSat$</dt>
-            <dd>國立臺灣大學電機工程學系</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>原始檔</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>考試範圍</h6>
-          <ul class="list-inline">
-          </ul>
-      </div>
-      </div>
-    </div>
-
-    <div class="lecture">
-      <h3><span id="lecture-dtp"></span>$LC.SMT$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$LC.speaker-SMT$</dt>
-            <dd>中央研究院資訊科學研究所</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>原始檔</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>考試範圍</h6>
-          <ul class="list-inline">
-          </ul>
-      </div>
-      </div>
-    </div>
-    <div class="lecture">
-      <h3><span id="lecture-dtp"></span>$LC.StrProg$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$LC.speaker-StrProg$</dt>
-            <dd>國立政治大學資訊管理學系</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>原始檔</h6>
-          <ul class="list-inline">
-          </ul>
-          <h6>考試範圍</h6>
-          <ul class="list-inline">
-          </ul>
-      </div>
-      </div>
-    </div>
+    $endforeach$
     <div class="lecture">
       <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
       <div class="lecture-content">
@@ -316,7 +252,7 @@
 <div id="timetable" class="alt ocean">
   <section>
     <h2>課表</h2>
-    <!--table>
+    <table>
       <thead>
         <tr>
           <th scope="col">第一週</th>
@@ -330,19 +266,19 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 0</a><small>Introduction</small></td>
-          <td class="lgc"><a href="#lecture-logic">邏輯 0</a><small>Natural deduction and intuitionistic propositional logic</small></td>
-          <td class="fp"><a href="#lecture-fp">函數編程 1</a><small>Functional program derivation</small></abbr></td>
-          <td class="lgc"><a href="#lecture-logic">邏輯 1</a><small>Classical semantics and meta-theoretic properties</small></td>
-          <td class="fp"><a href="#lecture-fp">函數編程 2</a><small>TBA</small></td>
+          <td class=""><a href="#lecture">程式驗證導論</a><small>Introduction</small></td>
+          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
+          <td class=""><a href="#lecture">霍爾邏輯</a><small>Hoare Logic</small></abbr></td>
+          <td class=""><a href="#lecture">布林可滿足性演算法</a><small>Boolean Satisfiability Algorithms</small></td>
+          <td class=""><a href="#lecture">布林可滿足性演算法</a><small>Boolean Satisfiability Algorithms</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="fp"><a href="#lecture-fp">函數編程 0</a><small>Inductive functions and equational reasoning</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 1</a><small>Untyped λ-calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 2</a><small>Simply typed λ-calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 3</a><small>Imperative language constructs</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 4</a><small>What's out there / Agda Installation</small></td>
+          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
+          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
+          <td class=""><a href="#lecture">霍爾邏輯</a><small>Hoare Logic</small></td>
+          <td class=""><a href="#lecture">布林可滿足性求解器實習課</a><small>TA session on SAT solvers</small></td>
+          <td class=""><a href="#lecture">SMT 演算法</a><small>SMT Algorithms</small></td>
         </tr>
       </tbody>
     </table>
@@ -360,20 +296,21 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="dtp"><a href="#lecture-dtp">依值型別編程 0</a><small>Agda basics</small></td>
-          <td class="dtp"><a href="#lecture-dtp">依值型別編程 1</a><small>Shallow and deep embeddings of intuitionistic logic</small></td>
-          <td class="dtp"><a href="#lecture-dtp">依值型別編程 2</a><small>Intrinsic representation of simply typed lambda calculus</small></td>
-          <td class="dtp"><a href="#lecture-dtp">依值型別編程 3</a><small>McBride's razor</small></td>
-          <td class="exm"><a href="#lecture-exam">考試</a></td>
+          <td class=""><a href="#lecture">SMT 演算法</a><small>SMT Algorithms</small></td>
+          <td class=""><a href="#lecture">布林可滿足性問題在合成與驗證的應用</a><small>Boolean Satisfiability’s Applications to Synthesis and Verification</small></td>
+          <td class=""><a href="#lecture">邏輯的理論研究</a><small>Theoretical Aspect of Logic Research</small></td>
+          <td class=""><a href="#lecture">基於 SMT 的程式測試</a><small>SMT-based Program Testing</small></td>
+          <td class=""><a href="#lecture">考試</a><small>Exam</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
-          <td class="lgc"><a href="#lecture-logc">邏輯 2</a><small>Curry–Howard correspondence</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 5</a><small>Polymorphic lambda calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">程式語言導論 6</a><small>Hoare logic</small></td>
-          <td class="tlk"><a href="#lecture-special">特別演講</a><small>Verification of a Snapshot-Consistent Flash Translation Layer</small></td>
+          <td class=""><a href="#lecture">Dafny 程式驗證工具</a><small>Dafny Program Verifier</small></td>
+          <td class=""><a href="#lecture">布林可滿足性問題在合成與驗證的應用</a><small>Boolean Satisfiability’s Applications to Synthesis and Verification</small></td>
+          <td class=""><a href="#lecture">邏輯的理論研究</a><small>Theoretical Aspect of Logic Research</small></td>
+          <td class=""><a href="#lecture">驗證密碼學程式</a><small>Crypto Program Verification</small></td>
+          <td class=""><a href="#lecture">特別演講：資料流分析導論</a><small>Introduction to static data-flow analysis</small></td>
         </tr>
       </tbody>
-    </table--!>
+    </table>
   </section>
 </div>

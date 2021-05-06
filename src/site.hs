@@ -17,10 +17,11 @@ import           Hakyll.Web.ExtendedTemplate.Type
 
 import           Redirect
 import           Multilingual
+import           YearlyTheme
 
 main :: IO ()
 main = hakyll $ do
-  createRedirects [("index.html", "zh/2020/index.html")]
+  createRedirects [("index.html", "zh/2021/index.html")]
 
   forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
