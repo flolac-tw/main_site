@@ -131,7 +131,7 @@ applyTemplate' tmps ctx item = go tmps
           bs  <- forM (V.toList xs) $ \val -> do
             let id  = itemIdentifier item
                 obj = HM.singleton (T.pack iter) val
-                cxt = Context $ \key _ -> metadataJSON obj id key
+                cxt = (Context $ \key _ -> metadataJSON obj id key) <> ctx
             applyTemplate' body cxt item
           return $ intercalate sep bs
         field         -> expected "list" (fieldType field) typeMsg
