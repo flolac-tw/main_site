@@ -5,7 +5,7 @@
 # The location of a snapshot can be provided as a file or url. Stack assumes
 # a snapshot provided as a file might change, whereas a url resource does not.
 #
-resolver: nightly-2021-01-17
+resolver: lts-17.10
 system-ghc: true
 #
 # packages:
@@ -34,6 +34,10 @@ extra-deps:
   - 'skylighting-0.10.1'
   - 'skylighting-core-0.10.1'
   - doctemplates-0.8.3@sha256:b346b72d7351bfa1b16de3759f76854153e18fe3230b0115ab744c1f5bb0e36b,3127
+
+nix:
+  enable: true
+  packages: [zlib.dev, zlib.out]
       
 
 # Override default flag values for local packages and extra-deps
@@ -43,7 +47,7 @@ extra-deps:
 # extra-package-dbs: []
 
 # Control whether we use the GHC we find on the path
-system-ghc: true
+# system-ghc: true
 #
 # Require a specific version of stack, using version ranges
 # require-stack-version: -any # Default
