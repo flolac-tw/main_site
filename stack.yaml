@@ -35,9 +35,9 @@ extra-deps:
   - 'skylighting-core-0.10.1'
   - doctemplates-0.8.3@sha256:b346b72d7351bfa1b16de3759f76854153e18fe3230b0115ab744c1f5bb0e36b,3127
 
-nix:
-  enable: true
-  packages: [zlib.dev, zlib.out]
+# nix:
+#   enable: true
+#   packages: [zlib.dev, zlib.out]
       
 
 # Override default flag values for local packages and extra-deps
