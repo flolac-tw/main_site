@@ -12,13 +12,24 @@ $body$
                   <div>陳郁方</div>
                 </div></dd></div><div>
                   <dt>事務委員</dt><dd><div = class="container-4-rows">
-                    </div></dd></div><div>
-                  <dt>助教團長</dt><dd>
-                <div = class="container-4-rows">
-              </dd>
-            </div><div>
+                    </div></dd></div>
+	          $if(ta_boss)$
+		    <div>
+                      <dt>助教團長</dt><dd>
+                        <div = class="container-4-rows">
+	                  <div>$ta_boss$</div>
+		        </div>
+                    </dd>
+		  $endif$
+            </div>
+	    <div>
+            $if(ta)$
             <dt>助教團</dt><dd><div class="container-4-rows">
+	            $foreach(name)in(ta)$
+		      <div>$name.name$</div>
+		    $endforeach$
                   </div></dd></div>
+            $endif$
             <!--
             <li class="list-inline-item">陳恭</li>
             <li class="list-inline-item">莊庭瑞</li>
