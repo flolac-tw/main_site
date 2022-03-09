@@ -263,7 +263,8 @@ importField = Context $ \k i -> do
       Just fileName -> do
         let fileDir = takeDirectory $ toFilePath id'
         metadata' <- unsafeCompiler $ loadMetadataFile $ fileDir </> fileName
-        maybe empty' (return . Y.String . T.pack) (lookupString k metadata')
+        metadataJSON metadata' id' k
+        --maybe empty' (return . Y.String . T.pack) (lookupString k metadata')
       Nothing -> noResult "No 'import' field found."
 
 
