@@ -18,6 +18,7 @@ module Hakyll.Web.ExtendedTemplate.Context
     , titleField
     , dateField
     , dateFieldWith
+    , importField
 
     , getItemUTC
     , getItemModificationTime
@@ -47,13 +48,14 @@ import           Data.Yaml                     (Object, Value(..))
 import qualified Data.Yaml                     as Y
 
 import           System.FilePath               (dropExtension, splitDirectories,
-                                                takeBaseName)
+                                                takeBaseName, takeDirectory, (</>))
 import           Hakyll.Core.Compiler
 import           Hakyll.Core.Compiler.Internal
 import           Hakyll.Core.Identifier
 import           Hakyll.Core.Item
 import           Hakyll.Core.Metadata
 import           Hakyll.Core.Provider
+import           Hakyll.Core.Provider.Metadata (loadMetadataFile)
 import           Hakyll.Core.Util.String       (needlePrefix, splitAll)
 import           Hakyll.Web.Html
 
@@ -251,6 +253,19 @@ modificationTimeFieldWith :: TimeLocale  -- ^ Time output locale
 modificationTimeFieldWith locale key fmt = stringField key $ \i -> do
     mtime <- getItemModificationTime $ itemIdentifier i
     return $ formatTime locale fmt mtime
+
+importField :: Context a
+importField = Context $ \k i -> do
+    let id' = itemIdentifier i
+        empty' =  noResult $ "No '" ++ k ++ "' field in imported metadata."
+    metadata <- getMetadata id' 
+    case lookupString "import" metadata of
+      Just fileName -> do
+        let fileDir = takeDirectory $ toFilePath id'
+        metadata' <- unsafeCompiler $ loadMetadataFile $ fileDir </> fileName
+        maybe empty' (return . Y.String . T.pack) (lookupString k metadata')
+      Nothing -> noResult "No 'import' field found."
+
 
 --------------------------------------------------------------------------------
 -- | A context with "teaser" key which contain a teaser of the item.

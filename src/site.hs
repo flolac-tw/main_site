@@ -1,4 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
+import System.FilePath
+
 import           Control.Monad
 import qualified Data.Text                     as T
 import           Data.Monoid                    ( mappend )
@@ -7,6 +9,8 @@ import           Data.List.Extra                ( splitOn )
 import           Data.Yaml
 
 import           Hakyll.Core
+import           Hakyll.Core.Compiler
+import           Hakyll.Core.Provider.Metadata
 import           Hakyll.Main
 import           Hakyll.Web.CompressCss
 import           Hakyll.Web.Html
@@ -26,12 +30,23 @@ main = hakyll $ do
   forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
-      let ctx = defaultContext <> localeCtx lc <> langToggleURL lc
+      let ctx = importField
+             <> defaultContext
+             <> localeCtx lc
+             <> langToggleURL lc
+
+      -- Treat metadata as template as well
+      appliedPage <- getResourceString >>= applyAsTemplate ctx
+      let (metadata, _) = either mempty id $ parsePage $ itemBody appliedPage
+          appliedMetadataField = Context $ \k _ -> do
+                let empty' = noResult $ "No '"  ++ k ++ "' field in applied metadata."
+                maybe empty' (return . String . T.pack) (lookupString k metadata)
+          ctx' = appliedMetadataField <> ctx
       getResourceBody
-        >>= applyAsTemplate ctx
+        >>= applyAsTemplate ctx'
         >>= loadAndApplyTemplatesLC
               lc
-              ctx
+              ctx'
               [ "templates/banner.html"
               , "templates/nav.html"
               , "templates/footer.html"
