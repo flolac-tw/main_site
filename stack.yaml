@@ -19,8 +19,8 @@ system-ghc: true
 # forks / in-progress versions pinned to a git hash. For example:
 #
 extra-deps:
-  - git: https://github.com/flolac-tw/hakyll.git
-    commit: e56a069eb3f95835d3916ed54955b794afd08b50
+  - git: https://github.com/flolac-tw/hakyll
+    commit: 0d8a02181a4932d626564e140f099aa998023f5d
   - 'citeproc-0.2'
   - 'commonmark-0.1.1.2'
   - 'commonmark-extensions-0.2.0.4'
