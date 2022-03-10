@@ -1,7 +1,6 @@
 ---
   <!-- image-banner: True -->
   import: config.yaml
-  yearly_theme: mountain
   calendar: 
     - time: 6/1
       title: 宣佈停辦
@@ -124,14 +123,14 @@
     talk-abstract-content: ""
 ---
 
-<div id="header">
+<div id="header" class="$yearly_theme$">
   <header>
     <h1>$LC.title$</h1>
     <span>$LC.subtitle$</span><br /><span>$LC.date$</span><span>$LC.time$</span><br/><span>$LC.location$</span>
   </header>
 </div>
 
-<div class="two-column ocean">
+<div class="two-column $yearly_theme$">
   <section>
     <h2>$LC.introduction$</h2>
     <p> 近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。</p>
@@ -148,7 +147,7 @@
     </ul>
   </section>
 </div>
-<div class="two-column ocean alt">
+<div class="two-column $yearly_theme$ alt">
   <section>
     <h2>$LC.special-topic$</h2>
     <p>
@@ -200,7 +199,7 @@
     </ol>
   </section>
 </div>
-<div id="course-lectures" class="ocean">
+<div id="course-lectures" class="$yearly_theme$">
   <section>
     <h2>$LC.course$</h2>
     $foreach(course)in(LC.courses)$
@@ -246,7 +245,7 @@
     </div>
   </section>
 </div>
-<div id="timetable" class="alt ocean">
+<div id="timetable" class="alt $yearly_theme$">
   <section>
     <h2>課表</h2>
     <table>

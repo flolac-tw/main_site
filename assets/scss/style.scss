@@ -68,6 +68,12 @@ nav {
         h2 {
             color: $ocean-dark;
         }
+	   .lecture > h3 {
+               color: $ocean-dark;
+           }
+        #registration-attendee-type-tab>li.selected {
+            border-top-color: $ocean-dark;
+        }	   
     }
 
     .mountain,
@@ -75,6 +81,12 @@ nav {
         h2 {
             color: $mountain-dark;
         }
+	   .lecture > h3 {
+               color: $mountain-dark;
+        }
+        #registration-attendee-type-tab>li.selected {
+            border-top-color: $mountain-dark;
+        }	   
     }
 
     body div.alt {
@@ -87,7 +99,6 @@ nav {
 
     #registration-attendee-type-tab>li.selected {
         background      : $background-dark-alt;
-        border-top-color: $ocean-dark;
     }
 
 
@@ -106,9 +117,6 @@ nav {
     }
 
     .lecture {
-        h3 {
-            color: $ocean-dark;
-        }
         box-shadow: 0.5rem 0.5rem 0 $background-dark-alt2;
         background       : $background-dark-alt;
     }
@@ -228,16 +236,24 @@ nav {
 
     .ocean,
     body > div.ocean {
-        h2 {
+        h2,
+	    .lecture > h3 {
             color: $ocean-light;
         }
+        #registration-attendee-type-tab>li.selected {
+            border-top-color: $ocean-light;
+        }	   
     }
 
     .mountain,
     body > div.mountain {
-        h2 {
+        h2,
+	    .lecture > h3 {
             color: $mountain-light;
         }
+        #registration-attendee-type-tab>li.selected {
+            border-top-color: $mountain-light;
+        }	   
     }
 
     body div.alt {
@@ -266,7 +282,6 @@ nav {
 
     #registration-attendee-type-tab>li.selected {
         background      : $background-light-alt;
-        border-top-color: $ocean-light;
     }
 
     #registration-attendee-type-page {
@@ -276,10 +291,6 @@ nav {
     .lecture {
         box-shadow: 0.5rem 0.5rem 0 $background-light-alt2;
         background       : $background-light-alt;
-
-        h3 {
-            color: $ocean-light;
-        }
     }
 
     #course-timeline {
@@ -550,13 +561,20 @@ h4 {
 
 }
 
+#header.ocean {
+    background-color: $ocean-light;
+    background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
+}
+
+#header.mountain {
+    background-color: $mountain-light;
+    background-image: url("https://user-images.githubusercontent.com/8312228/157644132-c64a4437-b7ac-4d83-92f5-e01e78b77c36.png");
+}
+
 #header {
     // dimentions
     height          : 200px;
     padding         : $padding;
-    // background 
-    background-color: $ocean-light;
-    background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
 
     background-size    : cover;
     background-position: center 20%;
