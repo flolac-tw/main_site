@@ -25,12 +25,14 @@ import           YearlyTheme
 
 main :: IO ()
 main = hakyll $ do
-  createRedirects [("index.html", "zh/2021/index.html")]
+  let currentYear = "2022"
+  createRedirects [("index.html", "zh/"++currentYear++"/index.html")]
 
   forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
-      let ctx = importField
+      let ctx = constField "current_year" currentYear
+             <> importField
              <> defaultContext
              <> localeCtx lc
              <> langToggleURL lc

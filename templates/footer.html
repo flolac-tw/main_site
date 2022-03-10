@@ -5,43 +5,76 @@ $body$
       <div class="pb-3 pr-5">
         <object type="image/svg+xml" data="/img/logo.svg" style="height: 3.5rem;"/>
       </div>
-      <dl class="dl-vbar"><dt class="">主辦單位</dt><dd><ul class="list-inline-block m-0"><li>中央研究院資訊科學所</li><li>台灣大學資訊管理學系</li><li>台灣大學資訊工程學系</li><li>台灣大學電機工程學系</li></ul>
-        </dd><dt>籌辦團隊</dt>
-        <dd><dl class="inline-block-lists m-0"><div><dt class="">課程委員</dt><dd>
-          <div class="container-4-rows">
-                  <div>陳郁方</div>
-                </div></dd></div><div>
-                  <dt>事務委員</dt><dd><div = class="container-4-rows">
-                    </div></dd></div>
-	          $if(ta_boss)$
-		    <div>
-                      <dt>助教團長</dt><dd>
-                        <div = class="container-4-rows">
-	                  <div>$ta_boss$</div>
-		        </div>
-                    </dd>
-		  $endif$
+      <dl class="dl-vbar">
+        <dt class="">主辦單位</dt>
+        <dd>
+          <ul class="list-inline-block m-0">
+            <li>中央研究院資訊科學所</li>
+            <li>台灣大學資訊管理學系</li>
+            <li>台灣大學資訊工程學系</li>
+            <li>台灣大學電機工程學系</li>
+          </ul>
+        </dd>
+        <dt>籌辦團隊</dt>
+        <dd>
+          <dl class="inline-block-lists m-0">
+            $if(organizer)$
+            <div>
+              <dt class="">課程委員</dt>
+              <dd>
+                <div class="container-4-rows">
+                  $foreach(name)in(organizer)$
+                  <div>$name$</div>
+                  $endforeach$
+                </div>
+              </dd>
             </div>
-	    <div>
+            $endif$
+            <div>
+              <dt>事務委員</dt>
+              <dd>
+                <div = class="container-4-rows">
+                </div>
+              </dd>
+            </div>
+            $if(ta_boss)$
+            <div>
+              <dt>助教團長</dt>
+              <dd>
+                <div = class="container-4-rows">
+                  <div>$ta_boss$</div>
+                </div>
+              </dd>
+              $endif$
+            </div>
             $if(ta)$
-            <dt>助教團</dt><dd><div class="container-4-rows">
-	            $foreach(name)in(ta)$
-		      <div>$name.name$</div>
-		    $endforeach$
-                  </div></dd></div>
+            <div>
+              <dt>助教團</dt>
+              <dd>
+                <div class="container-4-rows">
+                  $foreach(name)in(ta)$
+                  <div>$name.name$</div>
+                  $endforeach$
+                </div>
+              </dd>
+            </div>
             $endif$
             <!--
-            <li class="list-inline-item">陳恭</li>
-            <li class="list-inline-item">莊庭瑞</li>
-            <li class="list-inline-item">穆信成</li>
-            <li class="list-inline-item">蔡益坤</li>
-            <li class="list-inline-item">王柏堯</li>
-            -->
+              <li class="list-inline-item">陳恭</li>
+              <li class="list-inline-item">莊庭瑞</li>
+              <li class="list-inline-item">穆信成</li>
+              <li class="list-inline-item">蔡益坤</li>
+              <li class="list-inline-item">王柏堯</li>
+              -->
           </dl>
         </dd>
         <dt>連絡信箱</dt>
-        <dd><a class="text-decoration-none text-light" href="javascript:location='mai'+'lto:\u0066\u006c\u006f\u006c\u0061'+'\u0063\u0040\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063\u0061\u002e\u0065'+'\u0064\u0075\u002e\u0074\u0077';void 0"><script type="text/javascript">document.write('\u0066\u006c'+'\u006f\u006c\u0061\u0063\u0040'+'\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063'+'\u0061\u002e\u0065\u0064'+'\u0075\u002e\u0074\u0077')</script></a></dd>
+        <dd>
+          <a class="text-decoration-none text-light" href="javascript:location='mai'+'lto:\u0066\u006c\u006f\u006c\u0061'+'\u0063\u0040\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063\u0061\u002e\u0065'+'\u0064\u0075\u002e\u0074\u0077';void 0">
+            <script type="text/javascript">document.write('\u0066\u006c'+'\u006f\u006c\u0061\u0063\u0040'+'\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063'+'\u0061\u002e\u0065\u0064'+'\u0075\u002e\u0074\u0077')</script>
+          </a>
+        </dd>
       </dl>
+    </div>
   </div>
-  </div>
-</footer> 
+</footer>

@@ -1,0 +1,306 @@
+---
+  <!-- image-banner: True -->
+  import: config.yaml
+  calendar: 
+    - time: 03/10
+      title: 網站上線
+      past: true
+  announcement:
+    - time: 03/10
+      title: 網站上線
+  zh:
+    title: 邏輯、語言與計算暑期研習營
+    subtitle: Formosan Summer School on Logic, Language, and Computation, 2022
+    date: "TBD"
+    time: ""
+    location: "地點：TBD"
+    introduction: 課程介紹
+    special-lecture: 特別講座
+    lecture-intro: 課程講師
+    announcement: 公告事項
+    dates: 重要日期
+    course: 課程
+    functional-programming: 函數編程
+    scm: 穆信成
+    logic: 邏輯
+    PLT: 程式語言導論
+    DTP: 依值型別編程
+    special-topic: 特別講題：依值型別編程
+    special-talk: 特別演講
+    speaker: 主講人
+    speaker-name: TBD
+    speaker-affli: TBD
+    talk-title: 題目
+    talk-title-content: TBD
+    talk-abstract: 摘要
+    talk-abstract-content: ""
+  en:
+    title: Formosan Summer School on Logic, Language, and Computation, 2022
+    subtitle: 邏輯、語言與計算暑期研習營
+    date: "TBD"
+    time: ""
+    location: "Location: TBD"
+    introduction: Introduction
+    lecture-intro: Lecturers
+    special-lecture: Special Lecture
+    announcement: Announcements
+    dates: Important dates
+    course: Courses
+    special-topic: "Special Lecture: Dependently Typed Programming"
+    functional-programming: Functional Programming
+    scm: Shin-Cheng Mu
+    logic: Logic
+    PLT: Programming Language Theory
+    DTP: Dependently Typed Programming
+    special-talk: Special Talk
+    speaker: Speaker
+    speaker-name: Yun-Sheng Chang
+    speaker-affli: Institute of Information Science, Academia Sinica
+    talk-title: Title
+    talk-title-content: "Verifying real-world systems<br/>Case study: Formal verification of a flash translation layer"
+    talk-abstract: Abstract 
+    talk-abstract-content: "Formal verification, the act of reasoning about program correctness using mathematical logic, is often considered hard to conduct and labor-intensive, and thus only applicable to tiny programs or life-critical systems. However, with the advance of theory and tools, many real-world systems such as compilers and operating systems have been successfully verified over the last decade. In the first part of this talk, I will first talk about what it is to be a “correct program,” then introduce some verification techniques, and finally conclude with a simple demonstration, in which a small program will be verified. In the second part, I will share the experience of verifying a flash translation layer, a key software component in many solid-state drives. In particular, I will cover its formal specification, how we modeled the behavior of system crashes, the verification approach we used, and the challenges we met."
+---
+
+<div id="header">
+  <header>
+    <h1>$LC.title$</h1>
+    <span>$LC.subtitle$</span><br /><span>$LC.date$</span><span>$LC.time$</span><br/><span>$LC.location$</span>
+  </header>
+</div>
+
+<div class="two-column ocean">
+  <section>
+    <h2>$LC.introduction$</h2>
+    <p>
+      本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
+      以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
+      並具備進一步探索程式語言相關領域的知識基礎。
+    </p>
+  </section>
+  <section>
+    <h2>$LC.announcement$</h2>
+    <ul>
+      $foreach(event)in(announcement)$
+      <li><strong>$event.time$</strong> - $event.title$</li>
+      $endforeach$
+    </ul>
+  </section>
+</div>
+<div class="two-column ocean alt">
+  <section>
+    <h2>$LC.special-topic$</h2>
+    <p>本次特別講題將重返中研院資訊所講師群鑽研已久的主題「依值型別編程」(dependently typed programming)，接力呈現其各個面向。</p>
+    <h3>程式不可能寫錯</h3>
+    <p>依值型別之表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。</p>
+    <h3>寫程式不再孤單</h3>
+    <p>當程式員透過依值型別提供更多資訊給型別檢查器 (type-checker)，後者就能反過來隨時告訴程式員當下已知與尚待滿足的條件，互動地寫出正確程式。</p>
+    <h3>數學定理也能跑</h3>
+    <p>依值型別語言的表達能力強到能夠將數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。</p>
+    <p>歡迎一同來體驗數學、邏輯、計算融為一體的舒暢感！</p>
+  </section>
+  <section id="course-timeline">
+    <h2>$LC.dates$</h2>
+    <ol>
+      $foreach(event)in(calendar)$
+      $if(event.past)$
+        <li class="timeline-event-past">
+      $else$
+        $if(event.next)$
+          <li class="timeline-event-next">
+        $else$
+          <li >
+        $endif$
+      $endif$
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">
+            $event.time$
+          </div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">
+            $event.title$
+          </div>
+        </div>
+      </li>
+      $endforeach$
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="ocean">
+  <section>
+    <h2>$LC.course$</h2>
+    <div class="lecture">
+      <h3><span id="lecture-fp"></span>$LC.functional-programming$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>$LC.scm$</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>講義</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>練習解答</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-logic"></span>$LC.logic$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>柯向上</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-plt"></span>$LC.PLT$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>陳亮廷</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>補充資料</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>習題解答</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3><span id="lecture-dtp"></span>$LC.DTP$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>穆信成</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+            <dt>柯向上</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+            <dt>陳亮廷</dt>
+            <dd>中央研究院資訊科學研究所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>Agda 安裝指南</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://paper.dropbox.com/doc/Windows--A5q1GT37n8jrafQJGR5UuF8vAQ-yCITtULcz3mRG9gGETjRQ">Windows</a></li>
+            <li class="list-inline-item"><a href="https://paper.dropbox.com/doc/Mac--A5pGvKSfn4Gk7Rp4ypnOZMsSAQ-sgAFjf4ClpRGLXraVwE33">Mac</a></li>
+            <li class="list-inline-item"><a href="https://paper.dropbox.com/doc/Linux--A5oTA1pnWWnPCZJS1ARBW8IlAQ-nkP4Uu5LUEicAo9h1JtqI">Linux</a></li>
+          </ul>
+          <h6><a href="https://hackmd.io/ryEsPWrBT66QueCEaPbjlg">Unicode 符號對照表</a></h6>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="lecture">
+      <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.speaker$</h4>
+          <dl>
+            <dt>$LC.speaker-name$</dt>
+            <dd>$LC.speaker-affli$</dd>
+          </dl>
+          <h4>$LC.talk-title$</h4>
+          $LC.talk-title-content$
+        </div>
+        <div>
+          <h4>$LC.talk-abstract$</h4>
+          $LC.talk-abstract-content$
+          <ul class="list-inline">
+          </ul>
+          <a href="">投影片</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="timetable" class="alt ocean">
+  <section>
+    <h2>課表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第一週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第二週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

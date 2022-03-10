@@ -10,6 +10,7 @@ module Hakyll.Web.ExtendedTemplate.Context
     , field
     , missingField
     , stringField
+    , constField
 
     , defaultContext
     , bodyField
@@ -76,6 +77,9 @@ field :: String -> (Item a -> Compiler ContextField) -> Context a
 field key f = Context $ \k item -> if key == k 
     then f item
     else noResult $ "Tried field: " ++ k
+
+constField :: String -> String -> Context a
+constField key s = field key (\_ -> (return . String . T.pack) s)
 
 --------------------------------------------------------------------------------
 -- | Constantly reports any field as missing. Mostly for internal usage,
