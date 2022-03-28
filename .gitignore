@@ -4,6 +4,7 @@ flolac-site.cabal.local
 .vscode
 package-lock.json
 stack.yaml.lock
+hie.yaml
 
 node_modules
 assets/css/*
