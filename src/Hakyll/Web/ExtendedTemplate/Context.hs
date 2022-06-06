@@ -52,6 +52,7 @@ import           System.FilePath               (dropExtension, splitDirectories,
                                                 takeBaseName, takeDirectory, (</>))
 import           Hakyll.Core.Compiler
 import           Hakyll.Core.Compiler.Internal
+import           Hakyll.Core.Dependencies
 import           Hakyll.Core.Identifier
 import           Hakyll.Core.Item
 import           Hakyll.Core.Metadata
@@ -266,10 +267,12 @@ importField = Context $ \k i -> do
     case lookupString "import" metadata of
       Just fileName -> do
         let fileDir = takeDirectory $ toFilePath id'
-        metadata' <- unsafeCompiler $ loadMetadataFile $ fileDir </> fileName
+            fp = fileDir </> fileName
+        compilerTellDependencies [IdentifierDependency (fromFilePath fp)]
+        metadata' <- unsafeCompiler $ loadMetadataFile fp
         metadataJSON metadata' id' k
         --maybe empty' (return . Y.String . T.pack) (lookupString k metadata')
-      Nothing -> noResult "No 'import' field found."
+      Nothing -> noResult $ "No 'import' field found in the metadata of " ++ toFilePath id' ++ "."
 
 
 --------------------------------------------------------------------------------
