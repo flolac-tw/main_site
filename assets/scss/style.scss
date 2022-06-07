@@ -592,6 +592,11 @@ h4 {
     h1 {
         font-size: 200%;
     }
+    @media (max-width: $breakpoint) {
+		h1 {
+			font-size: 150%;
+		}
+	}
 }
 
 #course-lectures {
