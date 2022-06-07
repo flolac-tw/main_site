@@ -34,11 +34,12 @@
     announcement: 公告事項
     dates: 重要日期
     course: 課程
-    functional-programming: 函數編程
+    FP: 函數編程
     scm: 穆信成
     logic: 邏輯
-    PLT: 程式語言導論
+    PLT: λ-Calculus
     DTP: 依值型別編程
+    Eff: Monad 與副作用
     special-topic: 特別講題：依值型別編程
     special-talk: 特別演講
     speaker: 主講人
@@ -59,19 +60,20 @@
     dates: Important dates
     course: Courses
     special-topic: "Special Lecture: Dependently Typed Programming"
-    functional-programming: Functional Programming
+    FP: Functional Programming
     scm: Shin-Cheng Mu
     logic: Logic
-    PLT: Programming Language Theory
+    PLT: λ-Calculus
     DTP: Dependently Typed Programming
+    Eff: Monad and Side Effects
     special-talk: Special Talk
     speaker: Speaker
-    speaker-name: Yun-Sheng Chang
-    speaker-affli: Institute of Information Science, Academia Sinica
+    speaker-name: TBD
+    speaker-affli: TBD
     talk-title: Title
-    talk-title-content: "Verifying real-world systems<br/>Case study: Formal verification of a flash translation layer"
+    talk-title-content: TBD
     talk-abstract: Abstract 
-    talk-abstract-content: "Formal verification, the act of reasoning about program correctness using mathematical logic, is often considered hard to conduct and labor-intensive, and thus only applicable to tiny programs or life-critical systems. However, with the advance of theory and tools, many real-world systems such as compilers and operating systems have been successfully verified over the last decade. In the first part of this talk, I will first talk about what it is to be a “correct program,” then introduce some verification techniques, and finally conclude with a simple demonstration, in which a small program will be verified. In the second part, I will share the experience of verifying a flash translation layer, a key software component in many solid-state drives. In particular, I will cover its formal specification, how we modeled the behavior of system crashes, the verification approach we used, and the challenges we met."
+    talk-abstract-content: ""
 ---
 
 <div id="header" class="$yearly_theme$">
@@ -143,7 +145,7 @@
   <section>
     <h2>$LC.course$</h2>
     <div class="lecture">
-      <h3><span id="lecture-fp"></span>$LC.functional-programming$</h3>
+      <h3><span id="lecture-fp"></span>$LC.FP$</h3>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -249,6 +251,28 @@
     </div>
 
     <div class="lecture">
+      <h3><span id="lecture-eff"></span>$LC.Eff$</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            <dt>單中杰</dt>
+            <dd>Department of Computer Science, Indiana University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>原始檔</h6>
+          <ul class="list-inline">
+          </ul>
+          <h6>考試範圍</h6>
+          <ul class="list-inline">
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="lecture">
       <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
       <div class="lecture-content">
         <div>
@@ -288,9 +312,19 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 0</a><small>Opening &amp; wholemeal programming</small></td>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 1</a><small>Inductive definitions</small></td>
+          <td class="plt"><a href="#lecture-fp">$LC.PLT$ 0</a><small>Untyped λ-Calculus</small></abbr></td>
+          <td class="plt"><a href="#lecture-plt">$LC.PLT$ 1</a><small>Simply Typed λ-Calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">$LC.PLT$ 2</a><small>Polymorphic λ-Calculus</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
+          <td class="lgc"><a href="#lecture-lgc">$LC.logic$ 0</a><small>Propositional logic &amp; natural deduction</small></td>
+          <td class="lgc"><a href="#lecture-lgc">$LC.logic$ 1</a><small>Classical semantics of propositional logic</small></td>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 2</a><small>Fold fusion</small></abbr></td>
+          <td class="lgc"><a href="#lecture-lgct">$LC.logic$ 2</a><small>Curry–Howard correspondence</small></td>
+          <td class="discussion"><a>討論</a><small>Discussion</small></td>
         </tr>
       </tbody>
     </table>
@@ -308,9 +342,18 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
+          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 0</a><small>Dualism: Pure programming with effects, Monad, Type Classes</small></td>
+          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 1</a><small>Choices: Nondeterministic search &amp; lazy sharing, Parsing, Probabability</small></td>
+          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 2</a><small>AI: Gradient descent, Automatic differentiation, Equational reasoning</small></abbr></td>
+          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 3</a><small>Optional Topics</small></td>
+          <td class="exm"><a href="#lecture-exam">考試</a><small>Exam</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
+          <td class="dtp"><a href="#lecture-dtp">$LC.DTP$ 0</a><small>Indexed datatypes &amp; dependent pattern matching</small></td>
+          <td class="dtp"><a href="#lecture-dtp">$LC.DTP$ 1</a><small>Shallow embedding of higher-order logic &amp; deep embedding of propositional logic</small></td>
+          <td class="dtp"><a href="#lecture-dtp">$LC.DTP$ 2</a><small>Formalisation of Simply Typed λ-Calculus</small></abbr></td>
+          <td class="discussion"><a>討論</a><small>Discussion</small></td>
         </tr>
       </tbody>
     </table>
