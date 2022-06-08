@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // tabs & corresponding pages
     let types = ["intern", "ntu", "non-ntu", "sit-in"];
 
-    let selected = "ntu";
+    let selected = "intern";
 
     types.forEach(function (type) {
         let tab = document.getElementById(type + "-tab");
