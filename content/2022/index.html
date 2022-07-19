@@ -32,13 +32,17 @@
     announcement: 公告事項
     dates: 重要日期
     course: 課程
-    FP: 函數編程
+    FP: 函數程設
+    FP-intro: 本課程以 Haskell 為工具，概述函數程式設計相關的一些必備知識，以便與其他課程銜接。由歸納法開始，我們將談資料結構與函數的歸納定義，發現函數的定義可依循資料結構的定義。而若欲證明該函數的性質，又可使用歸納法，其證明可依循函數的定義。接著我們會談到摺 (fold) 的觀念，發現摺可視為一種歸納法的抽象。最後以紅黑樹 (red-black tree) 為例演練程式設計與歸納證明，並為之後的依值型別課程做準備。
     scm: 穆信成
     logic: 邏輯
-    PLT: λ-Calculus
-    DTP: 依值型別編程
-    Eff: Monad 與副作用
-    special-topic: 特別講題：Monad 與副作用
+    logic-intro: ""
+    lambda: λ-Calculus
+    lambda-intro: ""
+    DTP: 依值型別
+    DTP-intro: 依值型別的表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。當我們透過依值型別提供更多資訊給型別檢查器，後者就能反過來隨時告訴我們當下已知與尚待滿足的條件，互動地寫出正確程式。依值型別語言也可用於數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。在此數學、邏輯、計算融為一體，形成新世代程式語言設計的堅實基礎。
+    special-topic: Monad 與副作用
+    special-topic-intro: 函數編程雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
     special-talk: 特別演講
     speaker: 主講人
     speaker-name: TBD
@@ -57,13 +61,13 @@
     announcement: Announcements
     dates: Important dates
     course: Courses
-    special-topic: "Special Lecture: Monad and Side Effects"
     FP: Functional Programming
     scm: Shin-Cheng Mu
     logic: Logic
-    PLT: λ-Calculus
+    lambda: λ-Calculus
     DTP: Dependently Typed Programming
-    Eff: Monad and Side Effects
+    special-topic: "Monad and Side Effects"
+    special-topic-intro: ""
     special-talk: Special Talk
     speaker: Speaker
     speaker-name: TBD
@@ -84,11 +88,7 @@
 <div class="two-column $yearly_theme$">
   <section>
     <h2>$LC.introduction$</h2>
-    <p>
-      本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，
-      以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，
-      並具備進一步探索程式語言相關領域的知識基礎。
-    </p>
+    <p>本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。</p>
   </section>
   <section>
     <h2>$LC.announcement$</h2>
@@ -101,8 +101,8 @@
 </div>
 <div class="two-column $yearly_theme$ alt">
   <section>
-    <h2>$LC.special-topic$</h2>
-    <p>函數編程雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。</p>
+    <h2>特別講題：$LC.special-topic$</h2>
+    <p>$LC.special-topic-intro$</p>
   </section>
   <section id="course-timeline">
     <h2>$LC.dates$</h2>
@@ -137,6 +137,7 @@
     <h2>$LC.course$</h2>
     <div class="lecture">
       <h3><span id="lecture-fp"></span>$LC.FP$</h3>
+      <p>$LC.FP-intro$</p>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -162,6 +163,7 @@
     </div>
     <div class="lecture">
       <h3><span id="lecture-logic"></span>$LC.logic$</h3>
+      <p>$LC.logic-intro$</p>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -182,7 +184,8 @@
       </div>
     </div>
     <div class="lecture">
-      <h3><span id="lecture-plt"></span>$LC.PLT$</h3>
+      <h3><span id="lecture-plt"></span>$LC.lambda$</h3>
+      <p>$LC.lambda-intro$</p>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -210,6 +213,7 @@
     </div>
     <div class="lecture">
       <h3><span id="lecture-dtp"></span>$LC.DTP$</h3>
+      <p>$LC.DTP-intro$</p>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -242,7 +246,8 @@
     </div>
 
     <div class="lecture">
-      <h3><span id="lecture-eff"></span>$LC.Eff$</h3>
+      <h3><span id="lecture-eff"></span>特別講題：$LC.special-topic$</h3>
+      <p>$LC.special-topic-intro$</p>
       <div class="lecture-content">
         <div>
           <h4>講師</h4>
@@ -282,17 +287,17 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="fp"><a href="#lecture-fp">$LC.FP$ 0</a><small>Opening &amp; wholemeal programming</small></td>
-          <td class="fp"><a href="#lecture-fp">$LC.FP$ 1</a><small>Inductive definitions</small></td>
-          <td class="plt"><a href="#lecture-fp">$LC.PLT$ 0</a><small>Untyped λ-Calculus</small></abbr></td>
-          <td class="plt"><a href="#lecture-plt">$LC.PLT$ 1</a><small>Simply Typed λ-Calculus</small></td>
-          <td class="plt"><a href="#lecture-plt">$LC.PLT$ 2</a><small>Polymorphic λ-Calculus</small></td>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 0</a><small>Inductive definitions</small></td>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 1</a><small>Folds</small></td>
+          <td class="plt"><a href="#lecture-fp">$LC.lambda$ 0</a><small>Untyped λ-Calculus</small></abbr></td>
+          <td class="plt"><a href="#lecture-plt">$LC.lambda$ 1</a><small>Simply Typed λ-Calculus</small></td>
+          <td class="plt"><a href="#lecture-plt">$LC.lambda$ 2</a><small>Polymorphic λ-Calculus</small></td>
         </tr>
         <tr>
           <th scope="row">下午</th>
           <td class="lgc"><a href="#lecture-lgc">$LC.logic$ 0</a><small>Propositional logic &amp; natural deduction</small></td>
           <td class="lgc"><a href="#lecture-lgc">$LC.logic$ 1</a><small>Classical semantics of propositional logic</small></td>
-          <td class="fp"><a href="#lecture-fp">$LC.FP$ 2</a><small>Fold fusion</small></abbr></td>
+          <td class="fp"><a href="#lecture-fp">$LC.FP$ 2</a><small>Red-black trees</small></abbr></td>
           <td class="lgc"><a href="#lecture-lgct">$LC.logic$ 2</a><small>Curry–Howard correspondence</small></td>
           <td class="discussion"><a>討論</a><small>Discussion</small></td>
         </tr>
@@ -312,10 +317,10 @@
       <tbody>
         <tr>
           <th scope="row">上午</th>
-          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 0</a><small>Dualism: Pure programming with effects, Monad, Type Classes</small></td>
-          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 1</a><small>Choices: Nondeterministic search &amp; lazy sharing, Parsing, Probabability</small></td>
-          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 2</a><small>AI: Gradient descent, Automatic differentiation, Equational reasoning</small></abbr></td>
-          <td class="eff"><a href="#lecture-eff">$LC.Eff$ 3</a><small>Optional Topics</small></td>
+          <td class="eff"><a href="#lecture-eff">$LC.special-topic$ 0</a><small>Dualism: Pure programming with effects, Monad, Type Classes</small></td>
+          <td class="eff"><a href="#lecture-eff">$LC.special-topic$ 1</a><small>Choices: Nondeterministic search &amp; lazy sharing, Parsing, Probabability</small></td>
+          <td class="eff"><a href="#lecture-eff">$LC.special-topic$ 2</a><small>AI: Gradient descent, Automatic differentiation, Equational reasoning</small></abbr></td>
+          <td class="eff"><a href="#lecture-eff">$LC.special-topic$ 3</a><small>Optional Topics</small></td>
           <td class="exm"><a href="#lecture-exam">考試</a><small>Exam</small></td>
         </tr>
         <tr>
