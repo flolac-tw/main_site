@@ -1,11 +1,8 @@
-# resolver: lts-3.5
-# resolver: nightly-2015-09-21
-# resolver: ghc-7.10.2
-#
 # The location of a snapshot can be provided as a file or url. Stack assumes
 # a snapshot provided as a file might change, whereas a url resource does not.
 #
-resolver: lts-17.10
+resolver: lts-18.28
+compiler: ghc-8.10.7
 system-ghc: true
 #
 # packages:
@@ -19,47 +16,6 @@ system-ghc: true
 # forks / in-progress versions pinned to a git hash. For example:
 #
 extra-deps:
-  - git: https://github.com/flolac-tw/hakyll
-    commit: 0d8a02181a4932d626564e140f099aa998023f5d
-  - 'citeproc-0.2'
-  - 'commonmark-0.1.1.2'
-  - 'commonmark-extensions-0.2.0.4'
-  - 'commonmark-pandoc-0.2.0.1'
-  - 'hslua-1.3.0'
-  - 'hslua-module-text-0.3.0.1'
-  - 'jira-wiki-markup-1.3.2'
-  - 'pandoc-2.11.2'
-  - 'pandoc-types-1.22'
-  - 'rfc5051-0.2'
-  - 'skylighting-0.10.1'
-  - 'skylighting-core-0.10.1'
-  - doctemplates-0.8.3@sha256:b346b72d7351bfa1b16de3759f76854153e18fe3230b0115ab744c1f5bb0e36b,3127
-
-# nix:
-#   enable: true
-#   packages: [zlib.dev, zlib.out]
-      
-
-# Override default flag values for local packages and extra-deps
-# flags: {}
-
-# Extra package databases containing global packages
-# extra-package-dbs: []
-
-# Control whether we use the GHC we find on the path
-# system-ghc: true
-#
-# Require a specific version of stack, using version ranges
-# require-stack-version: -any # Default
-# require-stack-version: ">=2.3"
-#
-# Override the architecture used by stack, especially useful on Windows
-# arch: i386
-# arch: x86_64
-#
-# Extra directories used by stack for building
-# extra-include-dirs: [/path/to/dir]
-# extra-lib-dirs: [/path/to/dir]
-#
-# Allow a newer minor version of GHC than the snapshot specifies
-# compiler-check: newer-minor
+# - 'hakyll-4.15.1.1'
+- git: https://github.com/flolac-tw/hakyll.git
+  commit: 4477cbed4d9a2c1d0ccd699aa96e5117f532b496

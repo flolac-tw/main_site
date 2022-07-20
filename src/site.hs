@@ -8,9 +8,22 @@ import           Data.List                      ( intercalate )
 import           Data.List.Extra                ( splitOn )
 import           Data.Yaml
 
-import           Hakyll.Core
 import           Hakyll.Core.Compiler
+import           Hakyll.Core.Configuration
+import           Hakyll.Core.File
+import           Hakyll.Core.Identifier
+import           Hakyll.Core.Identifier.Pattern
+import           Hakyll.Core.Item
+import           Hakyll.Core.Metadata
 import           Hakyll.Core.Provider.Metadata
+import           Hakyll.Core.Routes
+import           Hakyll.Core.Rules
+import           Hakyll.Core.UnixFilter
+import           Hakyll.Core.Util.File
+import           Hakyll.Core.Util.String
+import           Hakyll.Core.Writable
+
+
 import           Hakyll.Main
 import           Hakyll.Web.CompressCss
 import           Hakyll.Web.Html
