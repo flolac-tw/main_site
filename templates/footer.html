@@ -6,37 +6,50 @@ $body$
         <object type="image/svg+xml" data="/img/logo.svg" style="height: 3.5rem;"/>
       </div>
       <dl class="dl-vbar">
-        <dt class="">主辦單位</dt>
+        <dt>主辦單位</dt>
         <dd>
           <ul class="list-inline-block m-0">
             <li>中央研究院資訊科學所</li>
             <li>台灣大學資訊管理學系</li>
-            <li>台灣大學資訊工程學系</li>
-            <li>台灣大學電機工程學系</li>
           </ul>
         </dd>
+        $if(sponsors)$
+        <dt>贊助單位</dt>
+        <dd>
+          <ul class="list-inline-block m-0">
+          $foreach(name)in(sponsors)$
+            <li>$name$</li>
+          $endforeach$
+          </ul>
+        </dd>
+        $endif$
         <dt>籌辦團隊</dt>
         <dd>
           <dl class="inline-block-lists m-0">
-            $if(organizer)$
+            $if(programme)$
             <div>
               <dt class="">課程委員</dt>
               <dd>
                 <div class="container-4-rows">
-                  $foreach(name)in(organizer)$
+                  $foreach(name)in(programme)$
                   <div>$name$</div>
                   $endforeach$
                 </div>
               </dd>
             </div>
             $endif$
+            $if(local)$
             <div>
               <dt>事務委員</dt>
               <dd>
                 <div = class="container-4-rows">
+                  $foreach(name)in(local)$
+                  <div>$name$</div>
+                  $endforeach$
                 </div>
               </dd>
             </div>
+            $endif$
             $if(ta_boss)$
             <div>
               <dt>助教團長</dt>
@@ -53,7 +66,7 @@ $body$
               <dd>
                 <div class="container-4-rows">
                   $foreach(name)in(ta)$
-                  <div>$name.name$</div>
+                  <div>$name$</div>
                   $endforeach$
                 </div>
               </dd>

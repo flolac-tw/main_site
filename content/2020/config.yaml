@@ -1,16 +1,22 @@
 yearly_theme: ocean
 year: "2020"
-organizer:
-  - 柯向上
+programme:
+- 柯向上
+- 陳亮廷
+- 穆信成
+sponsors:
+- 台灣大學資訊工程學系
+- 台灣大學電機工程學系
+local:
+- 韓愷真
+- 林柏芬
 ta_boss: 賴廷彥
 ta:
-  - name: 林子期 
-  - name: 潘廣霖 
-  - name: 江宗儒 
-  - name: 林敬文 
-  - name: 鄭淳丰 
-  - name: 潘昱仁 
-  - name: 曾守瑜 
-  - name: 張耀晟 
-
-test: test
+  - 林子期 
+  - 潘廣霖 
+  - 江宗儒 
+  - 林敬文 
+  - 鄭淳丰 
+  - 潘昱仁 
+  - 曾守瑜 
+  - 張耀晟 

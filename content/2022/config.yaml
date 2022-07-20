@@ -1,13 +1,22 @@
 year: "2022"
 yearly_theme: ocean
-organizer:
-  - 柯向上
+sponsors:
+- 入山山有限公司
+- 台灣大學資訊工程學系
+- 台灣大學電機工程學系
+programme:
+- 柯向上
+- 陳亮廷
+- 穆信成
+local:
+- 林柏芬
+- 韓愷真
 ta_boss: 林子期
 ta:
-  - name: 張耀晟
-  - name: 蔡柏毅
-  - name: 施宗佑
-  - name: 鄭伯俞
-  - name: 陳冠廷
+  - 張耀晟
+  - 蔡柏毅
+  - 施宗佑
+  - 鄭伯俞
+  - 陳冠廷
 date: "8/1-8/12"
 time: "09:00-17:00"
