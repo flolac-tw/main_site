@@ -144,6 +144,43 @@ lem-irrefutable = {!!}
 
 --------------------------------------------------------------------------------
 --
+---- The double negation monad
+--
+--  Double negation gives rise to a monad.
+--  Classicality (e.g., LEM) is an effect in intuitionistic logic!
+
+DN : Set → Set
+DN A = Neg (Neg A)
+
+return : A → DN A
+return x = {!!}
+
+_>>=_ : DN A → (A → DN B) → DN B
+ma >>= f = {!!}
+
+ite : DN (((A → B) × (Neg A → C)) → (A × B) ⊎ (Neg A × C))
+ite = lem-irrefutable >>= λ a⊎¬a →
+      return (case a⊎¬a (λ  a fg → inl ( a , outl fg  a))
+                        (λ ¬a fg → inr (¬a , outr fg ¬a)))
+
+--  The double negation monad is a special case of the ‘continuation monad’
+--  (look it up or ask Prof Shan about this):
+
+Cont : Set → Set → Set
+Cont C A = (A → C) → C
+
+returnᶜ : A → Cont C A
+returnᶜ = {!!}
+
+_>>=ᶜ_ : Cont C A → (A → Cont C B) → Cont C B
+ma >>=ᶜ f = {!!}
+
+--
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--
 ---- Quantification and predicates
 --
 --  As a logic, Agda’s type system is very expressive and goes well beyond
