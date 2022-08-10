@@ -1,5 +1,4 @@
 {-# OPTIONS --no-import-sorts #-}
-module Lambda-full where
 
 open import Agda.Primitive
   renaming (Set to Type; Setω to Typeω)
@@ -48,7 +47,7 @@ data ℕ : Type where
 {-# BUILTIN NATURAL ℕ #-}
 
 _ : 1 ≡ suc zero
-_ = {!!}
+_ = refl
 
 ------------------------------------------------------------------------------
 -- List over A
@@ -84,10 +83,10 @@ data _∋_ {A : Type} : List A → A → Type where
 infix 4 _∋_
 
 _ : 3 ∷ 1 ∷ 2 ∷ [] ∋ 1
-_ = {! !}
+_ = suc zero 
 
 _ : 3 ∷ 1 ∷ 2 ∷ [] ∋ 3
-_ = {! !}
+_ = zero
 
 ------------------------------------------------------------------------------
 -- Types for STLC
@@ -154,11 +153,11 @@ K₁ = ƛ ƛ ` suc zero
 
 I : (τ : Ty V)
   → [] ⊢ τ ⇒ τ
-I τ = {!!}
+I τ = ƛ (` zero)
 
 K₂ : {τ σ : Ty V}
   → [] ⊢ τ ⇒ σ ⇒ σ
-K₂ = {!!}
+K₂ = ƛ ƛ (` zero)
 
 Nat : (τ : Ty V) → Ty V
 Nat τ = (τ ⇒ τ) ⇒ τ ⇒ τ
@@ -169,11 +168,11 @@ c₂ τ = ƛ ƛ ` suc zero · (` suc zero · ` zero)
 
 c₀ : (τ : Ty V)
   → [] ⊢ Nat τ
-c₀ τ = {!!} 
+c₀ τ = ƛ ƛ (` zero) 
 
 c₁ : (τ : Ty V)
   → [] ⊢ Nat τ
-c₁ τ = {!!}
+c₁ τ = ƛ ƛ (` suc zero) · (` zero)
 
 ------------------------------------------------------------------------------
 -- Variable renaming
@@ -287,10 +286,10 @@ data _→β*_ : (Γ ⊢ τ) → (Γ ⊢ τ) → Type where
       M →β* L
 
 _ : K₁ · I τ · N →β* (I τ)
-_ = {!!} -- ξ-·₁ β-ƛ· ∷ β-ƛ· ∷ []
+_ = ξ-·₁ β-ƛ· ∷ β-ƛ· ∷ []
 
 _ : K₂ · N · I τ →β* (I τ)
-_ = {!!}
+_ = ξ-·₁ β-ƛ· ∷ β-ƛ· ∷ []
 
 ------------------------------------------------------------------------------
 -- Preservation is trivial (why?)
@@ -332,13 +331,13 @@ mutual
 
 normal-completeness : (M : Γ ⊢ τ) → ((N : Γ ⊢ τ) → ¬ (M →β1 N)) → Normal M
 normal-completeness (` x)   M↛  = ↑ (` x)
-normal-completeness (ƛ M)   ƛM↛ = {!!} 
+normal-completeness (ƛ M)   ƛM↛ = ƛ normal-completeness M (λ N z → ƛM↛ (ƛ N) (ξ-ƛ z)) 
 normal-completeness (M · N) MN↛ with normal-completeness M M↛ | normal-completeness N N↛
    where
      M↛ : ∀ M′ → ¬ (M →β1 M′)
-     M↛ M′ M→M′ = {!!}
+     M↛ M′ M→M′ = MN↛ (M′ · N) (ξ-·₁ M→M′)
      N↛ : ∀ N′ → ¬ (N →β1 N′)
-     N↛ N′ N→N′ = {!!}
+     N↛ N′ N→N′ = MN↛ (M · N′) (ξ-·₂ N→N′)
 ... | ↑ M↓ | N↓ = ↑ (M↓ · N↓)
 ... | ƛ M↓ | N↓ = ⊥-elim (MN↛ _ β-ƛ·)
 
@@ -354,4 +353,12 @@ data Progress (M : Γ ⊢ τ) : Type where
       Progress M
 
 progress : (M : Γ ⊢ τ) → Progress M
-progress M = {!!}
+progress (` x)   = done (↑ (` x))
+progress (M · N) with progress M | progress N
+... | step M→M′ | _      = step (ξ-·₁ M→M′)
+... | done _    | step x = step (ξ-·₂ x)
+... | done (↑ M↓) | done N↓ = done (↑ (M↓ · N↓))
+... | done (ƛ M↓) | done N↓ = step β-ƛ·
+progress (ƛ M) with progress M
+... | done M↓   = done (ƛ M↓)
+... | step M→M′ = step (ξ-ƛ M→M′)
