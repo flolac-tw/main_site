@@ -2,6 +2,7 @@ dist-newstyle
 flolac-site.cabal.local
 .stack-work
 .vscode
+.sass-cache
 package-lock.json
 stack.yaml.lock
 hie.yaml
