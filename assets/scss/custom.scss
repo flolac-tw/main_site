@@ -36,6 +36,7 @@ $theme-colors: ("primary": $fountain-blue,
 
 $body-bg   : $snow-drift;
 $body-color: $pickled-bluewood;
+$headings-font-weight: 700;
 
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";

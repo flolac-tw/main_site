@@ -625,10 +625,7 @@ h4 {
             }
 
             dl {
-                $dt-width: 5rem;
-
                 display              : grid;
-                grid-template-columns: $dt-width auto;
 
                 dt {
                     grid-column: 1 / 2;
