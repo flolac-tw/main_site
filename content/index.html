@@ -1,4 +1,5 @@
 ---
+  yearly_theme: ocean
   zh: 
     title: 「邏輯、語言與計算」暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation
@@ -6,6 +7,10 @@
     h-guest-lecture: 特別講題
     h-PL: 型別原理
     h-FM: 自動驗證
+    h-topic-this-year: 今年主題：
+    h-topic-that-year: 來年主題：
+    h-past-guest-lecture: 過往特別講題
+    h-feedback: 學員心得
 
     aim-content: |
       <p>近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。
@@ -37,6 +42,10 @@
     h-guest-lecture: Guest Lectures
     h-PL: Type-Theoretic Foundations
     h-FM: Automated Verification
+    h-topic-this-year: "Topic of the Year: "
+    h-topic-that-year: "Topic of Next Year: "
+    h-past-guest-lecture: Past Guest Lectures
+    h-feedback: Feedbacks from Students
 
     aim-content: |
       <p>In recent years, Taiwanese scholars engaged in basic computational science research have established research teams and collaborated with each other. Students who are interested in basic computing science must learn basic knowledge through a series of courses; however, domestic scholars engaged in such research are scattered in various schools, and it is difficult to set up a whole set of courses by themselves. Therefore, we invite scholars with similar interests to start classes together to train the next generation of research talents.</p>
@@ -48,11 +57,13 @@
         <li>Ease of use: Symbols are our tools for solving program-related problems. We will pay attention to the design of symbols and design special symbols that are easy to use for various problems.</li>
         <li>Connotation: Good symbols often have multiple levels of meaning, helping us think about problems from different angles;</li>
       </ul>
-      We especially like to borrow symbols from mathematics and logic to communicate with their profound concepts accumulated over time.</p><p><a href="/en/2020">最近課程 (2020)</a></p> 
+      We especially like to borrow symbols from mathematics and logic to communicate with their profound concepts accumulated over time.</p><p><a href="/en/2020">Most Recent Course (2022)</a></p> 
 
     mountain-intro-content: ""
 
   guest-lectures:
+    - year: "2022"
+      title: Monad and Side Effects
     - year: "2020"
       title: Dependently Typed Programming
     - year: "2019" 
@@ -73,8 +84,9 @@
       title: Interpreting Types as Abstract Values
 ---
 
-<div id="landing">
+<div id="landing" class="$yearly_theme$">
   <header>
+    <img src="../img/logo.svg">
     <h1>$LC.title$</h1>
     <span>$LC.subtitle$</span>
   </header>
@@ -87,11 +99,11 @@
 </div>
 <div id="ocean-mountain-intro" class="alt two-column">
   <section id="ocean-intro" class="ocean">
-    <h2>今年主題：$LC.h-PL$</h2>
+    <h2>$LC.h-topic-this-year$$LC.h-PL$</h2>
     $LC.ocean-intro-content$
   </section>
   <section id="mountain-intro" class="mountain">
-    <h2>來年主題：$LC.h-FM$</h2>
+    <h2>$LC.h-topic-that-year$$LC.h-FM$</h2>
     $LC.mountain-intro-content$
   </section>
 </div>
@@ -104,7 +116,7 @@
 </div>
 <div id="previous-guest-lectures" class="alt" >
   <section>
-    <h2>過往特別講題</h2>
+    <h2>$LC.h-past-guest-lecture$</h2>
     <ol>
       $foreach(event)in(guest-lectures)$
       <li>
@@ -149,11 +161,11 @@
 </div>
 <div id="feedbacks" class="alt" >
   <section>
-      <h2>學員心得</h2>
+      <h2>$LC.h-feedback$</h2>
       <div>
         <blockquote>
-          <p>只要對 theoretical computer science稍微有興趣的人，
-            沒去一定會後悔得哭出來！特別今年是關於languages 的主題，
+          <p>只要對 theoretical computer science 稍微有興趣的人，
+            沒去一定會後悔得哭出來！特別今年是關於 languages 的主題，
             就是那些 type systems、denotational semantics 之類的東西！
             跌斷手都要去的呀！
           </p>

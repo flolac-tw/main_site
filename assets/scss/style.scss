@@ -433,6 +433,7 @@ h4 {
     // dimension 
     padding: 0;
     height : calc(100vh - #{$nav-height});
+	max-height: 100vw;
 
     // background 
     background-color: $ocean-light;
@@ -453,12 +454,41 @@ h4 {
     text-align : center;
 
     h1 {
-        font-size: 400%;
+		max-width: 75vw;
+        font-size: 300%;
     }
 
     span {
         font-size: 150%;
     }
+
+	img {
+		display: none;
+	}
+
+	@media (max-width: $breakpoint) {
+		h1 {
+			font-size: 250%;
+		}
+
+		span {
+			font-size: 100%;
+		}
+	}
+
+	@media (max-width: $breakpoint2) {
+		h1 {
+			font-size: 100%;
+		}
+		span {
+			display: none;
+		}
+		img {
+			display: block;
+			filter: drop-shadow(0px 0px 2px black);
+		}
+	}
+
 }
 
 #previous-guest-lectures {
@@ -648,13 +678,15 @@ h4 {
 
             dl {
                 display              : grid;
+				grid-template-columns: 1fr 2fr;
 
                 dt {
-                    grid-column: 1 / 2;
+                    grid-column : 1;
+					margin-right: 5px;
                 }
 
                 dd {
-                    grid-column: 2 / 3;
+                    grid-column: 2;
                 }
             }
         }
