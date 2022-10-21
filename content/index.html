@@ -1,7 +1,8 @@
 ---
+  ocean: true
   yearly_theme: ocean
   zh: 
-    title: 「邏輯、語言與計算」暑期研習營
+    title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation
     h-aim: 課程宗旨
     h-guest-lecture: 特別講題
@@ -16,7 +17,7 @@
       <p>近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。
       對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，
       難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。</p>
-      <p>。從2008年起，本研習營在兩大主題之間輪流替換。自 2012 年起，本研習營正式成為台灣大學暑修課程，
+      <p>從2008年起，本研習營在兩大主題之間輪流替換。自 2012 年起，本研習營正式成為台灣大學暑修課程，
         針對大學部學生開課，但亦歡迎研究生選修。</p>
 
     ocean-intro-content: |
@@ -98,6 +99,7 @@
   </section>
 </div>
 <div id="ocean-mountain-intro" class="alt two-column">
+  $if(ocean)$
   <section id="ocean-intro" class="ocean">
     <h2>$LC.h-topic-this-year$$LC.h-PL$</h2>
     $LC.ocean-intro-content$
@@ -106,6 +108,16 @@
     <h2>$LC.h-topic-that-year$$LC.h-FM$</h2>
     $LC.mountain-intro-content$
   </section>
+  $else$
+  <section id="mountain-intro" class="mountain">
+    <h2>$LC.h-topic-this-year$$LC.h-FM$</h2>
+    $LC.mountain-intro-content$
+  </section>
+  <section id="ocean-intro" class="ocean">
+    <h2>$LC.h-topic-that-year$$LC.h-PL$</h2>
+    $LC.ocean-intro-content$
+  </section>
+  $endif$
 </div>
 <div>
   <section>
