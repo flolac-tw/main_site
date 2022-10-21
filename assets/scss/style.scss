@@ -433,15 +433,15 @@ h4 {
     // dimension 
     padding: 0;
     height : calc(100vh - #{$nav-height});
-	max-height: 100vw;
+	max-height: 70vw;
 
     // background 
     background-color: $ocean-light;
     background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
 
-    background-size    : cover;
-    background-position: top;
-    background-repeat  : no-repeat;
+    background-size      : cover;
+    background-position-y: 5%;
+    background-repeat    : no-repeat;
 
     // layout 
     display        : flex;
@@ -453,8 +453,12 @@ h4 {
     text-shadow: 0px 0px 5px black;
     text-align : center;
 
+	header {
+		margin-top: 10vh;
+		max-width: min(75vw, 1000px);
+	}
+
     h1 {
-		max-width: 75vw;
         font-size: 300%;
     }
 
