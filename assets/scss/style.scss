@@ -550,17 +550,37 @@ h4 {
 }
 
 #faq {
+    section {
+        display       : flex;
+	    flex-wrap     : wrap;
+        flex-direction: row;
+        align-items   : flex-start;
+    }
+
+    h2 {
+        flex-basis: 100%;
+    }
+
+    div {
+        flex-basis: 70%;
+        flex-grow: 1;
+        margin: 1rem 1rem 0 0;
+
+        h3 {
+        	margin: 0.5rem auto;
+            text-align: left;
+        }
+    }
+
     img {
         display: block;
 
         width    : 80%;
-        margin   : $margin auto;
-        max-width: 300px;
+        margin   : 1rem auto;
+        max-width: 200px;
 
-    }
-
-    h3 {
-        text-align: center;
+        flex-basis: 30%;
+        flex-grow: 1;
     }
 }
 

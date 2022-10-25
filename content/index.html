@@ -35,6 +35,22 @@
 
     mountain-intro-content: ""
 
+    faq: |
+      <div>
+        <h3>會使用什麼（自然）語言上課？</h3>
+        <p>視講師的偏好而定，會以中文或英文講課，投影片內容以英文為主。</p>
+      </div>
+      <div>
+        <h3>適合幾年級的學生呢？</h3>
+        <p>根據我們的統計，歷年來參加者的年齡分布很廣，除了大學生與研究生外，還有少數高中生跟不少的社會人士。課程沒有預設背景，不同年級的學員（盡力參與）都可以跟得上課程，我們也有助教群可以協助學員。</p>
+      </div>
+      <img src="/img/year-stat-zh.png" alt="學員年級統計">
+      <div>
+        <h3>課程很難嗎？</h3>
+        <p>因為各種科系背景的不同，每個人狀況都不大一樣。大致上我們發現科系背景間的差異較大，例如歷年來數學系跟資工系高分通過的比較多，但也曾有財金系的同學拿到滿分哦！至於不及格的同學則是沒有明顯的差異，即便是最相關的資工系也有不少人最後沒拿到學分（殘念⋯⋯）</p>
+      </div>
+      <img src="/img/fatality-zh.png" alt="學員年級統計">
+
 
   en:
     title: Formosan Summer School on Logic, Language, and Computation
@@ -48,7 +64,7 @@
     h-topic-that-year: "Topic of Next Year: "
     h-past-guest-lecture: Past Guest Lectures
     h-feedback: Feedbacks from Students
-    h-faq: FAQ
+    h-faq: FAQs
 
     aim-content: |
       <p>In recent years, Taiwanese scholars engaged in basic computational science research have established research teams and collaborated with each other. Students who are interested in basic computing science must learn basic knowledge through a series of courses; however, domestic scholars engaged in such research are scattered in various schools, and it is difficult to set up a whole set of courses by themselves. Therefore, we invite scholars with similar interests to start classes together to train the next generation of research talents.</p>
@@ -63,6 +79,22 @@
       We especially like to borrow symbols from mathematics and logic to communicate with their profound concepts accumulated over time.</p><p><a href="/en/2020">Most Recent Course (2022)</a></p> 
 
     mountain-intro-content: ""
+
+    faq: |
+      <div>
+        <h3>What (natural) language is this course taught in?</h3>
+        <p>The lectures are in Mandarin or English depending on the lecturers, while slides are usually in English.</p>
+      </div>
+      <div>
+        <h3>What kind of students does this course aim for?</h3>
+        <p>Statistically, our participants vary in age. Besides undergraduate and graduate students, there were a few highschool students and working professionals. We don't assume the participants' backgrounds, and we have more TAs than usual courses to make sure people from different backgrounds can keep up.</p>
+      </div>
+      <img src="/img/year-stat-cropped.png" alt="學員年級統計">
+      <div>
+        <h3>How hard is the course?</h3>
+        <p>Every participant may face different difficulties depending on their background. In general we find people from mathematics or computer science backgrounds pass in high marks more regularly. But there is no consistency in who could fail the course.</p>
+      </div>
+      <img src="/img/fatality-cropped.png" alt="學員年級統計">
 
   guest-lectures:
     - year: "2022"
@@ -121,13 +153,13 @@
   </section>
   $endif$
 </div>
-<div class="$yearly-theme$">
+<!--div class="$yearly-theme$">
   <section>
     <h2>2020 年特別講題：依值型別編程</h2>
     <p>D. E. Knuth 的名言 "Beware of bugs in the above code; I have only proved it correct, not tried it." 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 "In programming, nothing is cheaper than not introducing the bugs in the first place." 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
     <p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。踏在直構型別論的基礎上，依值型別編程的目標是進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。</p>
   </section>
-</div>
+</div-->
 <div id="previous-guest-lectures" class="alt $yearly-theme$" >
   <section>
     <h2>$LC.h-past-guest-lecture$</h2>
@@ -162,20 +194,7 @@
 <div id="faq" class="ocean" >
   <section>
     <h2>$LC.h-faq$</h2>
-    <div>
-      <h3>會使用什麼（自然）語言上課？</h3>
-      <p>視講師的偏好而定，會以中文或英文講課，投影片內容以英文為主。</p>
-    </div>
-    <div>
-      <h3>適合幾年級的學生呢？</h3>
-      <p>根據我們的統計，歷年來參加者的年齡分布很廣，除了大學生與研究生外，還有少數高中生跟不少的社會人士。課程沒有預設背景，不同年級的學員（盡力參與）都可以跟得上課程，我們也有助教群可以協助學員。</p>
-      <img src="/img/year-stat-cropped.png" alt="學員年級統計">
-    </div>
-    <div>
-      <h3>課程很難嗎？</h3>
-      <p>因為各種科系背景的不同，每個人狀況都不大一樣。大致上我們發現科系背景間的差異較大，例如歷年來數學系跟資工系高分通過的比較多，但也曾有財金系的同學拿到滿分哦！至於不及格的同學則是沒有明顯的差異，即便是最相關的資工系也有不少人最後沒拿到學分（殘念⋯⋯）</p>
-      <img src="/img/fatality-cropped.png" alt="學員年級統計">
-    </div>
+    $LC.faq$
   </section>
 </div>
 <div id="feedbacks" class="alt $yearly-theme$">
