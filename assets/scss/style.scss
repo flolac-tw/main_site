@@ -36,7 +36,20 @@ $foreground-light-emph :black;
 
 nav {
     height: $nav-height;
+
+    ul {
+        flex-basis: 100%;
+    }
+
+    .nav-item {
+        text-align     : center;
+
+        .nav-link {
+            white-space: normal;
+        }
+    }
 }
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -455,7 +468,7 @@ h4 {
 
 	header {
 		margin-top: 10vh;
-		max-width: min(75vw, 1000px);
+		max-width: min(75vw, 1200px);
 	}
 
     h1 {

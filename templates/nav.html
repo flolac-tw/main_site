@@ -4,9 +4,9 @@
     theme-intro: 課程主題
     ocean-intro: 型別原理
     mountain-intro: 自動驗證
-    past-activity: 歷年課程
-    current: 應屆課程
-    registration: 報名資訊
+    past-activity: 歷年<br class="d-sm-none">課程
+    current: 應屆<br class="d-none">課程
+    registration: 報名<br class="d-none">資訊
     lang-toggle: En
   en:
     home: Home
@@ -15,18 +15,18 @@
     mountain-intro: Automated Verification
     past-activity: Past Events
     current: Current Event
-    registration: Registration
+    registration: Regis&shy;tration
     lang-toggle: 中
 
 ---
-<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark-shade justify-content-around py-md-2 py-sm-1 py-0" style="font-weight: 600">
+<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark-shade justify-content-xl-around justify-content-between py-md-2 py-sm-1 py-0" style="font-weight: 600">
   <!-- TODO: use CSS to control heights in different window widths -->
-  <div class="container-md px-md-5 px-0">
+  <div class="container-md px-lg-5 px-0">
     <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="/img/logo.svg" style="height: 2rem"/></a>
     <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="/img/logo.svg" style="height: 1.5rem"/></a>
 
-    <ul class="navbar-nav">
-      <!-- <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li> -->
+    <ul class="navbar-nav justify-content-md-center justify-content-around align-items-center">
+      <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li>
       <li class="nav-item"><a class="nav-link" href="/$lang$/$current_year$">$LC.current$</a></li>
       <li class="nav-item"><a class="nav-link" href="/$lang$/$current_year$/registration.html">$LC.registration$</a></li>
       <li class="nav-item dropdown">
