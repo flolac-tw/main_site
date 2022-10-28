@@ -95,7 +95,7 @@ jobs:
         # For details, see
         # https://github.com/marketplace/actions/github-pages-action
         #
-        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 
         # Ensure to match the source branch specified on the GitHub setting.
         #
