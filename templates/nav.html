@@ -4,9 +4,9 @@
     theme-intro: 課程主題
     ocean-intro: 型別原理
     mountain-intro: 自動驗證
-    past-activity: 歷年<br class="d-sm-none">課程
-    current: 應屆<br class="d-none">課程
-    registration: 報名<br class="d-none">資訊
+    past-activity: 歷年課程
+    current: 應屆課程
+    registration: 報名資訊
     lang-toggle: En
   en:
     home: Home
@@ -19,13 +19,16 @@
     lang-toggle: 中
 
 ---
-<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark-shade justify-content-xl-around justify-content-between py-md-2 py-sm-1 py-0" style="font-weight: 600">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark-shade justify-content-xl-around justify-content-between py-md-2 py-sm-1 py-0" style="font-weight: 600">
   <!-- TODO: use CSS to control heights in different window widths -->
-  <div class="container-md px-lg-5 px-0">
-    <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="/img/logo.svg" style="height: 2rem"/></a>
-    <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="/img/logo.svg" style="height: 1.5rem"/></a>
+  <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="/img/logo.svg" style="height: 2rem" class="logo"/></a>
+  <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="/img/logo.svg" style="height: 1.5rem" class="logo"/></a>
 
-    <ul class="navbar-nav justify-content-md-center justify-content-around align-items-center">
+  <div class="collapse navbar-collapse px-lg-5 px-0" id="navbarNav">
+    <ul class="navbar-nav justify-content-md-center justify-content-around align-items-left">
       <li class="nav-item"><a class="nav-link" href="/$lang$/">$LC.home$</a></li>
       <li class="nav-item"><a class="nav-link" href="/$lang$/$current_year$">$LC.current$</a></li>
       <li class="nav-item"><a class="nav-link" href="/$lang$/$current_year$/registration.html">$LC.registration$</a></li>
@@ -55,14 +58,14 @@
       </li>
     </ul>
 
-    <span class="navbar-nav">
-      <a class="nav-link d-none d-sm-flex" href="javascript:location='mailto:\u0066\u006c\u006f\u006c\u0061\u0063\u0040\u0069\u0069\u0073\u002e\u0073\u0069\u006e\u0069\u0063\u0061\u002e\u0065\u0064\u0075\u002e\u0074\u0077';void 0"><i class="fas fa-envelope"></i></a>
-      <a class="nav-link d-none d-sm-flex" href="https://github.com/flolac-tw"><i class="fab fa-github"></i></a>
-      <a class="nav-link d-none d-sm-flex" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
-      <a class="nav-link d-none d-sm-flex" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
-<!--      <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a> -->
-      <a class="nav-link d-sm-flex" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
-    </span>
   </div>
+  <span class="navbar-nav" id="actions">
+    <a class="nav-link" href="javascript:location='mailto:\u0066\u006c\u006f\u006c\u0061\u0063\u0040\u0069\u0069\u0073\u002e\u0073\u0069\u006e\u0069\u0063\u0061\u002e\u0065\u0064\u0075\u002e\u0074\u0077';void 0"><i class="fas fa-envelope"></i></a>
+    <a class="nav-link" href="https://github.com/flolac-tw"><i class="fab fa-github"></i></a>
+    <a class="nav-link" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+    <a class="nav-link" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+<!-- <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a> -->
+    <a class="nav-link" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
+  </span>
 </nav>
 $body$

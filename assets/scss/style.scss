@@ -35,17 +35,31 @@ $foreground-light-emph :black;
 
 
 nav {
-    height: $nav-height;
+    //height: $nav-height;
+    &::before, &::after {
+        content: "";
+        margin-left: calc((100vw - $width) / 2);
+
+        @media (max-width: $breakpoint) {
+            display: none;
+        }
+    }
 
     ul {
         flex-basis: 100%;
     }
 
     .nav-item {
-        text-align     : center;
-
         .nav-link {
             white-space: normal;
+        }
+    }
+
+    #actions {
+        flex-direction: row;
+
+        @media(max-width: $breakpoint2) {
+            gap: 1rem;
         }
     }
 }
