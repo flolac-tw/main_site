@@ -1,7 +1,8 @@
-$breakpoint : 992px; // used by Bootstrap
-$breakpoint2: 576px;
+$breakpoint-lg: 992px; // used by Bootstrap
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
 
-$width        : $breakpoint;
+$width        : $breakpoint-lg;
 $margin       : 3rem;
 $padding      : 1rem;
 $border-radius: 0.5rem;
@@ -38,9 +39,9 @@ nav {
     //height: $nav-height;
     &::before, &::after {
         content: "";
-        margin-left: calc((100vw - $width) / 2);
+        margin-left: calc( ( 100vw - 992px ) / 2 ); // Variable in calc not working in Dart Sass
 
-        @media (max-width: $breakpoint) {
+        @media (max-width: $breakpoint-lg) {
             display: none;
         }
     }
@@ -58,7 +59,7 @@ nav {
     #actions {
         flex-direction: row;
 
-        @media(max-width: $breakpoint2) {
+        @media(max-width: $breakpoint-md) {
             gap: 1rem;
         }
     }
@@ -443,7 +444,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
         display: block;
 
         > :first-child,
@@ -497,7 +498,7 @@ h4 {
 		display: none;
 	}
 
-	@media (max-width: $breakpoint) {
+	@media (max-width: $breakpoint-lg) {
 		h1 {
 			font-size: 250%;
 		}
@@ -507,7 +508,7 @@ h4 {
 		}
 	}
 
-	@media (max-width: $breakpoint2) {
+	@media (max-width: $breakpoint-sm) {
 		h1 {
 			font-size: 100%;
 		}
@@ -545,7 +546,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
         ol {
             column-count: 1;
         }
@@ -569,7 +570,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
         h2 {
             text-align: left;
         }
@@ -633,7 +634,7 @@ h4 {
     }
 
     // make the tab text smaller on mobile 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
 
         >section>div {
             columns: unset;
@@ -678,12 +679,12 @@ h4 {
 	img {
 		display: none;
 	}
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
 		h1 {
 			font-size: 150%;
 		}
 	}
-	@media (max-width: $breakpoint2) {
+	@media (max-width: $breakpoint-sm) {
 		h1 {
 			display: none;
 		}
@@ -747,7 +748,7 @@ h4 {
 
 
         // make the tab text smaller on mobile 
-        @media (max-width: $breakpoint2) {
+        @media (max-width: $breakpoint-sm) {
 
             .lecture-content {
                 display: block;
@@ -870,7 +871,7 @@ h4 {
 
 
     // make the tab text smaller on mobile 
-    @media (max-width: $breakpoint2) {
+    @media (max-width: $breakpoint-sm) {
         padding : $padding
     }
 }
@@ -952,7 +953,7 @@ h4 {
 
     }
     // for mobile 
-    @media (max-width: $breakpoint2) {
+    @media (max-width: $breakpoint-sm) {
        small {
            display: none;
        }
@@ -993,7 +994,7 @@ h4 {
         border-top: solid $border-width transparent;
 
         // make the tab text smaller on mobile 
-        @media (max-width: $breakpoint2) {
+        @media (max-width: $breakpoint-sm) {
 
             a {
                 &.full {
@@ -1026,7 +1027,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint) {
+    @media (max-width: $breakpoint-lg) {
         >li {
             padding: $margin $padding;
         }
