@@ -50,6 +50,11 @@ nav {
         flex-basis: 100%;
     }
 
+    .dropdown-menu {
+        max-height: 60vh;
+        overflow-x: hidden;
+    }
+
     #actions {
         @media(max-width: $breakpoint-md) {
             gap: 1rem;
