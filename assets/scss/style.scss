@@ -686,14 +686,6 @@ h4 {
 			font-size: 150%;
 		}
 	}
-	@media (max-width: $breakpoint-sm) {
-		h1 + span {
-			display: none;
-		}
-		h1 + span + br {
-			display: none;
-		}
-	}
 }
 
 #course-lectures {
