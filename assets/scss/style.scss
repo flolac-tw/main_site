@@ -50,15 +50,7 @@ nav {
         flex-basis: 100%;
     }
 
-    .nav-item {
-        .nav-link {
-            white-space: normal;
-        }
-    }
-
     #actions {
-        flex-direction: row;
-
         @media(max-width: $breakpoint-md) {
             gap: 1rem;
         }

@@ -19,13 +19,9 @@
     lang-toggle: 中
 
 ---
-<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark-shade justify-content-xl-around justify-content-between py-md-2 py-sm-1 py-0" style="font-weight: 600">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark-shade flex-md-row flex-md-wrap flex-row-reverse flex-wrap-reverse justify-content-xl-around justify-content-between py-md-2 py-sm-1 py-0" style="font-weight: 600">
   <!-- TODO: use CSS to control heights in different window widths -->
-  <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="/img/logo.svg" style="height: 2rem" class="logo"/></a>
-  <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="/img/logo.svg" style="height: 1.5rem" class="logo"/></a>
+  <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="/img/logo.svg" style="height: 2rem"/></a>
 
   <div class="collapse navbar-collapse px-lg-5 px-0" id="navbarNav">
     <ul class="navbar-nav justify-content-md-center justify-content-around align-items-left">
@@ -59,7 +55,7 @@
     </ul>
 
   </div>
-  <span class="navbar-nav" id="actions">
+  <span class="navbar-nav flex-row" id="actions">
     <a class="nav-link" href="javascript:location='mailto:\u0066\u006c\u006f\u006c\u0061\u0063\u0040\u0069\u0069\u0073\u002e\u0073\u0069\u006e\u0069\u0063\u0061\u002e\u0065\u0064\u0075\u002e\u0074\u0077';void 0"><i class="fas fa-envelope"></i></a>
     <a class="nav-link" href="https://github.com/flolac-tw"><i class="fab fa-github"></i></a>
     <a class="nav-link" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
@@ -67,5 +63,8 @@
 <!-- <a class="nav-link nav-item" href="#"><i class="fab fa-slack"></i></a> -->
     <a class="nav-link" href="$LC-toggle-url$"><small>$LC.lang-toggle$</small></a>
   </span>
+  <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 </nav>
 $body$
