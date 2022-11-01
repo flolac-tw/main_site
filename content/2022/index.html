@@ -42,7 +42,10 @@
         title: 更改上課地點為臺灣大學新生教學館 202 教室
     title: 邏輯、語言與計算暑期研習營
     subtitle: Formosan Summer School on Logic, Language, and Computation, 2022
-    location: "地點：國立臺灣大學新生教學館 202 教室"
+    time-n-place: "時間 & 地點"
+    date: "上課日期：8/1-8/12"
+    time: "上課時間：每日 9:00-17:00"
+    location: "上課地點：國立臺灣大學新生教學館 202 教室"
     introduction: 課程介紹
     introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
     special-lecture: 特別講座
@@ -132,6 +135,9 @@
         title: 更改上課地點為臺灣大學新生教學館 202 教室
     title: Formosan Summer School on Logic, Language, and Computation, 2022
     subtitle: 邏輯、語言與計算暑期研習營
+    time-n-place: "Time & Place"
+    date: "Date: 8/1-8/12"
+    time: "Time: 9:00-17:00"
     location: "Location: Room 202, Freshman Classroom Building, National Taiwan University"
     introduction: Introduction
     introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
@@ -185,11 +191,19 @@
 <div id="header" class="$yearly_theme$">
   <header>
     <h1>$LC.title$</h1>
-    <img src="../../img/logo.svg">
-    <span>$LC.subtitle$</span><br /><span>$date$</span>&emsp;<span>$time$</span><br/><span>$LC.location$</span>
+    <span class="d-sm-inline d-none">$LC.subtitle$</span>
   </header>
 </div>
-
+<div class="alt $yearly_theme$">
+  <section>
+    <h2>$LC.time-n-place$</h2>
+    <ul>
+      <li>$LC.date$</li>
+      <li>$LC.time$</li>
+      <li>$LC.location$</li>
+    </ul>
+  </section>
+</div>
 <div class="two-column $yearly_theme$">
   <section>
     <h2>$LC.introduction$</h2>
