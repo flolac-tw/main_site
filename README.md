@@ -1,4 +1,4 @@
-# FLOLAC 網站
+# FLOLAC 網站 [![Hakyll site CI](https://github.com/flolac-tw/main_site/actions/workflows/hakyll.yml/badge.svg)](https://github.com/flolac-tw/main_site/actions/workflows/hakyll.yml)
 
 網站係用 [Hakyll](https://hackage.haskell.org/package/hakyll) 靜態網站編譯器維護，
 支援文件轉換器 [Pandoc](https://pandoc.org) 可用 Markdown, LaTeX 甚至 doc 格式。
