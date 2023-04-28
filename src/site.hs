@@ -35,7 +35,6 @@ import           Hakyll.Web.ExtendedTemplate.Type
 import           Hakyll.Web.Sass ( sassCompiler )
 import           Redirect
 import           Multilingual
-import           YearlyTheme
 
 main :: IO ()
 main = hakyll $ do
@@ -108,3 +107,10 @@ getURL i = maybe empty' toUrl <$> getRoute id
 -- An ad-hoc function of changing from /xxx/yyy to /dom/yyy
 substRoot :: String -> String -> String
 substRoot dom = intercalate "/" . ([[], dom] ++) . drop 2 . splitOn "/"
+
+data Theme = Ocean | Mountain
+
+themeCtx :: Theme -> Context a
+themeCtx th = case th of
+                Ocean -> stringField "yearly_theme" (const $ return "ocean")
+                Mountain -> stringField "yearly_theme" (const $ return "mountain")

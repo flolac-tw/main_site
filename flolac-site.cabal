@@ -26,7 +26,6 @@ executable site
 
   other-modules:    Multilingual
                     Redirect
-                    YearlyTheme
                     Hakyll.Web.ExtendedTemplate
                     Hakyll.Web.ExtendedTemplate.Context
                     Hakyll.Web.ExtendedTemplate.Parser
