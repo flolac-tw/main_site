@@ -74,6 +74,7 @@ jobs:
         external_repository: flolac-tw/flolac-tw.github.io
         publish_branch: master
         publish_dir: _site
+        force_orphan: true
         
     - uses: peaceiris/actions-gh-pages@v3
       name: Publish to the project site
