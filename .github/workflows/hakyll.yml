@@ -6,8 +6,8 @@ on:
       - master
       - dev
   schedule:
-    - cron: '0 5 * * *'
-
+    - cron: '* 17 * * *'
+      # Liang-Ting (2023-04-28): Run this workflow every day at 1700 UTC, i.e. 0100 Taiwan Time.
 jobs:
   build:
     strategy:
@@ -39,18 +39,6 @@ jobs:
       run: |
         stack build ${FLAGS}
         npm install
-        mkdir -p assets/css
-
-    - name: Compile CSS from SCSS files
-      uses: gha-utilities/sass-build@v0.2.6
-      with:
-        source: assets/scss/custom.scss
-        destination: assets/css/custom.css
-
-    - uses: gha-utilities/sass-build@v0.2.6
-      with:
-        source: assets/scss/style.scss
-        destination: assets/css/style.css
 
     - name: Build the site
       env:
