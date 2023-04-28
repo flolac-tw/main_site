@@ -45,10 +45,10 @@ jobs:
         # citeproc requires this locale environment variable.
         LANG: en_US.UTF-8
       run: |
-        stack build ${FLAGS} --exec "site build"
+        stack run ${FLAGS} -- site build
     - name: Check the site output
       run: |
-        stack build ${FLAGS} --exec "site check --internal-links"
+        stack run ${FLAGS} -- site check --internal-links
 
     - uses: peaceiris/actions-gh-pages@v3
       name: Publish to the organsiation site      
