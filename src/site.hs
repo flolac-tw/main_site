@@ -32,6 +32,7 @@ import           Hakyll.Web.Html.RelativizeUrls
 import           Hakyll.Web.ExtendedTemplate
 import           Hakyll.Web.ExtendedTemplate.Type
 
+import           Hakyll.Web.Sass ( sassCompiler )
 import           Redirect
 import           Multilingual
 import           YearlyTheme
@@ -77,9 +78,12 @@ main = hakyll $ do
     route (gsubRoute "assets/" (const ""))
     compile copyFileCompiler
 
-  match "assets/css/**" $ do
-    route (gsubRoute "assets/" (const ""))
-    compile compressCssCompiler
+  scssDependency <- makePatternDependency "assets/scss/style.scss"
+  rulesExtraDependencies [scssDependency]
+    $ match "assets/scss/custom.scss"
+    $ do
+      route $ setExtension "css" `composeRoutes` gsubRoute "assets/scss/" (const "css/")
+      compile (fmap compressCss <$> sassCompiler)
 
   match "assets/html/**" $ do
     route (gsubRoute "assets/html/" (const ""))

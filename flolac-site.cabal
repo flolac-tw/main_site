@@ -11,6 +11,7 @@ executable site
                   , extra  >= 0.1
                   , filepath >= 1.0 && < 1.5
                   , hakyll >= 4.13
+                  , hakyll-sass >= 0.2.4
                   , mtl >= 1 && < 2.3
                   , parsec >= 3.0 && < 3.2
                   , scientific >= 0.3.6 && < 4

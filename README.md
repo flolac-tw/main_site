@@ -11,7 +11,7 @@
 
 ## 安裝
 
-如需在本地端檢視結果，需先安裝 [Stack](https://docs.haskellstack.org/en/stable/README/)
+如需在本地端檢視結果，需先安裝 [Stack](https://docs.haskellstack.org/en/stable/README/) 以及 [npm](https://www.npmjs.com)
 
 1. 複製這個 repo：
 
@@ -34,10 +34,10 @@ stack build
 
 ## 預覽結果
 
-在 repo 所在的目錄下執行（反正你都在寫前端了應該至少有個裝 `npm` 吧）
+在 repo 所在的目錄下執行
 
 ```
-npm run watch
+stack run -- site watch
 ```
 
 若成功的話最後會顯示 `Success` 進入監控模式，網站可連入 http://127.0.0.1:8000 瀏覽。

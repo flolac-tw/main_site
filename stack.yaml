@@ -19,3 +19,5 @@ extra-deps:
 # - 'hakyll-4.15.1.1'
 - git: https://github.com/flolac-tw/hakyll.git
   commit: 4477cbed4d9a2c1d0ccd699aa96e5117f532b496
+- 'hakyll-sass-0.2.4'
+    
