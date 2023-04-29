@@ -1,4 +1,4 @@
-name: Hakyll site CI
+name: Build & Deploy (by Hakyll)
 
 on:
   push:
@@ -38,7 +38,6 @@ jobs:
     - name: Build dependencies and the site generator
       run: |
         stack build ${FLAGS}
-        npm install
 
     - name: Build the site
       env:
