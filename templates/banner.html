@@ -8,8 +8,8 @@ $if(fancy-banner)$
     </div>
   </div>
 </header>
-$endif$
-$if(plain-banner)$
+$-endif$
+$-if(plain-banner)$
 <header class="container-fluid">
   <div class="row">
     <div class="col">
@@ -19,8 +19,8 @@ $if(plain-banner)$
     </div>
   </div>
 </header>
-$endif$
-$if(image-banner)$
+$-endif$
+$-if(image-banner)$
 <header class="container-fluid px-0">
   <div class="row no-gutters">
     <div class="col bg-gd"></div>
@@ -46,6 +46,4 @@ $if(image-banner)$
     <div class="col bg-gd2"></div>
   </div>
 </header>
-$endif$
-
-$body$
+$-endif$$body$

@@ -1,312 +1,216 @@
 ---
-  <!-- image-banner: True -->
-  import: config.yaml
-  calendar: 
-    - time: 6/1
-      title: 宣佈停辦
-  announcement:
-    - time: 6/1
-      title: "本年度邏輯、語言與計算暑期研習營（FLOLAC）因應疫情停辦一年。"
-  zh:
-    title: 邏輯、語言與計算暑期研習營
-    subtitle: Formosan Summer School on Logic, Language, and Computation, 2021
-    date: "停辦"
-    time: ""
-    location: "臺灣大學管理學院"
-    introduction: 課程介紹
-    special-lecture: 特別講座
-    lecturer: 課程講師
-    announcement: 公告事項
-    dates: 重要日期
-    course: 課程
-    courses:
-      - title: 命題邏輯與一階邏輯
-        lecturer: 王柏堯
-        affli: 中央研究院資訊科學研究所 
-      - title: 驗證密碼學程式
-        lecturer: 蔡明憲
-        affli: 中央研究院資訊科學研究所
-      - title: 霍爾邏輯
-        lecturer: 穆信成
-        affli: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
-      - title: 邏輯的理論研究
-        lecturer: 陳偉松
-        affli: 國立臺灣大學資訊工程學系 
-      - title: 布林可滿足性與其在合成與驗證的應用
-        lecturer: 江介宏
-        affli: 國立臺灣大學電機工程學系
-      - title: 布林可滿足性演算法
-        lecturer: 黃鍾揚
-        affli: 國立臺灣大學電機工程學系
-      - title: 程式驗證導論／SMT 演算法
-        lecturer: 陳郁方
-        affli: 中央研究院資訊科學研究所
-      - title: Dafny 程式驗證工具
-        lecturer: 林子期 
-        affli: 中央研究院資訊科學研究所
-      - title: 基於 SMT 的程式測試
-        lecturer: 郁方
-        affli: 國立政治大學資訊管理學系
-    special-topic: 基於邏輯的程式測試與驗證
-    special-talk: 特別演講
-    speaker: 主講人
-    speaker-name: 謝邁思
-    speaker-affli: GitHub
-    talk-title: 題目
-    talk-title-content: 資料流分析導論
-    talk-abstract: 摘要
-    talk-abstract-content: ""
-  en:
-    title: Formosan Summer School on Logic, Language, and Computation, 2021
-    subtitle: 邏輯、語言與計算暑期研習營
-    date: "停辦"
-    time: ""
-    location: ""
-    introduction: Introduction
-    lecturer: Lecturer(s)
-    special-lecture: Special Lecture
-    announcement: Announcements
-    dates: Important dates
-    course: Courses
-    courses:
-      - title: 命題邏輯與一階邏輯
-        lecturer: 王柏堯
-        affli: 中央研究院資訊科學研究所 
-      - title: 驗證密碼學程式
-        lecturer: 蔡明憲
-        affli: 中央研究院資訊科學研究所
-      - title: 霍爾邏輯
-        lecturer: 穆信成
-        affli: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
-      - title: 邏輯的理論研究
-        lecturer: 陳偉松
-        affli: 國立臺灣大學資訊工程學系 
-      - title: 布林可滿足性與其在合成與驗證的應用
-        lecturer: 江介宏
-        affli: 國立臺灣大學電機工程學系
-      - title: 布林可滿足性演算法
-        lecturer: 黃鍾揚
-        affli: 國立臺灣大學電機工程學系
-      - title: 程式驗證導論／SMT 演算法
-        lecturer: 陳郁方
-        affli: 中央研究院資訊科學研究所
-      - title: Dafny 程式驗證工具
-        lecturer: 林子期 
-        affli: 中央研究院資訊科學研究所
-      - title: 基於 SMT 的程式測試
-        lecturer: 郁方
-        affli: 國立政治大學資訊管理學系
-    special-topic: "基於邏輯的程式測試與驗證"
-    logic: First-Order Logic
-    speaker-logic: Bow-Yaw Wang
-    hoare: 霍爾邏輯
-    speaker-hoare: 穆信成
-    automata: Automata Theory
-    speaker-automata: Ming-Hsien Tsai
-    DL: Description Logics and its Application in AI and Knowledge Systems
-    speaker-DL: Tony Tan
-    BoolSat: Boolean Satisfiability and Its Applications to Synthesis and Verification
-    speaker-BoolSat: Roland Jiang
-    SMT: Satisfiability Modulo Theories
-    speaker-SMT: Yu-Fang Chen
-    StrProg: Automata-based String Manipulating Program Analysis
-    speaker-StrProg: Fang Yu
-    functional-programming: Functional Programming
-    DTP: Dependently Typed Programming
-    special-talk: Special Talk
-    speaker: Speaker
-    speaker-name: Max Schäfer
-    speaker-affli: GitHub
-    talk-title: Title
-    talk-title-content: Introduction to Static Data-flow Analysis
-    talk-abstract: Abstract 
-    talk-abstract-content: ""
+import: config.yaml
+calendar: 
+  - time: 6/1
+    title: 宣佈停辦
+announcements:
+  - time: 6/1
+    title: "本年度邏輯、語言與計算暑期研習營（FLOLAC）因應疫情停辦一年。"
+zh:
+  location: "臺灣大學管理學院"
+  introduction: 課程介紹
+  introduction-text: >-
+    近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+    邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+    自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+    邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十五屆。
+  talks:
+  - title: "資料流分析導論"
+    speaker: 謝邁思
+    affi: GitHub, Inc.
+    id: talk
+    abstract: ""
+  timetables:
+    week1:
+      morning:
+      - title: "程式驗證導論"
+        subtitle: "Introduction"
+        id: smt
+      - title: "命題邏輯與一階邏輯"
+        subtitle: "Propositional Logic and First Order Logic"
+        id: first-logic
+      - title: "霍爾邏輯"
+        subtitle: "Hoare Logic"
+        id: hoare
+      - title: "布林可滿足性演算法"
+        subtitle: "Boolean Satisfiability Algorithms"
+        id: sat
+      - title: "布林可滿足性演算法"
+        subtitle: "Boolean Satisfiability Algorithms"
+        id: sat
+      afternoon:
+      - title: "命題邏輯與一階邏輯"
+        subtitle: "Propositional Logic and First Order Logic"
+        id: first-logic
+      - title: "命題邏輯與一階邏輯"
+        subtitle: "Propositional Logic and First Order Logic"
+        id: first-logic
+      - title: "霍爾邏輯"
+        subtitle: "Hoare Logic"
+        id: hoare
+      - title: "布林可滿足性求解器實習課"
+        subtitle: "TA session on SAT solvers"
+        id: sat
+      - title: "SMT 演算法"
+        subtitle: "SMT Algorithms"
+        id: smt
+    week2:
+      morning:
+      - title: "SMT 演算法"
+        subtitle: "SMT Algorithms"
+        id: smt
+      - title: "布林可滿足性問題在合成與驗證的應用"
+        subtitle: "Boolean Satisfiability’s Applications to Synthesis and Verification"
+        id: boolean
+      - title: "邏輯的理論研究"
+        subtitle: "Theoretical Aspect of Logic Research"
+        id: logic
+      - title: "基於 SMT 的程式測試"
+        subtitle: "SMT-based Program Testing"
+        id: smt-testing
+      - title: "考試"
+        subtitle: "Exam"
+      afternoon:
+      - title: "Dafny 程式驗證工具"
+        subtitle: "Dafny Program Verifier"
+        id: dafny
+      - title: "布林可滿足性問題在合成與驗證的應用"
+        subtitle: "Boolean Satisfiability’s Applications to Synthesis and Verification"
+        id: boolean
+      - title: "邏輯的理論研究"
+        subtitle: "Theoretical Aspect of Logic Research"
+        id: logic
+      - title: "驗證密碼學程式"
+        subtitle: "Crypto Program Verification"
+        id: crypto
+      - title: "特別演講：資料流分析導論"
+        subtitle: "Introduction to static data-flow analysis"
+        id: talk
+  courses:
+  - title: 命題邏輯與一階邏輯
+    id: first-logic
+    instructors:
+    - name: 王柏堯
+      affi: 中央研究院資訊科學研究所 
+  - title: 驗證密碼學程式
+    id: crypto
+    instructors:
+    - name: 蔡明憲
+      affi: 中央研究院資訊科學研究所
+  - title: 霍爾邏輯
+    id: hoare
+    instructors:
+    - name: 穆信成
+      affi: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
+  - title: 邏輯的理論研究
+    id: logic
+    instructors:
+    - name: 陳偉松
+      affi: 國立臺灣大學資訊工程學系 
+  - title: 布林可滿足性與其在合成與驗證的應用
+    id: boolean
+    instructors:
+    - name: 江介宏
+      affi: 國立臺灣大學電機工程學系
+  - title: 布林可滿足性演算法
+    id: sat
+    instructors:
+    - name: 黃鍾揚
+      affi: 國立臺灣大學電機工程學系
+  - title: 程式驗證導論／SMT 演算法
+    id: smt
+    instructors:
+    - name: 陳郁方
+      affi: 中央研究院資訊科學研究所
+  - title: Dafny 程式驗證工具
+    id: dafny
+    instructors:
+    - name: 林子期 
+      affi: 中央研究院資訊科學研究所
+  - title: 基於 SMT 的程式測試
+    id: smt-testing
+    instructors:
+    - name: 郁方
+      affi: 國立政治大學資訊管理學系
+en:
+  location: ""
+  introduction: Introduction
+  introduction-text: >-
+    近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+    邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+    自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+    邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十五屆。
+  talks:
+  - title: "Introduction to Static Data-flow Analysis"
+    speaker: Max Schäfer
+    affi: GitHub, Inc.
+    id: "talk"
+    abstract: ""
+  courses:
+  - title: 命題邏輯與一階邏輯
+    id: first-logic
+    instructors:
+    - name: 王柏堯
+      affi: 中央研究院資訊科學研究所 
+  - title: 驗證密碼學程式
+    id: crypto
+    instructors:
+    - name: 蔡明憲
+      affi: 中央研究院資訊科學研究所
+  - title: 霍爾邏輯
+    id: hoare
+    instructors:
+    - name: 穆信成
+      affi: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
+  - title: 邏輯的理論研究
+    id: logic
+    instructors:
+    - name: 陳偉松
+      affi: 國立臺灣大學資訊工程學系 
+  - title: 布林可滿足性與其在合成與驗證的應用
+    id: boolean
+    instructors:
+    - name: 江介宏
+      affi: 國立臺灣大學電機工程學系
+  - title: 布林可滿足性演算法
+    id: sat
+    instructors:
+    - name: 黃鍾揚
+      affi: 國立臺灣大學電機工程學系
+  - title: 程式驗證導論／SMT 演算法
+    id: smt
+    instructors:
+    - name: 陳郁方
+      affi: 中央研究院資訊科學研究所
+  - title: Dafny 程式驗證工具
+    id: dafny
+    instructors:
+    - name: 林子期 
+      affi: 中央研究院資訊科學研究所
+  - title: 基於 SMT 的程式測試
+    id: smt-testing
+    instructors:
+    - name: 郁方
+      affi: 國立政治大學資訊管理學系
 ---
-
-<div id="header" class="$yearly_theme$">
-  <header>
-    <h1>$LC.title$</h1>
-    <span>$LC.subtitle$</span><br /><span>$LC.date$</span><span>$LC.time$</span><br/><span>$LC.location$</span>
-  </header>
-</div>
-
-<div class="two-column $yearly_theme$">
-  <section>
-    <h2>$LC.introduction$</h2>
-    <p> 近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。</p>
-    <p>「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。</p>
-    <p>自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。</p>
-    <p>「邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十五屆。 </p>
-  </section>
-  <section>
-    <h2>$LC.announcement$</h2>
-    <ul>
-      $foreach(event)in(announcement)$
-      <li><strong>$event.time$</strong> - $event.title$</li>
-      $endforeach$
-    </ul>
-  </section>
-</div>
-<div class="two-column $yearly_theme$ alt">
-  <section>
-    <h2>$LC.special-topic$</h2>
-    <p>
-    透過這次教學，我們希望讓大家了解邏輯對於寫程式的幫助。</br>
-    現在基於邏輯的程式驗證與測試已經不僅僅是理論。許多大公司，已經積極地採用。
-    再不學，就來不及囉。</br>
-    本次課程集結了國內相關研究的黃金陣容，講師來自中央研究院，台灣大學，政治大學。
-    無論經驗或是研究成果都是目前首選，相信不會讓大家失望。</br>
-    </p>
-    <h3>（傳統）程式一定會有錯</h3>
-    <p>
-    現今程式的規模已經日益龐大，在實務上，以傳統方式開發的程式，只要超過一定的大小，無可避免的，一定或多或少會有一些錯誤。
-    這些錯誤，可大可小，常常會造成經濟上的損失或是更大的危害。
-    </p>
-    <h3>（自動）推論幫你找到錯</h3>
-    <p>
-    我們會討論各種基於邏輯的方法，自動化的幫忙找到程式錯誤，甚至證明修改過的已經完全符合定出來的規格。這些方法許多已經在最先進的業界被採用，有許多更前沿的方法還在學界開發中。
-    </p>
-    <h3>（電腦）邏輯研究面面觀</h3>
-    <p>
-    除了自動驗證與測試，我們還會提到更多邏輯在電腦科學的研究議題。範圍從理論到實務，在理論研究上，我們有多名講師有電腦邏輯最重要會議 LICS (Logic in Computer Science) 議程委員的經驗，在實務上，我們也有多位講師曾經或現在任職於頂尖軟體公司，處理相關工作，如硬體的 Cadence 和軟體的 GitHub。
-    </p>
-  </section>
-  <section id="course-timeline">
-    <h2>$LC.dates$</h2>
-    <ol>
-      $foreach(event)in(calendar)$
-      $if(event.past)$
-        <li class="timeline-event-past">
-      $else$
-        $if(event.next)$
-          <li class="timeline-event-next">
-        $else$
-          <li >
-        $endif$
-      $endif$
-        <div class="timeline-event-date-container">
-          <div class="timeline-event-date">
-            $event.time$
-          </div>
-        </div>
-        <div class="timeline-event-content-container">
-          <div class="timeline-event-content">
-            $event.title$
-          </div>
-        </div>
-      </li>
-      $endforeach$
-    </ol>
-  </section>
-</div>
-<div id="course-lectures" class="$yearly_theme$">
-  <section>
-    <h2>$LC.course$</h2>
-    $foreach(course)in(LC.courses)$
-    <div class="lecture">
-      <h3><span></span>$course.title$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.lecturer$</h4>
-          <dl>
-            <dt>$course.lecturer$</dt>
-            <dd>$course.affli$</dd>
-          </dl>
-        </div>
-        <div>
-          <h4>教學資源</h4>
-          <h6>講義</h6>
-          <h6>原始檔</h6>
-          <h6>練習解答</h6>
-          <h6>考試範圍</h6>
-        </div>
-      </div>
-    </div>
-    $endforeach$
-    <div class="lecture">
-      <h3><span id="lecture-special"></span>$LC.special-talk$</h3>
-      <div class="lecture-content">
-        <div>
-          <h4>$LC.speaker$</h4>
-          <dl>
-            <dt>$LC.speaker-name$</dt>
-            <dd>$LC.speaker-affli$</dd>
-          </dl>
-          <h4>$LC.talk-title$</h4>
-          $LC.talk-title-content$
-        </div>
-        <div>
-          <h4>$LC.talk-abstract$</h4>
-          $LC.talk-abstract-content$
-          <ul class="list-inline">
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<div id="timetable" class="alt $yearly_theme$">
-  <section>
-    <h2>課表</h2>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">第一週</th>
-          <th scope="col">星期一</th>
-          <th scope="col">星期二</th>
-          <th scope="col">星期三</th>
-          <th scope="col">星期四</th>
-          <th scope="col">星期五</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">上午</th>
-          <td class=""><a href="#lecture">程式驗證導論</a><small>Introduction</small></td>
-          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
-          <td class=""><a href="#lecture">霍爾邏輯</a><small>Hoare Logic</small></abbr></td>
-          <td class=""><a href="#lecture">布林可滿足性演算法</a><small>Boolean Satisfiability Algorithms</small></td>
-          <td class=""><a href="#lecture">布林可滿足性演算法</a><small>Boolean Satisfiability Algorithms</small></td>
-        </tr>
-        <tr>
-          <th scope="row">下午</th>
-          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
-          <td class=""><a href="#lecture">命題邏輯與一階邏輯</a><small>Propositional Logic and First Order Logic</small></td>
-          <td class=""><a href="#lecture">霍爾邏輯</a><small>Hoare Logic</small></td>
-          <td class=""><a href="#lecture">布林可滿足性求解器實習課</a><small>TA session on SAT solvers</small></td>
-          <td class=""><a href="#lecture">SMT 演算法</a><small>SMT Algorithms</small></td>
-        </tr>
-      </tbody>
-    </table>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">第二週</th>
-          <th scope="col">星期一</th>
-          <th scope="col">星期二</th>
-          <th scope="col">星期三</th>
-          <th scope="col">星期四</th>
-          <th scope="col">星期五</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">上午</th>
-          <td class=""><a href="#lecture">SMT 演算法</a><small>SMT Algorithms</small></td>
-          <td class=""><a href="#lecture">布林可滿足性問題在合成與驗證的應用</a><small>Boolean Satisfiability’s Applications to Synthesis and Verification</small></td>
-          <td class=""><a href="#lecture">邏輯的理論研究</a><small>Theoretical Aspect of Logic Research</small></td>
-          <td class=""><a href="#lecture">基於 SMT 的程式測試</a><small>SMT-based Program Testing</small></td>
-          <td class=""><a href="#lecture">考試</a><small>Exam</small></td>
-        </tr>
-        <tr>
-          <th scope="row">下午</th>
-          <td class=""><a href="#lecture">Dafny 程式驗證工具</a><small>Dafny Program Verifier</small></td>
-          <td class=""><a href="#lecture">布林可滿足性問題在合成與驗證的應用</a><small>Boolean Satisfiability’s Applications to Synthesis and Verification</small></td>
-          <td class=""><a href="#lecture">邏輯的理論研究</a><small>Theoretical Aspect of Logic Research</small></td>
-          <td class=""><a href="#lecture">驗證密碼學程式</a><small>Crypto Program Verification</small></td>
-          <td class=""><a href="#lecture">特別演講：資料流分析導論</a><small>Introduction to static data-flow analysis</small></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</div>
+<h2>基於邏輯的程式測試與驗證</h2>
+<p>
+透過這次教學，我們希望讓大家了解邏輯對於寫程式的幫助。</br>
+現在基於邏輯的程式驗證與測試已經不僅僅是理論。許多大公司，已經積極地採用。
+再不學，就來不及囉。</br>
+本次課程集結了國內相關研究的黃金陣容，講師來自中央研究院，台灣大學，政治大學。
+無論經驗或是研究成果都是目前首選，相信不會讓大家失望。</br>
+</p>
+<h3>（傳統）程式一定會有錯</h3>
+<p>
+現今程式的規模已經日益龐大，在實務上，以傳統方式開發的程式，只要超過一定的大小，無可避免的，一定或多或少會有一些錯誤。
+這些錯誤，可大可小，常常會造成經濟上的損失或是更大的危害。
+</p>
+<h3>（自動）推論幫你找到錯</h3>
+<p>
+我們會討論各種基於邏輯的方法，自動化的幫忙找到程式錯誤，甚至證明修改過的已經完全符合定出來的規格。這些方法許多已經在最先進的業界被採用，有許多更前沿的方法還在學界開發中。
+</p>
+<h3>（電腦）邏輯研究面面觀</h3>
+<p>
+除了自動驗證與測試，我們還會提到更多邏輯在電腦科學的研究議題。範圍從理論到實務，在理論研究上，我們有多名講師有電腦邏輯最重要會議 LICS (Logic in Computer Science) 議程委員的經驗，在實務上，我們也有多位講師曾經或現在任職於頂尖軟體公司，處理相關工作，如硬體的 Cadence 和軟體的 GitHub。
+</p>

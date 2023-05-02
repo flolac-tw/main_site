@@ -1,4 +1,4 @@
-$body$
+$-body$
 <footer>
   <div class="container-fluid bg-dark-shade text-light small">
     <div class="container-md px-xl-5 px-2 py-4 py-xl-5 d-flex flex-column flex-md-row justify-content-around ">
@@ -13,44 +13,44 @@ $body$
             <li>台灣大學資訊管理學系</li>
           </ul>
         </dd>
-        $if(sponsors)$
+        $-if(sponsors)$
         <dt>贊助單位</dt>
         <dd>
           <ul class="list-inline-block m-0">
-          $foreach(name)in(sponsors)$
+            $-foreach(name)in(sponsors)$
             <li>$name$</li>
-          $endforeach$
+            $-endforeach$
           </ul>
         </dd>
-        $endif$
+        $endif-$
         <dt>籌辦團隊</dt>
         <dd>
           <dl class="inline-block-lists m-0">
-            $if(programme)$
+            $-if(programme)$
             <div>
               <dt class="">課程委員</dt>
               <dd>
                 <div class="container-4-rows">
-                  $foreach(name)in(programme)$
+                  $-foreach(name)in(programme)$
                   <div>$name$</div>
-                  $endforeach$
+                  $-endforeach$
                 </div>
               </dd>
             </div>
-            $endif$
-            $if(local)$
+            $-endif$
+            $if(local)-$
             <div>
               <dt>事務委員</dt>
               <dd>
                 <div = class="container-4-rows">
-                  $foreach(name)in(local)$
+                  $-foreach(name)in(local)$
                   <div>$name$</div>
-                  $endforeach$
+                  $-endforeach$
                 </div>
               </dd>
             </div>
-            $endif$
-            $if(ta_boss)$
+            $-endif$
+            $if(ta_boss)-$
             <div>
               <dt>助教團長</dt>
               <dd>
@@ -59,19 +59,19 @@ $body$
                 </div>
               </dd>
             </div>
-            $endif$
-            $if(ta)$
+            $-endif$
+            $if(ta)-$
             <div>
               <dt>助教團</dt>
               <dd>
                 <div class="container-4-rows">
-                  $foreach(name)in(ta)$
+                  $-foreach(name)in(ta)$
                   <div>$name$</div>
-                  $endforeach$
+                  $-endforeach$
                 </div>
               </dd>
             </div>
-            $endif$
+            $-endif$
           </dl>
         </dd>
         <dt>連絡信箱</dt>

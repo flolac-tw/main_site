@@ -1,0 +1,230 @@
+---
+zh:
+  title: 邏輯、語言與計算暑期研習營
+  subtitle: Formosan Summer School on Logic, Language, and Computation
+  introduction: 課程介紹
+  special-lecture: 特別講座
+  announcement: 公告事項
+  dates: 重要日期
+  course: 課程
+  special-talk: 特別演講
+  speaker: 主講人
+  talk-title: 題目
+  talk-abstract: 摘要
+  slides: 投影片
+  download: 下載
+  lecturer: 講師
+  resource: 教學資源
+  fst-week: 第一週
+  snd-week: 第二週
+  monday: 星期一
+  tuesday: 星期二
+  wednesday: 星期三
+  thursday: 星期四
+  friday: 星期五
+  morning: 上午
+  afternoon: 下午
+
+en:
+  title: Formosan Summer School on Logic, Language, and Computation
+  subtitle: 邏輯、語言與計算暑期研習營
+  introduction: Introduction
+  special-lecture: Special Lecture
+  announcement: Announcements
+  dates: Important dates
+  course: Courses
+  special-talk: Special Talk
+  speaker: Speaker
+  slides: Slides
+  download: Download
+  talk-title: Title
+  talk-abstract: Abstract
+  lecturer: "Taught by"
+  resource: Resources
+  fst-week: 1st week
+  snd-week: 2nd week
+  monday: Mon
+  tuesday: Tue
+  wednesday: Wed
+  thursday: Thu
+  friday: Fri
+  morning: Morning
+  afternoon: Afternoon
+---
+<div id="header" class="$theme$">
+  <header>
+    <h1>$LC.title$</h1>
+    <img src="../../img/logo.svg">
+    <span>$LC.subtitle$, $year$</span><br /><span>$date$</span>&emsp;<span>$time$</span><br/><span>$LC.location$</span>
+  </header>
+</div>
+<div class="two-column $theme$">
+  <section>
+    <h2>$LC.introduction$</h2>
+    <p>$LC.introduction-text$</p>
+  </section>
+  <section>
+    <h2>$LC.announcement$</h2>
+    <ul>$foreach(event)in(announcements)$
+      <li><strong>$event.time$</strong> - $event.title$</li>$endforeach$
+    </ul>
+  </section>
+</div>
+<div class="two-column $theme$ alt">
+  <section>
+    $body$
+  </section>
+  <section id="course-timeline">
+    <h2>$LC.dates$</h2>
+    <ol>$foreach(event)in(calendar)$
+    $-if(event.past)$
+      <li class="timeline-event-past">
+      $-else$ $if(event.next)-$
+      <li class="timeline-event-next">
+      $else-$
+      <li >
+      $-endif$
+    $-endif$
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">$event.time$</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">$event.title$</div>
+        </div>
+      </li>$endforeach$
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="$theme$">
+  <section>
+    <h2>$LC.course$</h2>
+    $-if(LC.course)$
+    $-foreach(course)in(LC.courses)$
+    <div class="lecture"><h3><span id="lecture-$course.id$"></span>$course.title$</h3>
+      $-if(course.subtitle)$<h4>$course.subtitle$</h4>$endif-$
+      $if(course.intro)$<p>$course.intro$</p>$endif$
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.lecturer$</h4>
+          <dl>
+            $-foreach(inst)in(course.instructors)$
+            <dt>$inst.name$</dt>
+            <dd>$inst.affi$</dd>$endforeach$
+          </dl>
+        </div>
+        $-if(course.resource)$
+        <div>
+          <h4>$LC.resource$</h4>$foreach(r)in(course.resource)$
+          <h6>$r.type$</h6>
+          <ul class="list-inline">
+            $-foreach(it)in(r.items)$
+            $-if(it.link)$
+            <li class="list-inline-item"><a href=$it.link$>$it.name$</a> $if(it.note)$$it.note$
+            $-endif$</li>
+            $-else-$
+            <li class="list-inline-item">$it.name$</li>
+            $-endif$
+            $-endforeach$
+          </ul>$endforeach$
+        </div>$endif$
+      </div>
+    </div>
+    $-endforeach$
+    $-endif$
+    $-if(LC.talks)$
+    $-foreach(talk)in(LC.talks)$
+    <div class="lecture">
+      <h3 id="lecture-special"><span id="lecture-$talk.id$"></span>$LC.special-talk$ — $talk.title$</h3>
+      $if(talk.subtitle)$<h4>$talk.subtitle$</h4>$endif$
+      <p>$talk.abstract$</p>
+      <div class="lecture-content">
+        <div>
+          <h4>$LC.speaker$</h4>
+          <dl>
+            <dt>$talk.speaker$</dt>
+            <dd>$talk.affi$</dd>
+          </dl>
+        </div>
+        $-if(talk.slides)$
+        <div>
+          <h4>$LC.slides$</h4>
+          <ul class="list-inline">
+          </ul>
+          <a href=$talk.slides$>$LC.download$</a>
+        </div>
+        $-endif$
+      </div>
+    </div>
+    $-endforeach$
+    $-endif$
+  </section>
+</div>
+$-if(LC.timetables.week1.morning)$
+<div id="timetable" class="alt $theme$">
+  <section>
+    <h2>課表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">$LC.fst-week$</th>
+          <th scope="col">$LC.monday$</th>
+          <th scope="col">$LC.tuesday$</th>
+          <th scope="col">$LC.wednesday$</th>
+          <th scope="col">$LC.thursday$</th>
+          <th scope="col">$LC.friday$</th>
+        </tr>
+      </thead>
+      <tbody>
+        $-if(LC.timetables.week1.morning)$
+        <tr>
+          <th scope="row">$LC.morning$</th>
+          $-foreach(session)in(LC.timetables.week1.morning)$
+          <td>$if(session.id)$<a href="#lecture-$session.id$">$session.title$</a><small>$session.subtitle$</small>$else$<a>$session.title$</a>$if(session.subtitle)$<small>$session.subtitle$</small>$endif$$endif$</td>
+          $-endforeach$
+        </tr>
+        $-endif$
+        $-if(LC.timetables.week1.afternoon)$
+        <tr>
+          <th scope="row">$LC.afternoon$</th>
+          $-foreach(session)in(LC.timetables.week1.afternoon)$
+          <td>$if(session.id)$<a href="#lecture-$session.id$">$session.title$</a><small>$session.subtitle$</small>$else$<a>$session.title$</a>$if(session.subtitle)$<small>$session.subtitle$</small>$endif$$endif$</td>
+          $-endforeach$
+        </tr>
+        $-endif$
+      </tbody>
+    </table>
+    $-if(LC.timetables.week2.morning)$
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">$LC.snd-week$</th>
+          <th scope="col">$LC.monday$</th>
+          <th scope="col">$LC.tuesday$</th>
+          <th scope="col">$LC.wednesday$</th>
+          <th scope="col">$LC.thursday$</th>
+          <th scope="col">$LC.friday$</th>
+        </tr>
+      </thead>
+      <tbody>
+        $-if(LC.timetables.week2.morning)$
+        <tr>
+          <th scope="row">$LC.morning$</th>
+          $-foreach(session)in(LC.timetables.week2.morning)$
+          <td>$if(session.id)$<a href="#lecture-$session.id$">$session.title$</a><small>$session.subtitle$</small>$else$<a>$session.title$</a>$if(session.subtitle)$<small>$session.subtitle$</small>$endif$$endif$</td>
+          $-endforeach$
+        </tr>
+        $-endif$
+        $-if(LC.timetables.week2.afternoon)$
+        <tr>
+          <th scope="row">$LC.afternoon$</th>
+          $-foreach(session)in(LC.timetables.week2.afternoon)$
+          <td>$if(session.id)$<a href="#lecture-$session.id$">$session.title$</a><small>$session.subtitle$</small>$else$<a>$session.title$</a>$if(session.subtitle)$ <small>$session.subtitle$</small>$endif$$endif$</td>
+          $-endforeach$
+        </tr>
+        $-endif$
+      </tbody>
+    </table>
+    $endif-$
+  </section>
+</div>
+$-endif$

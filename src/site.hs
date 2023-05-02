@@ -41,7 +41,9 @@ main = hakyll $ do
   let currentYear = "2022"
   createRedirects [("index.html", "zh/"++currentYear++"/index.html")]
 
-  forM_ ["zh", "en"] $ \lc -> match "content/**.html" $ version lc $ do
+  -- Liang-Ting (2023-05-02):
+  -- TODO: Streamline the following two cases.
+  forM_ ["zh", "en"] $ \lc -> match "content/*/registration.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
       let ctx = constField "current_year" currentYear
@@ -63,6 +65,35 @@ main = hakyll $ do
               lc
               ctx'
               [ "templates/banner.html"
+              , "templates/nav.html"
+              , "templates/footer.html"
+              , "templates/head.html"
+              ]
+        >>= relativizeUrls
+
+  forM_ ["zh", "en"] $ \lc -> match "content/*/index.html" $ version lc $ do
+    route $ gsubRoute "content/" (const $ lc ++ "/")
+    compile $ do
+      let ctx = constField "current_year" currentYear
+             <> importField
+             <> defaultContext
+             <> localeCtx lc
+             <> langToggleURL lc
+
+      -- Treat metadata as template as well
+      appliedPage <- getResourceString >>= applyAsTemplate ctx
+      let (metadata, _) = either mempty id $ parsePage $ itemBody appliedPage
+          appliedMetadataField = Context $ \k _ -> do
+                let empty' = noResult $ "No '"  ++ k ++ "' field in applied metadata."
+                maybe empty' (return . String . T.pack) (lookupString k metadata)
+          ctx' = appliedMetadataField <> ctx
+      getResourceBody
+        >>= applyAsTemplate ctx'
+        >>= loadAndApplyTemplatesLC
+              lc
+              ctx'
+              [ "templates/course-index.html"
+              , "templates/banner.html"
               , "templates/nav.html"
               , "templates/footer.html"
               , "templates/head.html"
@@ -112,5 +143,5 @@ data Theme = Ocean | Mountain
 
 themeCtx :: Theme -> Context a
 themeCtx th = case th of
-                Ocean -> stringField "yearly_theme" (const $ return "ocean")
-                Mountain -> stringField "yearly_theme" (const $ return "mountain")
+                Ocean -> stringField "theme" (const $ return "ocean")
+                Mountain -> stringField "theme" (const $ return "mountain")

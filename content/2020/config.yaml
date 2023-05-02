@@ -1,4 +1,4 @@
-yearly_theme: ocean
+theme: ocean
 year: "2020"
 programme:
 - 柯向上
@@ -20,3 +20,6 @@ ta:
   - 潘昱仁 
   - 曾守瑜 
   - 張耀晟 
+
+date: "8/10-8/21"
+time: "09:00-17:00"
