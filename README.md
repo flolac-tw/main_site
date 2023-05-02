@@ -11,7 +11,7 @@
 
 ## 安裝
 
-如需在本地端檢視結果，需先安裝 [Stack](https://docs.haskellstack.org/en/stable/README/) 以及 [npm](https://www.npmjs.com)
+如需在本地端檢視結果，需先安裝 [Stack](https://docs.haskellstack.org/en/stable/README/)
 
 1. 複製這個 repo：
 
