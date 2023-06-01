@@ -1,46 +1,54 @@
 ---
-  <!-- image-banner: True -->
-  import: config.yaml
-  theme: mountain
-  zh:
-    title: 邏輯、語言與計算暑期研習營
-    subtitle: Formosan Summer School on Logic, Language, and Computation, 2021
-    date: "停辦"
-    time: ""
-    location: "臺灣大學管理學院"
-        
-  en:
-    title: Formosan Summer School on Logic, Language, and Computation, 2021
-    subtitle: 邏輯、語言與計算暑期研習營
-    date: "Cancelled"
-    time: ""
-    location: "臺灣大學管理學院"
+import: config.yaml
+zh:
+  title: 邏輯、語言與計算暑期研習營
+  subtitle: Formosan Summer School on Logic, Language, and Computation
+  date: 08/14-08/25
+  time: 09:00-17:00
+  location: "國立臺灣大學"
+en:
+  title: Formosan Summer School on Logic, Language, and Computation
+  subtitle: 邏輯、語言與計算暑期研習營
+  date: 08/14-08/25
+  time: 09:00-17:00
+  location: "National Taiwan University"
 ---
-
 <div id="header" class="$theme$">
   <header>
     <h1>$LC.title$</h1>
-    <span>$LC.subtitle$</span><br />
-    <span>$LC.date$</span>
-    <span>$LC.time$</span><br />
+    <span>$LC.subtitle$, $year$</span><br />
+    <span>$date$</span>&emsp;
+    <span>$time$</span><br />
     <span>$LC.location$</span>
   </header>
+</div>
+<div>
+  <section>
+    <h2>報名資訊</h2>
+    <p>本屆已開放報名。</p>
+    <p>FLOLAC 2022「邏輯、語言、與計算暑期研習營」開設為台灣大學暑期第一梯次的三學分選修課，課名為「程式語言理論與型態系統」。本課程開放在學大學生和研究生正式選課。</p>
+    <p>本屆開放旁聽。相關資訊請參考<a href="/$lang$/$year$/index.html">課程網站公告</a>和 <a href="https://www.facebook.com/flolac.tw/">Facebook 粉絲頁</a>公告。</p>
+  </section>
 </div>
 <div class="alt">
   <section>
     <h2>招收人數</h2>
     <ul>
       <li>修課人數 40 人</li>
-      <li>旁聽人數 40 人</li>
+      <li>旁聽人數 20 人</li>
     </ul>
     <p>報名人數超過名額上限時，將依報名所填的修課理由篩選。</p>
   </section>
 </div>
 <div>
   <section>
-    <h2>報名資訊</h2>
-    <p>本年度暑期營宣佈停辦。</p>
-    <!--ul id="registration-attendee-type-tab">
+    <h2>報名詳細辦法</h2>
+    <p>本暑期營目前有以下四種報名參與途徑，詳細報名方式與截止日期略微有異。</p>
+    <ul id="registration-attendee-type-tab">
+      <li id="intern-tab" class="selected">
+        <a href="#intern" class="full">外地實習生</a>
+        <a href="#intern" class="abbr">外地生</a>
+      </li>
       <li id="ntu-tab">
         <a href="#ntu" class="full">台大學生（修課）</a>
         <a href="#ntu" class="abbr">台大生</a>
@@ -55,60 +63,52 @@
       </li>
     </ul>
     <ul id="registration-attendee-type-page">
-      <li id="ntu" class="selected">
+      <li id="intern" class="selected">
+        <p>本屆未開放「外地實習生」名額。</p>
+      </li>
+      <li id="ntu">
         <p>此途徑限台大在學學生修課。</p>
         <p>請注意報名截止日期與一般暑期課程線上選課截止日期不同。</p>
+        <p>此課程的課號為 U 字頭，屬於大學部高年級和研究所的選修課程，學士與碩士一般可以採計為系外選修學分。各系所仍可能有更嚴格或特殊的規定（如少數科系可以作為系訂選修）。如有疑慮請洽各系所相關單位。</p>
         <h4>截止日期</h4>
-        <p>6 月 13 日（日）23:59</p>
+        <p>7 月 20 日（四）23:59</p>
         <h4>報名資格</h4>
         <p>限台大在學學生</p>
         <h4>費用</h4>
         <p>無（但特殊情況須依台大規定繳交學分費）</p>
         <h4>報名方式</h4>
         <ul>
-          <li>線上填寫<a href="https://forms.gle/tMwEKkBUvbxs6uz66">報名表</a></li>
-          <li>修課名單由主辦單位逕送教務處，學生無需線上選課</li>
-          <li>報名超額時，將依所填之修課理由篩選</li>
-          <li>預計於 6 月 21 日（一）以 email 通知篩選結果</li>
+          <li><a href="https://if177.aca.ntu.edu.tw/index.php">台灣大學網路選課系統</a></li>
         </ul>
-        <h4>錄取通知</h4>
-        <p>預計於 6 月 21 日（一）以 email 通知篩選結果</p>
-        <a href="https://forms.gle/tMwEKkBUvbxs6uz66">報名表</a>
       </li>
       <li id="non-ntu">
         <p>此途徑限在學大專學生修課。</p>
-        <p>請注意各校學分抵免規定不盡相同，選課前請洽貴校相關單位，確認是否可抵免學分並辦妥相關手續。</p>
+        <p>請注意各校系學分抵免規定不盡相同，選課前請洽貴校相關單位，確認是否可抵免學分並辦妥相關手續。</p>
         <h4>截止日期</h4>
-        <p>6 月 6 日（一）23:59</p>
+        <p>7 月 14 日（五）23:59</p>
         <h4>報名資格</h4>
         <p>在學大專院校學生</p>
         <h4>費用</h4>
         <p>依台大校外暑修規定繳交學分費與手續費</p>
         <h4>報名方式</h4>
           <ul>
-            <li>線上填寫<a href="https://forms.gle/hD2d29CCaLJMmq999">報名表</a>並於 6 月 8–9 日至<a href="https://coursemap.aca.ntu.edu.tw/summer/">台大暑期課程網</a>報名</li>
-            <li>通過篩選者尚須辦理台大規定之外校報名相關手續，才算完成選課</li>
+            <li><a href="https://if177.aca.ntu.edu.tw/index.php">台灣大學網路選課系統</a></li>
           </ul>
-        <h4>錄取通知</h4>
-        <p>預計於 6 月 7 日（四）以 email 通知篩選結果</p>
-        <a href="https://forms.gle/hD2d29CCaLJMmq999">報名表</a>
-        <a href="https://coursemap.aca.ntu.edu.tw/summer/">台大暑期課程網</a>
       </li>
       <li id="sit-in">
         <p>此途徑沒有資格限制。</p>
         <h4>截止時間</h4>
-        <p>6 月 14 日（二）23:59</p>
+        <p>7 月 27 日（三）23:59</p>
         <h4>報名資格</h4>
         <p>無限制</p>
         <h4>費用</h4>
         <p>無</p>
         <h4>報名方式</h4>
-        <p>線上填寫<a href="https://forms.gle/XyVkDwxyntMaqGkb8">報名表</a></p>
+        <p>線上填寫<a href="https://forms.gle/8LVU8FcA1WKpRDeh8">報名表</a></p>
         <h4>錄取通知</h4>
-        <p>預計於 6 月 21 日（三）以 email 通知篩選結果</p>
-        <a href="https://forms.gle/XyVkDwxyntMaqGkb8">報名表</a>
+        <p>預計於 7 月 31 日（日）以 email 通知篩選結果</p>
       </li>
-    </ul-->
+    </ul>
   </section>
 </div>
 
