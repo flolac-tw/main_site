@@ -36,7 +36,9 @@ module Hakyll.Web.ExtendedTemplate.Context
 --------------------------------------------------------------------------------
 import           Control.Monad                 (msum)
 import           Control.Monad.Fail            (MonadFail)
-import qualified Data.HashMap.Strict           as HM
+import           Data.Aeson.Key                (fromText)
+import           Data.Aeson.KeyMap             (KeyMap)
+import qualified Data.Aeson.KeyMap             as KM
 import           Data.List                     (intercalate, tails)
 import           Data.Scientific               as S
 import           Data.Text                     (Text)
@@ -346,8 +348,8 @@ lookupDot' sep obj key = lookup obj $ T.splitOn sep key
 -- | Lookup a JSON object recursively
 lookup :: Object -> [Text] -> Maybe Value
 lookup obj []     = Nothing
-lookup obj [x]    = HM.lookup x obj
-lookup obj (x:xs) = HM.lookup x obj >>= \case
+lookup obj [x]    = KM.lookup (fromText x) obj
+lookup obj (x:xs) = KM.lookup (fromText x) obj >>= \case
   Object obj' -> lookup obj' xs
   _           -> Nothing
 

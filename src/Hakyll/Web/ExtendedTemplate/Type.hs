@@ -10,8 +10,6 @@ module Hakyll.Web.ExtendedTemplate.Type where
 import           Control.Applicative     ((<|>))
 import           Data.Binary             (Binary, get, getWord8, put, putWord8)
 import           Data.List               (intercalate)
-import           Data.HashMap.Strict     (HashMap)
-import qualified Data.HashMap.Strict     as HM
 import           Data.Yaml               (Value(..), Object)
 import           Data.Text               (Text)
 import           Data.Typeable           (Typeable)

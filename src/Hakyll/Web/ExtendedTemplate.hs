@@ -21,7 +21,8 @@ module Hakyll.Web.ExtendedTemplate
 import           Control.Monad
 import           Control.Monad.Except                 (catchError)
 
-import qualified Data.HashMap.Strict                  as HM
+import           Data.Aeson.Key                       (fromString)
+import qualified Data.Aeson.KeyMap                    as KM
 import qualified Data.Text                            as T
 import           Data.Yaml                            (Value(..))
 import           Data.List
@@ -130,7 +131,7 @@ applyTemplate' tmps ctx item = go tmps
           sep <- maybe (return "") go sep
           bs  <- forM (V.toList xs) $ \val -> do
             let id  = itemIdentifier item
-                obj = HM.singleton (T.pack iter) val
+                obj = KM.singleton (fromString iter) val
                 cxt = (Context $ \key _ -> metadataJSON obj id key) <> ctx
             applyTemplate' body cxt item
           return $ intercalate sep bs
