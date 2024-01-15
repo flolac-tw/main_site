@@ -12,7 +12,7 @@ jobs:
   build:
     strategy:
       matrix:
-        ghc: [ '8.10.7' ]
+        ghc: [ '9.4.8' ]
         os: ['ubuntu-latest']
     env:
       FLAGS: "--flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal"
