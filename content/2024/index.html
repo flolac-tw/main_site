@@ -1,0 +1,222 @@
+---
+import: config.yaml
+announcements:
+- time: 01/19
+  title: 網站上線 (目前開課、報名時間和課程內容皆為暫定)
+- time: 01/19
+  title: 更新外地實習生報名資訊
+calendar:
+- time: 01/19
+  title: 網站上線
+  past: true
+- time: 02/15
+  title: 外地實習生報名開始
+  past: false
+- time: 03/15
+  title: 外地實習生報名截止
+  past: false
+zh:
+  location: "地點：國立臺灣大學新生教學館 202 教室"
+  introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
+  special-lecture: 特別講座
+  special-topic: （待定）
+  special-topic-intro: >-
+  timetables:
+  courses:
+  - title: 函數程設
+    id: fp
+    intro: 本課程以 Haskell 為工具，概述函數程式設計相關的一些必備知識，以便與其他課程銜接。
+      由歸納法開始，我們將談資料結構與函數的歸納定義，發現函數的定義可依循資料結構的定義。
+      而若欲證明該函數的性質，又可使用歸納法，其證明可依循函數的定義。
+      接著我們會談到摺 (fold) 的觀念，發現摺可視為一種歸納法的抽象。
+      最後以紅黑樹 (red-black tree) 為例演練程式設計與歸納證明，並為之後的依值型別課程做準備。
+    instructors:
+    - name: 穆信成
+      affi: 中央研究院資訊科學所
+  - title: 邏輯
+    id: logic
+    intro: 數學證明建立於有效的推論結構之上， 而型式邏輯學的目的是以嚴謹符號表達這些推論結構並研究其性質。
+      這門課聚焦於命題直構邏輯 (propositional intuitionistic logic) 的自然演繹系統 (natural deduction)，討論型式邏輯學裡基本的語法 (syntactic) 和語意 (semantic) 證明方法，並點出邏輯與計算的密切關係，銜接至依值型別課程。
+      透過對推論結構的型式化學習，這門課也為其他課程所需的數學證明基礎作好準備。
+    instructors:
+    - name: 柯向上
+      affi: 中央研究院資訊科學所
+  - title: λ-算則
+    id: lambda
+    intro: 現今許多語言如 Haskell、Agda 都會以 λ-算則 （λ-calculus，其中 λ 唸作 lam-da /ˈlæmdə/）的變形作為語言的模型，因此在課程中我們將從數學角度探討 λ-calculus 以及程式語言各種基本概念跟性質。例如定義何謂計算以及計算上相等的程式證明相關性質；加入型別討論並證明一個有型別沒有副作用的程式是如何能保證計算時一定會算出結果；除了學理上的興趣外，我們也會討論具體實務上應用於許多語言中解決程式碼重複的語言特性—多型（polymorphism）。這門課將延伸至依值型別課程，應用 Agda 實作與證明語言的性質。
+    instructors:
+    - name: 陳亮廷
+      affi: 中央研究院資訊科學所
+  - title: 依值型別
+    id: dtp
+    intro: >-
+      依值型別的表達能力遠超過主流語言的型別系統，一些原先需要另外證明的程式性質可直接編寫為依值型別，程式只要通過型別檢查即可保證性質成立。
+      當我們透過依值型別提供更多資訊給型別檢查器，後者就能反過來隨時告訴我們當下已知與尚待滿足的條件，互動地寫出正確程式。
+      依值型別語言也可用於數學型式化，數學定理與證明在依值型別語言中表達出來後，不僅能保證推論過程正確無誤，還一定具有計算意義。
+      在此數學、邏輯、計算融為一體，形成新世代程式語言設計的堅實基礎。
+    instructors:
+    - name: 穆信成
+      affi: 中央研究院資訊科學所
+    - name: 科向上
+      affi: 中央研究院資訊科學所
+    - name: 陳亮廷
+      affi: 中央研究院資訊科學所
+    resource:
+    - type: Agda 安裝指南
+      items:
+      - name: Windows
+        link: "https://paper.dropbox.com/doc/Windows--A5q1GT37n8jrafQJGR5UuF8vAQ-yCITtULcz3mRG9gGETjRQ"
+      - name: Mac
+        link: "https://paper.dropbox.com/doc/Mac--A5pGvKSfn4Gk7Rp4ypnOZMsSAQ-sgAFjf4ClpRGLXraVwE33"
+      - name: Linux
+        link: "https://paper.dropbox.com/doc/Linux--A5oTA1pnWWnPCZJS1ARBW8IlAQ-nkP4Uu5LUEicAo9h1JtqI"
+    - type: 其他
+      items:
+      - name: Unicode 符號對照表
+        link: "https://hackmd.io/ryEsPWrBT66QueCEaPbjlg"
+  - title: 特別講題：（待定）
+    id: special
+    intro: >-    
+    instructors:
+    - name: Neel Krishnaswami
+      affi: Computer Laboratory, University of Cambridge
+en:
+  location: "Location: Room 202, Freshman Classroom Building, National Taiwan University"
+  introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
+  special-lecture: Special Lecture
+  special-topic: "Monad and Side Effects"
+  special-topic-intro: 函數程式雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
+  courses:
+  - id: fp
+    title: Functional Programming
+    intro: This course uses Haskell as a tool to provide an overview of some of the essential knowledge related to function programming in order to bridge the gap with other courses.
+      Starting with structural induction, we will talk about data structures and the inductive definition of functions, and discover that the definition of a function can follow the definition of a data structure.
+      If you want to prove the properties of a function, you can use induction, and the proof will follow the definition of the function.
+      We then turn to the notion of fold, which we find can be regarded as an abstraction of structural induction.
+      Finally, the red-black tree will be used as an example of programming and inductive proofs, in preparation for the subsequent course on dependent types.
+    instructors:
+    - name: Shin-Cheng Mu
+      affi: Institute of Information Science, Academia Sinica
+    resource:
+    - type: "Handouts & Slides"
+      items:
+      - name: Handout
+        link: "/2022/fp-handouts.pdf"
+      - name: Slides
+        link: "/2022/fp-slides.pdf"
+    - type: Source
+      items:
+      - name: miniprelude.hs
+        link: "https://gist.github.com/Zekt/306115a9a61683e847a56f4c6975f75c"
+      - name: RedBlackOkasaki.hs
+        link: "/2022/RedBlackOkasaki.hs"
+    - type: "Practicals & Solutions"
+      items:
+      - name: Practicals 00
+        link: "/2022/fp-practicals-00.pdf"
+      - name: Practicals 01
+        link: "/2022/fp-practicals-01.pdf"
+      - name: Practicals 02
+        link: "/2022/fp-practicals-02.pdf"
+      - name: Solutions 00
+        link: "/2022/fp-practicals-00-sols.pdf"
+      - name: Solutions 01
+        link: "/2022/fp-practicals-01-sols.pdf"
+      - name: Solutions 02
+        link: "/2022/fp-practicals-02-sols.pdf"
+    - type: Other
+      items:
+      - name: Datatype-generic Programming
+        link: "https://slides.com/zekt/datatype-generic-programming"
+        note: 如何對每個 datatype 都寫出 map 與 foldr
+  - id: logic
+    title: Logic
+    intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module focuses on the natural deduction system of propositional intuitionistic logic, introduces the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules.
+    instructors:
+    - name: Josh Ko
+      affi: Institute of Information Science, Academia Sinica
+    resource:
+    - type: Slides
+      items:
+      - name: Logic 1
+        link: "/2022/LOGIC_1.pdf"
+      - name: Logic 2
+        link: "/2022/LOGIC_2.pdf"
+      - name: Logic 3
+        link: "/2022/LOGIC_3.pdf"
+  - id: lambda
+    title: λ-Calculus
+    intro: Nowadays many languages such as Haskell and Agda are based on variants of λ-calculus. In this course module, we will investigate λ-calculus and its notions and properties mathematically. For example, we will define computation and computational equivalence; after introducing types, we show how ‘a well-typed program does not go wrong’. Apart from theoretical interests, we also discuss a prevalent language feature —polymorphism— which has been applied to solve the code duplication problem in practice. Continuing into the dependently typed programming module, we will use Agda to implement λ-calculus and prove its properties.
+    instructors:
+    - name: Liang-Ting Chen
+      affi: Institute of Information Science, Academia Sinica
+    resource:
+    - type: Slides
+      items: 
+      - name: Lambda 1
+        link: "/2022/lambda-1.pdf"
+      - name: Lambda 2
+        link: "/2022/lambda-2.pdf"
+      - name: Lambda 3 (8/10 updated)
+        link: "/2022/lambda-3.pdf"
+  - id: dtp
+    title: Dependently Typed Programming
+    intro: >-
+      The expressiveness of dependent types far exceeds that of type systems in mainstream languages,
+      so that properties that would otherwise need to be proved additionally can be written directly as dependent types.
+      As we provide more information to the type checker through the dependent type,
+      the latter can in turn tell us what is known and what is yet to be satisfied,
+      and write the correct program interactively.
+      Mathematical theorems and proofs, when expressed in the language of the dependent type,
+      not only ensure that the inference is correct, but also that it is computationally meaningful.
+      Here mathematics, logic and computation become one, forming a solid basis for the design of a new generation of programming languages.
+    instructors:
+    - name: Shin-Cheng Mu
+      affi: Institute of Information Science, Academia Sinica
+    - name: Josh Ko
+      affi: Institute of Information Science, Academia Sinica
+    - name: Liang-Ting Chen
+      affi: Institute of Information Science, Academia Sinica
+    resource:
+    - type: Agda Installation Guide
+      items:
+      - name: Windows
+        link: "https://paper.dropbox.com/doc/Windows--A5q1GT37n8jrafQJGR5UuF8vAQ-yCITtULcz3mRG9gGETjRQ"
+      - name: Mac
+        link: "https://paper.dropbox.com/doc/Mac--A5pGvKSfn4Gk7Rp4ypnOZMsSAQ-sgAFjf4ClpRGLXraVwE33"
+      - name: Linux
+        link: "https://paper.dropbox.com/doc/Linux--A5oTA1pnWWnPCZJS1ARBW8IlAQ-nkP4Uu5LUEicAo9h1JtqI"
+    - type: Source
+      items:
+      - name: dtp.zip
+        link: "/2022/dtp.zip"
+      - name: DTP-Logic.agda
+        link: "/2022/DTP-Logic.agda"
+      - name: Lambda.agda
+        link: "/2022/Lambda.agda"
+      - name: Lambda-sol.agda
+        link: "/2022/Lambda-sol.agda"
+    - type: Other
+      items:
+      - name: Unicode Character Table
+        link: "https://hackmd.io/ryEsPWrBT66QueCEaPbjlg"
+  - id: monad
+    title: "Special Topic: Monad and Side Effects"
+    intro: >-
+      函數程式雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
+    instructors:
+    - name: Chung‑Chieh Shan
+      affi: Department of Computer Science, Indiana University
+    resource:
+    - type: Slides
+      items:
+      - name: Slides
+        link: "https://drive.google.com/file/d/1nn-4TA9lRnRd42ctMJZzKpwayPfu4ZvL/view"
+    - type: Practicals
+      items:
+      - name: Practicals
+        link: "https://drive.google.com/drive/folders/1oju5XL5sAlKe4n6T6dXfYpU1a1meVt6t?usp=sharing"
+---
+<h2>$LC.special-lecture$</h2>
+<h3>$LC.special-topic$</h2>
+<p>$LC.special-topic-intro$</p>
