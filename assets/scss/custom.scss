@@ -39,7 +39,7 @@ $body-color: $pickled-bluewood;
 $headings-font-weight: 700;
 
 // Bootstrap and its default variables
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 // Custom styling
 @import "style";
 
