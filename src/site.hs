@@ -38,7 +38,7 @@ import           Multilingual
 
 main :: IO ()
 main = hakyll $ do
-  let currentYear = "2024"
+  let currentYear = "2023"
   createRedirects [("index.html", "zh/"++currentYear++"/index.html")]
 
   -- Liang-Ting (2023-05-02):
