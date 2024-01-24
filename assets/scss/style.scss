@@ -1,8 +1,7 @@
-$breakpoint-lg: 992px; // used by Bootstrap
-$breakpoint-md: 768px;
-$breakpoint-sm: 576px;
+$breakpoint : 992px; // used by Bootstrap
+$breakpoint2: 576px;
 
-$width        : $breakpoint-lg;
+$width        : $breakpoint;
 $margin       : 3rem;
 $padding      : 1rem;
 $border-radius: 0.5rem;
@@ -36,32 +35,8 @@ $foreground-light-emph :black;
 
 
 nav {
-    //height: $nav-height;
-    &::before, &::after {
-        content: "";
-        margin-left: calc( ( 100vw - 992px ) / 2 ); // Variable in calc not working in Dart Sass
-
-        @media (max-width: $breakpoint-lg) {
-            display: none;
-        }
-    }
-
-    ul {
-        flex-basis: 100%;
-    }
-
-    .dropdown-menu {
-        max-height: 60vh;
-        overflow-x: hidden;
-    }
-
-    #actions {
-        @media(max-width: $breakpoint-md) {
-            gap: 1rem;
-        }
-    }
+    height: $nav-height;
 }
-
 
 
 @media (prefers-color-scheme: dark) {
@@ -411,12 +386,7 @@ body>div>section {
 }
 
 h2 {
-    margin: $margin/2 0 $margin/2 0;
-
-    @media (max-width: $breakpoint-sm) {
-        font-size: 150%;
-        margin-bottom: 1rem;
-    }
+    margin: $margin/2 0 $margin 0;
 }
 
 h3 {
@@ -446,7 +416,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
         display: block;
 
         > :first-child,
@@ -463,15 +433,15 @@ h4 {
     // dimension 
     padding: 0;
     height : calc(100vh - #{$nav-height});
-	max-height: 70vw;
+	max-height: 100vw;
 
     // background 
     background-color: $ocean-light;
     background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
 
-    background-size      : cover;
-    background-position-y: 5%;
-    background-repeat    : no-repeat;
+    background-size    : cover;
+    background-position: top;
+    background-repeat  : no-repeat;
 
     // layout 
     display        : flex;
@@ -483,13 +453,9 @@ h4 {
     text-shadow: 0px 0px 5px black;
     text-align : center;
 
-	header {
-		margin-top: 10vh;
-		max-width: min(75vw, 1200px);
-	}
-
     h1 {
-        font-size: 400%;
+		max-width: 75vw;
+        font-size: 300%;
     }
 
     span {
@@ -500,7 +466,7 @@ h4 {
 		display: none;
 	}
 
-	@media (max-width: $breakpoint-lg) {
+	@media (max-width: $breakpoint) {
 		h1 {
 			font-size: 250%;
 		}
@@ -510,7 +476,7 @@ h4 {
 		}
 	}
 
-	@media (max-width: $breakpoint-sm) {
+	@media (max-width: $breakpoint2) {
 		h1 {
 			font-size: 100%;
 		}
@@ -548,7 +514,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
         ol {
             column-count: 1;
         }
@@ -572,45 +538,25 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
         h2 {
             text-align: left;
         }
     }
 }
 
-#faq {
-    section {
-        display       : flex;
-	    flex-wrap     : wrap;
-        flex-direction: row;
-        align-items   : flex-start;
-    }
-
-    h2 {
-        flex-basis: 100%;
-    }
-
-    div {
-        flex-basis: 70%;
-        flex-grow: 1;
-        margin: 1rem 1rem 0 0;
-
-        h3 {
-        	margin: 0.5rem auto;
-            text-align: left;
-        }
-    }
-
+#stats {
     img {
         display: block;
 
         width    : 80%;
-        margin   : 1rem auto;
-        max-width: 200px;
+        margin   : $margin auto;
+        max-width: 300px;
 
-        flex-basis: 30%;
-        flex-grow: 1;
+    }
+
+    h3 {
+        text-align: center;
     }
 }
 
@@ -636,7 +582,7 @@ h4 {
     }
 
     // make the tab text smaller on mobile 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
 
         >section>div {
             columns: unset;
@@ -681,9 +627,26 @@ h4 {
 	img {
 		display: none;
 	}
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
 		h1 {
 			font-size: 150%;
+		}
+	}
+	@media (max-width: $breakpoint2) {
+		h1 {
+			display: none;
+		}
+		h1 + img {
+			display: block;
+			height: 3rem;
+			margin: auto;
+			filter: drop-shadow(0px 0px 1px black);
+		}
+		h1 + img + span {
+			display: none;
+		}
+		h1 + img + span + br {
+			display: none;
 		}
 	}
 }
@@ -733,7 +696,7 @@ h4 {
 
 
         // make the tab text smaller on mobile 
-        @media (max-width: $breakpoint-sm) {
+        @media (max-width: $breakpoint2) {
 
             .lecture-content {
                 display: block;
@@ -856,7 +819,7 @@ h4 {
 
 
     // make the tab text smaller on mobile 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint2) {
         padding : $padding
     }
 }
@@ -938,7 +901,7 @@ h4 {
 
     }
     // for mobile 
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: $breakpoint2) {
        small {
            display: none;
        }
@@ -979,7 +942,7 @@ h4 {
         border-top: solid $border-width transparent;
 
         // make the tab text smaller on mobile 
-        @media (max-width: $breakpoint-sm) {
+        @media (max-width: $breakpoint2) {
 
             a {
                 &.full {
@@ -1012,7 +975,7 @@ h4 {
     }
 
     // for mobile 
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint) {
         >li {
             padding: $margin $padding;
         }

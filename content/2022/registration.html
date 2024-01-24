@@ -1,39 +1,23 @@
 ---
-  import: config.yaml
-  <!-- image-banner: True -->
-  zh:
-    title: 邏輯、語言與計算暑期研習營
-    subtitle: Formosan Summer School on Logic, Language, and Computation, 2022
-    time-n-place: "時間 & 地點"
-    date: "上課日期：8/1-8/12"
-    time: "上課時間：每日 9:00-17:00"
-    location: "地點：國立臺灣大學新生教學館 202 教室"
-        
-  en:
-    title: Formosan Summer School on Logic, Language, and Computation, 2022
-    subtitle: 邏輯、語言與計算暑期研習營
-    time-n-place: "Time & Place"
-    date: "Date: 8/1-8/12"
-    time: "Time: 9:00-17:00"
-    location: "Location: Room 202, Freshman Classroom Building, National Taiwan University"
+import: config.yaml
+zh:
+  title: 邏輯、語言與計算暑期研習營
+  subtitle: Formosan Summer School on Logic, Language, and Computation
+  location: "國立臺灣大學"
+en:
+  title: Formosan Summer School on Logic, Language, and Computation
+  subtitle: 邏輯、語言與計算暑期研習營
+  location: "National Taiwan University"
 ---
 <div id="header" class="$theme$">
   <header>
     <h1>$LC.title$</h1>
-    <span>$LC.subtitle$</span>
+    <span>$LC.subtitle$, $year$</span><br />
+    <span>$date$</span>&emsp;
+    <span>$time$</span><br />
+    <span>$LC.location$</span>
   </header>
 </div>
-<div class="alt $yearly_theme$">
-  <section>
-    <h2>$LC.time-n-place$</h2>
-    <ul>
-      <li>$LC.date$</li>
-      <li>$LC.time$</li>
-      <li>$LC.location$</li>
-    </ul>
-  </section>
-</div>
-
 <div>
   <section>
     <h2>報名資訊</h2>

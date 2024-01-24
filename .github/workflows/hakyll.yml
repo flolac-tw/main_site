@@ -38,19 +38,6 @@ jobs:
     - name: Build dependencies and the site generator
       run: |
         stack build ${FLAGS}
-        npm install
-        mkdir -p assets/css
-
-    - name: Compile CSS from SCSS files
-      uses: gha-utilities/sass-build@v0.4.10
-      with:
-        source: assets/scss/custom.scss
-        destination: assets/css/custom.css
-
-    - uses: gha-utilities/sass-build@v0.4.10
-      with:
-        source: assets/scss/style.scss
-        destination: assets/css/style.css
 
     - name: Build the site
       env:
