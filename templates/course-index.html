@@ -55,7 +55,7 @@ en:
   <header>
     <h1>$LC.title$</h1>
     <img src="../../img/logo.svg">
-    <span>$LC.subtitle$, $year$</span><br /><span>$date$</span>&emsp;<span>$time$</span><br/><span>$LC.location$</span>
+    <span>$LC.subtitle$, $year$</span><br /><span>$date$</span>&emsp;<span>$time$</span><br/>$if(LC.location)$<span>$LC.location$</span>$endif$
   </header>
 </div>
 <div class="two-column $theme$">
@@ -108,7 +108,11 @@ en:
           <h4>$LC.lecturer$</h4>
           <dl>
             $-foreach(inst)in(course.instructors)$
-            <dt>$inst.name$</dt>
+            $if(inst.personalPage)$
+              <dt><a href=$inst.personalPage$>$inst.name$</a></dt>
+            $else$
+              <dt>$inst.name$</dt>
+            $endif$
             <dd>$inst.affi$</dd>$endforeach$
           </dl>
         </div>

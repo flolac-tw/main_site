@@ -35,7 +35,9 @@ $-if(image-banner)$
           <div class="flex-lg-row flex-column d-flex pt-3 justify-content-center">
             <div class="d-sm-none d-block"><h6 class="m-0">$LC.date$</h6></div>
             <div class="d-sm-none d-block"><h6 class="m-0">$LC.time$</h6></div>
-            <div class="d-sm-none d-block"><span class="m-0" style="white-space: nowrap;">$LC.location$</span></div>
+            $if(LC.location)$
+              <div class="d-sm-none d-block"><span class="m-0" style="white-space: nowrap;">$LC.location$</span></div>
+            $endif$
             <div class="pr-lg-3 border-right-thick d-sm-block d-none"><h5 class="m-0">$LC.date$</h5></div>
             <div class="px-lg-3 border-right-thick d-sm-block d-none"><h5 class="m-0">$LC.time$</h5></div>
             <div class="pl-lg-3 d-sm-block d-none"><h5 class="m-0">$LC.location$</h5></div>
