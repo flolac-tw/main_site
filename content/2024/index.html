@@ -16,8 +16,8 @@ calendar:
 zh:
   introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
   special-lecture: 特別講座
-  special-topic: （待定）
   special-topic-intro: >-
+    FLOLAC 2024 很榮幸邀請到劍橋大學 <a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a> 教授擔任特別講師，講題待定。
   timetables:
   courses:
   - title: 函數程設
@@ -48,7 +48,7 @@ zh:
       affi: 中央研究院資訊科學所
   - title: 特別講題：（待定）
     id: special
-    intro: >-    
+    intro: >-
     instructors:
     - name: Neel Krishnaswami
       personalPage: "https://www.cl.cam.ac.uk/~nk480/"
@@ -56,8 +56,8 @@ zh:
 en:
   introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
   special-lecture: Special Lecture
-  special-topic: "Monad and Side Effects"
-  special-topic-intro: 函數程式雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
+  special-topic-intro: >-
+    FLOLAC 2024 很榮幸邀請到劍橋大學 <a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a> 教授擔任特別講師，講題待定。
   courses:
   - id: fp
     title: Functional Programming
@@ -93,5 +93,7 @@ en:
       affi: Department of Computer Science and Technology, University of Cambridge
 ---
 <h2>$LC.special-lecture$</h2>
+$if(LC.special-topic)$
 <h3>$LC.special-topic$</h2>
+$endif$
 <p>$LC.special-topic-intro$</p>
