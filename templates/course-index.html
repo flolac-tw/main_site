@@ -105,7 +105,11 @@ en:
           <h4>$LC.lecturer$</h4>
           <dl>
             $-foreach(inst)in(course.instructors)$
+            $if(inst.personalPage)$
+            <dt><a href=$inst.personalPage$>$inst.name$</a></dt>
+            $else$
             <dt>$inst.name$</dt>
+            $endif$
             <dd>$inst.affi$</dd>$endforeach$
           </dl>
         </div>
