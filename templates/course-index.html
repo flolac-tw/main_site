@@ -79,11 +79,8 @@ en:
     <ol>$foreach(event)in(calendar)$
     $-if(event.past)$
       <li class="timeline-event-past">
-      $-else$ $if(event.next)-$
+      $-else$
       <li class="timeline-event-next">
-      $else-$
-      <li >
-      $-endif$
     $-endif$
         <div class="timeline-event-date-container">
           <div class="timeline-event-date">$event.time$</div>
@@ -108,11 +105,7 @@ en:
           <h4>$LC.lecturer$</h4>
           <dl>
             $-foreach(inst)in(course.instructors)$
-            $if(inst.personalPage)$
-              <dt><a href=$inst.personalPage$>$inst.name$</a></dt>
-            $else$
-              <dt>$inst.name$</dt>
-            $endif$
+            <dt>$inst.name$</dt>
             <dd>$inst.affi$</dd>$endforeach$
           </dl>
         </div>

@@ -6,13 +6,16 @@ $-body$
         <object type="image/svg+xml" data="/img/logo.svg" style="height: 3.5rem;"/>
       </div>
       <dl class="dl-vbar">
+        $-if(organizers)$
         <dt>主辦單位</dt>
         <dd>
           <ul class="list-inline-block m-0">
-            <li>中央研究院資訊科學所</li>
-            <li>台灣大學資訊管理學系</li>
+            $-foreach(name)in(organizers)$
+            <li>$name$</li>
+            $-endforeach$
           </ul>
         </dd>
+        $endif$
         $-if(sponsors)$
         <dt>贊助單位</dt>
         <dd>

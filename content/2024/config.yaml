@@ -1,8 +1,5 @@
 year: "2024"
 theme: ocean
-sponsors:
-- 台灣大學資訊工程學系
-- 台灣大學電機工程學系
 programme:
 - 柯向上
 - 陳亮廷
@@ -10,5 +7,5 @@ programme:
 local:
 - 林柏芬
 - 韓愷真
-date: "7/1-7/12"
+date: "7/1-7/12（暫定）"
 time: "09:00-17:00"
