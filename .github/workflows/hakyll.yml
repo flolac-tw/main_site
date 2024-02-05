@@ -89,5 +89,6 @@ jobs:
         # Ensure to match the source branch specified on the GitHub setting.
         #
         publish_dir: _site
+        force_orphan: true
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
