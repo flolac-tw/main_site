@@ -1,0 +1,93 @@
+====== 最新消息 ======
+  * (2017/09/08) Seminar講者資訊請見：[[https://sites.google.com/view/mikehsiao/home]]。
+  * (2017/09/06) 上傳 [[course:vdm|VDM]] 投影片與作業，星期四會發講義，可以不需要自己印。
+  * (2017/09/05) [[course:computation|Computation]] 與 [[course:smt|SMT]] 課程的習題解答皆有更新，請重新下載。
+  * (2017/09/05) 更新 [[course:seminar|Seminar]] 演講資訊。
+  * (2017/08/22) 更新旁聽名單，少複製了四筆資料。
+  * (2017/08/21) 公布[[https://docs.google.com/spreadsheets/d/1t7rdZYZOoevBP8teqhec59YCVm3QhFYjvsDpe9nHmLU/edit?usp=sharing|旁聽名單]]。
+  * (2017/08/17) [[https://goo.gl/forms/LZnLDzijQ5tQHt4O2|旁聽報名]]將於 8/20 17:00 結束，名單將於 8/21 公布。
+  * (2017/08/02) 課程異動，Boolean Satisfiability and Its Applications to Synthesis and Verification 與 Verification of String-Manipulating Programs 對調。
+  * (2017/07/24) 收到校方通知，新增線上報名截止日。台大本校生線上報名於 7/31 截止，外校生報名於 7/25 截止。請務必報名並依選課程序進行選課、註冊等。
+  * (2017/06/30) 台大暑期課程網[[https://coursemap.aca.ntu.edu.tw/summer/asp/index.php/reg_cou|台大本校生登記]]開跑，請欲修課的同學們前往登記以利開課。<color red>登記的同學仍請務必於選課期間選課</color>。
+====== 宗旨 ======
+
+近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+
+「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+
+自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+
+「邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十一屆。
+
+====== 時間地點 ======
+
+日期：2017 年 8 月 28 日 (週一) 至 9 月 8 日 (週五)，共計十天。
+
+時間：每週一至週五早上九點至下午五點。
+
+地點：台大管理學院 一號館 103教室
+====== 課程與講者 ======
+
+課程內容：
+  * [[course:logic|Elementary Logic]]
+  * [[course:computation|Elementary Computation Theory]]
+  * [[course:smt|Software Verification with Satisfiability Modulo Theories]]
+  * [[course:learning|Automata Learning and Its Applications]]
+  * [[course:synthesis|Boolean Satisfiability and Its Applications to Synthesis and Verification]]
+  * [[course:string|Verification of String-Manipulating Programs]]
+  * [[course:vdm|Vienna Development Method (VDM)]]
+
+課程講者：
+  * [[http://www.iis.sinica.edu.tw/~yfc/doku.php|Yu-Fang Chen]] (Academia Sinica)
+  * [[http://cc.ee.ntu.edu.tw/~jhjiang/|Jie-Hong Roland Jiang]] (National Taiwan University)
+  * [[https://www.iis.sinica.edu.tw/pages/hlin/index_en.html|Hsin-Hung Lin]] (Academia Sinica)
+  * Ming-Hsien Tsai (Academia Sinica)
+  * [[http://www.iis.sinica.edu.tw/~bywang/|Bow-Yaw Wang]] (Academia Sinica)
+  * [[http://www3.nccu.edu.tw/~yuf|Fang Yu]] (National Chengchi University)
+
+<WRAP column 600px>
+^ 時間 ^ 8/28（一） ^ 8/29（二） ^ 8/30（三） ^ 8/31（四） ^ 9/1（五） ^
+^ 09:00 - 12:00 | [[course:logic|Logic]] | [[course:computation|Computation]] | [[course:smt|SMT]] | [[course:smt|SMT]] | [[course:learning|Learning]] |
+^ 12:00 - 14:00 |  Lunch  |||||
+^ 14:00 - 17:00 | [[course:logic|Logic]] | [[course:computation|Computation]] | [[course:smt|SMT]] | [[course:smt|SMT]] | [[course:learning|Learning]] |
+</WRAP>
+
+<WRAP column 600px>
+^ 時間 ^ 9/4（一） ^ 9/5（二） ^ 9/6（三） ^ 9/7（四） ^ 9/8（五） ^
+^ 09:00 - 12:00 | [[course:synthesis|Synthesis]] | [[course:synthesis|Synthesis]] | [[course:string|String]] | [[course:vdm|VDM]] | Final |
+^ 12:00 - 14:00 |  Lunch  |||||
+^ 14:00 - 17:00 | [[course:synthesis|Synthesis]] | [[course:string|String]] | [[course:string|String]] | [[course:vdm|VDM]] | [[course:seminar|Seminar]] |
+</WRAP>
+====== 報名資訊 ======
+
+台大學生：
+  - [[https://goo.gl/forms/LZnLDzijQ5tQHt4O2|線上報名]]（7/31截止）
+  - 台大暑期課程網選課
+    - 初選：07/31(一) ~ 08/01(二)
+    - 加退選：08/03(四) ~ 08/04(五)
+  - 繳費：08/18 ~ 08/22
+
+非台大學生：
+  - [[https://goo.gl/forms/LZnLDzijQ5tQHt4O2|線上報名]]（7/25截止）
+  - 台大暑期課程網報名：07/25 ~ 07/26 
+  - 報名後之手續請參閱[[http://coursemap.aca.ntu.edu.tw/summer/dmdocuments/外校學生報名暑期課程流程.pdf|外校生報名流程]]
+
+====== 成績計算 ======
+
+作業（40%）、期末考（60%）
+====== 主辦單位 ======
+
+  * [[http://www.iis.sinica.edu.tw/|中央研究院 資訊科學研究所]]
+  * [[https://management.ntu.edu.tw/IM|國立台灣大學 資訊管理學系]]
+  * [[https://web.ee.ntu.edu.tw|國立台灣大學 電機工程學系]]
+  * [[https://www.csie.ntu.edu.tw|國立台灣大學 資訊工程學系]]
+  * [[http://www.mis2.nccu.edu.tw|國立政治大學 資訊管理學系]]
+====== 籌辦委員會 ======
+
+  * 陳郁方 Yu-Fang Chen (中央研究院 資訊科學研究所)
+  * 莊庭瑞 Tyng-Ruey Chuang (中央研究院 資訊科學研究所)
+  * 穆信成 Shin-Cheng Mu (中央研究院 資訊科學研究所)
+  * 蔡明憲 Ming-Hsien Tsai (中央研究院 資訊科學研究所)
+  * 蔡益坤 Yih-Kuen Tsay (國立台灣大學 資訊管理學系)
+  * 王柏堯 Bow-Yaw Wang (中央研究院 資訊科學研究所)
+  * 郁方 Fang Yu (國立政治大學 資訊管理學系)

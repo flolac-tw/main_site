@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    fv    [FLOLAC 2009]
+  </title>
+<meta name="generator" content="DokuWiki Release 2009-02-14" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2009-06-28T22:13:54+0800" />
+<meta name="keywords" content="fv" />
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="FLOLAC 2009" />
+<link rel="start" href="fv.html" />
+<link rel="contents" href="fv.html" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="feed.html" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="feed.mode.list.html%3Fmode=list.html" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="fv.html" />
+<link rel="stylesheet" media="all" type="text/css" href="lib/exe/css.php.s.all_t.flolac09.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="lib/exe/css.php.t.flolac09.css" />
+<link rel="stylesheet" media="print" type="text/css" href="lib/exe/css.php.s.print_t.flolac09.css" />
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.flolac09.js" ></script>
+
+  <link rel="shortcut icon" href="lib/tpl/flolac09/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="fv.html"  title="Backlinks">fv</a>]]
+      </div>
+      <div class="logo">
+        <a href="doku.html"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">FLOLAC 2009</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    <!--
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                      </div>
+
+      <div class="bar-right" id="bar__topright">
+                <form action="doku.html" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>&nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+-->
+        <div class="breadcrumbs">
+      <span class="bchead">Trace:</span> <span class="bcsep">&raquo;</span> <span class="curid"><a href="fv.html"  class="breadcrumbs" title="fv">fv</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#boolean_satisfiability_algorithms" class="toc">Boolean Satisfiability Algorithms</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#prerequisites" class="toc">Prerequisites</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#syllabus" class="toc">Syllabus</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#course_materials" class="toc">Course Materials</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#homework_assignment" class="toc">Homework Assignment</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fv.html#references" class="toc">References</a></span></div></li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="boolean_satisfiability_algorithms" id="boolean_satisfiability_algorithms">Boolean Satisfiability Algorithms</a></h1>
+<div class="level1">
+
+<p>
+
+Instructor: <a href="http://cc.ee.ntu.edu.tw/~ric/" class="urlextern" title="http://cc.ee.ntu.edu.tw/~ric/"  rel="nofollow">Chung-Yang (Ric) Huang</a> / <a href="http://dvlab.ee.ntu.edu.tw/" class="urlextern" title="http://dvlab.ee.ntu.edu.tw/"  rel="nofollow">Design Verification Lab</a>, <a href="http://cc.ee.ntu.edu.tw/~giee" class="urlextern" title="http://cc.ee.ntu.edu.tw/~giee"  rel="nofollow">GIEE</a>, <a href="http://www.ntu.edu.tw/" class="urlextern" title="http://www.ntu.edu.tw/"  rel="nofollow">NTU</a>
+</p>
+
+<p>
+This lecture covers the algorithms and applications of the Boolean Satisfiability (SAT)
+problem.
+</p>
+
+</div>
+
+<h1><a name="prerequisites" id="prerequisites">Prerequisites</a></h1>
+<div class="level1">
+
+<p>
+
+Elementary Switching Circuit and Logic Theories
+</p>
+
+</div>
+
+<h1><a name="syllabus" id="syllabus">Syllabus</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> Overview of Hardware Verification</div>
+</li>
+<li class="level1"><div class="li"> Assertion-Based Verification</div>
+</li>
+<li class="level1"><div class="li"> Boolean Satisfiability (SAT) Algorithms</div>
+<ol>
+<li class="level2"><div class="li"> Logic Implication and its Applications</div>
+</li>
+<li class="level2"><div class="li"> DPLL Decision Procedure</div>
+</li>
+<li class="level2"><div class="li"> Conflict-Driven Learning and Non-Chronological Backtracking</div>
+</li>
+<li class="level2"><div class="li"> Decision ordering / Restart</div>
+</li>
+<li class="level2"><div class="li"> Various learning techniques</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> SAT-Based Verification</div>
+<ol>
+<li class="level2"><div class="li"> Bounded and Unbounded Modeling Checking</div>
+</li>
+<li class="level2"><div class="li"> Interpolation Technique</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> Future Research Directions</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="course_materials" id="course_materials">Course Materials</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> SAT Algorithms [<a href="lib/exe/sat_4on1.pdf" class="media mediafile mf_pdf" title="sat_4on1.pdf">slides for print</a>] [<a href="lib/exe/sat.pdf" class="media mediafile mf_pdf" title="sat.pdf">slides for display</a>]</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="homework_assignment" id="homework_assignment">Homework Assignment</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> SAT Algorithms [<a href="lib/exe/sat_hw.pdf" class="media mediafile mf_pdf" title="sat_hw.pdf">Homework(PDF)</a>] | [<a href="lib/exe/sat_hw.doc" class="media mediafile mf_doc" title="sat_hw.doc">Homework(Word)</a>] (Due: 9:00am in class, Wednesday, 07/01/2009)</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="references" id="references">References</a></h1>
+<div class="level1">
+
+<p>
+
+Introduction to modern SAT solvers
+</p>
+<ul>
+<li class="level1"><div class="li"> Lintao Zhang and Sharad Malik. The Quest for Efficient Boolean Satisfiability Solvers, in <em>Proceedings of the 14th International Conference on Computer Aided Verification</em>, pp. 17 – 36, 2002.</div>
+</li>
+</ul>
+
+<p>
+
+Boolean SAT Solvers
+</p>
+<ul>
+<li class="level1"><div class="li"> SATO, <a href="http://www.cs.uiowa.edu/~hzhang/sato.html" class="urlextern" title="http://www.cs.uiowa.edu/~hzhang/sato.html"  rel="nofollow">http://www.cs.uiowa.edu/~hzhang/sato.html</a></div>
+</li>
+<li class="level1"><div class="li"> GRASP, <a href="http://www.eecs.umich.edu/~faloul/Tools/satire/Grasp2.exe" class="urlextern" title="http://www.eecs.umich.edu/~faloul/Tools/satire/Grasp2.exe"  rel="nofollow">http://www.eecs.umich.edu/~faloul/Tools/satire/Grasp2.exe</a></div>
+</li>
+<li class="level1"><div class="li"> zChaff, <a href="http://www.princeton.edu/~chaff/" class="urlextern" title="http://www.princeton.edu/~chaff/"  rel="nofollow">http://www.princeton.edu/~chaff/</a></div>
+</li>
+<li class="level1"><div class="li"> BerkMin, <a href="http://eigold.tripod.com/BerkMin.html" class="urlextern" title="http://eigold.tripod.com/BerkMin.html"  rel="nofollow">http://eigold.tripod.com/BerkMin.html</a></div>
+</li>
+<li class="level1"><div class="li"> CSAT, <a href="http://cadlab.ece.ucsb.edu/downloads/CSAT.htm" class="urlextern" title="http://cadlab.ece.ucsb.edu/downloads/CSAT.htm"  rel="nofollow">http://cadlab.ece.ucsb.edu/downloads/CSAT.htm</a></div>
+</li>
+<li class="level1"><div class="li"> miniSAT, <a href="http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/" class="urlextern" title="http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/"  rel="nofollow">http://www.cs.chalmers.se/Cs/Research/FormalMethods/MiniSat/</a></div>
+</li>
+<li class="level1"><div class="li"> PBS, <a href="http://www.eecs.umich.edu/~faloul/Tools/pbs4/" class="urlextern" title="http://www.eecs.umich.edu/~faloul/Tools/pbs4/"  rel="nofollow">http://www.eecs.umich.edu/~faloul/Tools/pbs4/</a></div>
+</li>
+<li class="level1"><div class="li"> Pueblo, <a href="http://www.eecs.umich.edu/~hsheini/pueblo/" class="urlextern" title="http://www.eecs.umich.edu/~hsheini/pueblo/"  rel="nofollow">http://www.eecs.umich.edu/~hsheini/pueblo/</a></div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+fv.txt &middot; Last modified: 2009/06/28 22:13 by ric      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                      </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <form class="button btn_login" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="login" /><input type="hidden" name="sectok" value="3d8dccfc6ad1863a71ff9b6fed15fce4" /><input type="hidden" name="id" value="fv" /><input type="submit" value="Login" class="button" title="Login" /></div></form>        <form class="button btn_index" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="index" /><input type="hidden" name="id" value="fv" /><input type="submit" value="Index" class="button" accesskey="x" title="Index [X]" /></div></form>                <form action="doku.html" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>        <a class="nolink" href="fv.html#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+  <div class="license">Except where otherwise noted, content on this wiki is licensed under the following license:<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" class="urlextern">CC Attribution-Noncommercial-Share Alike 3.0 Unported</a></div>
+</div>
+
+<div class="footerinc">
+
+  <a  href="feed.html" title="Recent changes RSS feed"><img src="lib/tpl/flolac09/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+        <a  href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="license" title="CC Attribution-Noncommercial-Share Alike 3.0 Unported"><img src="http://flolac.iis.sinica.edu.tw/flolac09/lib/images/license/button/cc-by-nc-sa.png" width="80" height="15" alt="" /></a>
+  
+  <a  href="http://www.dokuwiki.org/donate" title="Donate"><img src="lib/tpl/flolac09/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="lib/tpl/flolac09/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="lib/tpl/flolac09/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="lib/tpl/flolac09/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://dokuwiki.org/" title="Driven by DokuWiki"><img src="lib/tpl/flolac09/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+</div>
+
+<div class="no"><img  width="1" height="1" alt=""  /></div>
+</body>
+</html>

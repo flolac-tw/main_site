@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    derivation    [2007 Formosan Summer School on Logic, Language, and Computation (FLOLAC '07)]
+  </title>
+<meta name="generator" content="DokuWiki Release 2006-11-06" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2008-07-06T14:44:31+0800" />
+<meta name="keywords" content="derivation" />
+<link rel="stylesheet" media="screen" type="text/css" href="lib/exe/css.php.css" />
+<link rel="stylesheet" media="print" type="text/css" href="lib/exe/print.css" />
+
+  <link rel="shortcut icon" href="lib/tpl/lolac07/images/favicon.ico" />
+
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="http://flolac.iis.sinica.edu.tw/flolac07/derivation&amp;do=backlink.html" >derivation</a>]]
+      </div>
+      <div class="logo">
+        <a href="../flolac07.html"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">2007 Formosan Summer School on Logic, Language, and Computation (FLOLAC '07)</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+   
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#program_derivation" class="toc">Program Derivation</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#course_materials" class="toc">Course Materials</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#prerequisites" class="toc">Prerequisites</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#syllabus" class="toc">Syllabus</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#grading" class="toc">Grading</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="derivation.html#references" class="toc">References</a></span></div></li></ul>
+</div>
+</div>
+
+
+
+<h1><a name="program_derivation" id="program_derivation">Program Derivation</a></h1>
+<div class="level1">
+
+<p>
+ Lecturer: <a href="http://www.iis.sinica.edu.tw/~scm" class="urlextern" title="http://www.iis.sinica.edu.tw/~scm"  rel="nofollow">穆信成 Shin-Cheng Mu</a>
+</p>
+
+<p>
+Bird-Meertens style functional program derivation. 
+</p>
+
+</div>
+
+<h1><a name="course_materials" id="course_materials">Course Materials</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="files/handouts/mu-derivation.pdf" class="media mediafile mf_pdf" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation.pdf">Slides</a> for the course, and <a href="files/handouts/mu-derivation-handouts.pdf" class="media mediafile mf_pdf" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation-handouts.pdf">handout</a> version of the slides.</div>
+</li>
+<li class="level1"><div class="li"> <a href="files/handouts/mu-derivation-ex1.pdf" class="media mediafile mf_pdf" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation-ex1.pdf">Exercise 1</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="files/handouts/mu-derivation-ex2.pdf" class="media mediafile mf_pdf" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation-ex2.pdf">Exercise 2</a>.</div>
+</li>
+<li class="level1"><div class="li"> Supplementary <a href="files/handouts/mu-derivation.hs" class="media mediafile mf_" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation.hs">Haskell</a> and <a href="files/handouts/mu-derivation.ml" class="media mediafile mf_" title="http://www.iis.sinica.edu.tw/~scm/flolac07/files/handouts/mu-derivation.ml">OCaml</a> code.</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="prerequisites" id="prerequisites">Prerequisites</a></h1>
+<div class="level1">
+
+<p>
+ Functional programming.
+</p>
+
+</div>
+
+<h1><a name="syllabus" id="syllabus">Syllabus</a></h1>
+<div class="level1">
+
+<p>
+ Day 1. The Expand/Reduce Transformation(2 hours) 
+</p>
+<ul>
+<li class="level1"><div class="li"> Prelude: Maximum Segment Sum</div>
+</li>
+<li class="level1"><div class="li"> Preliminaries</div>
+<ul>
+<li class="level2"><div class="li"> Functions</div>
+</li>
+<li class="level2"><div class="li"> Data Structures</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> The Expand/Reduce Transformation</div>
+<ul>
+<li class="level2"><div class="li"> Example: Sum of Squares</div>
+</li>
+<li class="level2"><div class="li"> Proving Properties by Induction</div>
+</li>
+<li class="level2"><div class="li"> Accumulating parameters</div>
+</li>
+<li class="level2"><div class="li"> Tupling</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+ Day 2. Fold (2 hours) 
+</p>
+<ul>
+<li class="level1"><div class="li"> Folds</div>
+<ul>
+<li class="level2"><div class="li"> The Fold-Fusion Theorem</div>
+</li>
+<li class="level2"><div class="li"> More Useful Functions as Folds</div>
+</li>
+<li class="level2"><div class="li"> Finally, Solving Maximum Segment Sum!</div>
+</li>
+<li class="level2"><div class="li"> Folds on Trees</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Unfolds</div>
+<ul>
+<li class="level2"><div class="li"> Unfold on Lists</div>
+</li>
+<li class="level2"><div class="li"> Folds v.s. Unfolds</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Hylomorphism</div>
+<ul>
+<li class="level2"><div class="li"> A Museum of Sorting Algorithms</div>
+</li>
+<li class="level2"><div class="li"> Hylomorphism and Recursion</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Wrapping Up</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="grading" id="grading">Grading</a></h1>
+<div class="level1">
+
+<p>
+ Grading: Class Participation 10%, Homework 40%, Final (2007/07/13) 50%.
+</p>
+
+</div>
+
+<h1><a name="references" id="references">References</a></h1>
+<div class="level1">
+
+<p>
+ Some suggested reading: 
+</p>
+<ul>
+<li class="level1"><div class="li"> R. S. Bird, <a href="http://web.comlab.ox.ac.uk/oucl/publications/books/functional/" class="urlextern" title="http://web.comlab.ox.ac.uk/oucl/publications/books/functional/"  rel="nofollow">Introduction to Functional Programming using Haskell</a>.</div>
+</li>
+<li class="level1"><div class="li"> R. S. Bird and O. de Moor, <a href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=248932" class="urlextern" title="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=248932"  rel="nofollow">Algebra of Programming</a>. Only the functional part.</div>
+</li>
+<li class="level1"><div class="li"> Some papers from <a href="http://portal.acm.org/citation.cfm?id=138524.138526&amp;coll=&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618" class="urlextern" title="http://portal.acm.org/citation.cfm?id=138524.138526&amp;coll=&amp;dl=ACM&amp;CFID=15151515&amp;CFTOKEN=6184618"  rel="nofollow">H. Zantema</a>	on list segment problems.</div>
+</li>
+<li class="level1"><div class="li"> A. Kaldewaij, <a href="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=98158" class="urlextern" title="http://portal.acm.org/citation.cfm?coll=GUIDE&amp;dl=GUIDE&amp;id=98158"  rel="nofollow">Programming: the derivation of algorithms</a>.</div>
+</li>
+<li class="level1"><div class="li"> E. W. Dijkstra, <a href="http://portal.acm.org/citation.cfm?id=550359" class="urlextern" title="http://portal.acm.org/citation.cfm?id=550359"  rel="nofollow">A Discipline of Programming</a>, for more interesting examples and exercises.</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+derivation.txt &middot; Last modified: 2008/07/06 14:44 by scm      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerinc">
+
+  <a  href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="lib/tpl/lolac07/images/button-cc.gif" width="80" height="15" alt="Creative Commons License" /></a>
+
+  <a  href="https://www.paypal.com/xclick/business=andi%40splitbrain.org&amp;item_name=DokuWiki+Donation&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=EUR&amp;lc=US" title="Donate"><img src="lib/tpl/lolac07/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="lib/tpl/lolac07/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="lib/tpl/lolac07/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="lib/tpl/lolac07/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="lib/tpl/lolac07/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+-->
+
+
+</div>
+
+<div class="no"><img src="http://flolac.iis.sinica.edu.tw/flolac07/lib/exe/indexer.php%3Fid=derivation&amp;1300055330.html" width="1" height="1" alt=""  /></div>
+</body>
+</html>

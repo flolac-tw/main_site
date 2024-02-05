@@ -1,0 +1,917 @@
+/**
+ * main layout by
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author Anika Henke <henke@cosmocode.de>
+ * @author Michael Klier <chi@chimeric.de>
+ *
+ * Modification for mmClean template
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ */
+
+/* -------------- general elements --------------- */
+
+body 
+{
+  font: 14px Verdana, "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  margin-top:10px;
+  margin-bottom:10px;
+  background-attachment:scroll;
+  line-height:150%;
+/*  background: #466fd5; */
+  background: #238fae; 
+}
+
+div.page
+{
+  margin: auto;
+  width: 960px;
+  background: #ffffff;
+}
+
+div.container
+{
+    padding: 10px;
+    padding-top: 8px;
+    width: 940px;
+}
+
+div.content_with_sidebar, div.content
+{
+  text-align: justify;
+  float:left;
+  width:710px;
+  padding: 10px;
+  color: #444;
+}
+
+div.content 
+{
+  width: 910px;
+  background-color: #ffffff;
+  color: #444;
+}
+
+table 
+{
+  padding:0;
+  margin:0;
+  font-size:1em;
+}
+
+tr,td,th 
+{
+    padding:0; 
+    margin:0;
+    vertical-align:top;
+}
+
+tr:hover 
+{
+  background:#f8f8f8;
+}
+
+img 
+{
+    border:0
+}
+
+p 
+{
+    margin: 0 0 1.0em 0;
+    /* margin: 0; */
+    padding:0; 
+    /* font-size:0.8125em; */
+    font-size: 1em;
+}
+
+hr 
+{
+  border: 0px;
+  border-top: 1px solid #8cacbb;
+  text-align:center;
+  height: 0px;
+}
+
+div.nothing 
+{
+  text-align:center;
+	margin: 2em;
+}
+
+/* ---------------- forms ------------------------ */
+
+form {
+  border: none;
+  margin: 0;
+  display: inline;
+}
+
+div.searchform 
+{
+    float:right;
+    /* margin-bottom:11px !important; */
+    height: 40px;
+/*    margin-top: 140px; */
+/*    margin-bottom: -22px; */
+    padding-top: 40px;
+}
+
+label {
+display: block;
+text-align: right;
+font-weight: bold;
+}
+
+label.simple {
+text-align: left;
+font-weight: normal;
+}
+
+label input.edit {
+width: 50%;
+}
+
+fieldset {
+width: 300px;
+text-align: center;
+border: 1px solid #8cacbb;
+padding: 0.5em;
+}
+
+textarea.edit {
+font-family:monospace;
+border: 1px solid #8cacbb;  
+color: #333;
+background-color: #fdfdfd;
+font-size:11px;
+padding: 3px;
+width:99%;
+}
+
+input.edit,select.edit {
+border: 1px solid #8cacbb;
+height: 18px !important;
+max-height: 18px !important;
+min-height: 18px !important;
+height:14px;
+color: #333;
+background-color: #fdfdfd;
+vertical-align: middle;
+padding: 1px;
+display: inline;
+}
+
+input#qsearch_in {
+width:128px !important;
+width:134px;
+}
+
+input.missing {
+font-size: 80%;
+border: 1px solid #8cacbb;
+height: 18px !important;
+max-height: 18px !important;
+min-height: 18px !important;
+color: #333;
+background-color: #ffcccc;
+vertical-align: middle;
+padding: 1px;
+display: inline;
+}
+
+/* --------- buttons ------------------- */
+
+
+input.button, button.button{
+border: 1px solid #8cacbb;  
+color: #333;
+background-color: #fdfdfd;
+vertical-align: middle;
+text-decoration:none;
+cursor: pointer;
+font-size:0.8125em;
+height: 18px !important;
+max-height: 18px !important;
+min-height: 18px !important;
+margin: 1px;
+display: inline;
+}
+
+div.secedit input.button {
+border: 1px solid #8cacbb;
+color: #333;
+background-color: #fdfdfd;
+vertical-align: middle;
+text-decoration:none;
+margin: 0px;
+padding: 0px;
+font-size: 10px;
+cursor: pointer;
+height: 15px !important;
+max-height: 15px !important;
+min-height: 15px !important;
+float:right;
+display: inline;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+/* ----------- page navigator ------------- */
+
+div.pagenav {
+margin-top:1em;
+}
+
+div.pagenav-prev {
+text-align:right;	
+float:left;
+width:50%
+}
+
+div.pagenav-prev input.button {
+margin-right:5px;
+}
+
+div.pagenav-next {
+text-align:left;
+float:right;
+width:50%
+}
+
+div.pagenav-next input.button {
+margin-left:5px;
+}
+
+/* --------------- Links ------------------ */
+
+a {
+/*color:#436976; */
+color: #2a4380;
+text-decoration:none;
+}
+a:hover {
+color:#06246f;
+text-decoration:underline;
+}
+
+/* windows share */
+a.windows{
+/*  background: transparent url(../images/windows.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 16px;*/
+/*color:#436976; */
+  color: #2a4380;
+  text-decoration:none;
+} 
+a.windows:visited {
+  /*color:#436976; */
+  color: #2a4380;
+}
+a.windows:hover { 
+text-decoration:underline;
+}
+
+/* interwiki link */
+a.interwiki{
+/*  background: transparent url(../images/interwiki.png) 0px 1px no-repeat;
+  padding-left: 16px;*/
+  /*color:#436976; */
+  color: #2a4380;
+  text-decoration:none;
+}
+a.interwiki:visited {
+  /*color:#436976; */
+  color: #2a4380;
+}
+a.interwiki:hover {
+text-decoration:underline;
+}
+
+/* link to some embedded media */
+a.media {
+  /*color:#436976; */
+  color: #2a4380;
+  text-decoration:none;
+}
+a.media:hover {
+  /*color:#436976; */
+  color: #06246f;
+  text-decoration:underline
+}
+
+/* email link */
+a.mail {
+/*background: transparent url(../images/mail_icon.gif) 0px 1px no-repeat;
+padding: 1px 0px 1px 16px;*/
+  /*color:#436976; */
+  color: #2a4380;
+  text-decoration:none;
+}
+a.mail:hover {
+text-decoration:underline;
+}
+
+/* existing wikipage */
+a.wikilink1:link    { color:#2a4380; text-decoration:none }
+a.wikilink1:visited { color:#2a4380; text-decoration:none }
+a.wikilink1:hover   { color:#06246f; text-decoration:underline }
+
+/* not existing wikipage */
+a.wikilink2:link    { color:#2a4380; text-decoration:none }
+a.wikilink2:visited { color:#2a4380; text-decoration:none }
+a.wikilink2:hover   { color:#06246f; text-decoration:underline }
+
+/* external link */
+a.urlextern{
+/*  background: transparent url(../images/link_icon.png) 0px 0px no-repeat;
+  padding: 1px 0px 1px 18px;*/
+  color:#2a4380;
+  text-decoration:none;
+}
+a.urlextern:visited {
+color:#2a4380;
+}
+a.urlextern:hover {
+text-decoration:underline;
+}
+
+
+/* ------------- Page elements ----------------- */
+
+div.preview{
+padding: 4px;
+border: 1px dashed #c3c3c3;
+}
+
+div.breadcrumbs{
+color: #666666;
+float:left;
+line-height:140%;
+margin-left:2px;
+font-size:11px;
+width:187px;
+}
+
+span.user{
+color: #cccccc;
+}
+
+/* embedded images */
+img.media {
+margin: 3px;
+}
+
+img.medialeft {
+border: 0;
+float: left;
+margin: 0 1.5em 0 0;
+}
+
+img.mediaright {
+border: 0;
+float: right;
+margin: 0 0 0 1.5em;
+}
+
+img.mediacenter {
+border: 0;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+acronym {
+cursor: help;
+border-bottom: 1px dotted #000;
+}
+
+/* general headline setup */
+h1, h2, h3, h4, h5 
+{
+  color: #333;
+  font-family: Verdana, Georgia, "Lucida", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  margin-left:    0;
+  margin-right:   0;
+  margin-top:     0.5em;
+  margin-bottom:  0.5em;
+  padding-left:   0;
+  padding-right:  0;
+  padding-bottom:  0px;
+  clear: left;
+  font-size: 11px;
+}
+
+/* special headlines */
+h1 { border-bottom: 1px solid #83a9b6; font-size: 15px;}
+h2 {font-size: 14px;}
+h3 {font-size: 13px;}
+h4 {font-size: 12px;}
+
+/* unordered lists */
+ul 
+{ 
+line-height: 1.5em;
+/* font-size:0.8125em; */
+list-style-type: square;
+padding: 0;
+margin: 0px;
+margin-left: 20px;
+margin-bottom: 10px;
+list-style-image: url(../images/bullet.gif);
+}
+
+/* ordered lists */
+ol {
+/* font-size:0.8125em; */
+line-height: 1.5em;
+margin-left:25px;
+padding: 0;
+color: #638c9c;
+font-weight: bold;
+list-style-image: none;
+}
+
+/* the list items overriding the ol definition */
+.li 
+{
+font-weight: normal;
+}
+
+ol {list-style-type: decimal}
+ol ol {list-style-type: upper-roman}
+ol ol ol {list-style-type: lower-alpha}
+ol ol ol ol {list-style-type: lower-greek}
+
+li.open {
+list-style-image: url(../images/open.gif);
+}
+
+li.closed {
+list-style-image: url(../images/closed.gif);
+}
+
+blockquote {
+font-size:11px;
+border-left: 2px solid #8cacbb;
+padding-left: 3px;
+margin-left: 0;
+}
+
+/* code blocks by indention */
+pre.pre {
+padding: 0.5em;
+border: 1px dashed #8cacbb;
+color: #333;
+background-color: #f7f9fa;
+overflow: auto;
+}
+
+/* code blocks by code tag */
+pre.code {
+padding: 0.5em;
+border: 1px dashed #c3c3c3;
+color: #333;
+background-color: #fdfdfd;
+overflow: auto !important;
+overflow: scroll;
+width:90%;
+line-height:140%;
+}
+
+/* inline code words */
+code {
+}
+
+/* code blocks by file tag */
+pre.file {
+padding: 0.5em;
+border: 1px dashed #8cacbb;
+color: #333;
+background-color: #dee7ec;
+overflow: auto;
+}
+
+/* inline tables */
+table.inline {
+background-color: #ffffff;
+border-spacing: 0px;
+border-collapse: collapse;
+}
+
+table.inline th {
+padding: 3px;
+border: 1px solid #8cacbb;
+background-color: #dee7ec;
+}
+
+table.inline td {
+padding: 3px;
+border: 1px solid #8cacbb;
+}
+
+.leftalign{
+text-align: left;
+}
+
+.centeralign{
+text-align: center;
+}
+
+.rightalign{
+text-align: right;
+}
+
+/* ---------- table of contents ------------------- */
+
+div.toc {
+margin-left: 10px;
+margin-bottom: 0;
+margin-top: 10px !important;
+margin-top: 10px;
+margin-bottom:20px;
+float:right;
+width: 250px;
+clear:both;
+}
+
+div.tocheader
+{
+border: 1px solid #c3c3c3;
+background-color: #fdfdfd;
+text-align: left;
+font-weight:bold;
+margin-bottom: 1px;
+padding-left:5px;
+font-size:11px;
+}
+
+div.toctoggle img 
+{
+width:0.8em;
+height:0.8em;
+}
+
+#toc__inside 
+{
+border: 1px solid #c3c3c3;
+background-color: #fdfdfd;
+text-align: left;
+padding-top: 0.5em;
+padding-bottom: 0.7em;
+}
+
+ul.toc {
+font-size:10px;
+list-style-type: none;
+list-style-image: none;
+line-height: 1.2em;
+margin: 0;
+padding: 0;
+padding-left: 0.8em;
+}
+
+ul.toc li {
+background: transparent url(../images/tocdot2.gif) 0 0.6em no-repeat;
+padding-left:0.4em;
+}
+
+ul.toc li.clear {
+background-image: none;
+padding-left:0.4em;
+}
+
+a.toc {
+color: #436976;
+text-decoration:none;
+}
+
+a.toc:hover {
+color: #c37439;
+text-decoration:underline; 
+}
+
+/* ---------------------------- Diff rendering --------------------------*/
+table.diff { background:#fdfdfd; }
+td.diff-blockheader {font-weight:bold}
+td.diff-header {
+border-bottom: 1px solid #8cacbb;
+font-size:120%;
+}
+td.diff-addedline {
+  background:#ddffdd;
+  font-family: monospace;
+  font-size: 100%;
+}
+td.diff-deletedline { 
+  background:#ffffbb;
+  font-family: monospace;    
+  font-size: 100%;
+}
+td.diff-context {
+  background:#f7f9fa;
+  font-family: monospace;
+  font-size: 100%;
+}
+span.diffchange { color: red; }
+
+/* --------------------- footnotes -------------------------------- */
+
+div.footnotes{
+    
+    height: 35px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+div.fn{
+font-size:90%;
+}
+
+a.fn_top{
+vertical-align:super;
+font-size:80%;
+}
+
+a.fn_bot{
+vertical-align:super;
+font-size:80%;
+font-weight:bold;
+}
+
+/* insitu-footnotes */
+div.insitu-footnote {
+font-size: 80%;
+line-height: 1.2em;
+border: 1px solid #8cacbb;
+background: #eef3f8;
+text-align: left;
+padding: 4px;
+max-width: 40%;    /* IE's width is handled in javascript */  
+}
+
+/* overcome IE issue with one line code or file boxes which require h. scrolling */
+* html .insitu-footnote pre.code, * html .insitu-footnote pre.file {
+padding-bottom: 18px;
+}
+
+/* --------------- search result formating --------------- */
+.search_result{
+margin-bottom: 6px;
+padding-left: 16px;
+padding-right: 10px;
+}
+
+.search_snippet{
+color: #999999;
+font-size: 12px;
+margin-left: 20px;
+}
+
+.search_sep{
+color: #000000;
+}
+
+.search_hit{
+  color: #000000;
+  background: #FFFF99;
+}
+
+div.search_quickresult{
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  margin-left: 8px;
+  padding-right: 10px;
+  background: url(http://flolac.iis.sinica.edu.tw/flolac10/lib/tpl/flolac10/images/hborder.jpg) repeat-x 0px 15px;
+}
+
+div.search_quickhits {
+  margin-left: 8px;
+  float:left;
+  background: transparent url(../images/bullet.gif) 0px 1px no-repeat;
+  padding: 1px 0px 1px 8px;
+  width: 30%;
+}
+
+/* ------------------ Additional ---------------------- */
+.footer
+{
+  font-size: 11px;
+  height: 50px;
+/*  background:#436976; */
+  background: #999;
+  color: #fff;
+  padding: 0px;
+}
+
+.footer a
+{
+    font-weight: bold;
+    color: #ccc;
+}
+
+.footer a:hover
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- Admin --- */
+
+div.acladmin label {
+  text-align: left;
+  font-weight: normal;
+  display: inline;
+}
+
+div.acladmin table{
+  margin-left: 10%;
+  width: 80%;
+}
+
+/* ---------- AJAX quicksearch ----------- */
+
+div.ajax_qsearch {
+  position:absolute;
+  right:237px;;
+  width: 200px;
+  /*opacity: 0.9;*/
+  display:none;
+  font-size: 80%;
+  line-height: 1.2em;
+  border: 1px solid #8cacbb;
+  background: #eef3f8;
+  text-align: left;
+  padding: 4px;
+}
+
+/* ---------- Spellchecking ------------- */
+
+a.spell_error {
+  color: #ff0000;
+  text-decoration: underline;
+}
+
+div#spell_suggest {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  background-color: #fdfdfd;
+  padding: 2px;
+  border: 1px solid #000;
+  font-size:80%;
+  z-index: 2;
+}
+
+div#spell_result {
+  display:none;
+  font-family:monospace;
+  border: 1px solid #8cacbb; 
+  color: #333;
+  font-size:14px;
+  padding: 3px;
+  background-color: #f7f9fa;
+  overflow: auto;
+  z-index: 1;
+
+  
+  /*#fdfdfd-space: pre-wrap;       /* css-3 */
+  /*#fdfdfd-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  /*#fdfdfd-space: -pre-wrap;      /* Opera 4-6 */
+  /*#fdfdfd-space: -o-pre-wrap;    /* Opera 7 */
+  /*word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+span.spell_noerr {
+  color: #009933;
+}
+
+span.spell_wait {
+  color: #0066cc;
+}
+
+/* ---------------  Image Details  ----------------- */
+
+div.img_big {
+  float: left;
+  margin-right: 0.5em;
+}
+
+dl.img_tags dt {
+  font-weight: bold;
+  background-color: #dee7ec;
+}
+dl.img_tags dd {
+  background-color: #f5f5f5;
+}
+
+div.imagemeta {
+  color: #666;
+  font-size: 70%;
+  line-height: 95%;
+}
+
+div.imagemeta img.thumb{
+  float:left;
+  margin-right: 0.1em;
+}
+
+/* -------------- Media Popup ---------------------- */
+
+div.mediaselect-right li, div.uploadform { 
+  clear: both;
+}
+
+div.mediaedit div.data label{
+	display: block;
+  text-align: right; 
+  width: 20%;
+  float: left;
+  margin-right: 0.5em;
+}
+
+div.mediaedit div.data input, div.mediaedit div.data textarea{
+  width: 75%;
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+div.mediaedit div.data input.button {
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.img_detail
+{
+    border:0;
+}
+
+/* Translation Menu */
+
+/* div.plugin_translation span { float: left; } */
+
+div.plugin_translation ul
+{ 
+    padding: 0px;
+	margin: 0px;
+    padding-top: 0px;
+    list-style: none;
+    white-space: nowrap;
+}
+
+div.plugin_translation li
+{ 
+    width: auto !important;
+    float: left;
+    margin: 0px;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    margin-right: 1px;	
+}
+
+div.plugin_translation a.wikilink2:link,
+div.plugin_translation a.wikilink2:active,
+div.plugin_translation a.wikilink2:visited,
+div.plugin_translation a.wikilink1:link,
+div.plugin_translation a.wikilink1:active,
+div.plugin_translation a.wikilink1:visited,
+div.plugin_translation a.interwiki:link,
+div.plugin_translation a.interwiki:active,
+div.plugin_translation a.interwiki:visited,
+div.plugin_translation a.urlextern:link,
+div.plugin_translation a.urlextern:active,
+div.plugin_translation a.urlextern:visited
+{
+    font-size: 14px;
+    font-weight: bold;
+    
+    height: 25px;
+    display: block;
+    padding-right: 10px; 
+    padding-left: 10px; 
+    text-decoration: none;
+    color: #CCCCCC;
+    margin-left: 5px;
+    white-space: nowrap;
+    text-align: center;
+/*    width: 50px;*/
+    float: left;
+}
+
+div.plugin_translation a.wikilink2:hover,
+div.plugin_translation a.wikilink1:hover,
+div.plugin_translation a.interwiki:hover,
+div.plugin_translation a.urlextern:hover 
+{
+    text-decoration: none; 
+    height: 18px;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+}

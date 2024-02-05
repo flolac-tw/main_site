@@ -1,0 +1,57 @@
+ /* CSS definition file containing sitestyle stylesheets
+    Additional style sheet white.css for JAlbum skin - Exhibit Plus
+    Author Mark Fyvie email: <jalbum at fivewire . net> 
+
+    Note: this style sheet contains only information to change the colours on the original stylesheet basestyle.css (located in the res directory). This makes it easy to update just the colours in one location */
+
+/* <% album.put("BUTTON_SET", "aqua-32px-lightbackground"); %> */ 
+
+ body  { color: black; background-color: white }
+ a:link { color: #808080} 
+ a:visited { color: #808080}
+ a:hover { color: black}
+ p { }
+ p.indent { }
+ table, tr, td { }
+ img { }
+/* Used to setup the main page structure */
+ #centercontent { background: white;  }
+
+/* Styles assosicated with index pages */
+ #indexframe { background-color: #ffffff }
+ .folderData { }
+ .folderDescription { }
+ .folderNavigation { color: gray }
+ .folderNavigation a { color: gray }
+ .folderNavigation a:link { color: gray }
+ .folderNavigation a:visited { color: gray }
+ .folderNavigation a:hover { color: gray }
+ .float { } 
+ .float p { }
+ .float p.thumbComment { }
+ .thumbName a { color: #616161 }
+ .thumbDate { color: gray }
+ #w3clogosright { }
+
+/* Styles assosciated with slide pages */
+ #frame { background-color: #ffffff }
+ .minithumb { }
+ .minithumbCurrent { border: 1px dotted gray }
+ .minithumbBox { }
+ .photoName { color: black }
+ .photoPosition { color: black }
+ .photoComments { }
+ .photoData { color: black }
+ .photoData b { }
+ .photoData i { }
+ .photoDataPopup { background: white; color: gray }
+ .keyboardDataPopup {  background: white; color: gray }
+ .slideFrameButtons { }
+ #buttonbox_portrait { }
+ #photonavbar_inside_portrait { }
+ #w3clogosleft { }
+
+/* Styles assosciated with additional files, e.g. news.inc, footer.inc etc */
+ .dateline { color: #999999 }
+ .header { color: black }
+ .footer { color: rgb(97,97,97) }

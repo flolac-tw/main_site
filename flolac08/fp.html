@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    fp    [2008 Formosan Summer School on Logic, Language, and Computation (FLOLAC '08)]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2008-07-11T09:51:37+0800" />
+<meta name="keywords" content="fp" />
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.html" title="2008 Formosan Summer School on Logic, Language, and Computation (FLOLAC '08)" />
+<link rel="start" href="fp.html" />
+<link rel="contents" href="fp.html" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="feed.html" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="feed.mode.list.html%3Fmode=list.html" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="fp.html" />
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="fp.html" />
+<link rel="canonical" href="http://flolac.iis.sinica.edu.tw/flolac08/doku.php?id=fp" />
+<link rel="stylesheet" media="all" type="text/css" href="lib/exe/css.php.s.all_t.flolac08.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="lib/exe/css.php.t.flolac08.css" />
+<link rel="stylesheet" media="print" type="text/css" href="lib/exe/css.php.s.print_t.flolac08.css" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='';var JSINFO = {"id":"fp","namespace":""};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php.t.flolac08.js" ></script>
+
+  <link rel="shortcut icon" href="lib/tpl/flolac08/images/favicon.ico" />
+
+  <meta name="verify-v1" content="a8urvet+rGObmVbVXY0MHb+3srmBL9+igUZGc9xVz+g=" />
+  </head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="pagename">
+        [[<a href="fp.html" >fp</a>]]
+      </div>
+      <div class="logo">
+        <a href="doku.html"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">2008 Formosan Summer School on Logic, Language, and Computation (FLOLAC '08)</a>      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    
+    
+        <div class="breadcrumbs">
+      <span class="bchead">Trace:</span> <span class="bcsep">&raquo;</span> <span class="curid"><a href="fp.html"  class="breadcrumbs" title="fp">fp</a></span>          </div>
+    
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="fp.html#introduction_to_functional_programming_in_haskell_and_the_hindley-milner_type_system" class="toc">Introduction to Functional Programming in Haskell and the Hindley-Milner Type System</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fp.html#course_material" class="toc">Course Material</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fp.html#prerequisites" class="toc">Prerequisites</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fp.html#grading" class="toc">Grading</a></span></div></li>
+<li class="level1"><div class="li"><span class="li"><a href="fp.html#assignments" class="toc">Assignments</a></span></div></li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+
+
+<h1><a name="introduction_to_functional_programming_in_haskell_and_the_hindley-milner_type_system" id="introduction_to_functional_programming_in_haskell_and_the_hindley-milner_type_system">Introduction to Functional Programming in Haskell and the Hindley-Milner Type System</a></h1>
+<div class="level1">
+
+<p>
+
+Lecturer: <a href="http://www.cs.nccu.edu.tw/~chenk/" class="urlextern" title="http://www.cs.nccu.edu.tw/~chenk/"  rel="nofollow">陳恭 Kung Chen</a>
+</p>
+
+</div>
+
+<h1><a name="course_material" id="course_material">Course Material</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="files/handouts/chen.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/handouts/chen.pdf"  rel="nofollow">Slides</a>, <a href="http://flolac.iis.sinica.edu.tw/flolac08/files/handouts/chen-patch-1.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/handouts/chen-patch-1.pdf"  rel="nofollow">patch slides 1 (eta conversion)</a>, and <a href="files/handouts/chen-patch-2.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/handouts/chen-patch-2.pdf"  rel="nofollow">patch slides 2 (LC evaluator)</a>.</div>
+</li>
+<li class="level1"><div class="li"> Through out the course we will be mostly using <a href="http://cvs.haskell.org/Hugs/" class="urlextern" title="http://cvs.haskell.org/Hugs/"  rel="nofollow">Hugs</a>, a popular Haskell interepreter.</div>
+<ul>
+<li class="level2"><div class="li"> Windows users may download <a href="files/res/WinHugs-Sep2006.exe" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/res/WinHugs-Sep2006.exe"  rel="nofollow">WinHugs Sep 2006</a> (14MB self extracting .EXE), a windows implementation with a graphical interface. </div>
+</li>
+<li class="level2"><div class="li"> Unix and Mac <acronym title="Operating System">OS</acronym> X users please visit the <a href="http://cvs.haskell.org/Hugs/pages/downloading.htm" class="urlextern" title="http://cvs.haskell.org/Hugs/pages/downloading.htm"  rel="nofollow">Hugs homepage</a> to download Hugs for these platforms.</div>
+</li>
+<li class="level2"><div class="li"> Windows Vista users: seems that you have to expand the self extracting file by yourself, and run the WinHugs.exe to start the Haskell interpreter environment. </div>
+</li>
+<li class="level2"><div class="li"> GHC is another Haskell implementation that you can use: <a href="http://www.haskell.org/ghc/index.html" class="urlextern" title="http://www.haskell.org/ghc/index.html"  rel="nofollow">http://www.haskell.org/ghc/index.html</a>  </div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+ * A short introduction to using Haskell (mostly via GHCi) in Chinese: <a href="http://www.haskell.org/haskellwiki/Tw/Haskell入門的5個步驟" class="urlextern" title="http://www.haskell.org/haskellwiki/Tw/Haskell%E5%85%A5%E9%96%80%E7%9A%845%E5%80%8B%E6%AD%A5%E9%A9%9F"  rel="nofollow">Haskell入門的5個步驟</a>.
+</p>
+
+<p>
+ * A tour of the Haskell syntax: <a href="http://cs.anu.edu.au/Student/comp1100/haskell/tourofsyntax.html" class="urlextern" title="http://cs.anu.edu.au/Student/comp1100/haskell/tourofsyntax.html"  rel="nofollow">http://cs.anu.edu.au/Student/comp1100/haskell/tourofsyntax.html</a>
+</p>
+
+<p>
+ * A <a href="files/memo/haskell.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/memo/haskell.pdf"  rel="nofollow">list of Haskell Prelude functions</a> that may be useful for this course.
+</p>
+
+</div>
+
+<h1><a name="prerequisites" id="prerequisites">Prerequisites</a></h1>
+<div class="level1">
+
+<p>
+
+None.
+</p>
+
+</div>
+
+<h1><a name="grading" id="grading">Grading</a></h1>
+<div class="level1">
+
+<p>
+
+Grading: Class Participation 10%, Homework 40%, Final (2008/07/11) 50%.
+</p>
+
+</div>
+
+<h1><a name="assignments" id="assignments">Assignments</a></h1>
+<div class="level1">
+
+<p>
+
+Upload your homework through the website <a href="http://plsm.cs.nccu.edu.tw/flolac/" class="urlextern" title="http://plsm.cs.nccu.edu.tw/flolac/"  rel="nofollow">http://plsm.cs.nccu.edu.tw/flolac/</a>. Login with “f2008” ++ the last two digits of your registration number.
+
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="files/assignments/chen-hw-1.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-1.pdf"  rel="nofollow">Assignment #1</a>, with <a href="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-ans-1.hs" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-ans-1.hs"  rel="nofollow">solutions</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="files/assignments/chen-hw-2.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-2.pdf"  rel="nofollow">Assignment #2</a>, with <a href="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-ans-2.hs" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-ans-2.hs"  rel="nofollow">solutions</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="files/assignments/chen-hw-3.pdf" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac08/files/assignments/chen-hw-3.pdf"  rel="nofollow">Assignment #3</a>.</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+        fp.txt &middot; Last modified: 2008/07/11 09:51 by scm      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+        <form class="button btn_source" method="post" action="doku.html"><div class="no"><input type="hidden" name="do" value="edit" /><input type="hidden" name="rev" value="" /><input type="hidden" name="id" value="fp" /><input type="submit" value="Show pagesource" class="button" accesskey="v" title="Show pagesource [V]" /></div></form>        <form class="button btn_revs" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="fp" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [O]" /></div></form>      </div>
+      <div class="bar-right" id="bar__bottomright">
+                                <form class="button btn_login" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="login" /><input type="hidden" name="sectok" value="c0b6a121178fbdcf153f62b5381921a3" /><input type="hidden" name="id" value="fp" /><input type="submit" value="Login" class="button" title="Login" /></div></form>        <form class="button btn_index" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="index" /><input type="hidden" name="id" value="fp" /><input type="submit" value="Index" class="button" accesskey="x" title="Index [X]" /></div></form>        <a class="nolink" href="fp.html#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>        <form class="button btn_recent" method="get" action="doku.html"><div class="no"><input type="hidden" name="do" value="recent" /><input type="hidden" name="id" value="fp" /><input type="submit" value="Recent changes" class="button" accesskey="r" title="Recent changes [R]" /></div></form>        <form action="doku.html" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>&nbsp;      
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerinc">
+  <a  href="feed.html" title="Recent changes RSS feed"><img src="lib/tpl/flolac08/images/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" /></a>
+
+  <a  href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="lib/tpl/flolac08/images/button-cc.gif" width="80" height="15" alt="Creative Commons License" /></a>
+
+  <a  href="https://www.paypal.com/xclick/business=andi@splitbrain.org&amp;item_name=DokuWiki Donation&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=EUR&amp;lc=US" title="Donate"><img src="lib/tpl/flolac08/images/button-donate.gif" alt="Donate" width="80" height="15" /></a>
+
+  <a  href="http://www.php.net" title="Powered by PHP"><img src="lib/tpl/flolac08/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+
+  <a  href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="lib/tpl/flolac08/images/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" /></a>
+
+  <a  href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3" title="Valid CSS"><img src="lib/tpl/flolac08/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+
+  <a  href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="lib/tpl/flolac08/images/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" /></a>
+
+
+
+<!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+   <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+   <requires rdf:resource="http://web.resource.org/cc/ShareAlike" />
+</License>
+
+</rdf:RDF>
+
+-->
+
+
+</div>
+
+<div class="no"><img  width="1" height="1" alt=""  /></div>
+</body>
+</html>

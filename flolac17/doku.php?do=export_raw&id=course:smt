@@ -1,0 +1,11 @@
+===== Part I =====
+
+We introduce some first-order theories in this lecture. Some decidable fragments of first-order theories and decision procedures of satisfiability are also introduced. We will learn how to reduce a problem to a problem in satisfiability modulo theories (SMT) and how to use an SMT solver to solve it.
+
+{{ :course:01_smt.pdf |SMT}}, {{ :course:02_euf.pdf |Decision Procedures}}, {{ :course:smt_exercises.pdf | Exercises}}, {{ :course:smt_exercises_sol.pdf |Suggested Solutions}}
+
+===== Part II =====
+
+We show how to verify if a program satisfies a specification with Hoare logic and how to generate verification conditions with weakest preconditions. Besides backward reasoning, we also show how to verify a program in a forward manner.
+
+{{ :course:03_verification.pdf |Verification}}, {{ :course:04_verify25519.pdf |Cryptographic Software}}{{ :course:verification_exercises.pdf |Exercises}}, {{ :course:verification_exercises_sol.pdf |Suggested Solutions}}

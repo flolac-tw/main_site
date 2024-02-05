@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formosan Summer School on Logic, Language, and Computation.</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/pure-min.css" />
+<link rel="stylesheet" href="css/side-menu.css" />
+<link rel="stylesheet" href="css/ext.css" />
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="intro.html#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="index.html">FLOLAC 2016</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="register.html" class="pure-menu-link">報名資訊</a></li>
+                <li class="pure-menu-item"><a href="intro.html" class="pure-menu-link">課程簡介</a></li>
+                <li class="pure-menu-item"><a href="calendar.html" class="pure-menu-link">行事曆</a></li>
+            </ul>
+        </div>
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="fp.html" class="pure-menu-link">
+                    函數編程
+                </a></li>
+                <li class="pure-menu-item"><a href="lambda.html" class="pure-menu-link">
+                    λ 演算與型別
+                </a></li>
+                <li class="pure-menu-item"><a href="logic.html" class="pure-menu-link">
+                    基礎邏輯
+                </a></li>
+                <li class="pure-menu-item"><a href="mltt.html" class="pure-menu-link">
+                    Martin-Löf 型別理論
+                <li class="pure-menu-item"><a href="dtp.html" class="pure-menu-link">
+                    依值型別編程
+                </a></li>
+                <li class="pure-menu-item"><a href="talk.html" class="pure-menu-link">
+                    邀請演講
+                </a></li>
+                <li class="pure-menu-item"><a href="special.html" class="pure-menu-link">
+                    特別講座
+                </a></li>
+            </ul>
+        </div>
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a href="index.html" class="pure-menu-link">
+                    中文
+                </a></li>
+                <li class="pure-menu-item">
+                    <a href="en/index.html" class="pure-menu-link">
+                    English
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <img src="img/header.jpg" />
+        </div>
+        <div class="content">
+<h1>課程簡介</h1>
+<h2 id="函數編程">函數編程</h2>
+<p><em>待公布</em>。</p>
+<h2 id="型別論與邏輯">型別論與邏輯</h2>
+<p>資訊系學生常問的一個問題是學習數學 — 特別是數學證明 — 對寫程式有什麼幫助，答案不外乎是特定領域（如機器學習、訊號處理等）會用到，或是較為模糊的「訓練邏輯思考」。第二個答案其實有完全精確的版本，無需模糊帶過：寫程式和寫證明完全是同一件事！</p>
+<p>不過，在給這個答案之前，我們必須切換到另一個對數學本質的看法。古典數學 (classical mathematics) 的看法是數學物件獨立於人類心智存在，構成一個理型世界；數學家如同記者，工作是報導那個世界的實況。另一方面，直構數學 (intuitionistic mathematics) 認為數學物件 — 包括證明 — 是人類心智的主觀產物，而非客觀存在；數學家如同作家，工作是以心智構築出數學理論。直構觀點下，由於數學純粹是人類心智的活動（無涉理型），故構造出的數學物件必須符合「人類心智感知之先天條件」。這個神秘條件到了近代 — 特別因為計算機的發明與普及 — 終於能夠簡單且具體地解釋：直構數學的產物必須有計算意義。換句話說，直構數學家的工作本質正是程式編寫。</p>
+<p>傳統的數理邏輯系統源於古典數學，多忽略計算意義；另一方面，一般程式語言的表達能力不夠細緻，遠不足以描述常見數學構造的精密性質。瑞典邏輯學家 Per Martin-Löf 於是在 ’70 年代設計出直構型別論 (intuitionistic type theory) 作為直構數學的邏輯基礎，至今其理論延伸和應用均仍蓬勃發展中。本次 FLOLAC 首度專課介紹型別論如何融合數理邏輯之性質表達能力以及函數編程之計算模型，並另有專課介紹以型別論為基礎的新一代函數編程（請待下回分解）。</p>
+<p>回到最先問題：學習數學證明對寫程式有幫助嗎？我們的答案是：顯然有，因為閱讀證明就是研究數學家歷經數千年去蕪存菁的程式庫，而習寫證明則是練習在更全面的語意考量下編寫程式。一言以蔽之：資訊系學生應該多修點數學系的課（無誤）。</p>
+<ul>
+<li>原始連結：<a href="https://www.facebook.com/flolac.tw/posts/638416392899435"><i class="fa fa-globe fa-fw"></i>https://www.facebook.com/flolac.tw/posts/638416392899435</a></li>
+<li>關於直構邏輯另可參考 <a href="https://www.facebook.com/flolac.tw/posts/270616189714384"><i class="fa fa-globe fa-fw"></i>https://www.facebook.com/flolac.tw/posts/270616189714384</a></li>
+</ul>
+<h2 id="依值型別編程">依值型別編程</h2>
+<p>D. E. Knuth 的名言 “Beware of bugs in the above code; I have only proved it correct, not tried it.” 被程式員譽為傳奇，因為現實情境中大家整天疲於除錯。於是當 E. W. Dijkstra 說出 “In programming, nothing is cheaper than not introducing the bugs in the first place.” 時，程式員只是嗤之以鼻 — 程式哪有不寫錯的！但事實上，依值型別編程 (dependently typed programming) 的相關研究正帶我們走向一個「程式不可能寫錯」的新世界！</p>
+<p>當今主流程式語言的描述能力難以表達程式員的完整意圖，例如我們可描述樹狀資料結構但無法描述其平衡性質和元素排序，於是需要另外寫證明解釋程式之目的 — 當然，主流語言也無法表達型式證明，於是程式目的之解釋就退化為註釋。前篇介紹的直構型別論 (intuitionistic type theory) 造出一個證明與程式共存的環境，讓我們能在程式語言內直接證明程式的性質，但證明仍需另外寫就。踏在直構型別論的基礎上，依值型別編程的目標是更進一步融合證明與程式，藉著巧妙設計程式型別，使程式性質的證明能夠隱寓於程式本身，無需分開處理 — 如此一來，程式本身便足以表達原先需另以證明解釋之意義。例如，與其先寫程式將兩份樹狀資料結構合併為一份，再寫證明解釋此操作保持平衡性質和元素排序，我們可直接設計一個「平衡搜尋樹」資料型別，再寫出型別描述「將兩棵平衡搜尋樹合併為一棵」這樣的操作。依值型別系統確保任何具此型別的程式必須妥適處理嵌於「平衡搜尋樹型別」的平衡性質和元素排序，因此程式只要通過型別檢驗就必定正確。不僅如此，依值型別更能在程式編寫過程中提供語意上的提示，有時甚至能直接從型別自動推得符合的程式。</p>
+<p>本次 FLOLAC 首度開課簡介依值型別編程這項尖端研究，以學界廣泛使用的依值型別語言 Agda 為例，讓大家搶先體驗新世界的編程工具！</p>
+<ul>
+<li>原始連結： <a href="https://www.facebook.com/flolac.tw/posts/642090002532074"><i class="fa fa-globe fa-fw"></i>https://www.facebook.com/flolac.tw/posts/642090002532074</a></li>
+</ul>
+<h2 id="邀請演講">邀請演講</h2>
+<h3 id="邀請演講-i">邀請演講 I</h3>
+<p><em>待公布</em>。</p>
+<h3 id="邀請演講-ii">邀請演講 II</h3>
+<p><em>待公布</em>。</p>
+</div>
+
+    </div>
+    <div class="footer l-box is-center">
+      <p>
+      All contents on this site are licensed under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+      <img src="img/cc-by-sa.png" alt="CC BY-SA 3.0" /></a>
+      &nbsp;&nbsp;
+      Powered by
+      <a class="licens-link" href="https://jaspervdj.be/hakyll/">Hakyll</a>
+      <a class="licens-link" href="http://purecss.io/">PureCSS</a>
+      <a class="licens-link" href="http://fontawesome.io/">Fontawesome</a>
+      </p>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>

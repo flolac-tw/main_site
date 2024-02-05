@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formosan Summer School on Logic, Language, and Computation.</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/pure-min.css" />
+<link rel="stylesheet" href="css/side-menu.css" />
+<link rel="stylesheet" href="css/ext.css" />
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="lambda.html#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="index.html">FLOLAC 2016</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="register.html" class="pure-menu-link">報名資訊</a></li>
+                <li class="pure-menu-item"><a href="intro.html" class="pure-menu-link">課程簡介</a></li>
+                <li class="pure-menu-item"><a href="calendar.html" class="pure-menu-link">行事曆</a></li>
+            </ul>
+        </div>
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="fp.html" class="pure-menu-link">
+                    函數編程
+                </a></li>
+                <li class="pure-menu-item"><a href="lambda.html" class="pure-menu-link">
+                    λ 演算與型別
+                </a></li>
+                <li class="pure-menu-item"><a href="logic.html" class="pure-menu-link">
+                    基礎邏輯
+                </a></li>
+                <li class="pure-menu-item"><a href="mltt.html" class="pure-menu-link">
+                    Martin-Löf 型別理論
+                <li class="pure-menu-item"><a href="dtp.html" class="pure-menu-link">
+                    依值型別編程
+                </a></li>
+                <li class="pure-menu-item"><a href="talk.html" class="pure-menu-link">
+                    邀請演講
+                </a></li>
+                <li class="pure-menu-item"><a href="special.html" class="pure-menu-link">
+                    特別講座
+                </a></li>
+            </ul>
+        </div>
+        <div class="pure-menu">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a href="index.html" class="pure-menu-link">
+                    中文
+                </a></li>
+                <li class="pure-menu-item">
+                    <a href="en/index.html" class="pure-menu-link">
+                    English
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <img src="img/header.jpg" />
+        </div>
+        <div class="content">
+<h1>λ 演算與型別 (Lambda Calculus and Types)</h1>
+<ul>
+<li>講者: <a href="https://scholar.google.de/citations?user=o_NlMCcAAAAJ&amp;hl=en"><i class="fa fa-globe fa-fw"></i>陳亮廷 Liang-Ting Chen</a></li>
+</ul>
+<p>Practical introduction to lambda calculus (thus excluding, e.g., computability theory). May be interleaved with FP.</p>
+<h2 id="outline">Outline</h2>
+<ul>
+<li>Untyped lambda calculus (1 unit)
+<ul>
+<li>Syntax, alpha-conversion, beta-reduction</li>
+<li>Reduction strategies &amp; Church-Rosser Theorem</li>
+<li>Programming in lambda calculus
+<ul>
+<li>Church numerals</li>
+<li>Fixed-point combinator</li>
+</ul></li>
+</ul></li>
+<li>Simply typed lambda calculus (1 unit)
+<ul>
+<li>Typing rules (à la Curry)</li>
+<li>Simply typed lambda calculus à la Church</li>
+<li>Type safety
+<ul>
+<li>Subject reduction and strong normalisation</li>
+</ul></li>
+<li>Programming with simply typed lambda calculus</li>
+</ul></li>
+<li>Polymorphic lambda calculus (1 unit)
+<ul>
+<li>Typing rules</li>
+<li>Church numerals and folds revisited</li>
+<li>Parametricity overview</li>
+</ul></li>
+</ul>
+<h2 id="course-materials">Course Materials</h2>
+<ul>
+<li><a href="https://www.dropbox.com/s/pus8tjqv2kw3wqk/Lambda%20Calculus%20and%20Types%2C%201.pdf">slides 1</a></li>
+<li><a href="https://www.dropbox.com/s/aac9taiahir00ie/Lambda%20Calculus%20and%20Types%2C%202.pdf">slides 2</a></li>
+<li><a href="https://www.dropbox.com/s/v4ufzctru7aalua/Lambda%20Calculus%20and%20Types%2C%203.pdf">slides 3</a></li>
+<li><a href="https://www.dropbox.com/sh/2ehqu8suhionh75/AADfPIbxF4Intb0y4-WuAWNsa/lecture0_note.pdf">handout 0</a></li>
+<li><a href="https://www.dropbox.com/sh/2ehqu8suhionh75/AACtlRI0m7SBOpGnt3fkH8vda/lecture1_note.pdf">handout 1</a></li>
+<li><a href="https://www.dropbox.com/sh/2ehqu8suhionh75/AABrsHoJzEWZJPSTnbahZrfQa/lecture2_note.pdf">handout 2</a></li>
+<li><a href="https://www.dropbox.com/sh/2ehqu8suhionh75/AAAHrgSUickWaD3GX8vUYpoaa/lecture3_note.pdf">handout 3</a></li>
+</ul>
+<p><strong>[註] handout 1 中有些許變更如下：</strong></p>
+<ol style="list-style-type: decimal">
+<li>(Def. 1.1) 加註 <span class="math inline">\(\Lambda\)</span> 指的是所有 <span class="math inline">\(\lambda\)</span>-term 所成的集合</li>
+<li>(Def. 1.2) 修正 bound variable 的定義（出現在 <span class="math inline">\(\lambda\)</span> x. M 裡頭的 x 即為 bound occurrence）</li>
+<li>(Def. 1.6) <span class="math inline">\(\beta\)</span>-conversion 的定義中由 (<span class="math inline">\(\lambda\)</span> x. M) 跟 (<span class="math inline">\(\lambda\)</span> x’. M) 為 <span class="math inline">\(\alpha\)</span>-equivalent 改為 M 跟 M’ 為 <span class="math inline">\(\alpha\)</span>-equivalent。兩者皆正確，但後者較為精簡。</li>
+<li><span class="math inline">\(\lambda\)</span>-logical theory 改為 <span class="math inline">\(\beta\)</span>-convertibility。</li>
+<li>Church numerals 中的 <span class="math inline">\(f^n\)</span> 定義稍有改進。</li>
+<li>Successor 中原本寫 succ <span class="math inline">\(\bar{n} \xrightarrow{\beta*} \bar{n+1}\)</span> 中的 <span class="math inline">\(\bar{n}\)</span> 修正為 <span class="math inline">\(c_n\)</span>，<span class="math inline">\(\bar{n+1}\)</span> 亦然。</li>
+<li>Conditional 的定義修正。</li>
+<li>(Example 3.4 &amp; 3.6) 的 G 定義修正（原始定義漏了 “add n”）。</li>
+</ol>
+</div>
+
+    </div>
+    <div class="footer l-box is-center">
+      <p>
+      All contents on this site are licensed under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+      <img src="img/cc-by-sa.png" alt="CC BY-SA 3.0" /></a>
+      &nbsp;&nbsp;
+      Powered by
+      <a class="licens-link" href="https://jaspervdj.be/hakyll/">Hakyll</a>
+      <a class="licens-link" href="http://purecss.io/">PureCSS</a>
+      <a class="licens-link" href="http://fontawesome.io/">Fontawesome</a>
+      </p>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
+
+</body>
+</html>

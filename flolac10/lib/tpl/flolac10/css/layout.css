@@ -1,0 +1,216 @@
+/**
+ * Tableless Layout for default template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ * @author Michael Klier <chi@chimeric.de>
+ *
+ * Modification for mmClean Theme
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ */
+
+
+/* -------------- top row --------------- */
+
+div.page b.rtop, 
+div.page b.rbottom
+{
+    display:block;
+/*  background: #466fd5; */
+    background: #238fae; 
+}
+
+div.page b.rtop b, 
+div.page b.rbottom b
+{   
+    display:block;
+    height: 1px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+div.header b.rtop,
+div.header b.rbottom
+{
+    display:block;
+    background: #ffffff;
+}
+
+div.header b.rtop b,
+div.header b.rbottom b
+{   
+    display:block;
+    height: 1px;
+    overflow: hidden;
+    background: #436976;
+}
+
+div.footer b.rtop,
+div.footer b.rbottom
+{
+    display:block;
+    background: #ffffff;
+}
+
+div.footer b.rtop b,
+div.footer b.rbottom b
+{   
+    display:block;
+    height: 1px;
+    overflow: hidden;
+/*    background: #436976; */
+    background: #999;
+}
+
+/*
+div.sidebar b.rtop,
+div.sidebar b.rbottom
+{
+    display:block;
+    background: #ffffff;
+}
+
+div.sidebar b.rtop b,
+div.sidebar b.rbottom b
+{   
+    display:block;
+    height: 1px;
+    overflow: hidden;
+    background: #436976;
+}
+*/
+b.r1
+{
+    margin: 0 5px
+}
+
+b.r2
+{
+    margin: 0 3px
+}
+
+b.r3
+{
+    margin: 0 2px
+}
+
+b.rtop b.r4, b.rbottom b.r4
+{
+    margin: 0 1px;
+    height: 2px
+}
+
+.header 
+{
+    margin-bottom: 0px;
+/*    background:#436976; */
+/*    border:1px solid #c3c3c3; */
+    background-image: url(../images/tw-ocean-banner.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+
+}
+
+.stylefoot 
+{
+  display:block;
+  border-top:1px solid #eaeaea;
+  border-bottom:1px solid #eaeaea;
+  margin-top:10px;
+  font-weight:normal;
+  text-align:right;
+}
+
+.pagename a:link, .pagename a:visited 
+{
+  color:#436976;
+  text-decoration:none;
+}
+
+.pagename a:hover, .pagename a:active 
+{
+  color:#FF9933;
+}
+
+.logo 
+{
+/*	float:right;*/
+	font-weight:normal;
+	text-align:right;
+    margin-right:13px !important;
+    margin-right:9px;
+    margin-top:9px;
+    height: 165px;
+}
+
+.logo a:link, .logo a:visited, .logo a:hover, .logo a:active 
+{
+	color:#f8f8f8;
+	text-decoration:none;
+	letter-spacing:2pt;
+}
+
+#bar_bottom {
+  display:block;
+  margin-bottom:3px;
+}
+
+/* ------------- File Metadata ----------------------- */
+
+div.meta {
+  clear: both;
+  color:#436976;
+  font-size:0.8125em;
+  text-align:right;
+}
+
+div.meta div.user {
+}
+
+div.meta div.doc{
+}
+
+/* ---------------  Media Selection  ----------------- */
+
+div.uploadform {
+  margin-top: 0.5em;
+  border-top: 1px solid #8cacbb;
+}
+
+.mediaselect-left {
+  float:left;
+  padding: 0.5em;
+  width:30%;
+}
+
+.mediaselect-right {
+  float:right;
+  border-left: 1px solid #8cacbb;
+  padding: 0.5em;
+  width:65%;
+}
+
+div.mediaref_head {
+	margin-left:0.5em;
+}
+
+div.mediaref .search_result {
+	padding-left:1em;
+}
+
+.mediaref_ref {
+	color:#009900;
+}
+
+div.mediaref_hidden {
+	margin-top:1em;
+	text-align:center;
+	font-size:1.2em;
+	color:#BB0000;
+}
+
+div.mediaref_footer {
+	margin-top:1em;
+	text-align:center;
+}
+

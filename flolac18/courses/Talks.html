@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="FLOLAC 2018 official website">
+   <title>FLOLAC 2018 「邏輯、語言與計算」暑期研習營</title>
+
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="../css/pricing.css">
+</head>
+<body>
+
+<div class="pure-menu pure-menu-horizontal">
+    <a href="../index.html" class="pure-menu-heading">FLOLAC'18</a>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item"><a href="../prep.html" class="pure-menu-link">課前準備</a></li>
+      <li class="pure-menu-item"><a href="../register.html" class="pure-menu-link">報名資訊</a></li>
+      <li class="pure-menu-item"><a href="../timeline.html" class="pure-menu-link">重要時程</a></li>
+      <li class="pure-menu-item"><a href="../courses.html" class="pure-menu-link">課程列表</a></li>
+    </ul>
+</div>
+
+<div class="banner">
+    <h1 class="banner-head">
+        特別演講 (Talks)
+    </h1>
+</div>
+<div class="l-content">
+<div class="information pure-g">
+    <div class="pure-u-1 pure-u-md-1-1">
+        <div class="l-box">
+            <!-- <h3 class="information-head">特別演講 (Talks)</h3> -->
+            <h2 id="racket語言導向程式設計">[07/13] Racket：語言導向程式設計</h2>
+<ul>
+<li>時間：13:20</li>
+<li>地點：台灣大學管理學院一號館 102 教室</li>
+</ul>
+<h4 id="多程式語言環境領域專門語言以及程式語言系統">多程式語言環境、領域專門語言以及程式語言系統</h4>
+<ul>
+<li><strong>講者</strong>: 游書泓 <em>美國西北大學, Northwestern University, USA</em></li>
+<li><strong>講者簡介</strong>: I am a second year PhD student working with Robby Findler at Northwestern University. My research mainly focus on automated program testing for functional languages and programming language design.</li>
+<li><strong>投影片</strong>: <a href="../files/flolac-2018-racket-sharing.pdf">flolac-2018-racket-sharing.pdf</a> ; <a href="../files/flolac-2018-racket-sharing.tar.gz">flolac-2018-racket-sharing.tar.gz</a></li>
+</ul>
+<p><strong>大綱</strong>: 在開發軟體時，我們往往會至少使用一種一般程式語言並配合數種不同的領域專門語言，包含專案設定語言、說明文件語言等等。同樣的，Racket 也不是單一一種程式語言，而是許多程式語言並存的環境。在這次分享中，我們將看到 Racket 在從完全相異的程式語言到不同的嵌入式領域專門語言上支援「多程式語言環境」，不同的程式語言之間互動有什麼狀況，以及如何提供與整個程式環境相關的 API。</p>
+<h2 id="a-session-type-provider">[07/19] A Session Type Provider</h2>
+<ul>
+<li>時間：13:20</li>
+<li>地點：台灣大學管理學院一號館 102 教室</li>
+</ul>
+<h4 id="compile-time-generation-of-session-types-with-interaction-refinements">Compile-time Generation of Session Types with Interaction Refinements</h4>
+<ul>
+<li><strong>Speakers</strong>: <a href="http://mrg.doc.ic.ac.uk/">Nobuko Yoshida</a> and <a href="http://mrg.doc.ic.ac.uk/">Rumyana Neykova</a></li>
+</ul>
+<p><strong>Abstract</strong>: We first give an overview of recent research developments of our mobility group at Imperial College London.</p>
+<p>Session types is a typing discipline for concurrent and distributed processes that allows errors such as communication mismatches and deadlocks to be detected statically. Refinement types are types elaborated by logical constraints that allow richer and finer-grained specification of application properties, combining types with logical formulae that may refer to program values and can constrain types using arbitrary predicates. Type providers, developed in F#, are compile-time components for on-demand code generation. Their architecture relies on an open-compiler, where provider-authors implement a small interface that allows them to inject new names/types into the programming context as the program is written.</p>
+<p>In this talk, we will present a library that integrates aspects from the above fields to realise practical applications of multiparty refinement session types (MPST) for any .Net language. Our library supports the specification and validation of distributed message passing protocols based on a formulation of asynchronous MPST enriched with interaction refinements: a collection of features related to the refinement of protocols, such as message-type refinements (value constraints) and value dependent control flow. The combination of these aspects—session types for structured interactions, constraint solving from refinement types, and protocol-specific code generation—enables the specification and implementation of enriched protocols in native F# (and any .Net-compiled language) without requiring language extensions or external pre-processing of user programs. A well-typed endpoint program using our library is guaranteed to perform only compliant session I/O actions w.r.t. to the refined protocol, up to premature termination. The safety guarantees are achieved by a combination of static type checking of the generated types for messages and I/O operations, correctness by construction from code generation, and automated inlining of assertions.</p>
+	</div>
+    </div>
+</div> <!-- end information -->
+</div> <!-- end l-content -->
+
+
+
+<div class="footer l-box">
+   <p>
+      All contents on this site are licensed under
+      <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+      <img src="http://flolac.iis.sinica.edu.tw/flolac18/courses/img/cc-by-sa.png" alt="CC BY-SA 3.0"></a>
+      &nbsp;&nbsp;
+      Powered by
+      <a class="licens-link" href="https://jaspervdj.be/hakyll/">Hakyll</a>
+      <a class="licens-link" href="http://purecss.io/">PureCSS</a>
+      <a class="licens-link" href="http://fontawesome.io/">Fontawesome</a>
+   </p>
+</div>
+</body>
+</html>

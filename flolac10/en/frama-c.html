@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>en:frama-c [2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC &#039;10)]</title>
+	<meta name="Author" content="Marcin Mierzejewski @ Zenzire"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="Keywords" content="dokuwiki,template,en:frama-c"/>
+  <meta name="Description" content="page descirpionen:frama-c"/>
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;" />
+<meta name="robots" content="index,follow" />
+<meta name="date" content="2010-07-08T10:25:14+0800" />
+<meta name="keywords" content="en,frama-c" />
+<link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC '10)" />
+<link rel="start" href="frama-c.html" />
+<link rel="contents" href="frama-c.html" title="Index" />
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="../feed.html" />
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="../feed.mode.list.html%3Fmode=list.html" />
+<link rel="alternate" type="text/html" title="Plain HTML" href="frama-c.html" />
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="frama-c.html" />
+<link rel="canonical" href="http://flolac.iis.sinica.edu.tw/flolac10/doku.php?id=en:frama-c" />
+<link rel="stylesheet" media="all" type="text/css" href="../lib/exe/css.php.s.all_t.flolac10.css" />
+<link rel="stylesheet" media="screen" type="text/css" href="../lib/exe/css.php.t.flolac10.css" />
+<link rel="stylesheet" media="print" type="text/css" href="../lib/exe/css.php.s.print_t.flolac10.css" />
+<script type="text/javascript" charset="utf-8" ><!--//--><![CDATA[//><!--
+var NS='en';var JSINFO = {"id":"en:frama-c","namespace":"en"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="../lib/exe/js.php.t.flolac10.js" ></script>
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/layout.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/design.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/topbar.css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="../lib/tpl/flolac10/css/sidebar.css" />
+
+  
+  </head>
+<body>
+<div class="page">
+
+    <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b> 
+
+   <div class="container">
+
+
+
+   <div class="header">
+
+   
+   <div class="logo">
+   <a href="../doku.html"  name="top" accesskey="h" title="[ALT+H]">2010 Formosan Summer School on Logic, Language, and Computation (FLOLAC '10)</a>  
+         <div class="searchform" style="margin-top: 60px;"> 
+	<form action="../doku.html" accept-charset="utf-8" class="search" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><input type="submit" value="Search" class="button" title="Search" /><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form> 
+	       <div class="plugin_translation"><span></span> <ul>  <li><div class="li"><a href="../frama-c.html" class="wikilink1" title="中文">中文</a></div></li>  <li><div class="li"><a href="frama-c.html" class="wikilink1" title="English">English</a></div></li></ul></div>      </div>
+	       </div>
+      <div class="topbar">
+				<ul>
+<li class="level1"><div class="li"> <a href="start.html" class="wikilink1" title="en:start">Start</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="programme.html" class="wikilink1" title="en:programme">Programme</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="registration.html" class="wikilink1" title="en:registration">Registration</a></div>
+</li>
+</ul>
+      </div>
+       </div>
+    
+  
+          <div class="content_with_sidebar">
+        
+
+
+<h1><a name="using_frama-ccollaboration_of_static_analysis_techniques_towards_the_verification_of_c_code" id="using_frama-ccollaboration_of_static_analysis_techniques_towards_the_verification_of_c_code">Using Frama-C: Collaboration of static analysis techniques towards the verification of C code</a></h1>
+<div class="level1">
+
+<p>
+
+Lecturer: Pascal Cuoq.
+</p>
+
+<p>
+Frama-C is a framework for combining analysis techniques towards the analysis or verification of C code.
+</p>
+
+<p>
+Why C? C is widely use for embedded programming. In a tiny number of cases, the embedded software is critical: lives depend on it functioning as expected. These applications do, and will increasingly, take advantage of formal methods.
+</p>
+
+<p>
+Why combining techniques? Because each of them still has limitations on its own (in some cases, the limitation is intrinsic to the approach and will not be removed with any amount of research). In Frama-C, each technique, implemented as a plug-in, can complement the others, take advantage of the results they have computed, and provide its own results to other plug-ins.
+</p>
+
+<p>
+In this course, we will explore the different plug-ins that have already been implemented within the framework.
+</p>
+
+<p>
+Frama-C is <a href="http://frama-c.com/download.html" class="urlextern" title="http://frama-c.com/download.html"  rel="nofollow">available for download</a>.
+
+</p>
+
+</div>
+
+<h1><a name="course_materials" id="course_materials">Course Materials</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="../files/courses/value_print.pdf" class="media mediafile mf_pdf" title="http://flolac.iis.sinica.edu.tw/flolac10/files/courses/value_print.pdf">Frama-C Value Analysis Tutorial</a>.</div>
+</li>
+<li class="level1"><div class="li"> <a href="../files/courses/jessie_print.pdf" class="media mediafile mf_pdf" title="http://flolac.iis.sinica.edu.tw/flolac10/files/courses/jessie_print.pdf">Frama-C Jessie Plugin Tutorial</a>.</div>
+</li>
+<li class="level1"><div class="li"> <strong>IMPORTANT NOTE: make sure you download the files from the English version of the wiki. For some reason they are not linked correctly from the Chinese version. Click “English” at the top of the webpage where you are now.</strong></div>
+</li>
+<li class="level1"><div class="li"> Exercises:</div>
+<ul>
+<li class="level2"><div class="li"> Day 1</div>
+<ul>
+<li class="level3"><div class="li"> <a href="first.c.html" class="wikilink1" title="en:first.c">first.c</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="div.c.html" class="wikilink1" title="en:div.c">div.c</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="abs.c.html" class="wikilink1" title="en:abs.c">abs.c</a></div>
+</li>
+<li class="level3"><div class="li"> Skein: <a href="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:skein.zip" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:skein.zip"  rel="nofollow">ZIP file</a> <a href="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:skein.tgz" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:skein.tgz"  rel="nofollow">.tar.gz file</a></div>
+</li>
+<li class="level3"><div class="li"> <strong>Homework:</strong> continue the analysis of the Skein library to remove the last alarm that was left at the end of the class (assuming it is a false alarm). <a href="main_for_skein.c.html" class="wikilink1" title="en:main_for_skein.c">Download the main() function we had arrived at in class</a>.</div>
+</li>
+<li class="level3"><div class="li"> The Verisec suite is a <a href="http://se.cs.toronto.edu/index.php/Verisec_Suite" class="urlextern" title="http://se.cs.toronto.edu/index.php/Verisec_Suite"  rel="nofollow">benchmark for static analyzers</a>: <a href="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:verisec-r525.tar.gz" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:verisec-r525.tar.gz"  rel="nofollow">local mirror</a></div>
+</li>
+<li class="level3"><div class="li"> <strong>Homework:</strong> From the Verisec benchmark, study the files that compose the case CVE-2006-6876 (from OpenSER), and a few other cases if you wish. Your goal is to find the bug(s) in the files that have them and show there aren&#039;t any in the files where the bugs are corrected.</div>
+</li>
+<li class="level3"><div class="li"> If you have had success in either the first homework (removing the last alarm in Skein256) or the second homework (Verisec), <strong>send your results</strong>, outlining very precisely what you did so that they can be reproduced, before 2010/07/06 at 12:00 to Pascal.Cuoq@gmail.com.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> Day 2</div>
+<ul>
+<li class="level3"><div class="li"> <a href="spare.c.html" class="wikilink1" title="en:spare.c">spare.c</a> with commandlines “frama-c -sparecode-analysis spare.c” and “frama-c -pdg -dot-pdg spare spare.c” to generate the PDG in file spare.main.dot (visualize it with any dot visualization tool).</div>
+</li>
+<li class="level3"><div class="li"> <a href="http://bts.frama-c.com/view.php?id=529" class="urlextern" title="http://bts.frama-c.com/view.php?id=529"  rel="nofollow">Bug report</a> for the bug found in class (now fixed in the development version).</div>
+</li>
+<li class="level3"><div class="li"> <strong>Homework:</strong> Finish the exercise started in class. If you were not in class or did not have a computer or were sleeping, adapt the <a href="instructions_loop_bad.html" class="wikilink1" title="en:instructions_loop_bad">instructions provided for the case loops_bad.c</a> to the case istrstr_ok.c and determine that the alarm inside r_strcpy is a true alarm. In order to show that it is a true alarm, you must provide an input vector, which is in this case a value for the buffer <code>answer</code> that causes the problem to appear. <strong>Send your results</strong>, outlining very precisely what you did so that they can be reproduced, before 2010/07/07 at 12:00 to Pascal.Cuoq@gmail.com.</div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> Day 3</div>
+<ul>
+<li class="level3"><div class="li"> <a href="compare.c.html" class="wikilink1" title="en:compare.c">compare.c</a> <a href="solution_compare.c.html" class="wikilink1" title="en:solution_compare.c">solution_compare.c</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="array_ex.c.html" class="wikilink1" title="en:array_ex.c">array_ex.c</a> <a href="solution_array.c.html" class="wikilink1" title="en:solution_array.c">solution_array.c</a></div>
+</li>
+<li class="level3"><div class="li"> <a href="saturation_ex.c.html" class="wikilink1" title="en:saturation_ex.c">saturation_ex.c</a> <a href="solution_saturation.c.html" class="wikilink1" title="en:solution_saturation.c">solution_saturation.c</a></div>
+</li>
+<li class="level3"><div class="li"> <strong>Homework:</strong> Your choice between:</div>
+<ul>
+<li class="level4"><div class="li"> If you do not already have Jessie working properly on your computer, your homework is to <strong>get Jessie working</strong>. Google the error message that you get. Ask a friend. Do whatever it takes. </div>
+</li>
+<li class="level4"><div class="li"> OR: read the value analysis manual. <strong>Try out the examples.</strong> Most (or all) of the examples should be in <a href="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:value_ex.tgz" class="urlextern" title="http://flolac.iis.sinica.edu.tw/flolac10/lib/exe/fetch.php?media=en:value_ex.tgz"  rel="nofollow">this archive</a> if you do not want to type them (or you can probably copy and paste them from the electronic version). Report the bugs that you found (options that do not work, results that are significantly different) to Pascal.Cuoq@gmail.com before 2010/07/08 at 12:00. Example: several sections refer to option ”-lib-entry f”. This option has changed, and correct usage is now ”-lib-entry -main f” to do the same thing. Also please read the <a href="http://frama-c.com/acsl_tutorial_index.html" class="urlextern" title="http://frama-c.com/acsl_tutorial_index.html"  rel="nofollow">ACSL mini tutorial</a> up to chapter 6 (no reporting necessary)</div>
+</li>
+<li class="level4"><div class="li"> OR: read the entire <a href="http://frama-c.com/acsl_tutorial_index.html" class="urlextern" title="http://frama-c.com/acsl_tutorial_index.html"  rel="nofollow">ACSL mini tutorial</a>, <strong>trying out the examples in Jessie</strong>, and report bugs to Pascal.Cuoq@gmail.com before 2010/07/08 at 12:00.</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> Day 4</div>
+<ul>
+<li class="level3"><div class="li"> Example max_seq() from ACSL mini-tutorial <a href="chap6_orig.c.html" class="wikilink1" title="en:chap6_orig.c">chap6_orig.c</a> <a href="chap6_simple.c.html" class="wikilink1" title="en:chap6_simple.c">chap6_simple.c</a></div>
+</li>
+<li class="level3"><div class="li"> Bloom filters <a href="http://en.wikipedia.org/wiki/Bloom_filter" class="urlextern" title="http://en.wikipedia.org/wiki/Bloom_filter"  rel="nofollow">Wikipedia page</a></div>
+</li>
+<li class="level3"><div class="li"> Constant execution time for cryptographic functions: <a href="http://www.imperialviolet.org/2010/04/01/ctgrind.html" class="urlextern" title="http://www.imperialviolet.org/2010/04/01/ctgrind.html"  rel="nofollow">blog post with ideas using Valgrind</a>, <a href="http://nacl.cr.yp.to/" class="urlextern" title="http://nacl.cr.yp.to/"  rel="nofollow">NaCl verified cryptography library</a></div>
+</li>
+<li class="level3"><div class="li"> String functions</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="prerequisites" id="prerequisites">Prerequisites</a></h1>
+<div class="level1">
+
+<p>
+
+In order to take full advantage of this course, it is strongly recommended
+
+</p>
+<ul>
+<li class="level1"><div class="li"> to have already installed Frama-C, Why, alt-ergo and as many other automatic provers as possible in the following list: Simplify, Z3, CVC3. The versions to use are <a href="http://frama-c.com/download.html" class="urlextern" title="http://frama-c.com/download.html"  rel="nofollow">Frama-C 20100401 (Boron)</a>, <a href="http://why.lri.fr" class="urlextern" title="http://why.lri.fr"  rel="nofollow">Why 2.26</a>, and <a href="http://ergo.lri.fr/" class="urlextern" title="http://ergo.lri.fr/"  rel="nofollow">alt-ergo 0.91</a>.</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> to be familiar with the C programming language and its pitfalls.</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="syllabus" id="syllabus">Syllabus</a></h1>
+<div class="level1">
+
+</div>
+
+<h4><a name="day_1_value_analysis" id="day_1_value_analysis">Day 1. Value analysis</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Abstract-interpretation based Value analysis</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="day_2_synthetic_analyses" id="day_2_synthetic_analyses">Day 2. Synthetic analyses</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Inputs, outputs, dependencies, slicing</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="day_3_acsl" id="day_3_acsl">Day 3. ACSL</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> ACSL is the specification  language being developed at the same time as Frama-C.</div>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="day_4_deductive_verification" id="day_4_deductive_verification">Day 4. Deductive verification</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> Using plug-in Jessie</div>
+</li>
+</ul>
+
+</div>
+
+<h1><a name="references" id="references">References</a></h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> ACSL by example: <a href="http://www.first.fraunhofer.de/owx_download/acsl-by-example-5_1_0.pdf" class="urlextern" title="http://www.first.fraunhofer.de/owx_download/acsl-by-example-5_1_0.pdf"  rel="nofollow">http://www.first.fraunhofer.de/owx_download/acsl-by-example-5_1_0.pdf</a></div>
+</li>
+<li class="level1"><div class="li"> Links to documentation and introductory tutorials are at <a href="http://frama-c.com/support.html" class="urlextern" title="http://frama-c.com/support.html"  rel="nofollow">http://frama-c.com/support.html</a> in the “Documentation” section.</div>
+</li>
+</ul>
+
+<p>
+
+One dependency chain is <a href="http://frama-c.com/acsl_tutorial_index.html" class="urlextern" title="http://frama-c.com/acsl_tutorial_index.html"  rel="nofollow">ACSL mini-tutorial</a> → <a href="http://www.first.fraunhofer.de/owx_download/acsl-by-example-5_1_0.pdf" class="urlextern" title="http://www.first.fraunhofer.de/owx_download/acsl-by-example-5_1_0.pdf"  rel="nofollow">ACSL by example</a> → <a href="http://frama-c.com/jessie_tutorial_index.html" class="urlextern" title="http://frama-c.com/jessie_tutorial_index.html"  rel="nofollow">Jessie documentation</a> → <a href="http://frama-c.com/download/acsl_1.4.pdf" class="urlextern" title="http://frama-c.com/download/acsl_1.4.pdf"  rel="nofollow">ACSL reference manual</a>.
+</p>
+
+<p>
+Another dependency chain is <a href="http://frama-c.com/try_out.html" class="urlextern" title="http://frama-c.com/try_out.html"  rel="nofollow">Value analysis mini-tutorial</a> → <a href="http://frama-c.com/download/frama-c-value-analysis.pdf" class="urlextern" title="http://frama-c.com/download/frama-c-value-analysis.pdf"  rel="nofollow">Value analysis manual</a> → Slicing and navigation plug-ins documentation.
+
+</p>
+
+</div>
+
+  		      </div>
+      <div class="sidebar">
+      <b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+      
+
+
+<h2><a name="courses" id="courses">Courses</a></h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="logic.html" class="wikilink1" title="en:logic">Logic</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="fp.html" class="wikilink1" title="en:fp">Functional Programming</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="op.html" class="wikilink1" title="en:op">Operational Semantics</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="deno.html" class="wikilink1" title="en:deno">Denotational Semantics</a>	</div>
+</li>
+<li class="level1"><div class="li"> <a href="prog.html" class="wikilink1" title="en:prog">Program Construction and Reasoning</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="frama-c.html" class="wikilink1" title="en:frama-c">Using Frama-C</a> </div>
+</li>
+<li class="level1"><div class="li"> <a href="seminar.html" class="wikilink1" title="en:seminar">Seminar</a> </div>
+</li>
+</ul>
+
+</div>
+      <b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+      </div>
+  
+  <div class="clearer">&nbsp;</div>
+
+  
+    <div class="stylefoot">
+    <div class="meta">
+      <div class="doc">
+        en/frama-c.txt &middot; Last modified: 2010/07/08 10:25 by pascal.cuoq      </div>
+      <div class="user">
+              </div>
+    </div>
+    <a href="frama-c.html" class="interwiki" title="">Recent changes</a>&nbsp;&middot;&nbsp;<a href="frama-c.html" class="interwiki" title="Show pagesource">Show pagesource</a>&nbsp;&middot;&nbsp;<a href="frama-c.html" class="interwiki" title="Login">Login</a>      </div>
+  
+<div class="footer">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+    <div class="footnotes">
+          Powered by <a href="http://www.dokuwiki.org/">Dokuwiki</a>. Template derived from <a href="http://www.zenzire.com/projects/mmclean/">mmClean</a>, courtesy of <a href="http://www.zenzire.com">zenzire</a>. <a href="http://www.flickr.com/photos/82714083@N00/3535640182/">Banner image</a> courtesy of <a href="http://www.flickr.com/photos/82714083@N00/">aireheru</a>, distributed under <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/deed.en">CC 2.0-by-nc-sa</a>.    </div>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+
+
+</div>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+
+<img  width="1" height="1" alt=""  />
+</body>
+</html>

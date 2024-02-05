@@ -1,0 +1,98 @@
+====== 最新消息 ======
+  * (2019/8/30) 今日下午的演講題目為"Java Program Verification Using Horn Clause" by Philipp Rümmer (Uppsala University)
+  * (2019/8/29) Blockchain and Smart Contract Verification講義下載 [[https://dailambda.gitlab.io/slides-html/2019-08-29-taipei/ | slides]]
+  * (2019/8/27) 8/29(四)的課程需要實作，請同學先至 [[https://gitlab.com/dailambda/docker-tezos-hands-on/blob/tezos-hands-on-2019-08/README-en.md | link ]] 下載並安裝。
+  * (2019/8/27) 「課程內容」提供部分上課講義的下載連結  [持續更新]。
+  * (2019/8/1) 旁聽報名繼續開放中。
+  * (2019/8/1) 修課名單(~7/19報名)以及旁聽名單(~7/31報名)已經確定，已經寄送email通知。
+
+====== 宗旨 ======
+
+近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+
+「邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+
+自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+
+「邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十三屆。
+
+====== 時間地點 ======
+
+日期：2019 年 8 月 19 日 (週一) 至 8 月 30 日 (週五)，共計十天。
+
+時間：每週一至週五早上九點至下午五點。
+
+地點：台灣大學管理學院1號館102。
+====== 課程與講者 ======
+課程內容：
+  * Propositional Logic (Bow-Yaw Wang) {{::1_pl.pdf | slides}}
+  * First-Order Logic (Yu-Fang Chen) {{::lecture02-firstorderlogic.pdf | slides}}
+  * Automata Theory (Ming-Hsien Tsai) {{::7_automata.pdf | slides}}
+  * Description Logics and its Applications in AI and Knowledge Systems (Tony Tan)
+  * Efficient decision procedure for propositional logic (SAT) (Andrea Turrini)
+  * Boolean Satisfiability and Its Applications to Synthesis and Verification (QBF) (Roland Jiang) {{::5_qbf.pdf | slides}}
+  * Satisfiability Modulo Theories (SMT) (Hsin-Hung Lin) {{::6_smt.pdf | slides}}
+  * Blockchain and Smart Contract Verification (Jun Furuse)[[https://dailambda.gitlab.io/slides-html/2019-08-29-taipei/|Link to the slides]]
+  * Automata-based String Manipulating Program Analysis (Fang Yu){{ :flolac_2019.pdf |slides1}}{{ :mosca2019slides.pdf |slides2}}
+  * Invited talk: Strings & Software Model Checking (Philipp Rümmer){{ :slides-expanded.pdf |slides}}
+
+課程講者：
+  * [[https://iscasmc.ios.ac.cn/iscasmcwp/?page_id=152|Andrea Turrini]] (Chinese Academy of Sciences)
+  * [[http://www.iis.sinica.edu.tw/~bywang/|Bow-Yaw Wang]] (Academia Sinica)
+  * [[http://www3.nccu.edu.tw/~yuf|Fang Yu]] (National Chengchi University)
+  *   * Hsin-Hung Lin (Academia Sinica)
+  * [[http://cc.ee.ntu.edu.tw/~jhjiang/|Jie-Hong Roland Jiang]] (National Taiwan University)
+  * [[https://www.linkedin.com/in/jun-furuse-9919105/|Jun Furuse]] (DaiLambda, Inc.)
+  *   * Ming-Hsien Tsai (Academia Sinica)
+  * [[https://www.csie.ntu.edu.tw/~tonytan/|Tony Tan]] (National Taiwan University)
+  * [[http://www.iis.sinica.edu.tw/~yfc/doku.php|Yu-Fang Chen]] (Academia Sinica)
+  * [[http://www.philipp.ruemmer.org/|Philipp Rümmer]] (Uppsala University)
+
+
+時間表 (暫定)：
+|< 100% 15% 17% 17% 17% 17% 17% >|
+^  時間  ^  8/19 (一)  ^  8/20 (二)  ^  8/21 (三)  ^  8/22 (四)  ^  8/23 (五)  ^
+^  09:00~12:00  |  Propositional Logic  |  First-Order Logic  |  Description Logic  |  SAT  |  QBF  |
+^  12:00~14:00  |  Lunch  |||||
+^  14:00~17:00  |  Propositional Logic  |  First-Order Logic  |  Description Logic  |  SAT  |  QBF  |
+
+|< 100% 15% 17% 17% 17% 17% 17% >|
+^  時間  ^  8/26 (一)  ^  8/27 (二)  ^  8/28 (三)  ^  8/29 (四)  ^  8/30 (五)  ^
+^  09:00~12:00  |  SMT  |  Automata  |  String  |  Blockchain  |  Final Exam  |
+^  12:00~14:00  |  Lunch  |||||
+^  14:00~17:00  |  SMT  |  Automata  |  String  |  Blockchain  |  Invited Talks  |
+====== 報名資訊 ======
+
+台大學生：
+  - 請於 <color #ed1c24>**07/19 (五)**</color>前線上填寫[[https://forms.gle/qjfWmxzuqyTmUfK28|報名表]]。<color #22b14c>**(報名已截止)**</color>
+      * 修課名單由主辦單位逕送教務處，學生<color #ed1c24>無需線上選課</color>。<color #00a2e8>**(已發e-mail通知)**</color>
+      *  報名超額時，將依所填之修課理由篩選。
+  - 繳費日期：08/16 ~ 08/20。
+
+非台大學生：
+  - 請於 <color #ed1c24>**07/19 (五)**</color>前線上填寫[[https://forms.gle/qjfWmxzuqyTmUfK28|報名表]]。<color #22b14c>**(報名已截止)**</color>
+     * 報名超額時，將依所填之修課理由篩選。 
+  - 報名後之手續請參閱[[http://coursemap.aca.ntu.edu.tw/summer/dmdocuments/外校學生報名暑期課程流程.pdf|外校生報名流程]]<color #00a2e8>**(已發e-mail通知)**</color>
+
+旁聽報名
+   * 請於<color #ed1c24>**07/26 (五**)</color>前線上填寫[[https://forms.gle/JUZgCD7hJXPwYGJF7|旁聽用報名表]]。
+   * 報名超額時，將依所填之修課理由篩選。
+====== 成績計算 ======
+
+作業（40%）、期末考（60%）
+====== 主辦單位 ======
+
+  * [[http://www.iis.sinica.edu.tw/|中央研究院 資訊科學研究所]]
+  * [[https://management.ntu.edu.tw/IM|國立台灣大學 資訊管理學系]]
+  * [[https://web.ee.ntu.edu.tw|國立台灣大學 電機工程學系]]
+  * [[https://www.csie.ntu.edu.tw|國立台灣大學 資訊工程學系]]
+  * [[http://www.mis2.nccu.edu.tw|國立政治大學 資訊管理學系]]
+====== 籌辦委員會 ======
+
+  * 陳郁方 Yu-Fang Chen (中央研究院 資訊科學研究所)
+  * 莊庭瑞 Tyng-Ruey Chuang (中央研究院 資訊科學研究所)
+  * 穆信成 Shin-Cheng Mu (中央研究院 資訊科學研究所)
+  * 蔡明憲 Ming-Hsien Tsai (中央研究院 資訊科學研究所)
+  * 蔡益坤 Yih-Kuen Tsay (國立台灣大學 資訊管理學系)
+  * 王柏堯 Bow-Yaw Wang (中央研究院 資訊科學研究所)
+  * 郁方 Fang Yu (國立政治大學 資訊管理學系)

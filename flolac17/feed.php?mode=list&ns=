@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://flolac.iis.sinica.edu.tw/flolac17/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/feed.php">
+        <title>2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)</title>
+        <description></description>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/</link>
+        <image rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico" />
+       <dc:date>2020-05-05T02:47:53+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=sidebar&amp;rev=1501744634&amp;do=diff"/>
+                <rdf:li rdf:resource="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=start&amp;rev=1555658790&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico">
+        <title>2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/</link>
+        <url>http://flolac.iis.sinica.edu.tw/flolac17/lib/tpl/white/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=sidebar&amp;rev=1501744634&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2017-08-03T15:17:14+08:00</dc:date>
+        <title>sidebar</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=sidebar&amp;rev=1501744634&amp;do=diff</link>
+        <description>課程連結
+
+	*  Logic
+	*  Computation
+	*  SMT
+	*  Learning
+	*  Synthesis
+	*  String
+	*  VDM</description>
+    </item>
+    <item rdf:about="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=start&amp;rev=1555658790&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2019-04-19T15:26:30+08:00</dc:date>
+        <title>start</title>
+        <link>http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=start&amp;rev=1555658790&amp;do=diff</link>
+        <description>最新消息
+
+	*  (2017/09/08) Seminar講者資訊請見：&lt;https://sites.google.com/view/mikehsiao/home&gt;。
+	*  (2017/09/06) 上傳 VDM 投影片與作業，星期四會發講義，可以不需要自己印。
+	*  (2017/09/05) Computation 與 SMT 課程的習題解答皆有更新，請重新下載。
+	*  (2017/09/05) 更新</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,118 @@
+/**
+ * css for mmClean template 
+ *
+ * @author Michael Klier <chi@chimeric.de> 
+ *
+ * Modification for mmClean Theme
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ */
+
+div.sidebar a.wikilink2:link,
+div.sidebar a.wikilink2:active,
+div.sidebar a.wikilink2:visited,
+div.sidebar a.wikilink1:link,
+div.sidebar a.wikilink1:active,
+div.sidebar a.wikilink1:visited,
+div.sidebar a.interwiki:link,
+div.sidebar a.interwiki:active,
+div.sidebar a.interwiki:visited,
+div.sidebar a.urlextern:link,
+div.sidebar a.urlextern:active,
+div.sidebar a.urlextern:visited
+{
+  font-size: 14px;
+  text-decoration:none;
+  color:#fff;
+  line-height:140%;
+  display: block;
+  padding: 0.2em;
+  padding-left: 5px
+}
+
+div.sidebar li.level2 a.wikilink1
+{
+    padding-left: 15px;
+}
+
+div.sidebar a.wikilink2:hover,
+div.sidebar a.wikilink1:hover,
+div.sidebar a.interwiki:hover,
+div.sidebar a.urlextern:hover 
+{
+    text-decoration: none; 
+/*    border-right: 5px solid #fff;*/
+    color:#000;
+/*    background: #436976; */
+    background: #49eec1;
+}
+
+div.sidebar h1,
+div.sidebar h2,
+div.sidebar h3,
+div.sidebar h4,
+div.sidebar h5,
+div.sidebar h6 
+{
+    color:#000;
+    font-weight:bold;
+    font-size: 14px;
+    padding-left: 5px;
+    border: 0px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+div.sidebar h1
+{
+    border-bottom: 1px solid #000000;
+}
+
+div.sidebar strong
+{
+    padding: 02em;
+    padding-left: 5px;
+}
+
+div.sidebar
+{
+    float: left;
+    width: 200px;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*    background: #6c8ad5; */
+    background: #7baebc;
+}
+
+div.sidebar ul
+{ 
+    padding: 0;
+    margin: 0;
+    list-style-image: none;
+}
+
+div.sidebar li
+{ 
+    display: block;
+    margin: 0 0 5px 0;
+    background: 0;
+    border-bottom: 1px dotted #cccccc;
+}
+
+div.sidebar b.rtop,
+div.sidebar b.rbottom
+{
+    display:block;
+    background: #ffffff;
+}
+
+div.sidebar b.rtop b,
+div.sidebar b.rbottom b
+{   
+    display:block;
+    height: 1px;
+    overflow: hidden;
+/*    background: #6c8ad5; */
+    background: #7baebc;
+}
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <title>course:computation [2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="search" type="application/opensearchdescription+xml" href="lib/exe/opensearch.php" title="2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)"/>
+<link rel="start" href="index.html"/>
+<link rel="contents" href="./doku.php%3Fid=course:computation&amp;do=index.html" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="feed.php%3Fmode=list&amp;ns=course"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="./doku.php%3Fdo=export_xhtml&amp;id=course:computation.html"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="./doku.php%3Fdo=export_raw&amp;id=course:computation"/>
+<link rel="stylesheet" type="text/css" href="lib/exe/css.php%3Ft=white&amp;tseed=2b75087d3dabc082bc9df305a97e6717.css"/>
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='course';var JSINFO = {"id":"course:computation","namespace":"course"};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/jquery.php%3Ftseed=23f888679b4f1dc26eef34902aca964f"></script>
+<script type="text/javascript" charset="utf-8" src="lib/exe/js.php%3Ft=white&amp;tseed=2b75087d3dabc082bc9df305a97e6717"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="lib/tpl/white/images/favicon.ico" />
+<link rel="apple-touch-icon" href="lib/tpl/white/images/apple-touch-icon.png" />
+    </head>
+
+<body id="dokuwiki__top">
+    <div id="dokuwiki__site" class="dokuwiki mode_media tpl_white    hasSidebar">
+                
+        <!-- ********** HEADER ********** -->
+        <div id="dokuwiki__header">
+            <div class="group">
+                <h1><a href="doku.php%3Fid=start.html"  accesskey="h" title="[H]">2017「邏輯、語言與計算」暑期研習營 (FLOLAC'17)</a></h1>
+                <div class="left">
+                                        <button class="btn_left" accesskey="s", title="[S]">Nav</button>
+                                    </div>
+                <div class="right">
+                    <button class="btn_search">Search</button>
+                    <button class="btn_right" accesskey="m", title="[M]">Edit</button>
+                </div>
+            </div>
+            <div class="search">
+                <form action="doku.php%3Fid=start.html" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" placeholder="Search" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><button type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            </div>
+        </div><!-- /header -->
+
+        <!-- ********** sidebar ********** -->
+        <div id="sidebar_wrapper">
+            <!-- ********** ASIDE ********** -->
+                        <div id="dokuwiki__aside"  class="sidebar">
+                                
+<h3 class="sectionedit1" id="課程連結">課程連結</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:logic.html" class="wikilink2" title="course:logic" rel="nofollow">Logic</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:computation.html" class="wikilink1" title="course:computation">Computation</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:smt.html" class="wikilink1" title="course:smt">SMT</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:learning.html" class="wikilink1" title="course:learning">Learning</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:synthesis.html" class="wikilink1" title="course:synthesis">Synthesis</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:string.html" class="wikilink1" title="course:string">String</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="./doku.php%3Fid=course:vdm.html" class="wikilink1" title="course:vdm">VDM</a></div>
+</li>
+</ul>
+
+</div>
+                <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-page"
+     data-href="https://www.facebook.com/flolac.tw/"
+     data-tabs="timeline"
+     data-small-header="false"
+     data-adapt-container-width="true"
+     data-hide-cover="false"
+     data-show-facepile="false"
+     width="224"
+  >
+  <blockquote cite="https://www.facebook.com/flolac.tw/" class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/flolac.tw/">邏輯、語言與計算暑期研習營  (FLOLAC)</a>
+  </blockquote>
+</div>            </div><!-- /dokuwiki__aside -->
+            
+            <div id="dokuwiki__tools" class="sidebar left">
+                <!-- PAGE TOOLS -->
+                <div id="dokuwiki__pagetools">
+                    <h3>Page Tools</h3>
+                    <ul>
+                        <li><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;do="  class="action show" accesskey="v" rel="nofollow" title="Show page [V]"><span>Show page</span></a></li><li><a href="./doku.php%3Fid=course:computation&amp;do=backlink.html"  class="action backlink" rel="nofollow" title="Backlinks"><span>Backlinks</span></a></li>                    </ul>
+                </div><!-- /dokuwiki__pagetools -->
+
+                <!-- SITE TOOLS -->
+                <div id="dokuwiki__sitetools">
+                    <h3>Site Tools</h3>
+                    <ul>
+                        <li><a href="./doku.php%3Fid=course:computation&amp;do=media&amp;ns=course.html"  class="action media" rel="nofollow" title="Media Manager"><span>Media Manager</span></a></li><li><a href="./doku.php%3Fid=course:computation&amp;do=index.html"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]"><span>Sitemap</span></a></li>                    </ul>
+                </div><!-- /dokuwiki__sitetools -->
+
+                <!-- USER TOOLS -->
+                                <div id="dokuwiki__usertools">
+                    <h3>User Tools</h3>
+                    <ul>
+                        <li><a href="./doku.php%3Fid=course:computation&amp;do=login&amp;sectok=.html"  class="action login" rel="nofollow" title="Log In"><span>Log In</span></a></li>                    </ul>
+                                    </div><!-- /dokuwiki__usertools -->
+                            </div><!-- /dokuwiki__tools -->
+
+            <div id="sidebar_bg">
+            </div>
+
+            <div id="to_top">
+                <a class="nolink" href="./doku.php%3Fid=course:computation&amp;do=media&amp;ns=course.html#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>            </div>
+        </div><!-- /sidebar_wrapper -->
+
+        <div class="wrapper group">
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="group">
+                                
+                <!-- BREADCRUMBS -->
+                                    <div class="breadcrumbs"><span class="bchead">Trace:</span> <span class="bcsep">›</span> <bdi><a href="doku.php%3Fid=start.html"  class="breadcrumbs" title="start">start</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:computation.html"  class="breadcrumbs" title="course:computation">computation</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:smt.html"  class="breadcrumbs" title="course:smt">smt</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:learning.html"  class="breadcrumbs" title="course:learning">learning</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:synthesis.html"  class="breadcrumbs" title="course:synthesis">synthesis</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:string.html"  class="breadcrumbs" title="course:string">string</a></bdi> <span class="bcsep">›</span> <bdi><a href="./doku.php%3Fid=course:vdm.html"  class="breadcrumbs" title="course:vdm">vdm</a></bdi> <span class="bcsep">›</span> <span class="curid"><bdi><a href="./doku.php%3Fid=course:seminar.html"  class="breadcrumbs" title="course:seminar">seminar</a></bdi></span></div>
+                                
+                <div class="page group
+                                 toc_wikipedia                ">
+                    <!-- wikipage start -->
+                    <div id="mediamanager__page">
+<h1>Media Manager</h1>
+<div class="panel namespaces">
+<h2>Namespaces</h2>
+<div class="panelHeader">Choose namespace</div>
+<div class="panelContent" id="media__tree">
+
+<ul class="idx">
+<li class="media level0 open"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/minus.gif" alt="−" /><div class="li"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;ns=&amp;tab_files=files&amp;do=media" class="idx_dir">[root]</a></div>
+<ul class="idx">
+<li class="media level1 open"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/minus.gif" alt="−" /><div class="li"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;ns=course&amp;tab_files=files&amp;do=media" class="idx_dir">course</a></div></li>
+<li class="media level1 closed"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/plus.gif" alt="+" /><div class="li"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;ns=wiki&amp;tab_files=files&amp;do=media" class="idx_dir">wiki</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="panel filelist">
+<h2 class="a11y">Media Files</h2>
+<ul class="tabs">
+<li><strong>Media Files</strong></li>
+<li><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;tab_files=upload&amp;do=media&amp;ns=course">Upload</a></li>
+<li><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;tab_files=search&amp;do=media&amp;ns=course">Search</a></li>
+</ul>
+<div class="panelHeader">
+<h3>Files in <strong>course</strong></h3>
+<form class="options" method="get" action="./doku.php%3Fid=course:computation.html" accept-charset="utf-8"><div class="no">
+<input type="hidden" name="do" value="media" /><input type="hidden" name="ns" value="course" /><ul>
+<li class="listType"><label class="thumbs" for="listType__thumbs"><input type="radio" id="listType__thumbs" name="list_dwmedia" value="thumbs" checked="checked" /> <span>Thumbnails</span></label>
+<label class="rows" for="listType__rows"><input type="radio" id="listType__rows" name="list_dwmedia" value="rows" /> <span>Rows</span></label>
+</li>
+<li class="sortBy"><label class="name" for="sortBy__name"><input type="radio" id="sortBy__name" name="sort_dwmedia" value="name" checked="checked" /> <span>Name</span></label>
+<label class="date" for="sortBy__date"><input type="radio" id="sortBy__date" name="sort_dwmedia" value="date" /> <span>Date</span></label>
+</li>
+<li><button type="submit">Apply</button>
+</li>
+</ul>
+</div></form>
+</div>
+<div class="panelContent">
+<ul class="thumbs"><li><dl title="course:01_smt.pdf">
+<dt><a id="d_:course:01_smt.pdf" class="image" title="course:01_smt.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A01_smt.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:01_smt.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A01_smt.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:01_smt.pdf">01_smt.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/02 01:14</dd>
+<dd class="filesize">433.8 KB</dd>
+</dl></li>
+<li><dl title="course:02_euf.pdf">
+<dt><a id="d_:course:02_euf.pdf" class="image" title="course:02_euf.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A02_euf.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:02_euf.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A02_euf.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:02_euf.pdf">02_euf.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/31 13:26</dd>
+<dd class="filesize">1.5 MB</dd>
+</dl></li>
+<li><dl title="course:03_verification.pdf">
+<dt><a id="d_:course:03_verification.pdf" class="image" title="course:03_verification.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A03_verification.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:03_verification.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A03_verification.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:03_verification.pdf">03_verification.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/01 09:21</dd>
+<dd class="filesize">443.6 KB</dd>
+</dl></li>
+<li><dl title="course:04_verify25519.pdf">
+<dt><a id="d_:course:04_verify25519.pdf" class="image" title="course:04_verify25519.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A04_verify25519.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:04_verify25519.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3A04_verify25519.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:04_verify25519.pdf">04_verify25519.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/31 13:34</dd>
+<dd class="filesize">2.7 MB</dd>
+</dl></li>
+<li><dl title="course:automata.pdf">
+<dt><a id="d_:course:automata.pdf" class="image" title="course:automata.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:automata.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:automata.pdf">automata.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/29 23:21</dd>
+<dd class="filesize">2.1 MB</dd>
+</dl></li>
+<li><dl title="course:automata_exercises.pdf">
+<dt><a id="d_:course:automata_exercises.pdf" class="image" title="course:automata_exercises.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:automata_exercises.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:automata_exercises.pdf">automata_exercises.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/04 22:31</dd>
+<dd class="filesize">69.8 KB</dd>
+</dl></li>
+<li><dl title="course:automata_exercises_sol.pdf">
+<dt><a id="d_:course:automata_exercises_sol.pdf" class="image" title="course:automata_exercises_sol.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:automata_exercises_sol.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:automata_exercises_sol.pdf">automata_exercises_sol.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/04 22:49</dd>
+<dd class="filesize">139.1 KB</dd>
+</dl></li>
+<li><dl title="course:automata_handout.pdf">
+<dt><a id="d_:course:automata_handout.pdf" class="image" title="course:automata_handout.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_handout.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:automata_handout.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aautomata_handout.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:automata_handout.pdf">automata_handout.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/29 23:21</dd>
+<dd class="filesize">2 MB</dd>
+</dl></li>
+<li><dl title="course:exercises.pdf">
+<dt><a id="d_:course:exercises.pdf" class="image" title="course:exercises.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aexercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:exercises.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aexercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:exercises.pdf">exercises.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/29 12:33</dd>
+<dd class="filesize">70 KB</dd>
+</dl></li>
+<li><dl title="course:flolac2017_vdm_combined.pdf">
+<dt><a id="d_:course:flolac2017_vdm_combined.pdf" class="image" title="course:flolac2017_vdm_combined.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aflolac2017_vdm_combined.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:flolac2017_vdm_combined.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aflolac2017_vdm_combined.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:flolac2017_vdm_combined.pdf">flolac2017_vdm_combined.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/07 13:44</dd>
+<dd class="filesize">2 MB</dd>
+</dl></li>
+<li><dl title="course:flolac2017_vdm_homework.pdf">
+<dt><a id="d_:course:flolac2017_vdm_homework.pdf" class="image" title="course:flolac2017_vdm_homework.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aflolac2017_vdm_homework.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:flolac2017_vdm_homework.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Aflolac2017_vdm_homework.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:flolac2017_vdm_homework.pdf">flolac2017_vdm_homework.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/06 14:47</dd>
+<dd class="filesize">63.5 KB</dd>
+</dl></li>
+<li><dl title="course:smt_exercises.pdf">
+<dt><a id="d_:course:smt_exercises.pdf" class="image" title="course:smt_exercises.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Asmt_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:smt_exercises.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Asmt_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:smt_exercises.pdf">smt_exercises.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/08/30 21:55</dd>
+<dd class="filesize">79.7 KB</dd>
+</dl></li>
+<li><dl title="course:smt_exercises_sol.pdf">
+<dt><a id="d_:course:smt_exercises_sol.pdf" class="image" title="course:smt_exercises_sol.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Asmt_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:smt_exercises_sol.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Asmt_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:smt_exercises_sol.pdf">smt_exercises_sol.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/05 14:37</dd>
+<dd class="filesize">146.3 KB</dd>
+</dl></li>
+<li><dl title="course:verification_exercises.pdf">
+<dt><a id="d_:course:verification_exercises.pdf" class="image" title="course:verification_exercises.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Averification_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:verification_exercises.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Averification_exercises.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:verification_exercises.pdf">verification_exercises.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/05 09:50</dd>
+<dd class="filesize">83.5 KB</dd>
+</dl></li>
+<li><dl title="course:verification_exercises_sol.pdf">
+<dt><a id="d_:course:verification_exercises_sol.pdf" class="image" title="course:verification_exercises_sol.pdf" href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Averification_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/images/fileicons/32x32/pdf.png" alt="course:verification_exercises_sol.pdf" class="icon" /></a></dt>
+<dd class="name"><a href="http://flolac.iis.sinica.edu.tw/flolac17/doku.php?id=course:computation&amp;image=course%3Averification_exercises_sol.pdf&amp;ns=course&amp;tab_details=view&amp;do=media" id="h_:course:verification_exercises_sol.pdf">verification_exercises_sol.pdf</a></dd>
+<dd class="size">&#160;</dd>
+<dd class="date">2017/09/06 23:08</dd>
+<dd class="filesize">139.3 KB</dd>
+</dl></li>
+</ul>
+</div>
+</div>
+<div class="panel file">
+<h2 class="a11y">File</h2>
+</div>
+</div>
+
+                    <!-- wikipage stop -->
+                </div>
+
+                                            </div></div><!-- /content -->
+
+            <!-- ********** FOOTER ********** -->
+            <div id="dokuwiki__footer">
+                                <div class="doc">Last modified: 2017/09/01 10:26</div>
+                <!--                <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-page"
+     data-href="https://www.facebook.com/flolac.tw/"
+     data-tabs="timeline"
+     data-small-header="false"
+     data-adapt-container-width="true"
+     data-hide-cover="false"
+     data-show-facepile="false"
+     width="224"
+  >
+  <blockquote cite="https://www.facebook.com/flolac.tw/" class="fb-xfbml-parse-ignore">
+    <a href="https://www.facebook.com/flolac.tw/">邏輯、語言與計算暑期研習營  (FLOLAC)</a>
+  </blockquote>
+</div> -->
+                <div class="license"><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img src="lib/images/license/badge/cc-by-sa.png" alt="CC Attribution-Share Alike 4.0 International" /></a> Except where otherwise noted, content on this wiki is licensed under the following license: <bdi><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi></div>                <div class="footer">
+                                </div>
+            </div><!-- /footer -->
+
+                    </div><!-- /wrapper -->
+
+    </div><!-- /site -->
+
+    <div class="no"><img src="http://flolac.iis.sinica.edu.tw/flolac17/lib/exe/indexer.php?id=course%3Acomputation&amp;1588618249" width="2" height="1" alt="" /></div>
+</body>
+</html>
