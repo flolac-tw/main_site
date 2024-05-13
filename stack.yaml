@@ -19,4 +19,6 @@ extra-deps:
 - git: https://github.com/flolac-tw/hakyll.git
   commit: 00e343f385671e966ab10c670859562d634fa593
 - 'hakyll-sass-0.2.4'
-    
+
+ghc-options:
+  hlibsass: -optc -Wno-error=int-conversion
