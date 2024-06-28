@@ -1,0 +1,5 @@
+In computing, a sequence of characters is called a string.  For example, "Hello, World!" is a string (we use double quotes to indicate the beginning and end of the string). This particular string is very familiar
+to programmers since the first programming assignment in many programming textbooks is to write a program that outputs the string "Hello, World!" Although programmers become familiar with the creation and manipulation of strings very early on in their training, errors in string manipulating code
+is a major cause of software faults and vulnerabilities. This indicates that string manipulation is a challenging task for programmers, and automated techniques for analyzing string manipulating code are very desirable.
+
+String analysis is a static program analysis technique that determines the values that a string expression can take during program execution at a given program point. String analysis can be used to solve many problems in modern software systems that relate to string manipulation. In this lecture, we will discuss string analysis techniques and their applications. 

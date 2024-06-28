@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://imgur.com/BE39Hoj.png">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d25dd1f650.js" crossorigin="anonymous"></script>
+  <!-- Our code -->
+  <script src="../../script/script.js" type="text/javascript"></script>
+  <!-- Bootstrap 4.5 -->
+  <link rel="stylesheet" href="../../css/custom.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark-shade justify-content-around py-md-2 py-sm-1 py-0" style="font-weight: 600">
+  <!-- TODO: use CSS to control heights in different window widths -->
+  <div class="container-md px-md-5 px-0">
+    <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="../../img/logo.svg" style="height: 2rem" /></a>
+    <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="../../img/logo.svg" style="height: 1.5rem" /></a>
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item"><a class="nav-link" href="/zh/">首頁</a></li> -->
+      <li class="nav-item"><a class="nav-link" href="../../zh/2024/">應屆課程</a></li>
+      <li class="nav-item"><a class="nav-link" href="../../zh/2024/registration.html">應屆報名資訊</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">歷年課程</a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left">
+          <div class="dropdown-item">型別原理</div>
+          <a class="dropdown-item" href="../../zh/2024">2024</a>
+          <a class="dropdown-item" href="../../zh/2022">2022</a>
+          <a class="dropdown-item" href="../../zh/2020">2020</a>
+          <a class="dropdown-item" href="../../flolac18.html" target="_blank">2018</a>
+          <a class="dropdown-item" href="../../flolac16.html" target="_blank">2016</a>
+          <a class="dropdown-item" href="../../flolac14.html" target="_blank">2014</a>
+          <a class="dropdown-item" href="../../flolac12.html" target="_blank">2012</a>
+          <a class="dropdown-item" href="../../flolac10.html" target="_blank">2010</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item bg-light">自動驗證</div>
+          <a class="dropdown-item" href="../../zh/2023">2023</a>
+          <a class="dropdown-item" href="../../zh/2021">2021</a>
+          <a class="dropdown-item" href="../../flolac19.html" target="_blank">2019</a>
+          <a class="dropdown-item" href="../../flolac17.html" target="_blank">2017</a>
+          <a class="dropdown-item" href="../../flolac15.html" target="_blank">2015</a>
+          <a class="dropdown-item" href="../../flolac11.html" target="_blank">2011</a>
+          <a class="dropdown-item" href="../../flolac09.html" target="_blank">2009</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../../flolac08.html" target="_blank">2008</a>
+          <a class="dropdown-item" href="../../flolac07.html" target="_blank">2007</a>
+        </div>
+      </li>
+    </ul>
+    <span class="navbar-nav">
+      <a class="nav-link d-none d-sm-flex" href="javascript:location='mailto:\u0066\u006c\u006f\u006c\u0061\u0063\u0040\u0069\u0069\u0073\u002e\u0073\u0069\u006e\u0069\u0063\u0061\u002e\u0065\u0064\u0075\u002e\u0074\u0077';void 0"><i class="fas fa-envelope"></i></a>
+      <a class="nav-link d-none d-sm-flex" href="https://github.com/flolac-tw"><i class="fab fa-github"></i></a>
+      <a class="nav-link d-none d-sm-flex" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+      <a class="nav-link d-none d-sm-flex" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+      <a class="nav-link d-sm-flex" href="../../en/2024/index.html"><small>En</small></a>
+    </span>
+  </div>
+</nav>
+<div id="header" class="ocean">
+  <header>
+    <h1>邏輯、語言與計算暑期研習營</h1>
+    <img src="../../img/logo.svg">
+    <span>Formosan Summer School on Logic, Language, and Computation, 2024</span><br /><span>7/1-7/12</span>&emsp;<span>09:10-12:10, 13:20–16:20</span><br /><span>地點：國立臺灣大學管理學院一號館103教室</span>
+  </header>
+</div>
+<div class="two-column ocean">
+  <section>
+    <h2>課程介紹</h2>
+    <p>本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。</p>
+  </section>
+  <section>
+    <h2>公告事項</h2>
+    <ul>
+      <li><strong>06/12</strong> - 發出旁聽錄取通知
+（通知寄發信箱為 computing.laboratory.tw@gmail.com，勿直接回覆至此信箱）</li>
+      <li><strong>06/10</strong> - 發出台大學生修課錄取通知
+（通知寄發信箱為 computing.laboratory.tw@gmail.com，勿直接回覆至此信箱）</li>
+      <li><strong>06/06</strong> - 發出非台大學生修課錄取／未錄取通知</li>
+      <li><strong>05/10</strong> - 公布<a href="registration.html">報名資訊</a></li>
+      <li><strong>01/26</strong> - 更新<a href="registration.html#registration-information">外地實習生報名資訊</a></li>
+      <li><strong>01/26</strong> - 網站上線</li>
+    </ul>
+  </section>
+</div>
+<div class="two-column ocean alt">
+  <section>
+    <h2>特別講座</h2>
+
+<h3>Programming with Modal Types</h2>
+
+<p>FLOLAC 2024 很榮幸邀請到劍橋大學 <a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a> 教授擔任特別講師，講題為 Programming with Modal Types，內容簡介如下：<br /><br /> 著名的 Curry-Howard 對應闡述形式邏輯和函式程設之間深刻的對應：邏輯命題與型別相對應，命題的證明與該型別的程式亦相對應。然而幾個世紀以來，邏輯學家認識到邏輯系統並非只有一種，而是存在許多不同的邏輯系統。在過去的幾十年中，電腦科學家已經理解到這些邏輯系統可以反過來為程式語言提供新的見解。<br />
+  傳統邏輯最重要的擴充之一是模態邏輯（modal logic）。這將形式邏輯拓展到對於相對情境下斷言的研究。例如，我們不可能說「正在下雨」這個命題絕對是真或假，而是得取決於它被斷言的時間和地點。從電腦科學的角度來看，這表明我們可以將型別系統擴展到不單只是資料的形狀，而是關注到程式更深層次的行為特性。<br />
+  本課程將探討模態邏輯在程式語言設計中的應用，從它們在型別理論中的表現開始，展示如何用於組織各種計算現象，包括反應式程式設計（reactive programming）、增量計算（incremental computing）、資料庫查詢語言（data query language），甚至是能力安全程式設計（capability-safe programming）。</p>
+
+  </section>
+  <section id="course-timeline">
+    <h2>重要日期</h2>
+    <ol>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">01/26</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">網站上線</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">02/15</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">外地實習生報名開始</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">03/15</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">外地實習生報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">06/05</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">外校學生修課報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">06/09</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">台大學生正式報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">06/12</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">正式報名錄取回覆截止、台大學生候補報名截止、旁聽報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">06/13</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">候補報名錄取回覆截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-next">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/01</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">課程開始</div>
+        </div>
+      </li>
+      <li class="timeline-event-next">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/12</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">課程結束</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="ocean">
+  <section>
+    <h2>課程</h2>
+    <div class="lecture"><h3><span id="lecture-fp"></span>函數程設</h3><p>本課程以 Haskell 為工具，概述函數程式設計相關的一些必備知識，以便與其他課程銜接。 由歸納法開始，我們將談資料結構與函數的歸納定義，發現函數的定義可依循資料結構的定義。 而若欲證明該函數的性質，又可使用歸納法，其證明可依循函數的定義。 接著我們會談到摺 (fold) 的觀念，發現摺可視為一種歸納法的抽象。</p>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            
+            <dt><a href="https://management.ntu.edu.tw/IM/faculty/teacher/sn/28">穆信成</a></dt>
+            
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>講義</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2024/FP-Handouts.pdf">Handout</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-logic"></span>邏輯</h3><p>數學證明建立於有效的推論結構之上， 而型式邏輯學的目的是以嚴謹符號表達這些推論結構並研究其性質。 這門課聚焦於命題直構邏輯 (propositional intuitionistic logic) 的自然演繹系統 (natural deduction)，討論型式邏輯學裡基本的語法 (syntactic) 和語意 (semantic) 證明方法，並點出邏輯與計算的密切關係，銜接至依值型別課程。 透過對推論結構的型式化學習，這門課也為其他課程所需的數學證明基礎作好準備。</p>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            
+            <dt><a href="https://josh-hs-ko.github.io/">柯向上</a></dt>
+            
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2024/logic_lecture_1.pdf">Logic 1</a> </li>
+            <li class="list-inline-item"><a href="../../2024/logic_lecture_2.pdf">Logic 2</a> </li>
+            <li class="list-inline-item"><a href="../../2024/logic_lecture_3.pdf">Logic 3</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-lambda"></span>λ-算則</h3><p>現今許多語言如 Haskell、Agda 都會以 λ-算則 （λ-calculus，其中 λ 唸作 lam-da /ˈlæmdə/）的變形作為語言的模型，因此在課程中我們將從數學角度探討 λ-calculus 以及程式語言各種基本概念跟性質。例如定義何謂計算以及計算上相等的程式證明相關性質；加入型別討論並證明一個有型別沒有副作用的程式是如何能保證計算時一定會算出結果；除了學理上的興趣外，我們也會討論具體實務上應用於許多語言中解決程式碼重複的語言特性—多型（polymorphism）。</p>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            
+            <dt><a href="https://l-tchen.github.io/">陳亮廷</a></dt>
+            
+            <dd>中央研究院資訊科學所</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>教學資源</h4>
+          <h6>投影片</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2024/lambda_lecture1_slide.pdf">Lambda 1</a> </li>
+            <li class="list-inline-item"><a href="../../2024/lambda_lecture2_slide.pdf">Lambda 2</a> </li>
+            <li class="list-inline-item"><a href="../../2024/lambda_lecture3_slide.pdf">Lambda 3</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-special"></span>特別講題：Programming with Modal Types</h3><p>著名的 Curry-Howard 對應闡述形式邏輯和函式程設之間深刻的對應：邏輯命題與型別相對應，命題的證明與該型別的程式亦相對應。然而幾個世紀以來，邏輯學家認識到邏輯系統並非只有一種，而是存在許多不同的邏輯系統。在過去的幾十年中，電腦科學家已經理解到這些邏輯系統可以反過來為程式語言提供新的見解。<br /> 傳統邏輯最重要的擴充之一是模態邏輯（modal logic）。這將形式邏輯拓展到對於相對情境下斷言的研究。例如，我們不可能說「正在下雨」這個命題絕對是真或假，而是得取決於它被斷言的時間和地點。從電腦科學的角度來看，這表明我們可以將型別系統擴展到不單只是資料的形狀，而是關注到程式更深層次的行為特性。<br /> 本課程將探討模態邏輯在程式語言設計中的應用，從它們在型別理論中的表現開始，展示如何用於組織各種計算現象，包括反應式程式設計（reactive programming）、增量計算（incremental computing）、資料庫查詢語言（data query language），甚至是能力安全程式設計（capability-safe programming）。</p>
+      <div class="lecture-content">
+        <div>
+          <h4>講師</h4>
+          <dl>
+            
+            <dt><a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a></dt>
+            
+            <dd>Department of Computer Science and Technology, University of Cambridge</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="timetable" class="alt ocean">
+  <section>
+    <h2>課表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第一週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td><a href="#lecture-fp">函數程設 0</a><small>Definition and Proof by Induction</small></td>
+          <td><a href="#lecture-fp">函數程設 1</a><small>Monads</small></td>
+          <td><a href="#lecture-lambda">λ-算則 0</a><small>Untyped λ-Calculus</small></td>
+          <td><a href="#lecture-lambda">λ-算則 1</a><small>Simple Types and their Extensions</small></td>
+          <td><a href="#lecture-lambda">λ-算則 2</a><small>Parametric Polymorphism</small></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td><a href="#lecture-logic">邏輯 0</a><small>Propositional Logic and Natural Deduction</small></td>
+          <td><a href="#lecture-logic">邏輯 1</a><small>Classical Semantics of Propositional Logic</small></td>
+          <td><a href="#lecture-fp">函數程設 2</a><small>Program Derivation</small></td>
+          <td><a href="#lecture-logic">邏輯 2</a><small>The Curry–Howard Correspondence</small></td>
+          <td><a>討論</a><small>Discussion</small></td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">第二週</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">上午</th>
+          <td><a href="#lecture-special">模態型別 0</a><small></small></td>
+          <td><a href="#lecture-special">模態型別 1</a><small></small></td>
+          <td><a href="#lecture-special">模態型別 2</a><small></small></td>
+          <td><a href="#lecture-special">模態型別 3</a><small></small></td>
+          <td><a>考試</a><small>Exam</small></td>
+        </tr>
+        <tr>
+          <th scope="row">下午</th>
+          <td><a href="#lecture-lambda">λ-算則 3</a><small></small></td>
+          <td><a href="#lecture-fp">函數程設 3</a><small>Program Derivation (Continued)</small></td>
+          <td><a href="#lecture-logic">邏輯 3</a><small>Dependently Typed Programming</small></td>
+          <td><a>討論</a> <small>Discussion</small></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+</div>
+<footer>
+  <div class="container-fluid bg-dark-shade text-light small">
+    <div class="container-md px-xl-5 px-2 py-4 py-xl-5 d-flex flex-column flex-md-row justify-content-around ">
+      <div class="pb-3 pr-5">
+        <object type="image/svg+xml" data="../../img/logo.svg" style="height: 3.5rem;"></object>
+      </div>
+      <dl class="dl-vbar">
+        <dt>主辦單位</dt>
+        <dd>
+          <ul class="list-inline-block m-0">
+            <li>中央研究院資訊科學研究所</li>
+            <li>國立臺灣大學資訊管理學系</li>
+          </ul>
+        </dd>
+        
+        <dt>贊助單位</dt>
+        <dd>
+          <ul class="list-inline-block m-0">
+            <li>入山山有限公司</li>
+            <li>國立臺灣大學資訊工程學系</li>
+            <li>國立臺灣大學電機工程學系</li>
+          </ul>
+        </dd>
+        <dt>籌辦團隊</dt>
+        <dd>
+          <dl class="inline-block-lists m-0">
+            <div>
+              <dt class>課程委員</dt>
+              <dd>
+                <div class="container-4-rows">
+                  <div>柯向上</div>
+                  <div>陳亮廷</div>
+                  <div>穆信成</div>
+                </div>
+              </dd>
+            </div>
+            <div>
+              <dt>事務委員</dt>
+              <dd>
+                <div = class="container-4-rows">
+                  <div>林柏芬</div>
+                  <div>韓愷真</div>
+                </div>
+              </dd>
+            </div>
+            <div>
+              <dt>助教團長</dt>
+              <dd>
+                <div = class="container-4-rows">
+                  <div>蔡子濬</div>
+                </div>
+              </dd>
+            </div>
+            <div>
+              <dt>助教團</dt>
+              <dd>
+                <div class="container-4-rows">
+                  <div>林秉軒</div>
+                  <div>陳正康</div>
+                  <div>曾顯恩</div>
+                  <div>蔡柏毅</div>
+                  <div>薛盛安</div>
+                  <div>張耀晟</div>
+                </div>
+              </dd>
+            </div>
+          </dl>
+        </dd>
+        <dt>連絡信箱</dt>
+        <dd>
+          <a class="text-decoration-none text-light" href="javascript:location='mai'+'lto:\u0066\u006c\u006f\u006c\u0061'+'\u0063\u0040\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063\u0061\u002e\u0065'+'\u0064\u0075\u002e\u0074\u0077';void 0">
+            <script type="text/javascript">document.write('\u0066\u006c'+'\u006f\u006c\u0061\u0063\u0040'+'\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063'+'\u0061\u002e\u0065\u0064'+'\u0075\u002e\u0074\u0077')</script>
+          </a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

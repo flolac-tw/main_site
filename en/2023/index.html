@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://imgur.com/BE39Hoj.png">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/d25dd1f650.js" crossorigin="anonymous"></script>
+  <!-- Our code -->
+  <script src="../../script/script.js" type="text/javascript"></script>
+  <!-- Bootstrap 4.5 -->
+  <link rel="stylesheet" href="../../css/custom.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand sticky-top navbar-dark bg-dark-shade justify-content-around py-md-2 py-sm-1 py-0" style="font-weight: 600">
+  <!-- TODO: use CSS to control heights in different window widths -->
+  <div class="container-md px-md-5 px-0">
+    <a class="navbar-brand py-md-2 d-none d-md-block" href="#"><img src="../../img/logo.svg" style="height: 2rem" /></a>
+    <a class="navbar-brand py-1 d-none d-sm-block d-md-none" href="#"><img src="../../img/logo.svg" style="height: 1.5rem" /></a>
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item"><a class="nav-link" href="/en/">Home</a></li> -->
+      <li class="nav-item"><a class="nav-link" href="../../en/2024/">Current Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="../../en/2024/registration.html">Registration</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Past Events</a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-md-left">
+          <div class="dropdown-item">Type-Theoretic Foundations</div>
+          <a class="dropdown-item" href="../../en/2024">2024</a>
+          <a class="dropdown-item" href="../../en/2022">2022</a>
+          <a class="dropdown-item" href="../../en/2020">2020</a>
+          <a class="dropdown-item" href="../../flolac18.html" target="_blank">2018</a>
+          <a class="dropdown-item" href="../../flolac16.html" target="_blank">2016</a>
+          <a class="dropdown-item" href="../../flolac14.html" target="_blank">2014</a>
+          <a class="dropdown-item" href="../../flolac12.html" target="_blank">2012</a>
+          <a class="dropdown-item" href="../../flolac10.html" target="_blank">2010</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item bg-light">Automated Verification</div>
+          <a class="dropdown-item" href="../../en/2023">2023</a>
+          <a class="dropdown-item" href="../../en/2021">2021</a>
+          <a class="dropdown-item" href="../../flolac19.html" target="_blank">2019</a>
+          <a class="dropdown-item" href="../../flolac17.html" target="_blank">2017</a>
+          <a class="dropdown-item" href="../../flolac15.html" target="_blank">2015</a>
+          <a class="dropdown-item" href="../../flolac11.html" target="_blank">2011</a>
+          <a class="dropdown-item" href="../../flolac09.html" target="_blank">2009</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../../flolac08.html" target="_blank">2008</a>
+          <a class="dropdown-item" href="../../flolac07.html" target="_blank">2007</a>
+        </div>
+      </li>
+    </ul>
+    <span class="navbar-nav">
+      <a class="nav-link d-none d-sm-flex" href="javascript:location='mailto:\u0066\u006c\u006f\u006c\u0061\u0063\u0040\u0069\u0069\u0073\u002e\u0073\u0069\u006e\u0069\u0063\u0061\u002e\u0065\u0064\u0075\u002e\u0074\u0077';void 0"><i class="fas fa-envelope"></i></a>
+      <a class="nav-link d-none d-sm-flex" href="https://github.com/flolac-tw"><i class="fab fa-github"></i></a>
+      <a class="nav-link d-none d-sm-flex" href="https://www.facebook.com/flolac.tw/"><i class="fab fa-facebook"></i></a>
+      <a class="nav-link d-none d-sm-flex" target="_blank" href="https://m.me/326622080745536"><i class="fab fa-facebook-messenger"></i></a>
+      <a class="nav-link d-sm-flex" href="../../zh/2023/index.html"><small>中</small></a>
+    </span>
+  </div>
+</nav>
+<div id="header" class="mountain">
+  <header>
+    <h1>Formosan Summer School on Logic, Language, and Computation</h1>
+    <img src="../../img/logo.svg">
+    <span>邏輯、語言與計算暑期研習營, 2023</span><br /><span>08/21-09/01</span>&emsp;<span>09:00-17:00</span><br /><span></span>
+  </header>
+</div>
+<div class="two-column mountain">
+  <section>
+    <h2>Introduction</h2>
+    <p>近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。 邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。 自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。 邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十七屆。</p>
+  </section>
+  <section>
+    <h2>Announcements</h2>
+    <ul>
+      <li><strong>05/31</strong> - 網站上線</li>
+      <li><strong>08/15</strong> - 上課地點台灣大學管理學院一號館101</li>
+    </ul>
+  </section>
+</div>
+<div class="two-column mountain alt">
+  <section>
+    <h2>基於邏輯的程式測試與驗證</h2>
+<p>
+透過這次教學，我們希望讓大家了解邏輯對於寫程式的幫助。</br>
+現在基於邏輯的程式驗證與測試已經不僅僅是理論。許多大公司，已經積極地採用。
+再不學，就來不及囉。</br>
+本次課程集結了國內相關研究的黃金陣容，講師來自中央研究院，台灣大學，政治大學。
+無論經驗或是研究成果都是目前首選，相信不會讓大家失望。</br>
+</p>
+<h3>（傳統）程式一定會有錯</h3>
+<p>
+現今程式的規模已經日益龐大，在實務上，以傳統方式開發的程式，只要超過一定的大小，無可避免的，一定或多或少會有一些錯誤。
+這些錯誤，可大可小，常常會造成經濟上的損失或是更大的危害。
+</p>
+<h3>（自動）推論幫你找到錯</h3>
+<p>
+我們會討論各種基於邏輯的方法，自動化的幫忙找到程式錯誤，甚至證明修改過的已經完全符合定出來的規格。這些方法許多已經在最先進的業界被採用，有許多更前沿的方法還在學界開發中。
+</p>
+<h3>（電腦）邏輯研究面面觀</h3>
+<p>
+除了自動驗證與測試，我們還會提到更多邏輯在電腦科學的研究議題。預計將以特別演講的方式呈現。
+</p>
+
+  </section>
+  <section id="course-timeline">
+    <h2>Important dates</h2>
+    <ol>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">05/31</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">網站上線</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/13</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">外校學生修課報名開始</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/14</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">外校學生修課報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/19</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">臺大學生報名開始</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/20</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">臺大學生報名截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/24</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">旁聽報名截止(07/31通知結果)</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">07/27</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">課程網路加退選截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">08/21</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">課程開始</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">08/28</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">期中停修截止</div>
+        </div>
+      </li>
+      <li class="timeline-event-past">
+        <div class="timeline-event-date-container">
+          <div class="timeline-event-date">09/01</div>
+        </div>
+        <div class="timeline-event-content-container">
+          <div class="timeline-event-content">課程結束</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+</div>
+<div id="course-lectures" class="mountain">
+  <section>
+    <h2>Courses</h2>
+    <div class="lecture"><h3><span id="lecture-automata"></span>Automata Theory</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Bow-Yaw Wang</dt>
+            
+            <dd>Institue of Information Science</br>Academia Sinica</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/automata_slides.pdf">Slides</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-pl"></span>Automated Decision Procedure for Propositional Logic</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Ming-Hsien Tsai</dt>
+            
+            <dd>National Institute of Cyber Security</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://ppt.cc/fnPVsx">Slides</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-qbf"></span>Quantified Boolean Formula Satisfiability's Applications to Synthesis and Verification</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Jie-Hong Jiang</dt>
+            
+            <dd>Department of Electrical Engineering</br>National Taiwan University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/QBF_slides.pdf">Slides</a> </li>
+          </ul>
+          <h6>Homework</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/QBF_hw.pdf">HW</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-fol"></span>Satisfiability Modulo Theories (SMT)</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Yu-Fang Chen</dt>
+            
+            <dd>Institue of Information Science</br>Academia Sinica</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/fol_slides_1.pdf">Slides_1</a> </li>
+            <li class="list-inline-item"><a href="../../2023/fol_slides_2.pdf">Slides_2</a> </li>
+            <li class="list-inline-item"><a href="../../2023/fol_source.zip">Material</a> </li>
+          </ul>
+          <h6>Example Codes</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/fol_example.zip">Example</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-com"></span>Basic Complexity Theory</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Tony Tan</dt>
+            
+            <dd>University of Liverpool</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/com_note.pdf">Note</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-smt-testing"></span>SMT-based Program Testing</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Fang Yu</dt>
+            
+            <dd>Department of Management Information Systems</br>National Cheng Chi University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/smt_testing_slides.pdf">Slides</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture"><h3><span id="lecture-para"></span>Automata-based Parameterized Model Checking and Synthesis</h3>
+      <div class="lecture-content">
+        <div>
+          <h4>Taught by</h4>
+          <dl>
+            
+            <dt>Chih-Duo Hong</dt>
+            
+            <dd>Department of Management Information Systems</br>National Cheng Chi University</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <h6>Handouts & Slides</h6>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="../../2023/para_slides.pdf">Slides</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3 id="lecture-special"><span id="lecture-talkL"></span>Special Talk — Incorrectness Logic and Underapproximation: Foundations of Bug Catching</h3>
+      
+      <p>The talk would cover the discussion of incorrectness separation logic and its applications in industry (e.g., finding bugs in software development at Meta.)</p>
+      <div class="lecture-content">
+        <div>
+          <h4>Speaker</h4>
+          <dl>
+            <dt>Lê Quang Lộc</dt>
+            <dd>Department of Computer Science</br>University College London</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>Slides</h4>
+          <ul class="list-inline">
+          </ul>
+          <a href="../../2023/talkL_slides.pdf">Download</a>
+        </div>
+      </div>
+    </div>
+    <div class="lecture">
+      <h3 id="lecture-special"><span id="lecture-talkJ"></span>Special Talk — Automatically Debugging AutoML Pipelines Using Maro: ML Automatted Remediaiton Oracle</h3>
+      
+      <p>The talk would focus on how to look for ways to improve AutoML search spaces via SMT. It also involves, effectively, using SMT to generate code.</p>
+      <div class="lecture-content">
+        <div>
+          <h4>Speaker</h4>
+          <dl>
+            <dt>Julian Dolby</dt>
+            <dd>Thomas J.Watson Research Center</br>Yorktown Heights</br>NY USA</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="timetable" class="alt mountain">
+  <section>
+    <h2>課表</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">1st week</th>
+          <th scope="col">Mon</th>
+          <th scope="col">Tue</th>
+          <th scope="col">Wed</th>
+          <th scope="col">Thu</th>
+          <th scope="col">Fri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Morning</th>
+          <td><a href="#lecture-pl">命題邏輯與其自動化決策程序</a><small>Automated Decision Procedure for Propositional Logic</small></td>
+          <td><a href="#lecture-pl">命題邏輯與其自動化決策程序</a><small>Automated Decision Procedure for Propositional Logic</small></td>
+          <td><a href="#lecture-automata">自動機理論</a><small>Automata Theory</small></td>
+          <td><a href="#lecture-qbf">QBF可滿足性與其在合成與驗證的應用</a><small>Quantified Boolean Formula Satisfiability's Applications to Synthesis and Verification</small></td>
+          <td><a href="#lecture-qbf">QBF可滿足性與其在合成與驗證的應用</a><small>Quantified Boolean Formula Satisfiability's Applications to Synthesis and Verification</small></td>
+        </tr>
+        <tr>
+          <th scope="row">Afternoon</th>
+          <td><a href="#lecture-pl">命題邏輯與其自動化決策程序</a><small>Automated Decision Procedure for Propositional Logic</small></td>
+          <td><a href="#lecture-automata">自動機理論</a><small>Automata Theory</small></td>
+          <td><a href="#lecture-automata">自動機理論</a><small>Automata Theory</small></td>
+          <td><a href="#lecture-qbf">QBF可滿足性與其在合成與驗證的應用</a><small>Quantified Boolean Formula Satisfiability's Applications to Synthesis and Verification</small></td>
+          <td><a href="#lecture-para">基於自動機理論的可參數化模型驗證與合成</a><small>Automata-based Parameterized Model Checking and Synthesis</small></td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">2nd week</th>
+          <th scope="col">Mon</th>
+          <th scope="col">Tue</th>
+          <th scope="col">Wed</th>
+          <th scope="col">Thu</th>
+          <th scope="col">Fri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Morning</th>
+          <td><a href="#lecture-fol">Satisfiability Modulo Theories (SMT)</a><small>Satisfiability Modulo Theories (SMT)</small></td>
+          <td><a href="#lecture-talkL">演講1</a><small>Incorrectness Logic and Underapproximation: Foundations of Bug Catching</small></td>
+          <td><a href="#lecture-com">基礎複雜度理論</a><small>Basic Complexity Theory</small></td>
+          <td><a href="#lecture-talkJ">演講2</a><small>Automatically Debugging AutoML Pipelines Using Maro: ML Automatted Remediaiton Oracle</small></td>
+          <td><a>考試</a><small>Exam</small></td>
+        </tr>
+        <tr>
+          <th scope="row">Afternoon</th>
+          <td><a href="#lecture-fol">Satisfiability Modulo Theories (SMT)</a><small>Satisfiability Modulo Theories (SMT)</small></td>
+          <td><a href="#lecture-fol">Satisfiability Modulo Theories (SMT)</a><small>Satisfiability Modulo Theories (SMT)</small></td>
+          <td><a href="#lecture-com">基礎複雜度理論</a><small>Basic Complexity Theory</small></td>
+          <td><a href="#lecture-smt-testing">基於SMT的程式測試</a><small>SMT-based Program Testing</small></td>
+          <td><a>討論與意見回饋</a> <small>Discussion and Feedback</small></td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+</div>
+<footer>
+  <div class="container-fluid bg-dark-shade text-light small">
+    <div class="container-md px-xl-5 px-2 py-4 py-xl-5 d-flex flex-column flex-md-row justify-content-around ">
+      <div class="pb-3 pr-5">
+        <object type="image/svg+xml" data="../../img/logo.svg" style="height: 3.5rem;"></object>
+      </div>
+      <dl class="dl-vbar"><dt>籌辦團隊</dt>
+        <dd>
+          <dl class="inline-block-lists m-0">
+            <div>
+              <dt class>課程委員</dt>
+              <dd>
+                <div class="container-4-rows">
+                  <div>陳郁方</div>
+                </div>
+              </dd>
+            </div>
+            
+            
+            
+          </dl>
+        </dd>
+        <dt>連絡信箱</dt>
+        <dd>
+          <a class="text-decoration-none text-light" href="javascript:location='mai'+'lto:\u0066\u006c\u006f\u006c\u0061'+'\u0063\u0040\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063\u0061\u002e\u0065'+'\u0064\u0075\u002e\u0074\u0077';void 0">
+            <script type="text/javascript">document.write('\u0066\u006c'+'\u006f\u006c\u0061\u0063\u0040'+'\u0069\u0069\u0073\u002e\u0073'+'\u0069\u006e\u0069\u0063'+'\u0061\u002e\u0065\u0064'+'\u0075\u002e\u0074\u0077')</script>
+          </a>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

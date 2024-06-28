@@ -1,0 +1,1 @@
+Boolean satisfiability (SAT) has become an indispensable tool in the synthesis and verification hardware and software systems. In this lecture, we will cover some fundamental elements of SAT and quantified Boolean satisfiability (QSAT). Some examples will be introduced to show how SAT and QSAT are applied in solving industrial problems.

@@ -1,0 +1,3 @@
+The Vienna Development Method (VDM) is a software development methodology since the 1970s. VDM specification language (VDM-SL) models software systems at a higher level of abstraction. Through the modeling with VDM-SL, analysis of software designs and identification of key features can be achieved at an early stage of software development. This lecture will cover the basic modeling and analysis techniques of VDM-SL. We will also discuss some examples and industrial applications of VDM.
+
+{{ :course:flolac2017_vdm_combined.pdf |Slides}}, {{ :course:flolac2017_vdm_homework.pdf |Homework}}

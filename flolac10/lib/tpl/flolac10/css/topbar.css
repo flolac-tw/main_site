@@ -1,0 +1,93 @@
+/**
+ * css for mmClean template 
+ *
+ * @author Michael Klier <chi@chimeric.de> 
+ *
+ * Modification for mmClean Theme
+ * @author Marcin Mierzejewski <marcin@mierzejewski.net>
+ */
+
+div.topbar a.wikilink2:link,
+div.topbar a.wikilink2:active,
+div.topbar a.wikilink2:visited,
+div.topbar a.wikilink1:link,
+div.topbar a.wikilink1:active,
+div.topbar a.wikilink1:visited,
+div.topbar a.interwiki:link,
+div.topbar a.interwiki:active,
+div.topbar a.interwiki:visited,
+div.topbar a.urlextern:link,
+div.topbar a.urlextern:active,
+div.topbar a.urlextern:visited
+{
+    font-size: 14px;
+    font-weight: bold;
+    
+    height: 25px;
+    display: block;
+    padding-right: 10px; 
+    padding-left: 10px; 
+    text-decoration: none;
+    color: #fee59e;
+    margin-left: 5px;
+    white-space: nowrap;
+    text-align: center;
+/*    width: 50px;*/
+    float: left;
+}
+
+div.topbar a.wikilink2:hover,
+div.topbar a.wikilink1:hover,
+div.topbar a.interwiki:hover,
+div.topbar a.urlextern:hover 
+{
+    text-decoration: none; 
+    height: 18px;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+
+div.topbar h1,
+div.topbar h2,
+div.topbar h3,
+div.topbar h4,
+div.topbar h5,
+div.topbar h6 
+{
+  font-size:0.8125em;
+  font-family: Verdana;
+  font-weight:bold;
+  padding-bottom: 0px;
+}
+
+div.topbar
+{
+    margin-top: -22px;
+    height: 22px;
+    border: 0px;
+/*    background: #436976; */
+    width: 100%;
+    list-style: none;
+}
+
+div.topbar ul
+{ 
+    padding: 0px;
+	margin: 0px;
+    padding-top: 0px;
+    list-style: none;
+    white-space: nowrap;
+}
+
+div.topbar li
+{ 
+    width: auto !important;
+    float: left;
+    margin: 0px;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    margin-right: 1px;	
+}
