@@ -2,9 +2,9 @@
 import: config.yaml
 announcements:
 - time: 06/12
-  title: "發出旁聽錄取通知\n（通知寄發信箱為 computing.laboratory.tw@gmail.com，勿直接回覆至此信箱）"
+  title: 發出旁聽錄取通知
 - time: 06/10
-  title: "發出台大學生修課錄取通知\n（通知寄發信箱為 computing.laboratory.tw@gmail.com，勿直接回覆至此信箱）"
+  title: 發出台大學生修課錄取通知
 - time: 06/06
   title: 發出非台大學生修課錄取／未錄取通知
 - time: 05/10
@@ -40,8 +40,9 @@ calendar:
   past: true
 - time: 07/09
   title: 期中停修截止
+  past: true
 - time: 07/12
-  title: 課程結束
+  title: 考試、課程結束
 zh:
   location: "地點：國立臺灣大學管理學院一號館103教室"
   introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
@@ -78,7 +79,7 @@ zh:
         subtitle: "Classical Semantics of Propositional Logic"
         id: logic
       - title: "函數程設 2"
-        subtitle: "Program Derivation"
+        subtitle: "Monads (Continued)"
         id: fp
       - title: "邏輯 2"
         subtitle: "The Curry–Howard Correspondence"
@@ -88,10 +89,10 @@ zh:
     week2:
       morning:
       - title: "模態型別 0"
-        subtitle: ""
+        subtitle: "Modal Logic"
         id: special
       - title: "模態型別 1"
-        subtitle: ""
+        subtitle: "Capability-Safety and Logical Relations"
         id: special
       - title: "模態型別 2"
         subtitle: ""
@@ -103,10 +104,10 @@ zh:
         subtitle: "Exam"
       afternoon:
       - title: "λ-算則 3"
-        subtitle: ""
+        subtitle: "Bidirectional Typing"
         id: lambda
       - title: "函數程設 3"
-        subtitle: "Program Derivation (Continued)"
+        subtitle: "Monads (Rebooted)"
         id: fp
       - title: "邏輯 3"
         subtitle: "Dependently Typed Programming"
@@ -144,7 +145,7 @@ zh:
   - title: 邏輯
     id: logic
     intro: 數學證明建立於有效的推論結構之上， 而型式邏輯學的目的是以嚴謹符號表達這些推論結構並研究其性質。
-      這門課聚焦於命題直構邏輯 (propositional intuitionistic logic) 的自然演繹系統 (natural deduction)，討論型式邏輯學裡基本的語法 (syntactic) 和語意 (semantic) 證明方法，並點出邏輯與計算的密切關係，銜接至依值型別課程。
+      這門課聚焦於命題直構邏輯 (propositional intuitionistic logic) 的自然演繹系統 (natural deduction)，討論型式邏輯學裡基本的語法 (syntactic) 和語意 (semantic) 證明方法，並點出邏輯與計算的密切關係，最終引導至依值型別。
       透過對推論結構的型式化學習，這門課也為其他課程所需的數學證明基礎作好準備。
     instructors:
     - name: 柯向上
@@ -159,6 +160,14 @@ zh:
         link: "/2024/logic_lecture_2.pdf"
       - name: Logic 3
         link: "/2024/logic_lecture_3.pdf"
+      - name: Supplemental
+        link: "/2024/logic_lecture_3_supplemental.pdf"
+    - type: 原始檔
+      items:
+      - name: "DTP.agda"
+        link: "/2024/DTP.agda"
+      - name: "NDGP.agda"
+        link: "/2024/NDGP.agda"
   - title: λ-算則
     id: lambda
     intro: 現今許多語言如 Haskell、Agda 都會以 λ-算則 （λ-calculus，其中 λ 唸作 lam-da /ˈlæmdə/）的變形作為語言的模型，因此在課程中我們將從數學角度探討 λ-calculus 以及程式語言各種基本概念跟性質。例如定義何謂計算以及計算上相等的程式證明相關性質；加入型別討論並證明一個有型別沒有副作用的程式是如何能保證計算時一定會算出結果；除了學理上的興趣外，我們也會討論具體實務上應用於許多語言中解決程式碼重複的語言特性—多型（polymorphism）。
