@@ -264,7 +264,7 @@ exists-even = {!   !}
 --  specification.
 
 data _≤_ : ℕ → ℕ → Set where
-  base : zero ≤ m
+  base :         zero  ≤ n
   step : m ≤ n → suc m ≤ suc n
 
 findEven : (m : ℕ) → Σ[ n ∶ ℕ ] (m ≤ n) × Even n

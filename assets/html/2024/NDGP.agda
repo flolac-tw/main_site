@@ -29,7 +29,7 @@ open import Generics.Ornament.Algebraic.Isomorphism
 
 --  A simplest example is the theorem
 --
---    ‘There is an induction principle for any datatype D.’
+--    ‘There is an induction principle for any datatype.’
 --
 --  This theorem can be formalised datatype-generically, and used to generate
 --  the induction principle of (roughly speaking) any datatype with the help of
