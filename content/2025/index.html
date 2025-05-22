@@ -1,63 +1,49 @@
 ---
 import: config.yaml
 announcements:
-- time: 08/13
-  title: 寄出考試通過證書
-- time: 07/30
-  title: 寄出考試結果通知
-- time: 06/12
-  title: 發出旁聽錄取通知
-- time: 06/10
-  title: 發出台大學生修課錄取通知
-- time: 06/06
-  title: 發出非台大學生修課錄取／未錄取通知
-- time: 05/10
-  title: 公布<a href="registration.html">報名資訊</a>
-- time: 01/26
-  title: 更新<a href="registration.html#registration-information">外地實習生報名資訊</a>
-- time: 01/26
+- time: 05/23
   title: 網站上線
 calendar:
-- time: 05/19
+- time: 05/23
   title: 網站上線
   past: true
-- time: 02/15
+- time: 07/01
   title: 外地實習生報名開始
   past: true
-- time: 03/15
+- time: 07/01
   title: 外地實習生報名截止
   past: true
-- time: 06/05
+- time: 07/01
   title: 外校學生修課報名截止
   past: true
-- time: 06/09
+- time: 07/01
   title: 台大學生正式報名截止
   past: true
-- time: 06/12
+- time: 07/01
   title: 正式報名錄取回覆截止、台大學生候補報名截止、旁聽報名截止
   past: true
-- time: 06/13
+- time: 07/01
   title: 候補報名錄取回覆截止
   past: true
-- time: 07/01
+- time: 08/11
   title: 課程開始
   past: true
-- time: 07/09
+- time: 08/15
   title: 期中停修截止
   past: true
-- time: 07/12
+- time: 08/22
   title: 考試、課程結束
   past: true
 zh:
-  location: "地點：國立臺灣大學管理學院一號館103教室"
+  location: "地點：國立臺灣大學電機二館229教室"
   introduction-text: 近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
     邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
     自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
     邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十九屆。
   special-lecture: 特別講座
-  special-topic: "Programming with Modal Types"
+  special-topic: "待公布"
   special-topic-intro: >-
-    FLOLAC 2024 很榮幸邀請到劍橋大學 <a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a> 教授擔任特別講師，講題為 Programming with Modal Types，內容簡介如下：<br /><br />
+    FLOLAC 2025 很榮幸邀請到劍橋大學 <a href="https://www.cl.cam.ac.uk/~nk480/">Neel Krishnaswami</a> 教授擔任特別講師，講題為 Programming with Modal Types，內容簡介如下：<br /><br />
     著名的 Curry-Howard 對應闡述形式邏輯和函式程設之間深刻的對應：邏輯命題與型別相對應，命題的證明與該型別的程式亦相對應。然而幾個世紀以來，邏輯學家認識到邏輯系統並非只有一種，而是存在許多不同的邏輯系統。在過去的幾十年中，電腦科學家已經理解到這些邏輯系統可以反過來為程式語言提供新的見解。<br />
       傳統邏輯最重要的擴充之一是模態邏輯（modal logic）。這將形式邏輯拓展到對於相對情境下斷言的研究。例如，我們不可能說「正在下雨」這個命題絕對是真或假，而是得取決於它被斷言的時間和地點。從電腦科學的角度來看，這表明我們可以將型別系統擴展到不單只是資料的形狀，而是關注到程式更深層次的行為特性。<br />
       本課程將探討模態邏輯在程式語言設計中的應用，從它們在型別理論中的表現開始，展示如何用於組織各種計算現象，包括反應式程式設計（reactive programming）、增量計算（incremental computing）、資料庫查詢語言（data query language），甚至是能力安全程式設計（capability-safe programming）。
@@ -66,167 +52,155 @@ zh:
       morning:
       - title: "命題邏輯"
         subtitle: ""
-        id: fp
+        id: pl
       - title: "硬體模型檢測"
         subtitle: ""
-        id: fp
+        id: hmc
       - title: "一階邏輯"
         subtitle: ""
-        id: lambda
-      - title: "可滿足性模組理論"
+        id: fol
+      - title: "模組理論可滿足性"
         subtitle: ""
-        id: lambda
+        id: smt
       - title: "自動機理論"
         subtitle: ""
-        id: lambda
+        id: at
       afternoon:
       - title: "布林可滿足性問題與二元決策圖"
         subtitle: ""
-        id: logic
+        id: satbdd
       - title: "硬體模型檢測"
         subtitle: ""
-        id: logic
+        id: hmc
       - title: "一階邏輯"
         subtitle: ""
-        id: fp
-      - title: "可滿足性模組理論"
+        id: fol
+      - title: "模組理論可滿足性"
         subtitle: ""
-        id: logic
+        id: smt
       - title: "自動機理論"
         subtitle: ""
+	id: at
     week2:
       morning:
       - title: "軟體模型檢測"
         subtitle: ""
-        id: special
+        id: smc
       - title: "自動機學習與參數化驗証"
         subtitle: ""
-        id: special
+        id: alpv
       - title: "自動機與軟體安全"
         subtitle: ""
-        id: special
+        id: afss
       - title: "量化可滿足性及其在合成與驗證中的應用"
         subtitle: ""
-        id: special
+        id: qsasv
       - title: "期末考式"
         subtitle: "Exam"
       afternoon:
       - title: "軟體模型檢測"
         subtitle: ""
-        id: lambda
+        id: smc
       - title: "自動機學習與參數化驗証"
         subtitle: ""
-        id: fp
+        id: alpv
       - title: "自動機與軟體安全"
         subtitle: ""
-        id: logic
+        id: afss
       - title: "量化可滿足性及其在合成與驗證中的應用"
-        subtitle: Discussion
+        subtitle: ""
+	id: qsasv
       - title: "邀請講座"
         subtitle: "SMT over String theory"
+	id: special
   courses:
-  - title: 函數程設
-    id: fp
-    intro: 本課程以 Haskell 為工具，概述函數程式設計相關的一些必備知識，以便與其他課程銜接。
-      由歸納法開始，我們將談資料結構與函數的歸納定義，發現函數的定義可依循資料結構的定義。
-      而若欲證明該函數的性質，又可使用歸納法，其證明可依循函數的定義。
-      接著我們會談到摺 (fold) 的觀念，發現摺可視為一種歸納法的抽象。
+  - title: 命題邏輯
+    id: pl
+    intro: 命題邏輯是最基礎的形式邏輯系統，以「命題」──可判定真假的敘述──為最基礎的建構單元，透過 AND、OR、NOT、IMPLIES 等連接詞組合出複雜公式。它提供了真值表與演繹規則，讓我們能以機械化方式判斷公式的有效性，並為證明、程式驗證與自動定理證明奠定核心工具。透過學習命題邏輯，學生將掌握形式化推理的語法與語義，為後續的述詞邏輯、型別理論與 SMT 技術建立扎實基礎。
     instructors:
-    - name: 穆信成
-      personalPage: "https://management.ntu.edu.tw/IM/faculty/teacher/sn/28"
+    - name: 王柏堯
+      personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
       affi: 中央研究院資訊科學所
     resource:
-    - type: 講義
-      items:
-      - name: Handout
-        link: "/2024/FP-Handouts.pdf"
-    - type: 原始檔
-      items:
-      - name: FP-practicals_code.zip
-        link: "/2024/FP-practicals_code.zip"
-    - type: 習題與解答
-      items:
-      - name: Practicals 00
-        link: "/2024/FP-practicals_00.pdf"
-      - name: Practicals 02
-        link: "/2024/FP-practicals_02.pdf"
-      - name: Solutions 00
-        link: "/2024/FP-practicals_00_sols.pdf"
-  - title: 邏輯
-    id: logic
-    intro: 數學證明建立於有效的推論結構之上， 而型式邏輯學的目的是以嚴謹符號表達這些推論結構並研究其性質。
-      這門課聚焦於命題直構邏輯 (propositional intuitionistic logic) 的自然演繹系統 (natural deduction)，討論型式邏輯學裡基本的語法 (syntactic) 和語意 (semantic) 證明方法，並點出邏輯與計算的密切關係，最終引導至依值型別。
-      透過對推論結構的型式化學習，這門課也為其他課程所需的數學證明基礎作好準備。
+  - title: 布林可滿足性問題與二元決策圖
+    id: satbdd
+    intro: SAT（布林可滿足性問題）與二元決策圖（Binary Decision Diagram, BDD）是現代邏輯優化與自動化推理的兩大支柱。SAT 透過高效求解器判定布林公式是否存在滿足解，已成為硬體驗證、形式化檢查與組合最佳化的核心工具；BDD 則以圖形化結構將布林函式壓縮為共享決策樹，使得等價判定與函式操作在圖上即可快速進行。本課程將介紹 SAT 演算法（DPLL、CDCL）、BDD 建構與簡約技巧，並展示二者在電路設計、軟體分析及 AI 規劃中的互補應用，讓學員習得在實務系統中選擇與整合這兩種技術的關鍵思維。
     instructors:
-    - name: 柯向上
-      personalPage: "https://josh-hs-ko.github.io/"
+    - name: 王柏堯
+      personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
       affi: 中央研究院資訊科學所
     resource:
-    - type: 投影片
-      items:
-      - name: Logic 1
-        link: "/2024/logic_lecture_1.pdf"
-      - name: Logic 2
-        link: "/2024/logic_lecture_2.pdf"
-      - name: Logic 3
-        link: "/2024/logic_lecture_3.pdf"
-      - name: Supplemental
-        link: "/2024/logic_lecture_3_supplemental.pdf"
-    - type: 原始檔
-      items:
-      - name: "DTP.agda"
-        link: "/2024/DTP.agda"
-      - name: "NDGP.agda"
-        link: "/2024/NDGP.agda"
-  - title: λ-算則
-    id: lambda
-    intro: 現今許多語言如 Haskell、Agda 都會以 λ-算則 （λ-calculus，其中 λ 唸作 lam-da /ˈlæmdə/）的變形作為語言的模型，因此在課程中我們將從數學角度探討 λ-calculus 以及程式語言各種基本概念跟性質。例如定義何謂計算以及計算上相等的程式證明相關性質；加入型別討論並證明一個有型別沒有副作用的程式是如何能保證計算時一定會算出結果；除了學理上的興趣外，我們也會討論具體實務上應用於許多語言中解決程式碼重複的語言特性—多型（polymorphism）。
+  - title: 硬體模型檢測
+    id: hmc
+    intro: 硬體模型檢查（Hardware Model Checking）是一種自動化形式化驗證技術，透過在狀態空間中系統性地探索電路模型，確保晶片設計滿足時間邏輯（如 LTL／CTL）所描述的安全與活性性質。課程將聚焦於符號式模型檢查（BDD 與 SAT/SMT-based）、邊界模型檢查（BMC）、及形式財產驗證（FPV）的實務流程，並示範如何將 Verilog/VHDL 轉換為過渡系統、撰寫屬性、解析失敗範例（counter-example），以及運用工業級工具在 SoC 及 FPGA 專案中提早捕捉設計缺陷，縮短迴圈、提升可靠度。
     instructors:
-    - name: 陳亮廷
-      personalPage: "https://l-tchen.github.io/"
-      affi: 中央研究院資訊科學所
+    - name: 黃鐘揚
+      personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
+      affi: 台灣大學電機系暨電子研究所
     resource:
-    - type: 投影片
-      items:
-      - name: Lambda 1
-        link: "/2024/lambda_lecture1_slide.pdf"
-      - name: Lambda 2
-        link: "/2024/lambda_lecture2_slide.pdf"
-      - name: Lambda 3
-        link: "/2024/lambda_lecture3_slide.pdf"
-  - title: 特別講題：Programming with Modal Types
+  - title: 一階邏輯
+    id: fol
+    intro: 一階邏輯（First-order Logic, FOL）在命題邏輯的基礎上加入「變數、量詞與謂詞」，能精確表達「所有…皆…」與「存在…使…」等結構化敘述，是數學證明、程式規格與自動定理證明的核心語言。本課程將介紹 FOL 的語法與語意、自由與束縛變數、模型與滿足關係，以及完備性與可靠性等基本定理；進一步探討一階合取標準形、分辨率（resolution）演算法及其在 SMT 解題、軟體驗證和資料庫查詢中的應用，讓學員奠定形式化推理與邏輯推導的堅實基礎。
+    instructors:
+    - name: 陳郁方
+      personalPage: "https://guluchen.github.io/"
+      affi: 中央研究院資訊科學所
+  - title: 模組理論可滿足性
+    id: smt
+    intro: SMT（Satisfiability Modulo Theories，模組理論可滿足性）將 SAT 的布林求解核心與多種理論（如整數/實數算術、位向量、陣列、字串、遞歸資料結構等）結合，能直接處理帶有數學運算與資料結構的約束。現代 SMT 求解器採用 DPLL(T) 框架，協調 SAT 引擎與專用理論決策程序，已成為軟體/硬體驗證、符號執行、自動合成與優化領域的關鍵基礎。本課程將介紹 SMT-LIB 語法、DPLL(T) 演算法、主流理論決策器的原理，並透過實例展示如何在程式分析、模型檢查與約束優化中高效運用 SMT 技術。
+    instructors:
+    - name: 蔡明憲
+      personalPage: "https://www.cs.ntust.edu.tw/p/406-1102-121077,r2079.php?Lang=zh-tw"
+      affi: 台灣科技大學資訊管理系
+    resource:
+  - title: 自動機理論
+    id: at
+    intro: 自動機理論是理論計算機科學的基石，研究有限狀態機、推疊自動機、圖靈機等抽象運算模型，以及它們所辨識的形式語言階層（正則語言、上下文無關語言等）。藉由描述狀態轉移與接受條件，自動機為編譯器、正則表示式引擎、模型檢查乃至自然語言處理提供精確的規格與分析工具。本課程將介紹正則運算、DFA/NFA 等價轉換、PDA 與 CFG 的對應、決定性與不可決定性、語言封閉性與可判定性等核心概念，並透過實作展示自動機在程式語言分析與模式比對中的實務應用。
+    instructors:
+    - name: 林濬璈
+      personalPage: "https://carquois42.github.io/"
+      affi: 台北科技大學資訊工程學系暨創新前瞻科技研究學院
+    resource:
+  - title: 軟體模型檢測
+    id: smc
+    intro: 軟體模型檢查（Software Model Checking）以自動化技術在程式的狀態空間中探索，驗證其是否滿足安全與活性等規格。相較於傳統測試，它能覆蓋所有可達路徑並於發現錯誤時給出具體反例。課程將介紹抽象解釋與 CEGAR（Counter-Example Guided Abstraction Refinement）、符號與路徑取樣方法（如 Bounded Model Checking、符號執行）、以及現代工具（BLAST、CPAchecker、SPIN、KLEE）的核心演算法與實務工作流程。透過案例研究，學員將學會如何把 C/C++、Java、Rust 程式轉換成可驗證模型、撰寫屬性、分析反例，並將模型檢查整合進 CI/CD 以在開發早期捕捉潛在缺陷。
+    instructors:
+    - name: 李念澤
+      personalPage: "https://nianzelee.github.io/"
+      affi: 台灣大學電機工程學系
+    resource:
+  - title: 自動機學習與參數化驗証
+    id: alpv
+    intro: 本課程聚焦於 自動機學習（Automata Learning），特別是 Angluin 經典的 L* 主動學習演算法，並介紹其在 參數化驗證 中的創新應用。L* 透過「查詢–反例」迴圈自動推導最小 DFA，為未知或黑箱系統建構可機械分析的模型。當系統包含任意數量的相同元件時，我們結合學到的自動機與抽象加強技術，形成一般化不變式並保證性質對所有規模都成立。
+    instructors:
+    - name: 洪智鐸
+      personalPage: "https://chihduo.github.io/"
+      affi: 政治大學資訊管理學系
+    resource:
+  - title: 自動機與軟體安全
+    id: afss
+    intro: 本課程將介紹如何運用 「有限／符號自動機」來建模程式中的字串與輸入資料流，並自動偵測與修補常見漏洞（如 XSS、SQL 注入）。內容源自郁方教授在自動機式字串分析工具 STRANGER 與「前向／回溯符號分析產生漏洞簽章」等研究成果，說明自動機模型如何結合 SMT 求解器與查詢-反例迴圈，精準判定安全屬性並生成防護簽章。
+    instructors:
+    - name: 郁方
+      personalPage: "https://mis2.nccu.edu.tw/zh_tw/Faculty/Faculty_01/%E9%83%81%E6%96%B9-33653605"
+      affi: 政治大學資訊管理學系
+    resource:
+  - title: 量化可滿足性及其在驗證與合成的應用
+    id: qsasv
+    intro: 量化可滿足性（Quantified Satisfiability，QBF）在布林 SAT 上加入全稱與存在量詞，可自然編碼控制器合成、時序邏輯驗證等 PSPACE 完備問題。現代 QBF 求解器支援 Skolem／Herbrand 函式擷取，使「公式為真」時立即產生實作策略，「公式為假」則提供可解析的反例。課程將介紹 prenex-CNF 編碼、DPLL(Q) 與 expansion 求解，以及 QBF 證書在合成與錯誤診斷中的實務應用。
+    instructors:
+    - name: 江介宏
+      personalPage: "https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943014"
+      affi: 台灣大學電機工程學系暨電子工程研究所
+    resource:
+  - title: 特別講題：待公布
     id: special
-    intro: 著名的 Curry-Howard 對應闡述形式邏輯和函式程設之間深刻的對應：邏輯命題與型別相對應，命題的證明與該型別的程式亦相對應。然而幾個世紀以來，邏輯學家認識到邏輯系統並非只有一種，而是存在許多不同的邏輯系統。在過去的幾十年中，電腦科學家已經理解到這些邏輯系統可以反過來為程式語言提供新的見解。<br />
-      傳統邏輯最重要的擴充之一是模態邏輯（modal logic）。這將形式邏輯拓展到對於相對情境下斷言的研究。例如，我們不可能說「正在下雨」這個命題絕對是真或假，而是得取決於它被斷言的時間和地點。從電腦科學的角度來看，這表明我們可以將型別系統擴展到不單只是資料的形狀，而是關注到程式更深層次的行為特性。<br />
-      本課程將探討模態邏輯在程式語言設計中的應用，從它們在型別理論中的表現開始，展示如何用於組織各種計算現象，包括反應式程式設計（reactive programming）、增量計算（incremental computing）、資料庫查詢語言（data query language），甚至是能力安全程式設計（capability-safe programming）。
+    intro: 待公布
     instructors:
-    - name: Neel Krishnaswami
-      personalPage: "https://www.cl.cam.ac.uk/~nk480/"
-      affi: Department of Computer Science and Technology, University of Cambridge
+    - name: Anthony Widjaja Lin
+      personalPage: "https://anthonywlin.github.io/"
+      affi: Theoretical Computer Science (Automated Reasoning) and Max-Planck Fellow at Technical University of Kaiserslautern, Germany
     resource:
-      - type: 投影片
-        items:
-        - name: Modal Logic
-          link: "/2024/modal_logic.pdf"
-        - name: Capability-Safety
-          link: "/2024/capability-safety.pdf"
-        - name: Logical Relations
-          link: "/2024/logical_relations.pdf"
-        - name: Logical Relations for Capabilities
-          link: "/2024/logical_relations_for_capabilities.pdf"
-        - name: Fixed-point Computations
-          link: "/2024/fixed-point_computations.pdf"
-        - name: Datafun
-          link: "/2024/datafun.pdf"
-        - name: Semantics of Datafun
-          link: "/2024/semantics_of_datafun.pdf"
-        - name: Single Context Modal Types
-          link: "/2024/single_context_modal_types.pdf"
-        - name: Modal FRP
-          link: "/2024/modal_frp.pdf"
-        - name: More Modal FRP
-          link: "/2024/more_modal_frp.pdf"
-
 en:
   location: "Location：Room 103, Building 1, College of Management, National Taiwan University"
   introduction-text: This course will teach elements of programming languages, hoping to cultivate students' ability to reason using formal logic, understand the close relationship between logic, programming languages, and type systems, as well as the role that type systems play in programming languages. To enable students to understand and solve programming problems in a recursive/inductive manner, to use software tools to assist logical reasoning and prove the correctness of programs, and to have the knowledge base to further explore programming language-related fields.
@@ -237,40 +211,84 @@ en:
     One of the most important extensions to traditional logic is modal logic. This extends formal logic to the study of assertions which hold relatively. For example, it is impossible to say that the statement ``it is raining'' is definitely true or false, because its truth depends on when and where it is asserted. From the point of view of computer science, this suggests that we can extend type systems to go beyond the mere shape of data, to deeper behavioural properties of programs.<br />
     This course will study the applications of modal logic to the design of programming languages, starting from how they work type-theoretically and showing how they can be used to organise a wide variety of computational phenomena, ranging from reactive programming, incremental computation, database query languages, and even capability-safe programming."
   courses:
-  - id: fp
-    title: Functional Programming
-    intro: This course uses Haskell as a tool to provide an overview of some of the essential knowledge related to function programming in order to bridge the gap with other courses.
-      Starting with structural induction, we will talk about data structures and the inductive definition of functions, and discover that the definition of a function can follow the definition of a data structure.
-      If you want to prove the properties of a function, you can use induction, and the proof will follow the definition of the function.
-      We then turn to the notion of fold, which we find can be regarded as an abstraction of structural induction.
-      Finally, the red-black tree will be used as an example of programming and inductive proofs, in preparation for the subsequent course on dependent types.
+  - id: pl
+    title: Propositional Logic
+    intro: Propositional logic is the simplest formal logic system, treating whole propositions—statements that are either true or false—as atomic units combined by logical connectives such as AND, OR, NOT and IMPLIES. With truth tables and well-defined inference rules, it lets us mechanize validity checking and underpins proof assistants, program verification, and automated theorem provers. Mastering propositional logic equips students with the syntax and semantics of formal reasoning, providing a solid stepping stone toward predicate logic, type theory, and modern SMT-based verification techniques.
     instructors:
-    - name: Shin-Cheng Mu
-      personalPage: "https://management.ntu.edu.tw/IM/faculty/teacher/sn/28"
+    - name: Bow-Yaw Wang
+      personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
       affi: Institute of Information Science, Academia Sinica
-  - id: logic
-    title: Logic
-    intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module focuses on the natural deduction system of propositional intuitionistic logic, introduces the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules.
+  - id: satbdd
+    title: Boolean Satisfiability Problem and Binary Decision Diagrams
+    intro: SAT—the Boolean satisfiability problem—and Binary Decision Diagrams (BDDs) form a twin toolkit for modern logical reasoning and optimization. SAT solvers decide whether a Boolean formula has a satisfying assignment, powering hardware verification, model checking, and combinatorial optimization; BDDs represent Boolean functions as compact, shared decision graphs that enable lightning-fast equivalence checks and functional operations. This course surveys SAT algorithms (DPLL, CDCL), BDD construction and reduction strategies, and shows how the two techniques complement each other in circuit design, software analysis, and AI planning. Students will learn when to deploy each method and how to integrate them effectively in real-world systems.
     instructors:
-    - name: Josh Ko
-      personalPage: "https://josh-hs-ko.github.io/"
+    - name: Bow-Yaw Wang
+      personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
       affi: Institute of Information Science, Academia Sinica
-  - id: lambda
-    title: λ-Calculus
-    intro: Nowadays many languages such as Haskell and Agda are based on variants of λ-calculus. In this course module, we will investigate λ-calculus and its notions and properties mathematically. For example, we will define computation and computational equivalence; after introducing types, we show how ‘a well-typed program does not go wrong’. Apart from theoretical interests, we also discuss a prevalent language feature —polymorphism— which has been applied to solve the code duplication problem in practice. Continuing into the dependently typed programming module, we will use Agda to implement λ-calculus and prove its properties.
+  - id: hmc
+    title: Hardware Model Checking
+    intro: Hardware model checking is an automated formal-verification technique that systematically explores the state space of a circuit model to guarantee that the design complies with safety and liveness properties expressed in temporal logics such as LTL or CTL. The course covers symbolic model checking (BDD- and SAT/SMT-based), bounded model checking (BMC), and formal property verification workflows. Students will learn how to translate Verilog/VHDL into transition systems, write assertions, diagnose counter-examples, and apply industrial-strength tools to detect bugs early in SoC and FPGA projects—shrinking debug cycles and boosting design reliability.
     instructors:
-    - name: Liang-Ting Chen
-      personalPage: "https://l-tchen.github.io/"
+    - name: Ric Huang
+      personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
+      affi: Department of Electrical Engineering and Graduate Institute of Electronic Engineering, National Taiwan University
+  - id: fol
+    title: First-Order Logic
+    intro: First-order Logic (FOL) extends propositional logic with variables, quantifiers, and predicates, enabling precise statements such as “for all” and “there exists.” It is the foundational language for mathematical proof, program specification, and automated theorem proving. This course presents FOL’s syntax and semantics, free vs. bound variables, models and satisfaction, and key meta-theorems like soundness and completeness. We then cover prenex and conjunctive normal forms, resolution-based decision procedures, and show how FOL powers SMT solving, software verification, and even database query languages—equipping students with a robust toolkit for formal reasoning and logical deduction.
+    instructors:
+    - name: Yu-Fang Chen
+      personalPage: "https://guluchen.github.io/"
       affi: Institute of Information Science, Academia Sinica
-  - title: "Special Topic: Programming with Modal Types"
-    id: special
-    intro: "The celebrated Curry-Howard correspondence establishes a deep correspondence between formal logic and functional programming: logical formulae correspond with types, and the proofs of a formula corresponds with programs of that type. Over the centuries, though, logicians have learned that there is not one single system of logic, but rather that there are many different logical systems. And over the past decades, computer scientists have learned that those logical systems, can in turn offer new insights into programming languages.<br />
-      One of the most important extensions to traditional logic is modal logic. This extends formal logic to the study of assertions which hold relatively. For example, it is impossible to say that the statement ``it is raining'' is definitely true or false, because its truth depends on when and where it is asserted. From the point of view of computer science, this suggests that we can extend type systems to go beyond the mere shape of data, to deeper behavioural properties of programs.<br />
-      This course will study the applications of modal logic to the design of programming languages, starting from how they work type-theoretically and showing how they can be used to organise a wide variety of computational phenomena, ranging from reactive programming, incremental computation, database query languages, and even capability-safe programming."
+  - id: smt
+    title: Satisfiability Modulo Theories
+    intro: Satisfiability Modulo Theories (SMT) enriches Boolean SAT solving with background theories—integer and real arithmetic, bit-vectors, arrays, strings, algebraic datatypes, and more—so constraints featuring calculations and data structures can be solved directly. Modern SMT solvers follow the DPLL(T) architecture, orchestrating a SAT engine with dedicated theory decision procedures, and now power software/hardware verification, symbolic execution, synthesis, and optimization. This course introduces the SMT-LIB language, the DPLL(T) algorithm, and the internals of leading theory reasoners, then shows through hands-on cases how SMT accelerates program analysis, model checking, and constraint-based optimization in practice.
     instructors:
-    - name: Neel Krishnaswami
-      personalPage: "https://www.cl.cam.ac.uk/~nk480/"
-      affi: Department of Computer Science and Technology, University of Cambridge
+    - name: Ming-Hsien Tsai
+      personalPage: "https://www.cs.ntust.edu.tw/p/405-1102-121079,c10961.php?Lang=en"
+      affi: Department of Information Management, National Taiwan University of Science and Technology
+  - id: at
+    title: Automata Theory
+    intro: Automata theory underpins theoretical computer science by examining abstract computation models—finite automata, push-down automata, and Turing machines—and the formal language classes they recognize, from regular to context-free and beyond. By specifying state transitions and acceptance conditions, automata provide the rigorous foundation behind compilers, regex engines, model checkers, and even natural-language tools. This course covers regular operations and DFA/NFA equivalence, the correspondence between PDAs and CFGs, determinism versus nondeterminism, closure and decidability properties, and includes hands-on labs that show how automata power practical tasks such as program analysis and pattern matching.
+    instructors:
+    - name: Jyun-Ao Lin
+      personalPage: "https://carquois42.github.io/"
+      affi: Department of Computer Science and Information Engineering, National Taipei University of Technology
+  - id: smc
+    title: Software Model Checking
+    intro: Software model checking is an automated verification technique that systematically explores a program’s state space to ensure it satisfies safety, liveness, and other formal properties. Unlike conventional testing, it can cover all reachable paths and provides concrete counter-examples when violations arise. The course presents abstraction techniques and CEGAR, symbolic and path-based approaches such as bounded model checking and symbolic execution, and unpacks the algorithms and workflows behind leading tools like BLAST, CPAchecker, SPIN, and KLEE. Through case studies, students will learn to translate C/C++, Java, or Rust programs into analyzable models, write assertions, inspect counter-examples, and integrate model checking into CI/CD pipelines to catch bugs early in the development cycle.
+    instructors:
+    - name: Nian-Ze Lee
+      personalPage: "https://nianzelee.github.io/"
+      affi: Department of Electrical Engineering, National Taiwan University
+  - id: alpv
+    title: Automata Learning and Parameterized Verification
+    intro: This course spotlights automata learning, diving into Angluin’s classic L* active-learning algorithm and its synergy with parameterized verification. L* iteratively issues membership and equivalence queries to a “teacher,” automatically inferring the minimal DFA that models an unknown or black-box system. For systems with arbitrarily many identical components, the learned automaton is generalized into inductive invariants, proving safety and liveness for all sizes.
+    instructors:
+    - name: Chih-Duo Hong
+      personalPage: "https://chihduo.github.io/"
+      affi: Department of Management Information Systems, National Chengchi University
+  - id: afss
+    title: Automata for Software Security
+    intro: This course shows how finite and symbolic automata can be harnessed for software security. Building on Prof. Fang Yu’s work—such as the STRANGER automata-based string analyzer and techniques that generate vulnerability signatures via forward/backward symbolic analyses—it demonstrates how automata models, combined with SMT solving and query–counter-example loops, automatically detect and patch vulnerabilities like XSS and SQL injection while proving key security properties.
+    instructors:
+    - name: Fang Yu
+      personalPage: "https://mis2.nccu.edu.tw/en/Faculty/Faculty_01/%E9%83%81%E6%96%B9-33653605"
+      affi: Department of Management Information Systems, National Chengchi University
+  - id: qsasv
+    title: Quantified Satisfiability and its Applications in Synthesis and Verification
+    intro: Quantified satisfiability (QBF) augments Boolean SAT with universal and existential quantifiers, making it a natural language for PSPACE-complete synthesis and verification tasks such as controller derivation and temporal-logic model checking. Modern QBF solvers output proofs and Skolem/Herbrand functions, yielding an implementation strategy when the formula is true and concrete counter-examples when it is false. The course covers prenex-CNF encodings, DPLL(Q) and expansion-based solving, and demonstrates how QBF certificates drive automated synthesis and precise bug localization in hardware and software verification flows.
+    instructors:
+    - name: Jie-Hong Roland Jiang
+      personalPage: "https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943014"
+      affi: Department of Electrical Engineering, National Taiwan University
+  - id: special
+    title: Invited Talk - TBA
+    intro: TBA
+    instructors:
+    - name: Anthony Widjaja Lin
+      personalPage: "https://anthonywlin.github.io/"
+      affi: Theoretical Computer Science (Automated Reasoning) and Max-Planck Fellow at Technical University of Kaiserslautern, Germany
+    
 ---
 <h2>$LC.special-lecture$</h2>
 $if(LC.special-topic)$
