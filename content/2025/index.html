@@ -115,6 +115,11 @@ zh:
     - name: 黃鐘揚
       personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
       affi: 台灣大學電機系暨電子研究所
+    resource:
+    - type: 投影片
+      items:
+      - name: PL 1
+        link: "/2025/pl.pdf"
   - title: 布林可滿足性問題與二元決策圖
     id: satbdd
     intro: SAT（布林可滿足性問題）與二元決策圖（Binary Decision Diagram, BDD）是現代邏輯優化與自動化推理的兩大支柱。SAT 透過高效求解器判定布林公式是否存在滿足解，已成為硬體驗證、形式化檢查與組合最佳化的核心工具；BDD 則以圖形化結構將布林函式壓縮為共享決策樹，使得等價判定與函式操作在圖上即可快速進行。本課程將介紹 SAT 演算法（DPLL、CDCL）、BDD 建構與簡約技巧，並展示二者在電路設計、軟體分析及 AI 規劃中的互補應用，讓學員習得在實務系統中選擇與整合這兩種技術的關鍵思維。
@@ -125,6 +130,15 @@ zh:
     - name: 黃鐘揚
       personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
       affi: 台灣大學電機系暨電子研究所
+    resource:
+    - type: 投影片
+      items:
+      - name: BDD 1
+        link: "/2025/satbdd_1.pdf"
+      - name: BDD 2
+        link: "/2025/satbdd_2.pdf"
+      - name: BDD 3
+        link: "/2025/satbdd_3.pdf"
   - title: 硬體模型檢測
     id: hmc
     intro: 硬體模型檢查（Hardware Model Checking）是一種自動化形式化驗證技術，透過在狀態空間中系統性地探索電路模型，確保晶片設計滿足時間邏輯（如 LTL／CTL）所描述的安全與活性性質。課程將聚焦於符號式模型檢查（BDD 與 SAT/SMT-based）、邊界模型檢查（BMC）、及形式財產驗證（FPV）的實務流程，並示範如何將 Verilog/VHDL 轉換為過渡系統、撰寫屬性、解析失敗範例（counter-example），以及運用工業級工具在 SoC 及 FPGA 專案中提早捕捉設計缺陷，縮短迴圈、提升可靠度。
