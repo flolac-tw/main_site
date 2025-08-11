@@ -44,9 +44,9 @@ zh:
       - title: "命題邏輯"
         subtitle: ""
         id: pl
-      - title: "硬體模型檢測"
+      - title: "布林可滿足性問題與二元決策圖"
         subtitle: ""
-        id: hmc
+        id: satbdd
       - title: "一階邏輯"
         subtitle: ""
         id: fol
@@ -86,8 +86,9 @@ zh:
       - title: "量化可滿足性及其在合成與驗證中的應用"
         subtitle: ""
         id: qsasv
-      - title: "期末考試"
-        subtitle: "Exam"
+      - title: "邀請講座"
+        subtitle: "SMT over String Theory"
+        id: special
       afternoon:
       - title: "軟體模型檢測"
         subtitle: ""
@@ -101,9 +102,8 @@ zh:
       - title: "量化可滿足性及其在合成與驗證中的應用"
         subtitle: ""
         id: qsasv
-      - title: "邀請講座"
-        subtitle: "SMT over String theory"
-        id: special
+      - title: "期末考試"
+        subtitle: "Exam"
   courses:
   - title: 命題邏輯
     id: pl
@@ -149,6 +149,11 @@ zh:
     - name: 黃鐘揚
       personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
       affi: 台灣大學電機系暨電子研究所
+    resource:
+    - type: 投影片
+      items:
+      - name: HMC
+        link: "/2025/hmc.pdf"
   - title: 一階邏輯
     id: fol
     intro: 一階邏輯（First-order Logic, FOL）在命題邏輯的基礎上加入「變數、量詞與謂詞」，能精確表達「所有…皆…」與「存在…使…」等結構化敘述，是數學證明、程式規格與自動定理證明的核心語言。本課程將介紹 FOL 的語法與語意、自由與束縛變數、模型與滿足關係，以及完備性與可靠性等基本定理；進一步探討一階合取標準形、分辨率（resolution）演算法及其在 SMT 解題、軟體驗證和資料庫查詢中的應用，讓學員奠定形式化推理與邏輯推導的堅實基礎。
