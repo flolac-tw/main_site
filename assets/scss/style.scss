@@ -593,12 +593,15 @@ h4 {
 
 #header.ocean {
     background-color: $ocean-light;
-    background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
+    //background-image: url("https://user-images.githubusercontent.com/4060046/86566850-f38b0880-bf9c-11ea-9c77-c802927d3dbc.jpg");
+    background-image: url("../img/ocean-2026-banner.svg");
+    background-size: cover;
 }
 
 #header.mountain {
     background-color: $mountain-light;
     background-image: url("https://user-images.githubusercontent.com/8312228/157644132-c64a4437-b7ac-4d83-92f5-e01e78b77c36.png");
+    //background-image: url("../img/ocean-2026-banner.svg");
 }
 
 #header {
@@ -634,7 +637,7 @@ h4 {
 	}
 	@media (max-width: $breakpoint2) {
 		h1 {
-			display: none;
+			display: 100%;
 		}
 		h1 + img {
 			display: block;

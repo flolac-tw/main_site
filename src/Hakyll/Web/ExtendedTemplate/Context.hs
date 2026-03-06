@@ -39,6 +39,7 @@ import           Control.Monad.Fail            (MonadFail)
 import           Data.Aeson.Key                (fromText)
 import           Data.Aeson.KeyMap             (KeyMap)
 import qualified Data.Aeson.KeyMap             as KM
+import qualified Data.ByteString               as B
 import           Data.List                     (intercalate, tails)
 import           Data.Scientific               as S
 import           Data.Text                     (Text)
@@ -52,6 +53,7 @@ import qualified Data.Yaml                     as Y
 
 import           System.FilePath               (dropExtension, splitDirectories,
                                                 takeBaseName, takeDirectory, (</>))
+import           System.IO.Error               (modifyIOError, ioeSetLocation)
 import           Hakyll.Core.Compiler
 import           Hakyll.Core.Compiler.Internal
 import           Hakyll.Core.Dependencies
@@ -59,13 +61,18 @@ import           Hakyll.Core.Identifier
 import           Hakyll.Core.Item
 import           Hakyll.Core.Metadata
 import           Hakyll.Core.Provider
-import           Hakyll.Core.Provider.Metadata (loadMetadataFile)
 import           Hakyll.Core.Util.String       (needlePrefix, splitAll)
 import           Hakyll.Web.Html
 
 import           Hakyll.Web.ExtendedTemplate.Type
 
 import           Prelude hiding (lookup)
+
+loadMetadataFile :: FilePath -> IO Metadata
+loadMetadataFile fp = do
+    fileContent <- modifyIOError (`ioeSetLocation` "loadMetadataFile") $ B.readFile fp
+    let errOrMeta = Y.decodeEither' fileContent
+    either (fail . show) return errOrMeta
 
 --------------------------------------------------------------------------------
 -- | Constructs a new field for a 'Context'.
