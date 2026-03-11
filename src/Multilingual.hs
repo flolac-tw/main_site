@@ -16,14 +16,15 @@ loadAndApplyTemplatesLC lc ctx ids it =
 
 loadAndApplyTemplateLC :: Identifier -> String -> Context a -> Item a -> Compiler (Item String)
 loadAndApplyTemplateLC id lc context item =
-    let locale = redirectCtx "LC." (lc ++ ".") $ metadataIdField id
+    let base   = metadataIdField id <> metadataField <> importField
+        locale = redirectCtx "LC." (lc ++ ".") base
         ctx    = stringField "lang" (const $ return lc) <> locale <> context
     in loadAndApplyTemplate id ctx item
 
 localeCtx :: String -> Context a
 localeCtx lc =
-    let intLC  = metadataField
-        locale = redirectCtx "LC." (lc ++ ".") metadataField
+    let base   = metadataField <> importField
+        locale = redirectCtx "LC." (lc ++ ".") base
     in stringField "lang" (const $ return lc) <> locale
 ------------------------------------------------------------------------------
 

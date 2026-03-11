@@ -41,6 +41,10 @@ main = hakyll $ do
   let currentYear = "2026"
   createRedirects [("index.html", "zh/"++currentYear)]
 
+  match "content/**/config.yaml" $ do
+    route idRoute
+    compile getResourceBody
+
   -- Liang-Ting (2023-05-02):
   -- TODO: Streamline the following two cases.
   forM_ ["zh", "en"] $ \lc -> match "content/*/registration.html" $ version lc $ do
@@ -75,6 +79,7 @@ main = hakyll $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
       let ctx = constField "current_year" currentYear
+             <> constField "header_show_year" "true"
              <> importField
              <> defaultContext
              <> localeCtx lc
