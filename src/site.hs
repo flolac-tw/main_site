@@ -75,6 +75,7 @@ main = hakyll $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
       let ctx = constField "current_year" currentYear
+             <> constField "header_show_year" "true"
              <> importField
              <> defaultContext
              <> localeCtx lc
