@@ -46,29 +46,29 @@ announcements:
 
 calendar: 
   - time: 07/26
+    date: "2020-07-26"
     title: 外地實習生報名截止
-    past: true
   - time: 07/29
+    date: "2020-07-29"
     title: 非台大學生報名截止
-    past: true
   - time: 07/30
+    date: "2020-07-30"
     title: 非台大學生錄取通知
-    past: true
   - time: 08/03
+    date: "2020-08-03"
     title: 台大學生報名截止
-    past: true
   - time: 08/04
+    date: "2020-08-04"
     title: 旁聽報名截止
-    past: true
   - time: 08/05
+    date: "2020-08-05"
     title: 旁聽與台大學生錄取通知
-    past: true
   - time: 08/10
+    date: "2020-08-10"
     title: 課程開始
-    past: true
   - time: 08/20
+    date: "2020-08-20"
     title: 課程結束
-    past: true
   - time: 08/21
+    date: "2020-08-21"
     title: 考試
-    past: true

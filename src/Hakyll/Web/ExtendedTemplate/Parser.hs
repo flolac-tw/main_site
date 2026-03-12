@@ -185,10 +185,10 @@ numberLiteral = P.try $ do
 compOp :: P.Parser TemplateCompOp
 compOp =
     P.choice
-        [ symbol "==" *> pure OpEq
-        , symbol "!=" *> pure OpNeq
-        , symbol "<=" *> pure OpLte
-        , symbol ">=" *> pure OpGte
+        [ P.try (symbol "==") *> pure OpEq
+        , P.try (symbol "!=") *> pure OpNeq
+        , P.try (symbol "<=") *> pure OpLte
+        , P.try (symbol ">=") *> pure OpGte
         , symbol "<"  *> pure OpLt
         , symbol ">"  *> pure OpGt
         ]

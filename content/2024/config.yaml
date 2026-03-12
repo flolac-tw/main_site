@@ -45,32 +45,32 @@ announcements:
 
 calendar:
 - time: 01/26
+  date: "2024-01-26"
   title: 網站上線
-  past: true
 - time: 02/15
+  date: "2024-02-15"
   title: 外地實習生報名開始
-  past: true
 - time: 03/15
+  date: "2024-03-15"
   title: 外地實習生報名截止
-  past: true
 - time: 06/05
+  date: "2024-06-05"
   title: 外校學生修課報名截止
-  past: true
 - time: 06/09
+  date: "2024-06-09"
   title: 台大學生正式報名截止
-  past: true
 - time: 06/12
+  date: "2024-06-12"
   title: 正式報名錄取回覆截止、台大學生候補報名截止、旁聽報名截止
-  past: true
 - time: 06/13
+  date: "2024-06-13"
   title: 候補報名錄取回覆截止
-  past: true
 - time: 07/01
+  date: "2024-07-01"
   title: 課程開始
-  past: true
 - time: 07/09
+  date: "2024-07-09"
   title: 期中停修截止
-  past: true
 - time: 07/12
+  date: "2024-07-12"
   title: 考試、課程結束
-  past: true

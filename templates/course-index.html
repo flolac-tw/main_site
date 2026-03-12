@@ -17,9 +17,9 @@
   <section id="course-timeline">
     <h2>$LC.dates$</h2>
     <ol>$foreach(event)in(calendar)$
-    $-if(event.past)$
+    $-if(system.build.date > event.date)$
       <li class="timeline-event-past">
-      $-else$
+    $-else$
       <li class="timeline-event-next">
     $-endif$
         <div class="timeline-event-date-container">

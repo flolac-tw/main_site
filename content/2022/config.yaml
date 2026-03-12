@@ -47,26 +47,26 @@ announcements:
 
 calendar:
 - time: 03/10
+  date: "2022-03-10"
   title: 網站上線
-  past: true
 - time: 07/17
+  date: "2022-07-17"
   title: 外地實習生報名截止
-  past: true
 - time: 07/20
+  date: "2022-07-20"
   title: 外校學生修課報名截止
-  past: true
 - time: 07/25
+  date: "2022-07-25"
   title: 臺大學生報名截止
-  past: true
 - time: 07/27
+  date: "2022-07-27"
   title: 旁聽報名截止
-  past: true
 - time: 08/01
+  date: "2022-08-01"
   title: 課程開始
-  past: true
 - time: 08/08
+  date: "2022-08-08"
   title: 期中停修截止
-  past: true
 - time: 08/12
+  date: "2022-08-12"
   title: 課程結束
-  past: true

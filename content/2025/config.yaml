@@ -41,26 +41,26 @@ announcements:
 
 calendar:
 - time: 05/23
+  date: "2025-05-23"
   title: 網站上線
-  past: true
 - time: 07/08
+  date: "2025-07-08"
   title: 外校學生修課報名開始
-  past: true
 - time: 07/09
+  date: "2025-07-09"
   title: 外校學生修課報名截止
-  past: true
 - time: 07/15
+  date: "2025-07-15"
   title: 台大學生網路初選開始
-  past: true
 - time: 07/16
+  date: "2025-07-16"
   title: 台大學生網路初選截止
-  past: true
 - time: 08/11
+  date: "2025-08-11"
   title: 課程開始
-  past: true
 - time: 08/15
+  date: "2025-08-15"
   title: 期中停修截止
-  past: true
 - time: 08/22
+  date: "2025-08-22"
   title: 考試、課程結束
-  past: true

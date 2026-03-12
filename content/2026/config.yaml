@@ -40,32 +40,32 @@ announcements:
 
 calendar:
 - time: 06/02
+  date: "2026-06-02"
   title: 校外學生報名開始
-  past: false
 - time: 06/03
+  date: "2026-06-03"
   title: 校外學生報名截止
-  past: false
 - time: 06/09
+  date: "2026-06-09"
   title: 台大學生網路初選、旁聽報名開始
-  past: false
 - time: 06/10
+  date: "2026-06-10"
   title: 台大學生網路初選截止
-  past: false
 - time: 06/15
+  date: "2026-06-15"
   title: 台大學生網路加退選開始
-  past: false
 - time: 06/16
+  date: "2026-06-16"
   title: 台大學生網路加退選、旁聽報名截止
-  past: false
 - time: 06/19
+  date: "2026-06-19"
   title: 旁聽錄取通知
-  past: false
 - time: 06/29
+  date: "2026-06-29"
   title: 課程開始
-  past: false
 - time: 07/6
+  date: "2026-07-06"
   title: 期中停修截止
-  past: false
 - time: 07/10
+  date: "2026-07-10"
   title: 考試、課程結束
-  past: false
