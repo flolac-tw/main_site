@@ -19,7 +19,7 @@ module Hakyll.Web.ExtendedTemplate.Context
     , titleField
     , dateField
     , dateFieldWith
-    , importField
+    , configField
 
     , getItemUTC
     , getItemModificationTime
@@ -268,20 +268,15 @@ modificationTimeFieldWith locale key fmt = stringField key $ \i -> do
     mtime <- getItemModificationTime $ itemIdentifier i
     return $ formatTime locale fmt mtime
 
-importField :: Context a
-importField = Context $ \k i -> do
+-- | Load a sibling YAML file (e.g. config.yaml) as context.
+configField :: FilePath -> Context a
+configField configPath = Context $ \k i -> do
     let id' = itemIdentifier i
-        empty' =  noResult $ "No '" ++ k ++ "' field in imported metadata."
-    metadata <- getMetadata id' 
-    case lookupString "import" metadata of
-      Just fileName -> do
-        let fileDir = takeDirectory $ toFilePath id'
-            fp = fileDir </> fileName
-        compilerTellDependencies [IdentifierDependency (fromFilePath fp)]
-        metadata' <- unsafeCompiler $ loadMetadataFile fp
-        metadataJSON metadata' id' k
-        --maybe empty' (return . Y.String . T.pack) (lookupString k metadata')
-      Nothing -> noResult $ "No 'import' field found in the metadata of " ++ toFilePath id' ++ "."
+        fileDir = takeDirectory $ toFilePath id'
+        fp = fileDir </> configPath
+    compilerTellDependencies [IdentifierDependency (fromFilePath fp)]
+    metadata' <- unsafeCompiler $ loadMetadataFile fp
+    metadataJSON metadata' id' k
 
 
 --------------------------------------------------------------------------------
