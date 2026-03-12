@@ -30,7 +30,7 @@ data TemplateElement
     | Expr TemplateExpr
     | Escaped
       -- expr, then, else
-    | If TemplateExpr [TemplateElement] (Maybe [TemplateElement])
+    | If TemplateBoolExpr [TemplateElement] (Maybe [TemplateElement])
       -- expr, body, separator
     | ForEach TemplateKey TemplateExpr [TemplateElement] (Maybe [TemplateElement])
       -- filename
@@ -66,9 +66,60 @@ data TemplateExpr
     deriving (Eq, Typeable)
 
 --------------------------------------------------------------------------------
+-- | Value expression used in boolean conditions.
+data TemplateValueExpr
+    = VIdent TemplateKey
+    | VStringLiteral String
+    | VNumberLiteral Integer
+    deriving (Eq, Typeable)
+
+--------------------------------------------------------------------------------
+data TemplateCompOp
+    = OpEq
+    | OpNeq
+    | OpLt
+    | OpLte
+    | OpGt
+    | OpGte
+    deriving (Eq, Typeable)
+
+--------------------------------------------------------------------------------
+-- | Boolean expression used in @$if()$@.
+data TemplateBoolExpr
+    = BoolNot TemplateBoolExpr
+    | BoolAnd TemplateBoolExpr TemplateBoolExpr
+    | BoolOr  TemplateBoolExpr TemplateBoolExpr
+    | BoolCompare TemplateCompOp TemplateValueExpr TemplateValueExpr
+    | BoolTruthy TemplateValueExpr
+    deriving (Eq, Typeable)
+
+--------------------------------------------------------------------------------
 instance Show TemplateExpr where
     show (Ident k)   = k
     show (StringLiteral s)         = show s
+
+--------------------------------------------------------------------------------
+instance Show TemplateValueExpr where
+    show (VIdent k)         = k
+    show (VStringLiteral s) = show s
+    show (VNumberLiteral n) = show n
+
+--------------------------------------------------------------------------------
+instance Show TemplateCompOp where
+    show OpEq  = "=="
+    show OpNeq = "!="
+    show OpLt  = "<"
+    show OpLte = "<="
+    show OpGt  = ">"
+    show OpGte = ">="
+
+--------------------------------------------------------------------------------
+instance Show TemplateBoolExpr where
+    show (BoolNot e)               = "!" ++ show e
+    show (BoolAnd a b)             = show a ++ " && " ++ show b
+    show (BoolOr a b)              = show a ++ " || " ++ show b
+    show (BoolCompare op a b)      = show a ++ " " ++ show op ++ " " ++ show b
+    show (BoolTruthy v)            = show v
 
 --------------------------------------------------------------------------------
 instance Binary TemplateExpr where
@@ -78,6 +129,52 @@ instance Binary TemplateExpr where
     get = getWord8 >>= \case
         0 -> Ident         <$> get
         2 -> StringLiteral <$> get
+        _ -> error "Hakyll.Web.Template.Internal: Error reading cached template"
+
+--------------------------------------------------------------------------------
+instance Binary TemplateValueExpr where
+    put (VIdent k)         = putWord8 0 >> put k
+    put (VStringLiteral s) = putWord8 1 >> put s
+    put (VNumberLiteral n) = putWord8 2 >> put n
+
+    get = getWord8 >>= \case
+        0 -> VIdent         <$> get
+        1 -> VStringLiteral <$> get
+        2 -> VNumberLiteral <$> get
+        _ -> error "Hakyll.Web.Template.Internal: Error reading cached template"
+
+--------------------------------------------------------------------------------
+instance Binary TemplateCompOp where
+    put OpEq  = putWord8 0
+    put OpNeq = putWord8 1
+    put OpLt  = putWord8 2
+    put OpLte = putWord8 3
+    put OpGt  = putWord8 4
+    put OpGte = putWord8 5
+
+    get = getWord8 >>= \case
+        0 -> pure OpEq
+        1 -> pure OpNeq
+        2 -> pure OpLt
+        3 -> pure OpLte
+        4 -> pure OpGt
+        5 -> pure OpGte
+        _ -> error "Hakyll.Web.Template.Internal: Error reading cached template"
+
+--------------------------------------------------------------------------------
+instance Binary TemplateBoolExpr where
+    put (BoolNot e)          = putWord8 0 >> put e
+    put (BoolAnd a b)        = putWord8 1 >> put a >> put b
+    put (BoolOr a b)         = putWord8 2 >> put a >> put b
+    put (BoolCompare o a b)  = putWord8 3 >> put o >> put a >> put b
+    put (BoolTruthy v)       = putWord8 4 >> put v
+
+    get = getWord8 >>= \case
+        0 -> BoolNot      <$> get
+        1 -> BoolAnd      <$> get <*> get
+        2 -> BoolOr       <$> get <*> get
+        3 -> BoolCompare  <$> get <*> get <*> get
+        4 -> BoolTruthy   <$> get
         _ -> error "Hakyll.Web.Template.Internal: Error reading cached template"
 
 --------------------------------------------------------------------------------

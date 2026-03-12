@@ -13,6 +13,7 @@ module Hakyll.Web.ExtendedTemplate.Context
     , constField
 
     , defaultContext
+    , systemContext
     , bodyField
     , urlField
     , pathField
@@ -39,10 +40,10 @@ import           Control.Monad.Fail            (MonadFail)
 import           Data.Aeson.Key                (fromText)
 import qualified Data.Aeson.KeyMap             as KM
 import qualified Data.ByteString               as B
-import           Data.List                     (intercalate, tails)
+import           Data.List                     (intercalate, tails, stripPrefix)
 import           Data.Text                     (Text)
 import qualified Data.Text                     as T
-import           Data.Time.Clock               (UTCTime (..))
+import           Data.Time.Clock               (UTCTime (..), getCurrentTime)
 import           Data.Time.Format              (formatTime, parseTimeM)
 import           Data.Time.Locale.Compat       (TimeLocale, defaultTimeLocale)
 import           Data.Yaml                     (Object, Value(..))
@@ -114,10 +115,36 @@ stringField key f =
 defaultContext :: Context String
 defaultContext =
     bodyField     "body"     <>
-    metadataField            <> 
-    urlField      "url"      <> 
-    pathField     "path"     <> 
-    titleField    "title"
+    metadataField            <>
+    urlField      "url"      <>
+    pathField     "path"     <>
+    titleField    "title"    <>
+    systemContext
+
+--------------------------------------------------------------------------------
+-- | System context for build-time information.
+-- Exposes:
+--   system.build.date     (YYYY-MM-DD, UTC)
+--   system.build.time     (HH:MM:SS, UTC)
+--   system.build.datetime (YYYY-MM-DD HH:MM:SS, UTC)
+--   system.build.iso      (YYYY-MM-DDTHH:MM:SSZ, UTC)
+systemContext :: Context a
+systemContext = Context $ \k _ -> do
+    case stripPrefix "system.build." k of
+        Nothing -> noResult $ "No system field '" ++ k ++ "'"
+        Just field -> do
+            now <- unsafeCompiler getCurrentTime
+            let date = formatTime defaultTimeLocale "%Y-%m-%d" now
+                time = formatTime defaultTimeLocale "%H:%M:%S" now
+                datetime = formatTime defaultTimeLocale "%Y-%m-%d %H:%M:%S" now
+                iso = formatTime defaultTimeLocale "%Y-%m-%dT%H:%M:%SZ" now
+                val s = return (String $ T.pack s)
+            case field of
+                "date"     -> val date
+                "time"     -> val time
+                "datetime" -> val datetime
+                "iso"      -> val iso
+                _          -> noResult $ "No system field '" ++ k ++ "'"
 
 --------------------------------------------------------------------------------
 -- | Constructs a 'field' that contains the body of the item.

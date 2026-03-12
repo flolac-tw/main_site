@@ -66,7 +66,7 @@ conditional = P.try $ do
     -- if
     trimLIf <- trimOpen
     void $ P.string "if("
-    e <- expr'
+    e <- boolExpr
     void $ P.char ')'
     trimRIf <- trimClose
     -- then
@@ -133,13 +133,86 @@ ident :: P.Parser TemplateExpr
 ident = P.try $ Ident <$> key
 
 stringLiteral :: P.Parser TemplateExpr
-stringLiteral = do
+stringLiteral = StringLiteral <$> stringLiteralRaw
+
+--------------------------------------------------------------------------------
+-- Boolean expressions for if()
+--------------------------------------------------------------------------------
+
+boolExpr :: P.Parser TemplateBoolExpr
+boolExpr = spaces *> boolOr <* spaces
+
+boolOr :: P.Parser TemplateBoolExpr
+boolOr = boolAnd `P.chainl1` (symbol "||" *> pure BoolOr)
+
+boolAnd :: P.Parser TemplateBoolExpr
+boolAnd = boolNot `P.chainl1` (symbol "&&" *> pure BoolAnd)
+
+boolNot :: P.Parser TemplateBoolExpr
+boolNot = (symbol "!" *> (BoolNot <$> boolNot)) <|> boolTerm
+
+boolTerm :: P.Parser TemplateBoolExpr
+boolTerm = parens boolExpr <|> P.try boolCompare <|> boolTruthy
+
+boolCompare :: P.Parser TemplateBoolExpr
+boolCompare = do
+    lhs <- valueExpr
+    op  <- compOp
+    rhs <- valueExpr
+    pure $ BoolCompare op lhs rhs
+
+boolTruthy :: P.Parser TemplateBoolExpr
+boolTruthy = BoolTruthy <$> valueExpr
+
+valueExpr :: P.Parser TemplateValueExpr
+valueExpr = lexeme (numberLiteral <|> stringLiteralValue <|> identValue)
+
+identValue :: P.Parser TemplateValueExpr
+identValue = VIdent <$> key
+
+stringLiteralValue :: P.Parser TemplateValueExpr
+stringLiteralValue = VStringLiteral <$> stringLiteralRaw
+
+numberLiteral :: P.Parser TemplateValueExpr
+numberLiteral = P.try $ do
+    sign <- P.optionMaybe (P.char '-')
+    digits <- P.many1 P.digit
+    let n = read digits :: Integer
+    pure $ VNumberLiteral $ case sign of
+        Just _  -> negate n
+        Nothing -> n
+
+compOp :: P.Parser TemplateCompOp
+compOp =
+    P.choice
+        [ symbol "==" *> pure OpEq
+        , symbol "!=" *> pure OpNeq
+        , symbol "<=" *> pure OpLte
+        , symbol ">=" *> pure OpGte
+        , symbol "<"  *> pure OpLt
+        , symbol ">"  *> pure OpGt
+        ]
+
+parens :: P.Parser a -> P.Parser a
+parens p = symbol "(" *> p <* symbol ")"
+
+symbol :: String -> P.Parser String
+symbol s = lexeme (P.string s)
+
+lexeme :: P.Parser a -> P.Parser a
+lexeme p = p <* spaces
+
+spaces :: P.Parser ()
+spaces = P.skipMany (P.oneOf " \t\r\n")
+
+stringLiteralRaw :: P.Parser String
+stringLiteralRaw = do
     void $ P.char '\"'
     str <- P.many $ do
         x <- P.noneOf "\""
         if x == '\\' then P.anyChar else return x
     void $ P.char '\"'
-    return $ StringLiteral str
+    return str
 
 opt :: String -> P.Parser (Maybe (Bool, [TemplateElement], Bool))
 opt clause = P.optionMaybe $ P.try $ do

@@ -27,6 +27,7 @@ import qualified Data.Text                            as T
 import           Data.Yaml                            (Value(..))
 import           Data.List
 import qualified Data.List.NonEmpty                   as NonEmpty
+import           Data.Maybe                           (isJust)
 import           Data.Vector                          (Vector)
 import qualified Data.Vector                          as V
 
@@ -37,7 +38,7 @@ import           Hakyll.Core.Item
 import           Hakyll.Core.Writable
 
 import           Hakyll.Web.ExtendedTemplate.Context
-import           Hakyll.Web.ExtendedTemplate.Type    (Template(..), ContextField(..))
+import           Hakyll.Web.ExtendedTemplate.Type    (Template(..), ContextField(..), TemplateBoolExpr(..), TemplateCompOp(..), TemplateValueExpr(..))
 import           Hakyll.Web.ExtendedTemplate.Trim
 import           Hakyll.Web.ExtendedTemplate.Parser
 
@@ -117,10 +118,11 @@ applyTemplate' tmps ctx item = go tmps
         evalMsg = "In expr '$" ++ show e ++ "$'"
         typeMsg = "expr '$" ++ show e ++ "$'"
     applyElem Escaped = return "$"
-    applyElem (If e t mf) = compilerTry (applyExpr e) >>= handle
+    applyElem (If e t mf) = compilerTry (applyBoolExpr e) >>= handle
       where
         f = maybe (return "") go mf
-        handle (Right _)                      = go t
+        handle (Right True)                   = go t
+        handle (Right False)                  = f
         handle (Left (CompilationNoResult _)) = f
         handle (Left (CompilationFailure es)) = debug (NonEmpty.toList es) >> f
         debug = compilerDebugEntries ("Hakyll.Web.Template.applyTemplate: " ++
@@ -151,6 +153,79 @@ applyTemplate' tmps ctx item = go tmps
         applyExpr expr >>= \case
           String s -> return $ T.unpack s
           field    -> expected "string" (fieldType field) msg
+
+    ----------------------------------------------------------------------------
+    -- Boolean expressions for if()
+    ----------------------------------------------------------------------------
+
+    applyBoolExpr :: TemplateBoolExpr -> Compiler Bool
+    applyBoolExpr = \case
+        BoolNot e -> not <$> applyBoolExpr e
+        BoolAnd a b -> do
+            a' <- applyBoolExpr a
+            if a' then applyBoolExpr b else return False
+        BoolOr a b -> do
+            a' <- applyBoolExpr a
+            if a' then return True else applyBoolExpr b
+        BoolCompare op a b -> do
+            ma <- evalValue a
+            case ma of
+                Nothing -> return False
+                Just va -> do
+                    mb <- evalValue b
+                    case mb of
+                        Nothing -> return False
+                        Just vb -> compareValues op va vb
+        BoolTruthy v -> do
+            mv <- evalValue v
+            return $ isJust mv
+
+    evalValue :: TemplateValueExpr -> Compiler (Maybe ContextField)
+    evalValue = \case
+        VStringLiteral s -> return . Just . String $ T.pack s
+        VNumberLiteral n -> return . Just . Number $ fromInteger n
+        VIdent k -> compilerTry (ctx' k item) >>= \case
+            Right v                     -> return (Just v)
+            Left (CompilationNoResult _) -> return Nothing
+            Left (CompilationFailure es) -> do
+                compilerDebugEntries
+                    ("Hakyll.Web.Template.applyTemplate: " ++
+                     "[ERROR] in 'if' value on expr '" ++ k ++ "':")
+                    (NonEmpty.toList es)
+                return Nothing
+
+    compareValues :: TemplateCompOp -> ContextField -> ContextField -> Compiler Bool
+    compareValues op a b = case (a, b) of
+        (String l, String r) -> return $ compareOrd op l r
+        (Number l, Number r) -> return $ compareOrd op l r
+        (Bool l, Bool r)     -> compareBool op l r
+        (Null, Null)         -> compareNull op
+        _ -> fail $ unwords
+            [ "Hakyll.Web.Template.applyTemplate: cannot compare"
+            , fieldType a, "and", fieldType b
+            , "with", show op
+            ]
+
+    compareOrd :: Ord b => TemplateCompOp -> b -> b -> Bool
+    compareOrd o l r = case o of
+        OpEq  -> l == r
+        OpNeq -> l /= r
+        OpLt  -> l <  r
+        OpLte -> l <= r
+        OpGt  -> l >  r
+        OpGte -> l >= r
+
+    compareBool :: TemplateCompOp -> Bool -> Bool -> Compiler Bool
+    compareBool o l r = case o of
+        OpEq  -> return (l == r)
+        OpNeq -> return (l /= r)
+        _     -> fail $ "Hakyll.Web.Template.applyTemplate: bools only support == and !="
+
+    compareNull :: TemplateCompOp -> Compiler Bool
+    compareNull o = case o of
+        OpEq  -> return True
+        OpNeq -> return False
+        _     -> fail $ "Hakyll.Web.Template.applyTemplate: nulls only support == and !="
 
     expected typ act expr = fail $ unwords ["Hakyll.Web.Template.applyTemplate:",
         "expected", typ, "but got", act, "for", expr]
@@ -187,4 +262,3 @@ applyAsTemplate :: Context String          -- ^ Context
 applyAsTemplate ctx item = do
     tpl <- compileTemplateItem item
     applyTemplate tpl ctx item
-
