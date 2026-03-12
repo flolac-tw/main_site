@@ -37,17 +37,14 @@ module Hakyll.Web.ExtendedTemplate.Context
 import           Control.Monad                 (msum)
 import           Control.Monad.Fail            (MonadFail)
 import           Data.Aeson.Key                (fromText)
-import           Data.Aeson.KeyMap             (KeyMap)
 import qualified Data.Aeson.KeyMap             as KM
 import qualified Data.ByteString               as B
 import           Data.List                     (intercalate, tails)
-import           Data.Scientific               as S
 import           Data.Text                     (Text)
 import qualified Data.Text                     as T
 import           Data.Time.Clock               (UTCTime (..))
 import           Data.Time.Format              (formatTime, parseTimeM)
 import           Data.Time.Locale.Compat       (TimeLocale, defaultTimeLocale)
-import qualified Data.Vector                   as V
 import           Data.Yaml                     (Object, Value(..))
 import qualified Data.Yaml                     as Y
 
