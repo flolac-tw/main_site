@@ -1,7 +1,6 @@
 module Multilingual where
 
 import           Control.Monad
-import           Data.Monoid
 import           Data.List
 
 -- import           Hakyll hiding (Context)
@@ -16,16 +15,19 @@ loadAndApplyTemplatesLC lc ctx ids it =
 
 loadAndApplyTemplateLC :: Identifier -> String -> Context a -> Item a -> Compiler (Item String)
 loadAndApplyTemplateLC id lc context item =
-    let base   = metadataField <> metadataIdField id
-        locale = redirectCtx "LC." (lc ++ ".") base
-        ctx    = stringField "lang" (const $ return lc) <> locale <> context
+    let ctx = localize lc (metadataIdField id <> context)
     in loadAndApplyTemplate id ctx item
 
 localeCtx :: String -> Context a
 localeCtx lc =
-    let base   = metadataField <> configField "config.yaml"
-        locale = redirectCtx "LC." (lc ++ ".") base
-    in stringField "lang" (const $ return lc) <> locale
+    let base = metadataField <> configField "config.yaml"
+    in localize lc base
+-- | Add language fields and LC.* redirection to any context.
+localize :: String -> Context a -> Context a
+localize lc ctx =
+    stringField "lang" (const $ return lc) <>
+    redirectCtx "LC." (lc ++ ".") ctx
+
 ------------------------------------------------------------------------------
 
 -- | Context redirect $LC.title$ => $en.title$ or $zh.title$ ...

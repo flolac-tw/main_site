@@ -50,21 +50,22 @@ main = hakyll $ do
   forM_ ["zh", "en"] $ \lc -> match "content/*/registration.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
-      let ctx = constField "current_year" currentYear
-             <> defaultContext
-             <> configField "config.yaml"
-             <> localeCtx lc
-             <> langToggleURL lc
+      let baseCtx = constField "current_year" currentYear
+                 <> defaultContext
+                 <> configField "config.yaml"
+                 <> langToggleURL lc
+          pageCtx = localize lc baseCtx
 
       -- Treat metadata as template as well
-      appliedPage <- getResourceString >>= applyAsTemplate ctx
+      appliedPage <- getResourceString >>= applyAsTemplate pageCtx
       let (metadata, _) = either mempty id $ parsePage $ itemBody appliedPage
           appliedMetadataField = Context $ \k _ -> do
                 let empty' = noResult $ "No '"  ++ k ++ "' field in applied metadata."
                 maybe empty' (return . String . T.pack) (lookupString k metadata)
-          ctx' = appliedMetadataField <> ctx
+          ctx' = appliedMetadataField <> baseCtx
+          pageCtx' = localize lc ctx'
       getResourceBody
-        >>= applyAsTemplate ctx'
+        >>= applyAsTemplate pageCtx'
         >>= loadAndApplyTemplatesLC
               lc
               ctx'
@@ -78,22 +79,23 @@ main = hakyll $ do
   forM_ ["zh", "en"] $ \lc -> match "content/*/index.html" $ version lc $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
-      let ctx = constField "current_year" currentYear
-             <> constField "header_show_year" "true"
-             <> defaultContext
-             <> configField "config.yaml"
-             <> localeCtx lc
-             <> langToggleURL lc
+      let baseCtx = constField "current_year" currentYear
+                 <> constField "header_show_year" "true"
+                 <> defaultContext
+                 <> configField "config.yaml"
+                 <> langToggleURL lc
+          pageCtx = localize lc baseCtx
 
       -- Treat metadata as template as well
-      appliedPage <- getResourceString >>= applyAsTemplate ctx
+      appliedPage <- getResourceString >>= applyAsTemplate pageCtx
       let (metadata, _) = either mempty id $ parsePage $ itemBody appliedPage
           appliedMetadataField = Context $ \k _ -> do
                 let empty' = noResult $ "No '"  ++ k ++ "' field in applied metadata."
                 maybe empty' (return . String . T.pack) (lookupString k metadata)
-          ctx' = appliedMetadataField <> ctx
+          ctx' = appliedMetadataField <> baseCtx
+          pageCtx' = localize lc ctx'
       getResourceBody
-        >>= applyAsTemplate ctx'
+        >>= applyAsTemplate pageCtx'
         >>= loadAndApplyTemplatesLC
               lc
               ctx'
