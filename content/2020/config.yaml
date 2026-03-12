@@ -30,3 +30,45 @@ zh:
 en:
   title: Formosan Summer School on Logic, Language, and Computation
   subtitle: 邏輯、語言與計算暑期研習營
+
+announcements:
+  - time: 8/16
+    title: "DTP 0, 1 & 4 原始檔上傳；PLT 1 部分習題解答上傳"
+  - time: 08/14
+    title: "PLT 1, PLT 2, 與 PLT 3 投影片更新；PLT 3 教材補充資料上傳"
+  - time: 08/11
+    title: 自週四 (8/13) 上課教室改為 <strong>103 教室</strong>
+  - time: 08/10
+    title: 課程講義投影片陸續更新上傳，有需要的學員請下載
+  - time: 08/08
+    title: 請學員攜帶電腦於上課時間練習；並請於上課期間全程配戴口罩
+
+
+calendar: 
+  - time: 07/26
+    title: 外地實習生報名截止
+    past: true
+  - time: 07/29
+    title: 非台大學生報名截止
+    past: true
+  - time: 07/30
+    title: 非台大學生錄取通知
+    past: true
+  - time: 08/03
+    title: 台大學生報名截止
+    past: true
+  - time: 08/04
+    title: 旁聽報名截止
+    past: true
+  - time: 08/05
+    title: 旁聽與台大學生錄取通知
+    past: true
+  - time: 08/10
+    title: 課程開始
+    past: true
+  - time: 08/20
+    title: 課程結束
+    past: true
+  - time: 08/21
+    title: 考試
+    past: true

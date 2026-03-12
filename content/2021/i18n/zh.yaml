@@ -1,0 +1,138 @@
+location: "臺灣大學管理學院"
+
+introduction: 課程介紹
+
+introduction-text: >-
+  近年來，從事基礎計算科學研究之台灣學者們已在各校各自成立研究團隊並相互合作。對基礎計算科學有興趣之學生須透過一系列課程學習基本知識；然而，國內從事此類研究的學者分散在各校，難以僅靠一己之力開設整套課程。因此，我們邀請有相同興趣的學者一同開課，訓練下一代的研究人才。
+  邏輯、語言與計算」暑期研習營希望培養學員獨立進行基礎計算科學研究之能力。從2008年起，本研習營在兩大主題之間輪流替換。今年之主題為邏輯與正規驗證。
+  自 2012 年起，本研習營正式成為台灣大學暑修課程，針對大學部學生開課，但亦歡迎研究生選修。台灣大學學生可透過國立台灣大學暑期課程網選課，有學籍之其他學校學生可透過校際選修選課。
+  邏輯、語言與計算」暑期研習營從2007年開始至今每年舉辦，今年為第十五屆。
+
+talks:
+- title: "資料流分析導論"
+  speaker: 謝邁思
+  affi: GitHub, Inc.
+  id: talk
+  abstract: ""
+
+timetables:
+  week1:
+    morning:
+    - title: "程式驗證導論"
+      subtitle: "Introduction"
+      id: smt
+    - title: "命題邏輯與一階邏輯"
+      subtitle: "Propositional Logic and First Order Logic"
+      id: first-logic
+    - title: "霍爾邏輯"
+      subtitle: "Hoare Logic"
+      id: hoare
+    - title: "布林可滿足性演算法"
+      subtitle: "Boolean Satisfiability Algorithms"
+      id: sat
+    - title: "布林可滿足性演算法"
+      subtitle: "Boolean Satisfiability Algorithms"
+      id: sat
+    afternoon:
+    - title: "命題邏輯與一階邏輯"
+      subtitle: "Propositional Logic and First Order Logic"
+      id: first-logic
+    - title: "命題邏輯與一階邏輯"
+      subtitle: "Propositional Logic and First Order Logic"
+      id: first-logic
+    - title: "霍爾邏輯"
+      subtitle: "Hoare Logic"
+      id: hoare
+    - title: "布林可滿足性求解器實習課"
+      subtitle: "TA session on SAT solvers"
+      id: sat
+    - title: "SMT 演算法"
+      subtitle: "SMT Algorithms"
+      id: smt
+  week2:
+    morning:
+    - title: "SMT 演算法"
+      subtitle: "SMT Algorithms"
+      id: smt
+    - title: "布林可滿足性問題在合成與驗證的應用"
+      subtitle: "Boolean Satisfiability’s Applications to Synthesis and Verification"
+      id: boolean
+    - title: "邏輯的理論研究"
+      subtitle: "Theoretical Aspect of Logic Research"
+      id: logic
+    - title: "基於 SMT 的程式測試"
+      subtitle: "SMT-based Program Testing"
+      id: smt-testing
+    - title: "考試"
+      subtitle: "Exam"
+    afternoon:
+    - title: "Dafny 程式驗證工具"
+      subtitle: "Dafny Program Verifier"
+      id: dafny
+    - title: "布林可滿足性問題在合成與驗證的應用"
+      subtitle: "Boolean Satisfiability’s Applications to Synthesis and Verification"
+      id: boolean
+    - title: "邏輯的理論研究"
+      subtitle: "Theoretical Aspect of Logic Research"
+      id: logic
+    - title: "驗證密碼學程式"
+      subtitle: "Crypto Program Verification"
+      id: crypto
+    - title: "特別演講：資料流分析導論"
+      subtitle: "Introduction to static data-flow analysis"
+      id: talk
+
+courses:
+- title: 命題邏輯與一階邏輯
+  id: first-logic
+  instructors:
+  - name: 王柏堯
+    affi: 中央研究院資訊科學研究所 
+- title: 驗證密碼學程式
+  id: crypto
+  instructors:
+  - name: 蔡明憲
+    affi: 中央研究院資訊科學研究所
+- title: 霍爾邏輯
+  id: hoare
+  instructors:
+  - name: 穆信成
+    affi: 中央研究院資訊科學研究所</br>國立臺灣大學資訊管理學系
+- title: 邏輯的理論研究
+  id: logic
+  instructors:
+  - name: 陳偉松
+    affi: 國立臺灣大學資訊工程學系 
+- title: 布林可滿足性與其在合成與驗證的應用
+  id: boolean
+  instructors:
+  - name: 江介宏
+    affi: 國立臺灣大學電機工程學系
+- title: 布林可滿足性演算法
+  id: sat
+  instructors:
+  - name: 黃鍾揚
+    affi: 國立臺灣大學電機工程學系
+- title: 程式驗證導論／SMT 演算法
+  id: smt
+  instructors:
+  - name: 陳郁方
+    affi: 中央研究院資訊科學研究所
+- title: Dafny 程式驗證工具
+  id: dafny
+  instructors:
+  - name: 林子期 
+    affi: 中央研究院資訊科學研究所
+- title: 基於 SMT 的程式測試
+  id: smt-testing
+  instructors:
+  - name: 郁方
+    affi: 國立政治大學資訊管理學系
+
+title: 邏輯、語言與計算暑期研習營
+
+subtitle: Formosan Summer School on Logic, Language, and Computation, 2021
+
+date: "停辦"
+
+time: ""

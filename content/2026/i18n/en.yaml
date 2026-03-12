@@ -1,0 +1,63 @@
+introduction-text: This course will teach elements of programming languages, hoping to cultivate students' ability to reason using formal logic, understand the close relationship between logic, programming languages, and type systems, as well as the role that type systems play in programming languages. To enable students to understand and solve programming problems in a recursive/inductive manner, to use software tools to assist logical reasoning and prove the correctness of programs, and to have the knowledge base to further explore programming language-related fields.
+
+special-lecture: Special Lecture
+
+special-topic: "Introduction to Logic Programming with Datalog"
+
+special-topic-intro: >-
+  <p>Logic programming is an approach to software development based on formal logic first pioneered in the late 1960s:
+  instead of specifying how to solve a task step by step (as in imperative programming) or by mapping it onto
+  mathematical concepts (as in functional programming), logic programming expresses the task itself as a logical
+  formula whose satisfying assignments are the solutions to the problem, which can be found by a general-purpose solver.
+  Ideally, this would allow the software developer to focus entirely on precisely expressing _what_ they want to do,
+  and leaving it to the computer to figure out how to do it. While this dream is impossible to realise in general,
+  certain kinds of problems can be solved very elegantly using either full-fledged logic programming languages or
+  domain-specific languages (DSLs) embedded into other languages.</p>
+
+  <p>In this course, we will introduce logic programming using Datalog, a particularly simple and clean language based
+  on a subset of first-order predicate logic extended with recursive definitions. Students will learn how to write
+  and debug small Datalog programs to solve problems such as graph reachability and parsing, and to understand their
+  behaviour both logically and operationally. We will pay special attention to the power of recursion and the
+  complications introduced by negation.</p>
+  
+  <p>Based on these fundamentals, we will then explore the connection of Datalog with databases and the query language
+  SQL (which has been called every software developer's second language). Finally, we will survey recent applications
+  of Datalog in domains such as software security and program analysis, giving students a sense of the continuing
+  relevance of this language as well as logic programming in general.</p>
+
+courses:
+- id: fp
+  title: Functional Programming
+  intro: This course uses Haskell as a tool to provide an overview of some of the essential knowledge related to function programming in order to bridge the gap with other courses.
+    Starting with structural induction, we will talk about data structures and the inductive definition of functions, and discover that the definition of a function can follow the definition of a data structure.
+    If you want to prove the properties of a function, you can use induction, and the proof will follow the definition of the function.
+    We then turn to the notion of fold, which we find can be regarded as an abstraction of structural induction.
+    Finally, the red-black tree will be used as an example of programming and inductive proofs, in preparation for the subsequent course on dependent types.
+  instructors:
+  - name: Shin-Cheng Mu
+    personalPage: "https://management.ntu.edu.tw/IM/faculty/teacher/sn/28"
+    affi: Institute of Information Science, Academia Sinica
+- id: logic
+  title: Logic
+  intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module focuses on the natural deduction system of propositional intuitionistic logic, introduces the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules.
+  instructors:
+  - name: Josh Ko
+    personalPage: "https://josh-hs-ko.github.io/"
+    affi: Institute of Information Science, Academia Sinica
+- id: lambda
+  title: λ-Calculus
+  intro: Nowadays many languages such as Haskell and Agda are based on variants of λ-calculus. In this course module, we will investigate λ-calculus and its notions and properties mathematically. For example, we will define computation and computational equivalence; after introducing types, we show how ‘a well-typed program does not go wrong’. Apart from theoretical interests, we also discuss a prevalent language feature —polymorphism— which has been applied to solve the code duplication problem in practice. Continuing into the dependently typed programming module, we will use Agda to implement λ-calculus and prove its properties.
+  instructors:
+  - name: Liang-Ting Chen
+    personalPage: "https://l-tchen.github.io/"
+    affi: Institute of Information Science, Academia Sinica
+- title: "Introduction to Logic Programming with Datalog"
+  id: special
+  instructors:
+  - name: Max Schaefer
+    personalPage: "https://scholar.google.com/citations?user=0SsEudwAAAAJ&hl=en"
+    affi: XBOW
+
+title: Formosan Summer School on Logic, Language, and Computation
+
+subtitle: 邏輯、語言與計算暑期研習營

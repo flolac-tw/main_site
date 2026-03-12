@@ -1,0 +1,144 @@
+location: "Location: Room 202, Freshman Classroom Building, National Taiwan University"
+
+introduction-text: 本課程將講授程式語言領域之入門理論與知識，希望培養學生以型式邏輯進行清晰思考的能力，了解邏輯與程式語言、型別系統的密切關係，以及型別系統在程式語言中扮演的角色，使學生能以遞迴／迭構方式理解並解決程式設計問題，能運用軟體工具輔助邏輯推理及證明程式正確性，並具備進一步探索程式語言相關領域的知識基礎。
+
+special-lecture: Special Lecture
+
+special-topic: "Monad and Side Effects"
+
+special-topic-intro: 函數程式雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
+
+courses:
+- id: fp
+  title: Functional Programming
+  intro: This course uses Haskell as a tool to provide an overview of some of the essential knowledge related to function programming in order to bridge the gap with other courses.
+    Starting with structural induction, we will talk about data structures and the inductive definition of functions, and discover that the definition of a function can follow the definition of a data structure.
+    If you want to prove the properties of a function, you can use induction, and the proof will follow the definition of the function.
+    We then turn to the notion of fold, which we find can be regarded as an abstraction of structural induction.
+    Finally, the red-black tree will be used as an example of programming and inductive proofs, in preparation for the subsequent course on dependent types.
+  instructors:
+  - name: Shin-Cheng Mu
+    affi: Institute of Information Science, Academia Sinica
+  resource:
+  - type: "Handouts & Slides"
+    items:
+    - name: Handout
+      link: "/2022/fp-handouts.pdf"
+    - name: Slides
+      link: "/2022/fp-slides.pdf"
+  - type: Source
+    items:
+    - name: miniprelude.hs
+      link: "https://gist.github.com/Zekt/306115a9a61683e847a56f4c6975f75c"
+    - name: RedBlackOkasaki.hs
+      link: "/2022/RedBlackOkasaki.hs"
+  - type: "Practicals & Solutions"
+    items:
+    - name: Practicals 00
+      link: "/2022/fp-practicals-00.pdf"
+    - name: Practicals 01
+      link: "/2022/fp-practicals-01.pdf"
+    - name: Practicals 02
+      link: "/2022/fp-practicals-02.pdf"
+    - name: Solutions 00
+      link: "/2022/fp-practicals-00-sols.pdf"
+    - name: Solutions 01
+      link: "/2022/fp-practicals-01-sols.pdf"
+    - name: Solutions 02
+      link: "/2022/fp-practicals-02-sols.pdf"
+  - type: Other
+    items:
+    - name: Datatype-generic Programming
+      link: "https://slides.com/zekt/datatype-generic-programming"
+      note: 如何對每個 datatype 都寫出 map 與 foldr
+- id: logic
+  title: Logic
+  intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module focuses on the natural deduction system of propositional intuitionistic logic, introduces the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules.
+  instructors:
+  - name: Josh Ko
+    affi: Institute of Information Science, Academia Sinica
+  resource:
+  - type: Slides
+    items:
+    - name: Logic 1
+      link: "/2022/LOGIC_1.pdf"
+    - name: Logic 2
+      link: "/2022/LOGIC_2.pdf"
+    - name: Logic 3
+      link: "/2022/LOGIC_3.pdf"
+- id: lambda
+  title: λ-Calculus
+  intro: Nowadays many languages such as Haskell and Agda are based on variants of λ-calculus. In this course module, we will investigate λ-calculus and its notions and properties mathematically. For example, we will define computation and computational equivalence; after introducing types, we show how ‘a well-typed program does not go wrong’. Apart from theoretical interests, we also discuss a prevalent language feature —polymorphism— which has been applied to solve the code duplication problem in practice. Continuing into the dependently typed programming module, we will use Agda to implement λ-calculus and prove its properties.
+  instructors:
+  - name: Liang-Ting Chen
+    affi: Institute of Information Science, Academia Sinica
+  resource:
+  - type: Slides
+    items: 
+    - name: Lambda 1
+      link: "/2022/lambda-1.pdf"
+    - name: Lambda 2
+      link: "/2022/lambda-2.pdf"
+    - name: Lambda 3 (8/10 updated)
+      link: "/2022/lambda-3.pdf"
+- id: dtp
+  title: Dependently Typed Programming
+  intro: >-
+    The expressiveness of dependent types far exceeds that of type systems in mainstream languages,
+    so that properties that would otherwise need to be proved additionally can be written directly as dependent types.
+    As we provide more information to the type checker through the dependent type,
+    the latter can in turn tell us what is known and what is yet to be satisfied,
+    and write the correct program interactively.
+    Mathematical theorems and proofs, when expressed in the language of the dependent type,
+    not only ensure that the inference is correct, but also that it is computationally meaningful.
+    Here mathematics, logic and computation become one, forming a solid basis for the design of a new generation of programming languages.
+  instructors:
+  - name: Shin-Cheng Mu
+    affi: Institute of Information Science, Academia Sinica
+  - name: Josh Ko
+    affi: Institute of Information Science, Academia Sinica
+  - name: Liang-Ting Chen
+    affi: Institute of Information Science, Academia Sinica
+  resource:
+  - type: Agda Installation Guide
+    items:
+    - name: Windows
+      link: "https://paper.dropbox.com/doc/Windows--A5q1GT37n8jrafQJGR5UuF8vAQ-yCITtULcz3mRG9gGETjRQ"
+    - name: Mac
+      link: "https://paper.dropbox.com/doc/Mac--A5pGvKSfn4Gk7Rp4ypnOZMsSAQ-sgAFjf4ClpRGLXraVwE33"
+    - name: Linux
+      link: "https://paper.dropbox.com/doc/Linux--A5oTA1pnWWnPCZJS1ARBW8IlAQ-nkP4Uu5LUEicAo9h1JtqI"
+  - type: Source
+    items:
+    - name: dtp.zip
+      link: "/2022/dtp.zip"
+    - name: DTP-Logic.agda
+      link: "/2022/DTP-Logic.agda"
+    - name: Lambda.agda
+      link: "/2022/Lambda.agda"
+    - name: Lambda-sol.agda
+      link: "/2022/Lambda-sol.agda"
+  - type: Other
+    items:
+    - name: Unicode Character Table
+      link: "https://hackmd.io/ryEsPWrBT66QueCEaPbjlg"
+- id: monad
+  title: "Special Topic: Monad and Side Effects"
+  intro: >-
+    函數程式雖然常被說成是沒有副作用的，但是其實藉由函數以及型別的抽象化，尤其是藉由著名的 Monad 概念，可以更精準、更廣泛地表達並駕馭各種副作用。我們先介紹 Monad 的原理，再說明幾種歷久彌新的應用，包括搜尋、句法分析、機率運算等。我們也會跟人工智慧扯上關係，因為不論是要用「自動微分」把機器學習普及化，還是要把清晰易懂的模型變成跑得動的程式，都免不了對副作用進行推理。
+  instructors:
+  - name: Chung‑Chieh Shan
+    affi: Department of Computer Science, Indiana University
+  resource:
+  - type: Slides
+    items:
+    - name: Slides
+      link: "https://drive.google.com/file/d/1nn-4TA9lRnRd42ctMJZzKpwayPfu4ZvL/view"
+  - type: Practicals
+    items:
+    - name: Practicals
+      link: "https://drive.google.com/drive/folders/1oju5XL5sAlKe4n6T6dXfYpU1a1meVt6t?usp=sharing"
+
+title: Formosan Summer School on Logic, Language, and Computation
+
+subtitle: 邏輯、語言與計算暑期研習營

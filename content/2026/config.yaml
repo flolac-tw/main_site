@@ -33,3 +33,39 @@ zh:
 en:
   title: Formosan Summer School on Logic, Language, and Computation
   subtitle: 邏輯、語言與計算暑期研習營
+
+announcements:
+- time: 03/11
+  title: 網站上線
+
+calendar:
+- time: 06/02
+  title: 校外學生報名開始
+  past: false
+- time: 06/03
+  title: 校外學生報名截止
+  past: false
+- time: 06/09
+  title: 台大學生網路初選、旁聽報名開始
+  past: false
+- time: 06/10
+  title: 台大學生網路初選截止
+  past: false
+- time: 06/15
+  title: 台大學生網路加退選開始
+  past: false
+- time: 06/16
+  title: 台大學生網路加退選、旁聽報名截止
+  past: false
+- time: 06/19
+  title: 旁聽錄取通知
+  past: false
+- time: 06/29
+  title: 課程開始
+  past: false
+- time: 07/6
+  title: 期中停修截止
+  past: false
+- time: 07/10
+  title: 考試、課程結束
+  past: false

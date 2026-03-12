@@ -11,3 +11,11 @@ zh:
 en:
   title: Formosan Summer School on Logic, Language, and Computation
   subtitle: 邏輯、語言與計算暑期研習營
+
+announcements:
+  - time: 6/1
+    title: "本年度邏輯、語言與計算暑期研習營（FLOLAC）因應疫情停辦一年。"
+
+calendar: 
+  - time: 6/1
+    title: 宣佈停辦

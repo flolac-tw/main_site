@@ -1,0 +1,107 @@
+location: "Location：Room 229, Building 2, College of Electrical Engineering, National Taiwan University"
+
+introduction-text: This course will teach elements of programming languages, hoping to cultivate students' ability to reason using formal logic, understand the close relationship between logic, programming languages, and type systems, as well as the role that type systems play in programming languages. To enable students to understand and solve programming problems in a recursive/inductive manner, to use software tools to assist logical reasoning and prove the correctness of programs, and to have the knowledge base to further explore programming language-related fields.
+
+special-lecture: Special Lecture
+
+special-topic: "TBA"
+
+special-topic-intro: "TBA"
+
+courses:
+- id: pl
+  title: Propositional Logic
+  intro: Propositional logic is the simplest formal logic system, treating whole propositions—statements that are either true or false—as atomic units combined by logical connectives such as AND, OR, NOT and IMPLIES. With truth tables and well-defined inference rules, it lets us mechanize validity checking and underpins proof assistants, program verification, and automated theorem provers. Mastering propositional logic equips students with the syntax and semantics of formal reasoning, providing a solid stepping stone toward predicate logic, type theory, and modern SMT-based verification techniques.
+  instructors:
+  - name: Ric Huang
+    personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
+    affi: Department of Electrical Engineering and Graduate Institute of Electronic Engineering, National Taiwan University
+  - name: Bow-Yaw Wang
+    personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
+    affi: Institute of Information Science, Academia Sinica
+- id: satbdd
+  title: Boolean Satisfiability Problem and Binary Decision Diagrams
+  intro: SAT—the Boolean satisfiability problem—and Binary Decision Diagrams (BDDs) form a twin toolkit for modern logical reasoning and optimization. SAT solvers decide whether a Boolean formula has a satisfying assignment, powering hardware verification, model checking, and combinatorial optimization; BDDs represent Boolean functions as compact, shared decision graphs that enable lightning-fast equivalence checks and functional operations. This course surveys SAT algorithms (DPLL, CDCL), BDD construction and reduction strategies, and shows how the two techniques complement each other in circuit design, software analysis, and AI planning. Students will learn when to deploy each method and how to integrate them effectively in real-world systems.
+  instructors:
+  - name: Ric Huang
+    personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
+    affi: Department of Electrical Engineering and Graduate Institute of Electronic Engineering, National Taiwan University
+  - name: Bow-Yaw Wang
+    personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
+    affi: Institute of Information Science, Academia Sinica
+- id: hmc
+  title: Hardware Model Checking
+  intro: Hardware model checking is an automated formal-verification technique that systematically explores the state space of a circuit model to guarantee that the design complies with safety and liveness properties expressed in temporal logics such as LTL or CTL. The course covers symbolic model checking (BDD- and SAT/SMT-based), bounded model checking (BMC), and formal property verification workflows. Students will learn how to translate Verilog/VHDL into transition systems, write assertions, diagnose counter-examples, and apply industrial-strength tools to detect bugs early in SoC and FPGA projects—shrinking debug cycles and boosting design reliability.
+  instructors:
+  - name: Ric Huang
+    personalPage: "https://cc.ee.ntu.edu.tw/~ric/"
+    affi: Department of Electrical Engineering and Graduate Institute of Electronic Engineering, National Taiwan University
+  - name: Bow-Yaw Wang
+    personalPage: "https://homepage.iis.sinica.edu.tw/~bywang/"
+    affi: Institute of Information Science, Academia Sinica
+- id: fol
+  title: First-Order Logic
+  intro: First-order Logic (FOL) extends propositional logic with variables, quantifiers, and predicates, enabling precise statements such as “for all” and “there exists.” It is the foundational language for mathematical proof, program specification, and automated theorem proving. This course presents FOL’s syntax and semantics, free vs. bound variables, models and satisfaction, and key meta-theorems like soundness and completeness. We then cover prenex and conjunctive normal forms, resolution-based decision procedures, and show how FOL powers SMT solving, software verification, and even database query languages—equipping students with a robust toolkit for formal reasoning and logical deduction.
+  instructors:
+  - name: Yu-Fang Chen
+    personalPage: "https://guluchen.github.io/"
+    affi: Institute of Information Science, Academia Sinica
+  - name: Ming-Hsien Tsai
+    personalPage: "https://www.cs.ntust.edu.tw/p/405-1102-121079,c10961.php?Lang=en"
+    affi: Department of Information Management, National Taiwan University of Science and Technology
+- id: smt
+  title: Satisfiability Modulo Theories
+  intro: Satisfiability Modulo Theories (SMT) enriches Boolean SAT solving with background theories—integer and real arithmetic, bit-vectors, arrays, strings, algebraic datatypes, and more—so constraints featuring calculations and data structures can be solved directly. Modern SMT solvers follow the DPLL(T) architecture, orchestrating a SAT engine with dedicated theory decision procedures, and now power software/hardware verification, symbolic execution, synthesis, and optimization. This course introduces the SMT-LIB language, the DPLL(T) algorithm, and the internals of leading theory reasoners, then shows through hands-on cases how SMT accelerates program analysis, model checking, and constraint-based optimization in practice.
+  instructors:
+  - name: Yu-Fang Chen
+    personalPage: "https://guluchen.github.io/"
+    affi: Institute of Information Science, Academia Sinica
+  - name: Ming-Hsien Tsai
+    personalPage: "https://www.cs.ntust.edu.tw/p/405-1102-121079,c10961.php?Lang=en"
+    affi: Department of Information Management, National Taiwan University of Science and Technology
+- id: at
+  title: Automata Theory
+  intro: Automata theory underpins theoretical computer science by examining abstract computation models—finite automata, push-down automata, and Turing machines—and the formal language classes they recognize, from regular to context-free and beyond. By specifying state transitions and acceptance conditions, automata provide the rigorous foundation behind compilers, regex engines, model checkers, and even natural-language tools. This course covers regular operations and DFA/NFA equivalence, the correspondence between PDAs and CFGs, determinism versus nondeterminism, closure and decidability properties, and includes hands-on labs that show how automata power practical tasks such as program analysis and pattern matching.
+  instructors:
+  - name: Jyun-Ao Lin
+    personalPage: "https://carquois42.github.io/"
+    affi: Department of Computer Science and Information Engineering, National Taipei University of Technology
+- id: smc
+  title: Software Model Checking
+  intro: Software model checking is an automated verification technique that systematically explores a program’s state space to ensure it satisfies safety, liveness, and other formal properties. Unlike conventional testing, it can cover all reachable paths and provides concrete counter-examples when violations arise. The course presents abstraction techniques and CEGAR, symbolic and path-based approaches such as bounded model checking and symbolic execution, and unpacks the algorithms and workflows behind leading tools like BLAST, CPAchecker, SPIN, and KLEE. Through case studies, students will learn to translate C/C++, Java, or Rust programs into analyzable models, write assertions, inspect counter-examples, and integrate model checking into CI/CD pipelines to catch bugs early in the development cycle.
+  instructors:
+  - name: Nian-Ze Lee
+    personalPage: "https://nianzelee.github.io/"
+    affi: Department of Electrical Engineering, National Taiwan University
+- id: alpv
+  title: Automata Learning and Parameterized Verification
+  intro: This course spotlights automata learning, diving into Angluin’s classic L* active-learning algorithm and its synergy with parameterized verification. L* iteratively issues membership and equivalence queries to a “teacher,” automatically inferring the minimal DFA that models an unknown or black-box system. For systems with arbitrarily many identical components, the learned automaton is generalized into inductive invariants, proving safety and liveness for all sizes.
+  instructors:
+  - name: Chih-Duo Hong
+    personalPage: "https://chihduo.github.io/"
+    affi: Department of Management Information Systems, National Chengchi University
+- id: afss
+  title: Automata for Software Security
+  intro: This course shows how finite and symbolic automata can be harnessed for software security. Building on Prof. Fang Yu’s work—such as the STRANGER automata-based string analyzer and techniques that generate vulnerability signatures via forward/backward symbolic analyses—it demonstrates how automata models, combined with SMT solving and query–counter-example loops, automatically detect and patch vulnerabilities like XSS and SQL injection while proving key security properties.
+  instructors:
+  - name: Fang Yu
+    personalPage: "https://mis2.nccu.edu.tw/en/Faculty/Faculty_01/%E9%83%81%E6%96%B9-33653605"
+    affi: Department of Management Information Systems, National Chengchi University
+- id: qsasv
+  title: Quantified Satisfiability and its Applications in Synthesis and Verification
+  intro: Quantified satisfiability (QBF) augments Boolean SAT with universal and existential quantifiers, making it a natural language for PSPACE-complete synthesis and verification tasks such as controller derivation and temporal-logic model checking. Modern QBF solvers output proofs and Skolem/Herbrand functions, yielding an implementation strategy when the formula is true and concrete counter-examples when it is false. The course covers prenex-CNF encodings, DPLL(Q) and expansion-based solving, and demonstrates how QBF certificates drive automated synthesis and precise bug localization in hardware and software verification flows.
+  instructors:
+  - name: Jie-Hong Roland Jiang
+    personalPage: "https://www.ee.ntu.edu.tw/profile1.php?teacher_id=943014"
+    affi: Department of Electrical Engineering, National Taiwan University
+- id: special
+  title: Invited Talk - TBA
+  intro: TBA
+  instructors:
+  - name: Anthony Widjaja Lin
+    personalPage: "https://anthonywlin.github.io/"
+    affi: Theoretical Computer Science (Automated Reasoning) and Max-Planck Fellow at University of Kaiserslautern, Germany
+
+title: Formosan Summer School on Logic, Language, and Computation
+
+subtitle: 邏輯、語言與計算暑期研習營
