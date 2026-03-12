@@ -53,6 +53,7 @@ main = hakyll $ do
       let baseCtx = constField "current_year" currentYear
                  <> defaultContext
                  <> configField "config.yaml"
+                 <> i18nCtx lc
                  <> langToggleURL lc
           pageCtx = localize lc baseCtx
 
@@ -83,6 +84,7 @@ main = hakyll $ do
                  <> constField "header_show_year" "true"
                  <> defaultContext
                  <> configField "config.yaml"
+                 <> i18nCtx lc
                  <> langToggleURL lc
           pageCtx = localize lc baseCtx
 
