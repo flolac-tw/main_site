@@ -8,6 +8,17 @@ on:
   schedule:
     - cron: '30 0 * * *'
       # Liang-Ting (2026-03-13): Run this workflow every day at 0030 UTC, i.e. 0830 Taiwan Time.
+      #
+    
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     strategy:
@@ -77,18 +88,18 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         
-    - uses: peaceiris/actions-gh-pages@v4
-      name: Publish to the project site
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v4
       if: github.ref == 'refs/heads/dev'
-      with:
-        # For details, see
-        # https://github.com/marketplace/actions/github-pages-action
-        #
-        github_token: ${{ secrets.GITHUB_TOKEN }}
 
-        # Ensure to match the source branch specified on the GitHub setting.
-        #
-        publish_dir: _site
-        force_orphan: true
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        id: deployment
+        if: github.ref == 'refs/heads/dev'
