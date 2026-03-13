@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         ghc: [ '9.8.4' ]
-        enable-stack: true
         os: ['ubuntu-latest']
     env:
       FLAGS: "--flag hakyll:-previewServer --flag hakyll:-watchServer --flag hakyll:-checkexternal"
