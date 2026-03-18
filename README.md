@@ -6,8 +6,7 @@
 * 主要網站：push 至 `master` 後，會觸發 [GitHub workflow](/.github/workflows/hakyll.yml)
 編譯內容產生網站，自動發布網站內容到 `flolac-tw/flolac-tw.github.io` 的 `master` 分支更新網站。
 
-* 測試用網站：push 至 `dev` 後會自動生成網站，自動 push 進 `gh-pages` 分支
-並發布網站至 `flolac.iis.sinica.edu.tw/main_site/` 
+* 測試用網站：push 至 `dev` 後會自動生成網站，並發布網站至 `flolac.iis.sinica.edu.tw/main_site/` 
 
 ## 安裝
 
