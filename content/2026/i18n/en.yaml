@@ -35,22 +35,22 @@ courses:
     Finally, the red-black tree will be used as an example of programming and inductive proofs, in preparation for the subsequent course on dependent types.
   instructors:
   - name: Shin-Cheng Mu
-    personalPage: "https://management.ntu.edu.tw/IM/faculty/teacher/sn/28"
-    affi: Institute of Information Science, Academia Sinica
+    personalPage: "https://homepage.iis.sinica.edu.tw/pages/scm/"
+    affi: Institute of Information Science, Academia Sinica, Taiwan
 - id: logic
   title: Logic
-  intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module focuses on the natural deduction system of propositional intuitionistic logic, introduces the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules.
+  intro: Mathematical proofs are built upon valid inference structures; in formal logic, we express these structures with precise and succinct symbols, and study their properties. This course module introduces intuitionistic propositional logic and first-order logic, focuses on the natural deduction system, discusses the basic syntactic and semantic proof methods used in formal logic, and points out the intimate relationship between logic and computation, leading into the topic of dependently typed programming. By studying the inference structures formally, this course module also introduces the necessary proof techniques used in other modules, in particular the understanding and use of structural induction principles.
   instructors:
   - name: Josh Ko
     personalPage: "https://josh-hs-ko.github.io/"
-    affi: Institute of Information Science, Academia Sinica
+    affi: Institute of Information Science, Academia Sinica, Taiwan
 - id: lambda
   title: λ-Calculus
   intro: Nowadays many languages such as Haskell and Agda are based on variants of λ-calculus. In this course module, we will investigate λ-calculus and its notions and properties mathematically. For example, we will define computation and computational equivalence; after introducing types, we show how ‘a well-typed program does not go wrong’. Apart from theoretical interests, we also discuss a prevalent language feature —polymorphism— which has been applied to solve the code duplication problem in practice. Continuing into the dependently typed programming module, we will use Agda to implement λ-calculus and prove its properties.
   instructors:
   - name: Liang-Ting Chen
     personalPage: "https://l-tchen.github.io/"
-    affi: Institute of Information Science, Academia Sinica
+    affi: Institute of Information Science, Academia Sinica, Taiwan
 - title: "Introduction to Logic Programming with Datalog"
   id: special
   instructors:
