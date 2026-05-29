@@ -6,7 +6,7 @@ import qualified Data.Text                     as T
 import           Data.Monoid                    ( mappend )
 import           Data.List                      ( intercalate )
 import           Data.List.Extra                ( splitOn )
-import           Data.Yaml
+import           Data.Yaml                      ( Value(..) )
 
 import           Hakyll.Core.Compiler
 import           Hakyll.Core.Configuration
@@ -18,7 +18,6 @@ import           Hakyll.Core.Metadata
 import           Hakyll.Core.Provider.Metadata
 import           Hakyll.Core.Routes
 import           Hakyll.Core.Rules
-import           Hakyll.Core.UnixFilter
 import           Hakyll.Core.Util.File
 import           Hakyll.Core.Util.String
 import           Hakyll.Core.Writable
@@ -35,10 +34,12 @@ import           Hakyll.Web.ExtendedTemplate.Type
 import           Hakyll.Web.Sass ( sassCompiler )
 import           Redirect
 import           Multilingual
+import           OpenGraphBanner
 
 main :: IO ()
 main = hakyll $ do
   let currentYear = "2026"
+      siteRoot = "https://flolac.iis.sinica.edu.tw"
   createRedirects [("index.html", "zh/"++currentYear)]
 
   match "content/**/config.yaml" $ do
@@ -51,6 +52,8 @@ main = hakyll $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
       let baseCtx = constField "current_year" currentYear
+                 <> constField "site_root" siteRoot
+                 <> openGraphImageCtx lc siteRoot
                  <> defaultContext
                  <> configField "config.yaml"
                  <> i18nCtx lc
@@ -81,6 +84,8 @@ main = hakyll $ do
     route $ gsubRoute "content/" (const $ lc ++ "/")
     compile $ do
       let baseCtx = constField "current_year" currentYear
+                 <> constField "site_root" siteRoot
+                 <> openGraphImageCtx lc siteRoot
                  <> constField "header_show_year" "true"
                  <> defaultContext
                  <> configField "config.yaml"
@@ -108,6 +113,10 @@ main = hakyll $ do
               , "templates/head.html"
               ]
         >>= relativizeUrls
+
+  forM_ ["zh", "en"] $ \lc -> match "assets/img/*-banner.svg" $ version ("og-" ++ lc) $ do
+    route $ customRoute (localizedBannerRoute lc)
+    compile $ localizedBannerCompiler lc
 
   match "assets/img/**" $ do
     route (gsubRoute "assets/" (const ""))

@@ -38,6 +38,11 @@ jobs:
         enable-stack: true
         stack-version: 'latest'
 
+    - name: Install SVG renderer
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y librsvg2-bin fonts-noto-cjk
+
     - name: Cache dependencies and .stack-work
       uses: actions/cache@v5
       with:
