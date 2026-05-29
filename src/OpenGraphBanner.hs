@@ -11,15 +11,18 @@ import           System.Directory                ( doesFileExist )
 import           System.FilePath
 
 import qualified Data.ByteString.Lazy            as BL
-import           Data.Char                       ( ord )
+import           Data.Char                       ( isSpace
+                                                 , ord
+                                                 )
 import           Data.List                       ( intercalate
-                                                 , isInfixOf
                                                  , stripPrefix
                                                  )
 import           Data.List.Extra                 ( splitOn )
 import qualified Data.Text                       as T
 import qualified Data.Text.Encoding              as T
-import           Data.Yaml                       ( Value(..) )
+import           Data.Yaml                       ( Object
+                                                 , Value(..)
+                                                 )
 
 import           Hakyll.Core.Compiler
 import           Hakyll.Core.Compiler.Internal
@@ -59,10 +62,11 @@ localizedBannerCompiler :: String -> Compiler (Item BL.ByteString)
 localizedBannerCompiler lc = do
   item <- getResourceString
   (_, year) <- either fail return $ bannerStemParts (itemIdentifier item)
-  title <- bannerTitle lc year
-  overlaid <- addTitleOverlay title (itemBody item)
-  makeItem (utf8LBS overlaid)
-    >>= withItemBody (unixFilterLBS "rsvg-convert" ["--format=png"])
+  (title, subtitle) <- bannerText lc year
+  svg <- openGraphSvg title subtitle (itemBody item)
+  makeItem (utf8LBS svg)
+    >>= withItemBody (unixFilterLBS "rsvg-convert"
+          ["--format=png", "--width=1200", "--height=630"])
 
 bannerStemParts :: Identifier -> Either String (String, String)
 bannerStemParts id = do
@@ -77,51 +81,95 @@ bannerStemParts id = do
 stripSuffix' :: Eq a => [a] -> [a] -> Maybe [a]
 stripSuffix' suffix text = reverse <$> stripPrefix (reverse suffix) (reverse text)
 
-bannerTitle :: String -> String -> Compiler String
-bannerTitle lc year = do
+bannerText :: String -> String -> Compiler (String, String)
+bannerText lc year = do
   let fp = "content" </> year </> "config.yaml"
   compilerTellDependencies [IdentifierDependency (fromFilePath fp)]
   metadata <- unsafeCompiler $ loadYamlObject fp
-  value <- metadataJSON metadata (fromFilePath fp) (lc ++ ".title")
+  title <- metadataString metadata fp (lc ++ ".title")
+  subtitle <- metadataString metadata fp (lc ++ ".subtitle")
+  return (title, subtitle)
+
+metadataString :: Object -> FilePath -> String -> Compiler String
+metadataString metadata fp key = do
+  value <- metadataJSON metadata (fromFilePath fp) key
   case value of
-    String title -> return $ T.unpack title
-    other -> fail $ "OpenGraph banner title expected string '" ++ lc ++
-      ".title', got " ++ fieldType other
+    String text -> return $ T.unpack text
+    other -> fail $ "OpenGraph banner text expected string '" ++ key ++
+      "', got " ++ fieldType other
 
-addTitleOverlay :: String -> String -> Compiler String
-addTitleOverlay title svg
-  | closingSvg `isInfixOf` svg =
-      let overlay = titleOverlay title
-          (before : after) = splitOn closingSvg svg
-      in return $ before ++ overlay ++ closingSvg ++ intercalate closingSvg after
-  | otherwise = fail "Cannot add OpenGraph title overlay: no closing </svg> tag found."
+openGraphSvg :: String -> String -> String -> Compiler String
+openGraphSvg title subtitle source = do
+  artwork <- centeredArtwork source
+  return $
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1200\" height=\"630\" viewBox=\"0 0 1200 630\">\n" ++
+    artwork ++ "\n" ++
+    titleOverlay title subtitle ++
+    "</svg>\n"
+
+centeredArtwork :: String -> Compiler String
+centeredArtwork source =
+  case stripPrefix "<svg" trimmed of
+    Just attrs ->
+      return $
+        "  <svg x=\"0\" y=\"0\" width=\"1200\" height=\"630\" " ++
+        "preserveAspectRatio=\"xMidYMid slice\"" ++ attrs
+    Nothing -> fail "Cannot wrap OpenGraph banner artwork: no opening <svg> tag found."
  where
-  closingSvg = "</svg>"
+  trimmed = dropWhile isSpace $ stripXmlDeclaration source
 
-titleOverlay :: String -> String
-titleOverlay title =
+stripXmlDeclaration :: String -> String
+stripXmlDeclaration =
+  T.unpack . stripDecl . T.stripStart . T.pack
+ where
+  stripDecl text
+    | "<?xml" `T.isPrefixOf` text =
+        let (_, after) = T.breakOn "?>" text
+        in if T.null after
+             then text
+             else T.stripStart $ T.drop 2 after
+    | otherwise = text
+
+titleOverlay :: String -> String -> String
+titleOverlay title subtitle =
   "\n  <defs>\n" ++
   "    <filter id=\"og-title-shadow\" x=\"-20%\" y=\"-40%\" width=\"140%\" height=\"180%\">\n" ++
-  "      <feDropShadow dx=\"0\" dy=\"0\" stdDeviation=\"2\" flood-color=\"#000000\" flood-opacity=\"1\" />\n" ++
+  "      <feDropShadow dx=\"0\" dy=\"0\" stdDeviation=\"5\" flood-color=\"#000000\" flood-opacity=\"1\" />\n" ++
   "    </filter>\n" ++
   "  </defs>\n" ++
-  "  <text x=\"50%\" y=\"72%\" text-anchor=\"middle\" dominant-baseline=\"middle\" " ++
-  "font-family=\"Noto Sans CJK TC, Noto Sans CJK, sans-serif\" font-weight=\"700\" " ++
-  "font-size=\"" ++ show fontSize ++ "\" fill=\"#ffffff\" filter=\"url(#og-title-shadow)\">\n" ++
-  concat (zipWith tspan tspans lines') ++
-  "  </text>\n"
+  textBlock titleY titleFont titleLines titleSpans ++
+  textBlock subtitleY subtitleFont subtitleLines subtitleSpans
  where
-  lines' = wrappedTitleLines title
-  fontSize = if length lines' == 1 then 24 :: Int else 17
-  tspans = if length lines' == 1 then ["0"] else ["-0.55em", "1.2em"]
+  titleLines = wrappedTitleLines title
+  subtitleLines = wrappedSubtitleLines subtitle
+  titleFont = if length titleLines == 1 then 76 :: Int else 54
+  subtitleFont = if length subtitleLines == 1 then 38 :: Int else 34
+  titleY = if length titleLines == 1 then 405 :: Int else 380
+  subtitleY = if length titleLines == 1 then 500 :: Int else 535
+  titleSpans = if length titleLines == 1 then ["0"] else ["-0.55em", "1.2em"]
+  subtitleSpans = if length subtitleLines == 1 then ["0"] else ["-0.45em", "1.15em"]
+  textBlock y fontSize lines' tspans =
+    "  <text x=\"600\" y=\"" ++ show y ++ "\" text-anchor=\"middle\" dominant-baseline=\"middle\" " ++
+    "font-family=\"Noto Sans CJK TC, Noto Sans CJK, sans-serif\" font-weight=\"700\" " ++
+    "font-size=\"" ++ show fontSize ++ "\" fill=\"#ffffff\" filter=\"url(#og-title-shadow)\">\n" ++
+    concat (zipWith tspan tspans lines') ++
+    "  </text>\n"
   tspan dy line =
-    "    <tspan x=\"50%\" dy=\"" ++ dy ++ "\">" ++ escapeXml line ++ "</tspan>\n"
+    "    <tspan x=\"600\" dy=\"" ++ dy ++ "\">" ++ escapeXml line ++ "</tspan>\n"
 
 wrappedTitleLines :: String -> [String]
 wrappedTitleLines title
   | visualLength title <= 28 = [title]
   | otherwise = case wrapWords 34 title of
       [] -> [title]
+      [line] -> [line]
+      line : rest -> [line, unwords rest]
+
+wrappedSubtitleLines :: String -> [String]
+wrappedSubtitleLines subtitle
+  | visualLength subtitle <= 42 = [subtitle]
+  | otherwise = case wrapWords 42 subtitle of
+      [] -> [subtitle]
       [line] -> [line]
       line : rest -> [line, unwords rest]
 
