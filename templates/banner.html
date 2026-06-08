@@ -63,7 +63,11 @@ $-else$
       $if(time)$&emsp;<span>$time$</span>$endif$
     $endif$
     <br />
-    $if(LC.location)$<span>$LC.location$</span>$endif$
+    $if(LC.location)$
+      <span>$LC.location$</span>
+    $else$
+      $if(location)$<span>$location$</span>$endif$
+    $endif$
   </header>
 </div>
 $-endif$
