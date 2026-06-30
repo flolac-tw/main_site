@@ -14,7 +14,7 @@ programme:
 - 柯向上
 - 穆信成
 
-local: 
+local:
 - 施亭羽
 
 ta_boss: 游書泓
@@ -27,7 +27,7 @@ ta:
 
 date: "6/29-7/10"
 time: "09:10-12:10, 13:20–16:20"
-location: "國立台灣大學管理學院一號館 102 教室"
+location: "國立台灣大學管理學院一號館 103 教室"
 
 zh:
   title: 邏輯、語言與計算暑期研習營
@@ -37,6 +37,8 @@ en:
   subtitle: 邏輯、語言與計算暑期研習營
 
 announcements:
+- time: 06/30
+  title: 遷移至 103 教室
 - time: 03/11
   title: 網站上線
 
@@ -65,7 +67,7 @@ calendar:
 - time: 06/29
   date: "2026-06-29"
   title: 課程開始
-- time: 07/6
+- time: 07/06
   date: "2026-07-06"
   title: 期中停修截止
 - time: 07/10
