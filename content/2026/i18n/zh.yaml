@@ -26,7 +26,7 @@ timetables:
       subtitle: "Untyped λ-Calculus, Part II"
       id: lambda
     - title: "函數程設"
-      subtitle: "Program Derivation"
+      subtitle: "Red-Black Trees"
       id: fp
     afternoon:
     - title: "邏輯"
