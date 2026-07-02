@@ -1,10 +1,13 @@
-{-# LANGUAGE TypeOperators #-}
+{-# LANGUAGE TypeOperators, FunctionalDependencies #-}
 
-{- ver. 2017 -}
+{- ver. 2017,
+   modified for FLOLAC 2024
+    * kept the Num class -}
 
 module MiniPrelude (
    module Prelude ,
-   module MiniPrelude
+   module MiniPrelude ,
+   module Control.Monad
   ) where
 -- import GHC.Types hiding ((:))
 -- import qualified GHC.Types as GTypes
@@ -18,11 +21,14 @@ import Prelude
          , maximum, minimum
          , and, or, any, all
          -- arithmetics
-         , (+), (-), (*), negate, abs, signum, (/), (^)
+         -- , (+), (-), (*), negate, abs, signum, (/), (^)
          , fromIntegral, truncate, round, ceiling, floor
-         , properFraction)
+         , properFraction
+         , MonadFail, fail
+         )
 import qualified Prelude
 import Data.Char
+import Control.Monad (liftM, ap)
 
 type List a = [a]
 type a :* b = (a , b)
@@ -127,7 +133,7 @@ all :: (a -> Bool) -> List a -> Bool
 all = Prelude.all
 
 -- Arithmetics
-
+{-
 infixl 7 *, /
 infixl 6 +, -
 
@@ -160,6 +166,7 @@ infixr 8 ^, ^.
 
 (^.) :: Float -> Int -> Float
 (^.) = (Prelude.^)
+-}
 
 fromIntegral :: Int -> Float
 fromIntegral = Prelude.fromIntegral
@@ -172,3 +179,28 @@ floor = Prelude.floor
 
 properFraction :: Float -> (Int, Float)
 properFraction = Prelude.properFraction
+
+-- Things about Monads
+
+class Monad m => MonadFail m where
+  fail  :: m a
+
+class MonadFail m => MonadCatch m where
+  catch :: m a -> m a -> m a
+
+class Monad m => MonadExcept e m | m -> e where
+  throw :: e -> m a
+  catchE :: m a -> (e -> m a) -> m a
+
+class Monad m => MonadState s m | m -> s where
+  get :: m s
+  put :: s -> m ()
+
+class Monad m => MonadReader e m | m -> e where
+  ask   :: m e
+  local :: (e -> e) -> m a -> m a
+
+class Monad m => MonadAlt m where
+  (<|>)  :: m a -> m a -> m a
+
+class (MonadFail m, MonadAlt m) => MonadNondet m where

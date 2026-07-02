@@ -89,6 +89,8 @@ courses:
     items:
     - name: MiniPrelude.hs
       link: "/2026/MiniPrelude.hs"
+    - name: RedBlack.zip
+      link: "/2026/RedBlack.zip"
   - type: 習題與解答
     items:
     - name: Practicals 0
@@ -99,6 +101,8 @@ courses:
       link: "/2026/FP_practicals_01.pdf"
     - name: Solutions 1
       link: "/2026/FP_practicals_01_sols.pdf"
+    - name: Practicals 2
+      link: "/2026/FP_practicals_02.pdf"
 - title: 邏輯
   id: logic
   intro: 數學證明建立於有效的推論結構之上， 而型式邏輯學的目的是以精確簡潔的符號表達這些推論結構，並研究其性質。這門課介紹直構（intuitionistic）命題邏輯（propositional logic）和一階邏輯（first-order logic），聚焦於自然演繹系統（natural deduction），討論型式邏輯學裡基本的語法（syntactic）和語意（semantic）證明方法，並點出邏輯與計算的密切關係，最終引導至依值型別。透過對推論結構的型式化學習，這門課也為其他課程所需的數學證明基礎作好準備，特別是結構迭構原則（structural induction principles）的理解和使用。
