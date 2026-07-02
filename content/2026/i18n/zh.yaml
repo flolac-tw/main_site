@@ -117,7 +117,7 @@ courses:
       link: "/2026/logic_lecture_III.pdf"
   - type: 附錄
     items:
-    - name: Derivations in Peano–Heyting arithmetic
+    - name: Derivations of Peano–Heyting arithmetic theorems
       link: "/2026/logic_PA_derivations.pdf"
 - title: λ-算則
   id: lambda
