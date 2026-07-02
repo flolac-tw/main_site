@@ -127,6 +127,8 @@ courses:
     items:
     - name: Lambda I
       link: "/2026/lambda_I.pdf"
+    - name: Lambda II
+      link: "/2026/lambda_II.pdf"
 - title: 特別講題： Datalog 邏輯程設
   id: special
   instructors:
