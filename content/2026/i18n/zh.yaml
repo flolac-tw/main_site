@@ -113,6 +113,8 @@ courses:
       link: "/2026/logic_lecture_I.pdf"
     - name: Logic II
       link: "/2026/logic_lecture_II.pdf"
+    - name: Derivations in Peano–Heyting arithmetic
+      link: "/2026/logic_PA_derivations.pdf"
     - name: Logic III
       link: "/2026/logic_lecture_III.pdf"
 - title: λ-算則
