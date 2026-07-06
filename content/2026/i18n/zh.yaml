@@ -145,6 +145,11 @@ courses:
   - name: Max Schaefer
     personalPage: "https://scholar.google.com/citations?user=0SsEudwAAAAJ&hl=en"
     affi: XBOW
+  resource:
+  - type: 投影片
+    items:
+    - name: Slides
+      link: "https://max-schaefer.github.io/datamog/slides/"
 
 title: 邏輯、語言與計算暑期研習營
 
