@@ -105,11 +105,11 @@ courses:
       link: "/2026/FP_practicals_02.pdf"
     - name: Practicals 3
       link: "/2026/FP_practicals_03.pdf"
-    - name: [code]
+    - name: "[code]"
       link: "/2026/FP_practicals_03_code.zip"
     - name: Solutions 3
       link: "/2026/FP_practicals_03_sols.pdf"
-    - name: [completed code]
+    - name: "[completed code]"
       link: "/2026/FP_practicals_03_code_complete.zip"
 - title: 邏輯
   id: logic
