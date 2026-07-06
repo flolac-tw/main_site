@@ -46,16 +46,13 @@ timetables:
   week2:
     morning:
     - title: "邏輯程設"
-      subtitle: ""
+      subtitle: "Datalog Basics"
       id: special
     - title: "邏輯程設"
-      subtitle: ""
+      subtitle: "Recursion"
       id: special
     - title: "邏輯程設"
-      subtitle: ""
-      id: special
-    - title: "邏輯程設"
-      subtitle: ""
+      subtitle: "Aggregates"
       id: special
     - title: "考試"
       subtitle: ""
@@ -69,8 +66,9 @@ timetables:
     - title: "λ-算則"
       subtitle: "Parametric Polymorphism"
       id: lambda
-    - title: "討論"
-      subtitle: ""
+    - title: "邏輯程設"
+      subtitle: "Advanced Topics"
+      id: special
 
 courses:
 - title: 函數程設
