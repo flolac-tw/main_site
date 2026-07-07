@@ -164,6 +164,10 @@ courses:
     items:
     - name: Slides
       link: "https://max-schaefer.github.io/datamog/slides/"
+  - type: 網站
+    items:
+    - name: Datamog Playground
+      link: "https://max-schaefer.github.io/datamog/"
 
 title: 邏輯、語言與計算暑期研習營
 
