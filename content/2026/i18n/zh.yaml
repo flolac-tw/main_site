@@ -87,8 +87,6 @@ courses:
     items:
     - name: MiniPrelude.hs
       link: "/2026/MiniPrelude.hs"
-    - name: RedBlack.zip
-      link: "/2026/RedBlack.zip"
   - type: 習題與解答
     items:
     - name: Practicals 0
@@ -101,6 +99,10 @@ courses:
       link: "/2026/FP_practicals_01_sols.pdf"
     - name: Practicals 2
       link: "/2026/FP_practicals_02.pdf"
+    - name: "[code]"
+      link: "/2026/FP_practicals_02_code.zip"
+    - name: "[completed code]"
+      link: "/2026/FP_practicals_02_code_complete.zip"
     - name: Practicals 3
       link: "/2026/FP_practicals_03.pdf"
     - name: "[code]"
@@ -125,6 +127,12 @@ courses:
       link: "/2026/logic_lecture_II.pdf"
     - name: Logic III
       link: "/2026/logic_lecture_III.pdf"
+    - name: Logic IV
+      link: "/2026/logic_lecture_IV.pdf"
+  - type: 原始檔
+    items:
+    - name: DTP.agda
+      link: "/2026/DTP.agda"
   - type: 附錄
     items:
     - name: Derivations of Peano–Heyting arithmetic theorems
