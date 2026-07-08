@@ -52,7 +52,7 @@ timetables:
       subtitle: "Recursion"
       id: special
     - title: "邏輯程設"
-      subtitle: "Aggregates"
+      subtitle: "Aggregates & Advanced Topics"
       id: special
     - title: "考試"
       subtitle: ""
@@ -66,9 +66,6 @@ timetables:
     - title: "λ-算則"
       subtitle: "Parametric Polymorphism"
       id: lambda
-    - title: "邏輯程設"
-      subtitle: "Advanced Topics"
-      id: special
 
 courses:
 - title: 函數程設
