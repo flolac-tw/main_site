@@ -150,6 +150,8 @@ courses:
       link: "/2026/lambda_II.pdf"
     - name: Lambda III
       link: "/2026/lambda_III.pdf"
+    - name: Lambda IV
+      link: "/2026/lambda_IV.pdf"
 - title: 特別講題： Datalog 邏輯程設
   id: special
   instructors:
